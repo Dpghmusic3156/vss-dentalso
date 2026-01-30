@@ -1,0 +1,17 @@
+footer {
+  .menu-clinic {
+    li {
+      a {
+        @apply hover:text-primary-500;
+      }
+    }
+  }
+  
+  .menu-lab {
+    li {
+      a {
+        @apply hover:text-primary2-500;
+      }
+    }
+  }
+}

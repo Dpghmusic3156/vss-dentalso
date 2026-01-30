@@ -1,0 +1,48 @@
+@extends('layouts.app')
+
+@section('content')
+<style>
+    @media screen and (max-width: 760px) {
+  #mail {
+   display: flex!important;
+  }
+  #maildesktop {
+      display: none !important;
+  }
+}
+</style>
+<section id="thank-you-page" class="py-20">
+    <section class="container section-first-page pt-0" data-aos="fade-up">
+        <div>
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player src="<?php  echo get_site_url(); ?>/wp-content/themes/vss-dentalso/resources/images/thank-you.lottiefiles.json"
+                background="transparent" speed="1" class="d-block"
+                style="max-width: 250px;display: block;margin: 0 auto;" autoplay />
+        </div>
+        <div class="section-header">
+            <h2 class="text-3xl lg:text-4xl leading-normal text-center mb-10">Cảm ơn bạn!</h2>
+            <p class="div-center text-center">
+                Chúng tôi đã nhận được yêu cầu liên hệ của bạn. Thông tin về lịch demo online e được gửi qua email của bạn.</p>
+            <p class="div-center text-center">
+                Để được hỗ trợ ngay lập tức, vui lòng liên hệ trực tiếp với chúng tôi</p>
+            <div class="flex items-center justify-center" >
+                <span
+                    style="display: flex; flex-direction: row; align-items: center;margin-right: 1rem;">
+                    <img src="https://dentalso.com/wp-content/plugins/polylang/flags/vn.png" alt="Tiếng Việt"
+                        style="width: 16px; height: 11px">
+                    <a class="hover:text-primary-500 text-xl" href="tel:0947476000">&nbsp;0947.476.000</a>
+                </span>
+                <img src="https://dentalso.com/wp-content/plugins/polylang/flags/us.png" alt="English"
+                    style="width: 16px; height: 11px;">
+                <a class="hover:text-primary-500 text-xl" href="tel:+1. 425 954 5496">&nbsp;+1.425.954.5496</a>
+                 <span class="material-symbols-outlined align-bottom" style="margin-left: 1rem;" id="maildesktop">mail</span>
+                    <a href="mailto:contact@dentalso.com" class="hover:text-primary-500 text-xl" id="maildesktop">contact@dentalso.com</a>
+            </div>
+            <div class="flex items-center justify-center hidden" id="mail">
+                <span class="material-symbols-outlined align-bottom" style="margin-left: 1rem;">mail</span>
+                    <a href="mailto:contact@dentalso.com" class="hover:text-primary-500 text-xl">contact@dentalso.com</a>
+            </div>
+        </div>
+    </section>
+</section>
+@endsection
