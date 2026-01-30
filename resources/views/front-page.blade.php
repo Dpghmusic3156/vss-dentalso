@@ -12,44 +12,44 @@
         <swiper-slide class="bg-center bg-cover bg-white flex justify-center items-center py-20"
             style="background-image:url('<?php echo get_theme_mod('trang_chu.banner.hinhnen_1'); ?>')">
             <div class="bg-black absolute top-0 left-0 right-0 bottom-0 opacity-70"></div>
-            <div class="container max-w-screen-xl mx-auto lg:gap-8 xl:gap-0 lg:py-0 lg:pt-0 flex z-10 flex-col-reverse lg:flex-row gap-14">
-                <div class="mx-auto place-self-center flex-1 lg:w-40 lg:px-5 text-center md:text-left">
-                    <p class="max-w-2xl mb-6 text-primary-500 lg:mb-8 text-center lg:text-left md:text-4x text-4xl lg:text-5xl lg:leading-tight" data-aos="fade-up">
+            <div class="container max-w-screen-xl mx-auto flex z-10 flex-col items-center justify-center gap-10">
+                <div class="mx-auto w-full lg:w-3/4 px-5 text-center">
+                    <p class="mb-4 text-primary-500 text-center text-4xl lg:text-5xl lg:leading-tight font-bold" data-aos="fade-up">
                         <?php echo get_theme_mod('trang_chu.banner.title1'); ?>
                     </p>
-                    <p class="text-xl mb-10 text-white" data-aos="fade-up">
+                    <p class="text-xl mb-8 text-white text-center" data-aos="fade-up">
                         <?php echo get_theme_mod('trang_chu.banner.content1'); ?>
                     </p>
                     <a href="<?php echo get_site_url(); ?>/yeu-cau-tu-van" class="flex items-center justify-center group relative h-12 w-48 
-                    rounded-3xl bg-primary-500 text-lg shadow mx-auto lg:ml-0">
+                    rounded-3xl bg-primary-500 text-lg shadow mx-auto">
                         <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                         <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
                     </a>
                 </div>
-                <div class="lg:mt-0 flex-1 lg:flex place-self-center lg:w-60" data-aos="fade-up">
-                    <img src="<?php echo get_theme_mod('trang_chu.banner.hinh_1'); ?>" class="mx-auto">
+                <div class="w-full flex justify-center" data-aos="fade-up">
+                    <img src="<?php echo get_theme_mod('trang_chu.banner.hinh_1'); ?>" class="mx-auto max-h-[500px] object-contain">
                 </div>
             </div>
         </swiper-slide>
         <swiper-slide class="bg-center bg-cover bg-white flex justify-center items-center py-20"
             style="background-image:url('<?php echo get_theme_mod('trang_chu.banner.hinhnen_2'); ?>')">
             <div class="bg-black absolute top-0 left-0 right-0 bottom-0 opacity-70"></div>
-            <div class="container max-w-screen-xl pt-20 pb-8 mx-auto lg:gap-8 xl:gap-0 lg:py-0 lg:pt-0 flex z-10 flex-col-reverse lg:flex-row gap-14">
-                <div class="mx-auto place-self-center flex-1 lg:w-40 text-center md:text-left">
-                    <p class="max-w-2xl mb-6  text-primary2-500 lg:mb-8 md:text-4x text-4xl lg:text-4xl lg:leading-tight" data-aos="fade-up">
+            <div class="container max-w-screen-xl mx-auto flex z-10 flex-col items-center justify-center gap-10">
+                <div class="mx-auto w-full lg:w-3/4 px-5 text-center">
+                    <p class="mb-4 text-primary2-500 text-center text-4xl lg:text-5xl lg:leading-tight font-bold" data-aos="fade-up">
                         <?php echo get_theme_mod('trang_chu.banner.title2'); ?>
                     </p>
-                    <p class="text-xl mb-10 text-white" data-aos="fade-up">
+                    <p class="text-xl mb-8 text-white text-center" data-aos="fade-up">
                         <?php echo get_theme_mod('trang_chu.banner.content2'); ?>
                     </p>
                     <a href="https://dental.vn/" target="_blank" class="flex items-center justify-center group relative h-12 w-48 
-                    rounded-3xl bg-primary2-500 text-lg shadow mx-auto lg:ml-0">
+                    rounded-3xl bg-primary2-500 text-lg shadow mx-auto">
                         <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
                         <span class="relative text-white group-hover:text-primary-500">Tìm hiểu thêm</span>
                     </a>
                 </div>
-                <div class="lg:mt-0 flex-1 lg:flex place-self-center lg:w-60">
-                    <img src="<?php echo get_theme_mod('trang_chu.banner.hinh_2'); ?>" class="mx-auto" data-aos="fade-up">
+                <div class="w-full flex justify-center" data-aos="fade-up">
+                    <img src="<?php echo get_theme_mod('trang_chu.banner.hinh_2'); ?>" class="mx-auto max-h-[500px] object-contain">
                 </div>
             </div>
         </swiper-slide>
@@ -80,15 +80,15 @@
 </section>
 <section class="container grid lg:grid-cols-2 lg:gap-2 text-center">
     <div class="bg-primary-300 py-16 px-2 lg:px-16 text-white rounded-2xl">
-        <a class="text-3xl leading-snug" data-aos="fade-up"  href="<?php echo get_site_url(); ?>/quan-ly-dental-lab">
-           Quản lý toàn diện Dental Lab
+        <a class="text-3xl leading-snug" data-aos="fade-up" href="<?php echo get_site_url(); ?>/quan-ly-dental-lab">
+            Quản lý toàn diện Dental Lab
         </a>
         <ul class="list-type-none sub-text-2 pb-10 text-lg">
             <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="200">
                 <a href="<?php echo get_site_url(); ?>/so-hoa-va-toi-uu-quy-trinh-san-xuat/">Số hoá và tối ưu quy trình sản xuất. Tạo môi trường làm việc công bằng</a>
             </li>
             <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="400">
-                 <a href="<?php echo get_site_url(); ?>/phoi-hop-lam-viec-va-ket-noi-giua-cac-bo-phan/">Phối hợp làm việc và kết nối giữa các bộ phận. Tăng hiệu quả chung cho Lab</a>
+                <a href="<?php echo get_site_url(); ?>/phoi-hop-lam-viec-va-ket-noi-giua-cac-bo-phan/">Phối hợp làm việc và kết nối giữa các bộ phận. Tăng hiệu quả chung cho Lab</a>
             </li>
             <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="400">
                 Chăm sóc khách hàng và đáp ứng kỳ vọng của khách hàng tốt hơn
@@ -102,7 +102,7 @@
         </p>
         <ul class="list-type-none sub-text-2 pb-10 text-lg">
             <li class="inline-flex items-center" data-aos="fade-up" data-aos-delay="200">
-              Đặt hàng nhanh, Theo dõi đơn hàng theo thời gian thực
+                Đặt hàng nhanh, Theo dõi đơn hàng theo thời gian thực
             </li>
             <li data-aos="fade-up" data-aos-delay="400" class="inline-flex items-center">
                 Không còn chờ đợi, không còn sai sót, không còn khoảng cách giữa Labo với nha khoa
@@ -174,11 +174,11 @@
     </div>
 </section>
 <section>
-     
+
     <div class="2xl:px-[152px] md:px-10 xl:xl:py-[130px] md:py-[80px] px-5 py-10 overflow-x-hidden">
         <div class="flex flex-col items-center">
             <p data-aos="fade-up" class="md:text-48 text-3xl leading-snug text-main-black mb-8 text-center lg:w-[685px] w-full">
-                Hơn 300 doanh nghiệp tin dùng
+                Hơn 300 doanh nghiệp tin dùngdd
             </p>
         </div>
         <div id="labs-logo" class="container swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
@@ -237,8 +237,8 @@
     <p class="mb-4 text-4xl" data-aos="fade-up">Sẵn sàng để bắt đầu?</p>
     <a href="<?php echo get_site_url(); ?>/yeu-cau-tu-van" class="flex items-center justify-center group relative h-12 w-48 
         rounded-3xl bg-primary-500 text-lg shadow mx-auto mt-10">
-            <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
-        </a>
+        <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+        <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
+    </a>
 </section>
 @endsection
