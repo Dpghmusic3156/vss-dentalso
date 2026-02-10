@@ -178,7 +178,7 @@
     <div class="2xl:px-[152px] md:px-10 xl:xl:py-[130px] md:py-[80px] px-5 py-10 overflow-x-hidden">
         <div class="flex flex-col items-center">
             <p data-aos="fade-up" class="md:text-48 text-3xl leading-snug text-main-black mb-8 text-center lg:w-[685px] w-full">
-                Hơn 300 doanh nghiệp tin dùngdd
+                Hơn 300 doanh nghiệp tin dùng
             </p>
         </div>
         <div id="labs-logo" class="container swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
