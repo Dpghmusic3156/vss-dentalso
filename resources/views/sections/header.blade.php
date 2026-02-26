@@ -12,7 +12,7 @@
     <a class="hover:text-primary-500" href="https://dentalso.com/en">English</a>
   </div>
 </section>
-<header class="banner h-14 w-full block h1-header-sticky z-50 bg-white relative" x-data="{mobileMenuOpen: false}">
+<header class="banner h-14 w-full block h1-header-sticky z-50 bg-white sticky top-0 shadow-sm" x-data="{mobileMenuOpen: false}">
   <section class="container h-full flex items-center justify-between">
     <div class="h-full flex items-center">
       <a class="brand h-full flex items-center pr-6" href="{{ home_url('/') }}">

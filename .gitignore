@@ -2,6 +2,7 @@
 /node_modules
 /vendor
 /New Folder
+
 # Configuration
 .env
 .env.*
@@ -10,6 +11,8 @@
 # Build Artifacts
 .budfiles
 
+#agent
+.agent/
 
 # Logs
 npm-debug.log
