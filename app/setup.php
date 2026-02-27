@@ -25,7 +25,7 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    bundle('editor')->enqueue();
+    // bundle('editor')->enqueue();
 }, 100);
 
 /**
@@ -369,16 +369,16 @@ add_action('init', function () {
         'plural'   => 'Price',
         'slug'     => 'price',
     ]);
-      register_post_type('docs', [
+    register_post_type('docs', [
         'show_in_feed' => true,
         'show_in_menu' => true,
         'show_in_nav_menus' => true,
         'label' => 'Tài liệu',
         'public' => true,
-        'has_archive' => true,// <-- Cần có
-         'archive' => [
+        'has_archive' => true, // <-- Cần có
+        'archive' => [
             'nopaging' => true,
-        ], 
+        ],
         'supports' => ['title', 'editor', 'excerpt'],
         'taxonomies' => ['doc_category'],
     ], [
@@ -404,7 +404,7 @@ add_action('init', function () {
         ],
 
     ]);
-     register_taxonomy('doc_category', 'docs', [
+    register_taxonomy('doc_category', 'docs', [
         'labels' => [
             'name'              => 'Chuyên mục tài liệu',
             'singular_name'     => 'Chuyên mục',
@@ -421,7 +421,6 @@ add_action('init', function () {
         'show_in_rest' => true,
         'rewrite'      => ['slug' => 'chuyen-muc-tai-lieu'],
     ]);
-  
 });
 add_action('rest_api_init', function () {
     register_rest_route('custom/v1', '/filter-docs', [
@@ -430,14 +429,14 @@ add_action('rest_api_init', function () {
             $cat   = sanitize_text_field($req->get_param('category'));
             $q     = sanitize_text_field($req->get_param('query'));
             $paged = max(1, intval($req->get_param('paged')));
- 
+
             $args = [
                 'post_type'      => 'docs',
                 'posts_per_page' => 20,
                 'paged'          => $paged,
                 's'              => $q,
             ];
- 
+
             if ($cat && $cat !== 'all') {
                 $args['tax_query'] = [[
                     'taxonomy' => 'doc_category',
@@ -445,10 +444,10 @@ add_action('rest_api_init', function () {
                     'terms'    => $cat,
                 ]];
             }
- 
+
             $query = new WP_Query($args);
             $results = [];
- 
+
             while ($query->have_posts()) {
                 $query->the_post();
                 $results[] = [
@@ -457,9 +456,9 @@ add_action('rest_api_init', function () {
                     'excerpt' => get_the_excerpt(),
                 ];
             }
- 
+
             wp_reset_postdata();
- 
+
             return [
                 'items' => $results,
                 'has_more' => $query->max_num_pages > $paged,
@@ -473,11 +472,11 @@ add_action('rest_api_init', function () {
         'permission_callback' => '__return_true',
     ]);
 });
- 
+
 function get_recent_docs_by_category(WP_REST_Request $request)
 {
     $slug = sanitize_text_field($request->get_param('category'));
- 
+
     $args = [
         'post_type' => 'docs',
         'posts_per_page' => 5,
@@ -489,10 +488,10 @@ function get_recent_docs_by_category(WP_REST_Request $request)
             'terms' => $slug,
         ]]
     ];
- 
+
     $query = new WP_Query($args);
     $results = [];
- 
+
     while ($query->have_posts()) {
         $query->the_post();
         $results[] = [
@@ -500,7 +499,7 @@ function get_recent_docs_by_category(WP_REST_Request $request)
             'link' => get_permalink(),
         ];
     }
- 
+
     wp_reset_postdata();
     return $results;
 }
