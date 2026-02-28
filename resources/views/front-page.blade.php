@@ -75,7 +75,7 @@
         <div class="flex items-center justify-center gap-6 mb-12" data-aos="fade-up">
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-300"></div>
             <p class="text-center text-[#64748b] text-[15px] md:text-[17px] font-semibold uppercase tracking-[0.2em] m-0">
-                Được tin dùng bởi hơn <span class="text-primary-600 font-bold text-[18px] md:text-[20px] mx-1">300+</span> Labo & Nha khoa
+                Được tin dùng bởi hơn <span class="text-primary3 font-bold text-[18px] md:text-[20px] mx-1">300+</span> Labo & Nha khoa
             </p>
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-l from-transparent to-gray-300"></div>
         </div>
@@ -110,7 +110,7 @@
 </section>
 
 <!-- Pathways: Choose Solution -->
-<section id="solutions" class="py-12 bg-gray-50/50">
+<section id="solutions" class="py-20 lg:py-24 bg-gray-50/50">
     <div class="container max-w-6xl">
         <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
             <h2 class="text-2xl lg:text-3xl font-medium text-[#1e293b] mb-2">Giải Pháp Chuyên Biệt Cho Ngành Nha</h2>
@@ -232,11 +232,12 @@
 </section>
 
 <!-- Trust & Security -->
-<section class="py-24 bg-slate-900 text-white relative isolate overflow-hidden">
+<section class="py-24 bg-gradient-to-br from-[#0d2818] via-[#133a22] to-[#0a1f14] text-white relative isolate overflow-hidden">
     <!-- Abstract Background -->
     <div class="absolute top-0 left-0 w-full h-full overflow-hidden -z-10">
-        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-500/20 rounded-full blur-3xl"></div>
-        <div class="absolute bottom-0 left-20 w-72 h-72 bg-primary2-500/20 rounded-full blur-3xl"></div>
+        <div class="absolute -top-40 -right-40 w-96 h-96 bg-primary-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-20 w-72 h-72 bg-primary2-400/10 rounded-full blur-3xl"></div>
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-emerald-500/5 rounded-full blur-3xl"></div>
     </div>
 
     <div class="container relative">
@@ -331,27 +332,23 @@
         #app-slider { padding-bottom: 3rem; }
         #app-slider::part(button-prev),
         #app-slider::part(button-next) {
-            color: #334155;
-            background: rgba(255,255,255,0.95);
-            width: 2.5rem;
-            height: 2.5rem;
-            border-radius: 50%;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(0,0,0,0.06);
+            color: #94a3b8;
+            background: none;
+            border: none;
+            box-shadow: none;
+            width: 2rem;
+            height: 2rem;
             transition: all 0.3s ease;
             top: 45%;
         }
         #app-slider::part(button-prev):hover,
         #app-slider::part(button-next):hover {
-            background: #0f172a;
-            color: #fff;
-            transform: scale(1.08);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            color: #0f172a;
+            transform: scale(1.15);
         }
         @media (min-width: 1024px) {
             #app-slider::part(button-prev),
-            #app-slider::part(button-next) { width: 3rem; height: 3rem; }
+            #app-slider::part(button-next) { width: 2.5rem; height: 2.5rem; }
         }
         #app-slider::part(pagination) { bottom: 0; }
         #app-slider::part(bullet) {
