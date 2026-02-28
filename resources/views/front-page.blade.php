@@ -3,9 +3,9 @@
 @section('content')
 <!-- Hero Section -->
 <section class="banner relative overflow-hidden">
-    <swiper-container id="homepage-banner" class="w-full min-h-[calc(100dvh-88px)] lg:h-[calc(100vh-88px)]" loop="true" autoplay-delay="5000" navigation="true">
+    <swiper-container id="homepage-banner" class="w-full lg:h-[calc(100vh-88px)]" loop="true" autoplay-delay="5000" navigation="true" pagination="true" pagination-clickable="true">
         <!-- Slide 1: Lab Focus -->
-        <swiper-slide class="relative flex items-center justify-center bg-cover bg-center"
+        <swiper-slide class="relative flex items-center justify-center bg-cover bg-center min-h-[calc(100dvh-88px)]"
             style="background-image:url('{{ get_theme_mod('trang_chu.banner.hinhnen_1') }}')">
             <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
             <div class="container relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center justify-center h-full pt-10 pb-16 lg:py-0 lg:pt-16">
@@ -39,7 +39,7 @@
         </swiper-slide>
 
         <!-- Slide 2: Clinic & Connection Focus -->
-        <swiper-slide class="relative flex items-center justify-center bg-cover bg-center"
+        <swiper-slide class="relative flex items-center justify-center bg-cover bg-center min-h-[calc(100dvh-88px)]"
             style="background-image:url('{{ get_theme_mod('trang_chu.banner.hinhnen_2') }}')">
             <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-black/80 via-black/50 to-transparent"></div>
             <div class="container relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center justify-center h-full pt-10 pb-16 lg:py-0 lg:pt-16">
@@ -146,7 +146,7 @@
                     </a>
                 </div>
                 <!-- Featured Image -->
-                <div class="py-2 px-6 lg:px-8 mt-auto bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="py-2 px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
@@ -179,7 +179,7 @@
                     </a>
                 </div>
                 <!-- Featured Image -->
-                <div class="py-2 px-6 lg:px-8 mt-auto bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="py-2 px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
@@ -190,23 +190,25 @@
 <!-- Feature: Communication -->
 <section class="py-20 lg:py-24 bg-white overflow-hidden">
     <div class="container max-w-7xl">
-        <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
-            <div data-aos="fade-right" class="relative group">
+        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+            <div data-aos="fade-right" class="relative group order-2 lg:order-1">
                 <div class="absolute inset-0 bg-[#0ea5e9]/10 rounded-3xl transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500"></div>
                 <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" class="rounded-3xl shadow-[0_20px_50px_rgb(0,0,0,0.1)] w-full object-cover border border-gray-100 transform group-hover:-translate-y-2 transition-transform duration-500">
             </div>
-            <div class="space-y-8 lg:pl-6" data-aos="fade-left">
-                <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[13px] tracking-wide border border-[#e0f2fe] uppercase">
-                    <span class="material-symbols-outlined text-[16px] mr-2">hub</span>
-                    Giao tiếp thông minh
+            <div class="space-y-8 lg:pl-6 order-1 lg:order-2 flex flex-col" data-aos="fade-left">
+                <div>
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[13px] tracking-wide border border-[#e0f2fe] uppercase mb-4">
+                        <span class="material-symbols-outlined text-[16px] mr-2">hub</span>
+                        Giao tiếp thông minh
+                    </div>
+                    <h2 class="text-3xl lg:text-[40px] font-medium text-[#1e293b] leading-tight mb-4">
+                        Xóa bỏ khoảng cách <br> <span class="text-primary-600">Labo & Nha Khoa</span>
+                    </h2>
+                    <p class="text-[17px] text-[#64748b] leading-[1.8]">
+                        Nền tảng cung cấp môi trường giao tiếp tập trung. Mọi trao đổi, hình ảnh lâm sàng, và yêu cầu kỹ thuật được lưu trữ trọn đời, gắn liền với từng đơn hàng cụ thể.
+                    </p>
                 </div>
-                <h2 class="text-3xl lg:text-[40px] font-medium text-[#1e293b] leading-tight">
-                    Xóa bỏ khoảng cách <br> <span class="text-primary-600">Labo & Nha Khoa</span>
-                </h2>
-                <p class="text-[17px] text-[#64748b] leading-[1.8]">
-                    Nền tảng cung cấp môi trường giao tiếp tập trung. Mọi trao đổi, hình ảnh lâm sàng, và yêu cầu kỹ thuật được lưu trữ trọn đời, gắn liền với từng đơn hàng cụ thể.
-                </p>
-                <div class="grid sm:grid-cols-2 gap-8 pt-4">
+                <div class="grid sm:grid-cols-2 gap-8 pt-4 order-3 lg:order-none">
                     <div class="flex items-start bg-gray-50/50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                         <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-[#eff6ff] flex items-center justify-center text-[#3b82f6]">
                             <span class="material-symbols-outlined text-2xl">forum</span>
@@ -312,10 +314,11 @@
             background: #0f172a;
             border-radius: 2.5rem;
             padding: 8px;
-            box-shadow: 0 25px 60px rgba(0,0,0,0.18), inset 0 0 0 2px rgba(255,255,255,0.08);
+            box-shadow: 0 25px 60px rgba(0, 0, 0, 0.18), inset 0 0 0 2px rgba(255, 255, 255, 0.08);
             position: relative;
             overflow: hidden;
         }
+
         .phone-frame .phone-screen {
             width: 100%;
             height: auto;
@@ -323,34 +326,54 @@
             border-radius: 2rem;
             pointer-events: none;
         }
+
         @media (min-width: 1024px) {
-            .phone-frame { border-radius: 3rem; padding: 10px; }
-            .phone-frame .phone-screen { border-radius: 2.5rem; }
+            .phone-frame {
+                border-radius: 3rem;
+                padding: 10px;
+            }
+
+            .phone-frame .phone-screen {
+                border-radius: 2.5rem;
+            }
         }
 
         /* App slider scoped styles */
-        #app-slider { padding-bottom: 3rem; }
+        #app-slider {
+            padding-bottom: 3rem;
+        }
+
         #app-slider::part(button-prev),
         #app-slider::part(button-next) {
             color: #94a3b8;
             background: none;
             border: none;
             box-shadow: none;
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
             transition: all 0.3s ease;
-            top: 45%;
+            top: 37%;
         }
+
         #app-slider::part(button-prev):hover,
         #app-slider::part(button-next):hover {
             color: #0f172a;
             transform: scale(1.15);
         }
+
         @media (min-width: 1024px) {
+
             #app-slider::part(button-prev),
-            #app-slider::part(button-next) { width: 2.5rem; height: 2.5rem; }
+            #app-slider::part(button-next) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
         }
-        #app-slider::part(pagination) { bottom: 0; }
+
+        #app-slider::part(pagination) {
+            bottom: 0;
+        }
+
         #app-slider::part(bullet) {
             background: #e2e8f0;
             opacity: 1;
@@ -359,6 +382,7 @@
             transition: all 0.3s ease;
             margin: 0 4px !important;
         }
+
         #app-slider::part(bullet-active) {
             background: #0284c7;
             width: 24px;
@@ -368,7 +392,7 @@
 
     <div class="container">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            
+
             <!-- Left: Phone Slider -->
             <div class="relative w-full max-w-md mx-auto lg:mx-0 order-1" data-aos="fade-right">
                 <swiper-container id="app-slider" class="w-full" loop="true" autoplay-delay="4000" navigation="true" pagination="true" pagination-clickable="true">
@@ -520,6 +544,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        z-index: 50;
+        /* Ensure it's clickable above slide content */
     }
 
     swiper-container::part(button-prev):hover,
@@ -531,12 +557,47 @@
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
+    /* Specific overrides for homepage banner */
+    .banner .container {
+        pointer-events: none;
+    }
+
+    .banner .container>* {
+        pointer-events: auto;
+    }
+
+    #homepage-banner::part(button-prev),
+    #homepage-banner::part(button-next) {
+        width: 2rem;
+        height: 2rem;
+        top: 30%;
+    }
+
+    #homepage-banner::part(pagination) {
+        position: absolute;
+        bottom: 1rem;
+        z-index: 50;
+    }
+
+    #homepage-banner::part(bullet) {
+        background: rgba(255, 255, 255, 0.5);
+    }
+
     @media (min-width: 1024px) {
 
         swiper-container::part(button-prev),
         swiper-container::part(button-next) {
             width: 3.5rem;
             height: 3.5rem;
+        }
+
+        #homepage-banner::part(button-prev),
+        #homepage-banner::part(button-next) {
+            top: 50%;
+        }
+
+        #homepage-banner::part(pagination) {
+            bottom: 1.5rem;
         }
     }
 
