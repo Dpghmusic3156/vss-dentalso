@@ -46,7 +46,7 @@ if (swiperEl) {
 import Swiper from 'swiper/bundle';
 new Swiper("#labs-logo", {
     slidesPerView: 3,
-    spaceBetween: 30,
+    spaceBetween: 20,
     loop: true,
     autoplay: {
         delay: 2500,
@@ -54,22 +54,19 @@ new Swiper("#labs-logo", {
     },
     pagination: false,
     navigation: false,
-    enabled: false,
+    enabled: true,
     breakpoints: {
         640: {
             slidesPerView: 4,
             spaceBetween: 20,
-            enabled: false,
         },
         768: {
             slidesPerView: 5,
             spaceBetween: 40,
-            enabled: true,
         },
         1024: {
             slidesPerView: 6,
             spaceBetween: 50,
-            enabled: true,
         },
     },
 });
