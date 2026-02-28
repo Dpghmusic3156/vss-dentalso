@@ -146,7 +146,7 @@
                     </a>
                 </div>
                 <!-- Featured Image -->
-                <div class="px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="-mt-4 lg:mt-0 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
@@ -179,7 +179,7 @@
                     </a>
                 </div>
                 <!-- Featured Image -->
-                <div class="py-2 px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="-mt-4 lg:mt-0 py-2 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
