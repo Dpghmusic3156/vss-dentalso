@@ -423,7 +423,7 @@
                     <span class="material-symbols-outlined text-[14px] mr-2">smartphone</span>
                     DentalSO Mobile App
                 </div>
-                <h2 class="text-2xl lg:text-4xl font-medium text-gray-900 mb-4 leading-tight">
+                <h2 class="text-3xl lg:text-4xl font-normal text-gray-900 mb-4 leading-tight">
                     Trợ lý đắc lực cho <br><span class="text-primary-600">Kỹ thuật viên</span>
                 </h2>
                 <p class="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
