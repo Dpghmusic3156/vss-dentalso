@@ -121,7 +121,7 @@
             <!-- Lab Solution Card -->
             <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="100">
                 <div class="absolute top-0 left-0 w-full h-1 bg-primary-500"></div>
-                <div class="p-6 lg:p-8 pb-4 flex-grow relative z-10 flex flex-col">
+                <div class="p-6 lg:p-8 pb-0 lg:pb-4 flex-grow relative z-10 flex flex-col">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-12 h-12 rounded-xl bg-[#f0fdf4] flex items-center justify-center text-primary-500 transition-transform duration-500 rounded-tl-2xl rounded-br-2xl shrink-0">
                             <span class="material-symbols-outlined text-2xl">precision_manufacturing</span>
@@ -146,7 +146,7 @@
                     </a>
                 </div>
                 <!-- Featured Image -->
-                <div class="py-2 px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="px-6 lg:px-8 mt-auto mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
@@ -154,7 +154,7 @@
             <!-- Clinic Solution Card -->
             <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                 <div class="absolute top-0 left-0 w-full h-1 bg-[#0284c7]"></div>
-                <div class="p-6 lg:p-8 pb-4 flex-grow relative z-10 flex flex-col">
+                <div class="p-6 lg:p-8 pb-0 lg:pb-4 flex-grow relative z-10 flex flex-col">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-12 h-12 rounded-xl bg-[#f0f9ff] flex items-center justify-center text-[#0284c7] transition-transform duration-500 rounded-tl-2xl rounded-br-2xl shrink-0">
                             <span class="material-symbols-outlined text-2xl">clinical_notes</span>
@@ -570,8 +570,8 @@
 
     #homepage-banner::part(button-prev),
     #homepage-banner::part(button-next) {
-        width: 3rem;
-        height: 3rem;
+        width: 0rem;
+        height: 0rem;
         top: 37%;
     }
 
