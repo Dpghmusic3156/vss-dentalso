@@ -391,10 +391,10 @@
     </style>
 
     <div class="container">
-        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             <!-- Left: Phone Slider -->
-            <div class="relative w-full max-w-md mx-auto lg:mx-0 order-1" data-aos="fade-right">
+            <div class="relative w-full max-w-md mx-auto lg:mx-0 order-2 lg:order-1" data-aos="fade-right">
                 <swiper-container id="app-slider" class="w-full" loop="true" autoplay-delay="4000" navigation="true" pagination="true" pagination-clickable="true">
                     <!-- Slide 1 -->
                     <swiper-slide class="flex items-center justify-center py-6 px-6">
@@ -417,8 +417,8 @@
                 </swiper-container>
             </div>
 
-            <!-- Right: Text + Download -->
-            <div class="order-2 text-center lg:text-left" data-aos="fade-left">
+            <!-- Right: Text + Features + Download -->
+            <div class="order-1 lg:order-2 text-center lg:text-left" data-aos="fade-left">
                 <div class="inline-flex items-center px-4 py-1.5 mb-5 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[12px] tracking-wide border border-[#e0f2fe] uppercase">
                     <span class="material-symbols-outlined text-[14px] mr-2">smartphone</span>
                     DentalSO Mobile App
@@ -460,8 +460,10 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Download buttons -->
+            <!-- Download buttons - separate block for mobile ordering -->
+            <div class="order-3 lg:order-2 text-center lg:text-left lg:col-start-2">
                 <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
                     <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
                         <i class="fa-brands fa-apple text-2xl group-hover:scale-110 transition-transform"></i>
@@ -568,9 +570,9 @@
 
     #homepage-banner::part(button-prev),
     #homepage-banner::part(button-next) {
-        width: 2rem;
-        height: 2rem;
-        top: 30%;
+        width: 3rem;
+        height: 3rem;
+        top: 37%;
     }
 
     #homepage-banner::part(pagination) {
