@@ -10,19 +10,19 @@
             <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-r from-black/80 via-black/50 to-transparent"></div>
             <div class="container relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center justify-center h-full pt-10 pb-16 lg:py-0 lg:pt-16">
                 <div class="text-center lg:text-left text-white space-y-4 lg:space-y-6 lg:pl-4 order-2 lg:order-1" data-aos="fade-up">
-                    <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
+                    <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary2-500/20 text-primary2-300 border border-primary2-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
                         Giải pháp quản lý Labo chuyên nghiệp
                     </span>
-                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-tight">
-                        <span class="text-primary-400">{{ get_theme_mod('trang_chu.banner.title1') }}</span>
-                        <br class="hidden sm:block"> Ngành Nha
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-[1.3] lg:leading-[1.4]">
+                        <span class="text-primary2-400"> {{ get_theme_mod('trang_chu.banner.title1') }}</span>
+                        <br class="hidden sm:block"> Dental Lab Online
                     </h1>
                     <p class="text-base lg:text-xl text-gray-200 lg:max-w-lg leading-relaxed px-4 lg:px-0">
                         {{ get_theme_mod('trang_chu.banner.content1') }}
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-4 pt-4 px-4 lg:px-0">
                         <a href="{{ get_site_url() }}/yeu-cau-tu-van"
-                            class="flex items-center justify-center h-12 lg:h-14 px-6 lg:px-8 rounded-full bg-primary-500 text-white font-normal shadow-lg shadow-primary-500/30 hover:bg-primary-600 transition-all duration-300 transform hover:-translate-y-1">
+                            class="flex items-center justify-center h-12 lg:h-14 px-6 lg:px-8 rounded-full bg-primary2-500 text-white font-normal shadow-lg shadow-primary2-500/30 hover:bg-primary2-600 transition-all duration-300 transform hover:-translate-y-1">
                             <span class="material-symbols-outlined mr-2">calendar_month</span>
                             Đăng ký Demo
                         </a>
@@ -50,7 +50,7 @@
                     <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary2-500/20 text-primary2-300 border border-primary2-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
                         Kết nối Nha khoa - Labo
                     </span>
-                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-tight">
+                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-[1.3] lg:leading-[1.4]">
                         <span class="text-primary2-400">{{ get_theme_mod('trang_chu.banner.title2') }}</span>
                         <br class="hidden sm:block"> Liền mạch
                     </h1>
@@ -70,11 +70,15 @@
 </section>
 
 <!-- Social Proof Strip -->
-<section class="bg-white py-10 border-b border-gray-100">
+<section class="bg-gradient-to-b from-white to-gray-50/50 py-16 lg:py-24 border-b border-gray-100">
     <div class="container">
-        <p class="text-center text-gray-500 text-sm  font-normal  uppercase tracking-widest mb-8">
-            Được tin dùng bởi hơn <span class="text-primary-600  font-normal  text-lg">300+</span> Labo & Nha khoa hàng đầu
-        </p>
+        <div class="flex items-center justify-center gap-6 mb-12" data-aos="fade-up">
+            <div class="hidden md:block w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-300"></div>
+            <p class="text-center text-[#64748b] text-[15px] md:text-[17px] font-semibold uppercase tracking-[0.2em] m-0">
+                Được tin dùng bởi hơn <span class="text-primary-600 font-bold text-[18px] md:text-[20px] mx-1">300+</span> Labo & Nha khoa
+            </p>
+            <div class="hidden md:block w-16 h-[1px] bg-gradient-to-l from-transparent to-gray-300"></div>
+        </div>
         <div id="labs-logo" class="swiper swiper-initialized overflow-hidden relative" data-aos="fade-in">
             <div class="swiper-wrapper flex items-center">
                 <?php
@@ -143,7 +147,7 @@
                 </div>
                 <!-- Featured Image -->
                 <div class="py-2 px-6 lg:px-8 mt-auto bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-32 lg:h-40 w-auto object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
 
@@ -176,7 +180,7 @@
                 </div>
                 <!-- Featured Image -->
                 <div class="py-2 px-6 lg:px-8 mt-auto bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" class="h-32 lg:h-40 w-auto object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
         </div>
@@ -267,42 +271,26 @@
     </div>
 </section>
 
-<!-- Feature: Warranty & App -->
+<!-- Feature: Warranty Lookup -->
 <section class="py-24 bg-primary3-50 overflow-hidden">
     <div class="container">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 space-y-8" data-aos="fade-right">
-                <h2 class="text-3xl lg:text-4xl  font-normal  text-gray-900">
-                    Quản lý mọi lúc, mọi nơi <br> với <span class="text-primary-600">DentalSO App</span>
+                <h2 class="text-3xl lg:text-4xl font-normal text-gray-900">
+                    Tra cứu bảo hành dễ dàng <br> với <span class="text-primary-600">Mã QR Code</span>
                 </h2>
                 <div class="space-y-6 text-lg text-gray-600">
-                    <p>Dành cho Kỹ thuật viên & Quản lý. Theo dõi tiến độ, quét mã QR bảo hành và nhận thông báo tức thì ngay trên điện thoại.</p>
+                    <p>Khách hàng có thể dễ dàng kiểm tra thông tin xuất xứ, thời gian bảo hành và chi tiết phục hình chỉ bằng một thao tác quét mã.</p>
                     <ul class="space-y-4">
                         <li class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                             <span class="material-symbols-outlined text-primary-500 mr-4">qr_code_scanner</span>
-                            <span class="font-medium text-gray-800">Tra cứu bảo hành bằng QR Code</span>
+                            <span class="font-medium text-gray-800">Tra cứu nhanh chóng qua Zalo/Camera</span>
                         </li>
                         <li class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <span class="material-symbols-outlined text-primary-500 mr-4">notifications_active</span>
-                            <span class="font-medium text-gray-800">Nhận thông báo đơn hàng mới/hoàn thành</span>
+                            <span class="material-symbols-outlined text-primary-500 mr-4">verified_user</span>
+                            <span class="font-medium text-gray-800">Minh bạch nguồn gốc vật liệu</span>
                         </li>
                     </ul>
-                </div>
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
-                        <i class="fa-brands fa-apple text-3xl group-hover:scale-110 transition-transform"></i>
-                        <div class="text-left">
-                            <div class="text-[10px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
-                            <div class="text-lg  font-normal  leading-none">App Store</div>
-                        </div>
-                    </a>
-                    <a href="https://play.google.com/store/apps/details?id=com.dentalso" target="_blank" class="flex items-center justify-center gap-3 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
-                        <i class="fa-brands fa-google-play text-2xl group-hover:scale-110 transition-transform"></i>
-                        <div class="text-left">
-                            <div class="text-[10px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
-                            <div class="text-lg  font-normal  leading-none">Google Play</div>
-                        </div>
-                    </a>
                 </div>
             </div>
             <div class="order-1 lg:order-2 flex justify-center" data-aos="fade-left">
@@ -311,6 +299,166 @@
                     <img src="{{ get_site_url() }}/wp-content/uploads/2022/06/laptop-and-phone.png" class="relative z-10 w-full max-w-lg object-contain drop-shadow-2xl">
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature: Technician App -->
+<section class="py-16 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+    <style>
+        /* Phone frame styling */
+        .phone-frame {
+            background: #0f172a;
+            border-radius: 2.5rem;
+            padding: 8px;
+            box-shadow: 0 25px 60px rgba(0,0,0,0.18), inset 0 0 0 2px rgba(255,255,255,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        .phone-frame .phone-screen {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2rem;
+            pointer-events: none;
+        }
+        @media (min-width: 1024px) {
+            .phone-frame { border-radius: 3rem; padding: 10px; }
+            .phone-frame .phone-screen { border-radius: 2.5rem; }
+        }
+
+        /* App slider scoped styles */
+        #app-slider { padding-bottom: 3rem; }
+        #app-slider::part(button-prev),
+        #app-slider::part(button-next) {
+            color: #334155;
+            background: rgba(255,255,255,0.95);
+            width: 2.5rem;
+            height: 2.5rem;
+            border-radius: 50%;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.12);
+            backdrop-filter: blur(8px);
+            border: 1px solid rgba(0,0,0,0.06);
+            transition: all 0.3s ease;
+            top: 45%;
+        }
+        #app-slider::part(button-prev):hover,
+        #app-slider::part(button-next):hover {
+            background: #0f172a;
+            color: #fff;
+            transform: scale(1.08);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        @media (min-width: 1024px) {
+            #app-slider::part(button-prev),
+            #app-slider::part(button-next) { width: 3rem; height: 3rem; }
+        }
+        #app-slider::part(pagination) { bottom: 0; }
+        #app-slider::part(bullet) {
+            background: #e2e8f0;
+            opacity: 1;
+            width: 8px;
+            height: 8px;
+            transition: all 0.3s ease;
+            margin: 0 4px !important;
+        }
+        #app-slider::part(bullet-active) {
+            background: #0284c7;
+            width: 24px;
+            border-radius: 4px;
+        }
+    </style>
+
+    <div class="container">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            
+            <!-- Left: Phone Slider -->
+            <div class="relative w-full max-w-md mx-auto lg:mx-0 order-1" data-aos="fade-right">
+                <swiper-container id="app-slider" class="w-full" loop="true" autoplay-delay="4000" navigation="true" pagination="true" pagination-clickable="true">
+                    <!-- Slide 1 -->
+                    <swiper-slide class="flex items-center justify-center py-6 px-6">
+                        <div class="phone-frame mx-auto" style="max-width: 260px;">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-5.png" alt="Quản lý sản xuất" class="phone-screen">
+                        </div>
+                    </swiper-slide>
+                    <!-- Slide 2 -->
+                    <swiper-slide class="flex items-center justify-center py-6 px-6">
+                        <div class="phone-frame mx-auto" style="max-width: 260px;">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-4.png" alt="Danh sách đơn hàng" class="phone-screen">
+                        </div>
+                    </swiper-slide>
+                    <!-- Slide 3 -->
+                    <swiper-slide class="flex items-center justify-center py-6 px-6">
+                        <div class="phone-frame mx-auto" style="max-width: 260px;">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-1.png" alt="Tài khoản" class="phone-screen">
+                        </div>
+                    </swiper-slide>
+                </swiper-container>
+            </div>
+
+            <!-- Right: Text + Download -->
+            <div class="order-2 text-center lg:text-left" data-aos="fade-left">
+                <div class="inline-flex items-center px-4 py-1.5 mb-5 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[12px] tracking-wide border border-[#e0f2fe] uppercase">
+                    <span class="material-symbols-outlined text-[14px] mr-2">smartphone</span>
+                    DentalSO Mobile App
+                </div>
+                <h2 class="text-2xl lg:text-4xl font-medium text-gray-900 mb-4 leading-tight">
+                    Trợ lý đắc lực cho <br><span class="text-primary-600">Kỹ thuật viên</span>
+                </h2>
+                <p class="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                    Theo dõi tiến độ sản xuất, quét mã nhận việc và nhận thông báo tức thì ngay trên điện thoại di động mọi lúc, mọi nơi.
+                </p>
+
+                <!-- Feature highlights -->
+                <div class="space-y-4 mb-10">
+                    <div class="flex items-start gap-3 text-left">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center mt-0.5">
+                            <span class="material-symbols-outlined text-primary-600 text-[18px]">qr_code_scanner</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">Quét mã nhận việc nhanh chóng</p>
+                            <p class="text-sm text-gray-500">Scan QR để nhận đơn hàng chỉ trong 1 giây</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 text-left">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center mt-0.5">
+                            <span class="material-symbols-outlined text-primary-600 text-[18px]">notifications_active</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">Thông báo real-time</p>
+                            <p class="text-sm text-gray-500">Nhận thông báo đơn hàng mới, cập nhật tiến độ ngay lập tức</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-3 text-left">
+                        <div class="flex-shrink-0 w-8 h-8 rounded-lg bg-primary-50 flex items-center justify-center mt-0.5">
+                            <span class="material-symbols-outlined text-primary-600 text-[18px]">trending_up</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-medium text-gray-900">Theo dõi tiến độ sản xuất</p>
+                            <p class="text-sm text-gray-500">Nắm bắt tình trạng từng công đoạn mọi lúc mọi nơi</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Download buttons -->
+                <div class="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
+                    <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
+                        <i class="fa-brands fa-apple text-2xl group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left">
+                            <div class="text-[9px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
+                            <div class="text-base font-medium leading-none">App Store</div>
+                        </div>
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.dentalso" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
+                        <i class="fa-brands fa-google-play text-xl group-hover:scale-110 transition-transform"></i>
+                        <div class="text-left">
+                            <div class="text-[9px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
+                            <div class="text-base font-medium leading-none">Google Play</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -336,7 +484,7 @@
                         Đăng ký Demo Miễn phí
                     </a>
                     <a href="tel:0909090909" class="w-full sm:w-auto px-10 py-4 rounded-full bg-transparent border-2 border-white/30 text-white  font-normal  text-lg hover:bg-white/10 transition-all">
-                        Liên hệ: 0942 662 988
+                        Liên hệ: 0947 476 000
                     </a>
                 </div>
             </div>
@@ -364,24 +512,39 @@
     swiper-container::part(button-prev),
     swiper-container::part(button-next) {
         color: white;
-        background: rgba(0, 0, 0, 0.3);
-        width: 2rem;
-        height: 2rem;
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        width: 3rem;
+        height: 3rem;
         border-radius: 50%;
-        backdrop-filter: blur(4px);
+        backdrop-filter: blur(8px);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    swiper-container::part(button-prev):hover,
+    swiper-container::part(button-next):hover {
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.4);
+        transform: scale(1.05);
+        color: #fff;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     }
 
     @media (min-width: 1024px) {
 
         swiper-container::part(button-prev),
         swiper-container::part(button-next) {
-            width: 3rem;
-            height: 3rem;
+            width: 3.5rem;
+            height: 3.5rem;
         }
     }
 
     swiper-container::part(bullet-active) {
-        background: #2E8543;
+        background: #ffd146;
     }
 </style>
 
