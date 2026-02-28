@@ -286,8 +286,10 @@
                     <p>Khách hàng có thể dễ dàng kiểm tra thông tin xuất xứ, thời gian bảo hành và chi tiết phục hình chỉ bằng một thao tác quét mã.</p>
                     <ul class="space-y-4">
                         <li class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
-                            <span class="material-symbols-outlined text-primary-500 mr-4">qr_code_scanner</span>
-                            <span class="font-medium text-gray-800">Tra cứu nhanh chóng qua Zalo/Camera</span>
+                            <a href="{{ get_site_url() }}/quan-ly-bao-hanh/" class="flex items-center w-full">
+                                <span class="material-symbols-outlined text-primary-500 mr-4">qr_code_scanner</span>
+                                <span class="font-medium text-gray-800">Tra cứu nhanh chóng qua Zalo/Camera</span>
+                            </a>
                         </li>
                         <li class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
                             <span class="material-symbols-outlined text-primary-500 mr-4">verified_user</span>
