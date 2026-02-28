@@ -426,7 +426,7 @@
                 <h2 class="text-3xl lg:text-4xl font-normal text-gray-900 mb-4 leading-tight">
                     Trợ lý đắc lực cho <br><span class="text-primary-600">Kỹ thuật viên</span>
                 </h2>
-                <p class="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                     Theo dõi tiến độ sản xuất, quét mã nhận việc và nhận thông báo tức thì ngay trên điện thoại di động mọi lúc, mọi nơi.
                 </p>
 
@@ -506,7 +506,7 @@
                         class="w-full sm:w-auto px-10 py-4 rounded-full bg-white text-primary-700  font-normal  text-lg shadow-xl hover:bg-gray-50 transition-all transform hover:-translate-y-1">
                         Đăng ký Demo Miễn phí
                     </a>
-                    <a href="tel:0909090909" class="w-full sm:w-auto px-10 py-4 rounded-full bg-transparent border-2 border-white/30 text-white  font-normal  text-lg hover:bg-white/10 transition-all">
+                    <a href="tel:0947476000" class="w-full sm:w-auto px-10 py-4 rounded-full bg-transparent border-2 border-white/30 text-white  font-normal  text-lg hover:bg-white/10 transition-all">
                         Liên hệ: 0947 476 000
                     </a>
                 </div>
