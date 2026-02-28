@@ -47,11 +47,11 @@
                     <img src="{{ get_theme_mod('trang_chu.banner.hinh_2') }}" class="max-h-[35vh] lg:max-h-[500px] object-contain drop-shadow-2xl animate-float">
                 </div>
                 <div class="text-center lg:text-right text-white space-y-4 lg:space-y-6 lg:pr-4 order-2 lg:flex lg:flex-col lg:items-end" data-aos="fade-up">
-                    <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary2-500/20 text-primary2-300 border border-primary2-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
+                    <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
                         Kết nối Nha khoa - Labo
                     </span>
                     <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-[1.3] lg:leading-[1.4]">
-                        <span class="text-primary2-400">{{ get_theme_mod('trang_chu.banner.title2') }}</span>
+                        <span class="text-primary-400">{{ get_theme_mod('trang_chu.banner.title2') }}</span>
                         <br class="hidden sm:block"> Liền mạch
                     </h1>
                     <p class="text-base lg:text-xl text-gray-200 lg:max-w-lg leading-relaxed px-4 lg:px-0">
@@ -59,7 +59,7 @@
                     </p>
                     <div class="flex flex-col sm:flex-row flex-wrap justify-center lg:justify-end gap-4 pt-4 px-4 lg:px-0">
                         <a href="https://dental.vn/" target="_blank"
-                            class="flex items-center justify-center h-12 lg:h-14 px-6 lg:px-8 rounded-full bg-primary2-500 text-white font-normal shadow-lg shadow-primary2-500/30 hover:bg-primary2-600 transition-all duration-300 transform hover:-translate-y-1">
+                            class="flex items-center justify-center h-12 lg:h-14 px-6 lg:px-8 rounded-full bg-primary-500 text-white font-normal shadow-lg shadow-primary-500/30 hover:bg-primary-600 transition-all duration-300 transform hover:-translate-y-1">
                             Khám phá ngay
                         </a>
                     </div>
@@ -74,8 +74,8 @@
     <div class="container">
         <div class="flex items-center justify-center gap-6 mb-12" data-aos="fade-up">
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-300"></div>
-            <p class="text-center text-[#64748b] text-[15px] md:text-[17px] font-semibold uppercase tracking-[0.2em] m-0">
-                Được tin dùng bởi hơn <span class="text-primary3 font-bold text-[18px] md:text-[20px] mx-1">300+</span> Labo & Nha khoa
+            <p class="text-center text-[#1e293b] text-[16px] md:text-[19px] font-bold uppercase tracking-[0.15em] m-0">
+                Được tin dùng bởi hơn <span class="inline-flex items-center mx-1.5 px-3 py-0.5 rounded-full bg-gradient-to-r from-primary3-300 to-primary3-500 text-[#1e293b] font-extrabold text-[20px] md:text-[24px] shadow-sm">300+</span> Labo & Nha khoa
             </p>
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-l from-transparent to-gray-300"></div>
         </div>
