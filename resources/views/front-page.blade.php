@@ -154,7 +154,7 @@
             <!-- Clinic Solution Card -->
             <div class="group relative bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgb(0,0,0,0.04)] hover:shadow-[0_10px_30px_rgb(0,0,0,0.08)] transition-all duration-500 border border-gray-100 flex flex-col h-full" data-aos="fade-up" data-aos-delay="200">
                 <div class="absolute top-0 left-0 w-full h-1 bg-[#0284c7]"></div>
-                <div class="pt-6 lg:p-8 pb-0 lg:pb-4 flex-grow relative z-10 flex flex-col">
+                <div class="p-6 lg:p-8 pb-0 lg:pb-4 flex-grow relative z-10 flex flex-col">
                     <div class="flex items-center gap-4 mb-4">
                         <div class="w-12 h-12 rounded-xl bg-[#f0f9ff] flex items-center justify-center text-[#0284c7] transition-transform duration-500 rounded-tl-2xl rounded-br-2xl shrink-0">
                             <span class="material-symbols-outlined text-2xl">clinical_notes</span>
