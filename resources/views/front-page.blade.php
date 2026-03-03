@@ -348,6 +348,16 @@
 
         /* ========================================= */
 
+        /* ===== Mobile Horizontal Padding ===== */
+        @media (max-width: 1023px) {
+            section .container {
+                padding-left: 1.25rem;
+                padding-right: 1.25rem;
+            }
+        }
+
+        /* ===================================== */
+
         /* Phone frame styling */
         .phone-frame {
             background: #0f172a;
