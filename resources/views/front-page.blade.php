@@ -128,25 +128,27 @@
                         </div>
                         <h3 class="text-2xl font-medium text-[#1e293b] leading-normal group-hover:text-primary-600 transition-colors">Quản lý Dental Lab</h3>
                     </div>
-                    <p class="text-[#64748b] text-base lg:text-lg mb-4 leading-loose flex-grow">
+                    <p class="text-[#64748b] text-base lg:text-lg mb-4 leading-loose">
                         Số hoá toàn diện quy trình sản xuất, quản lý nhân sự, lương thưởng. Giảm thiểu sai sót thủ công.
                     </p>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center text-[#475569] text-base lg:text-lg">
-                            <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
-                            <span>Tối ưu quy trình & năng suất</span>
-                        </li>
-                        <li class="flex items-center text-[#475569] text-base lg:text-lg">
-                            <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
-                            <span>Kiểm soát chi phí & vật liệu</span>
-                        </li>
-                    </ul>
-                    <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="inline-flex items-center text-primary-600 text-base font-medium group-hover:translate-x-1 transition-transform duration-300">
-                        Khám phá tính năng <span class="material-symbols-outlined ml-1 text-base">chevron_right</span>
-                    </a>
+                    <div class="mt-auto">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center text-[#475569] text-base lg:text-lg">
+                                <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
+                                <span>Tối ưu quy trình & năng suất</span>
+                            </li>
+                            <li class="flex items-center text-[#475569] text-base lg:text-lg">
+                                <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
+                                <span>Kiểm soát chi phí & vật liệu</span>
+                            </li>
+                        </ul>
+                        <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="inline-flex items-center text-primary-600 text-base font-medium group-hover:translate-x-1 transition-transform duration-300">
+                            Khám phá tính năng <span class="material-symbols-outlined ml-1 text-base">chevron_right</span>
+                        </a>
+                    </div>
                 </div>
                 <!-- Featured Image -->
-                <div class="-mt-8 lg:mt-0 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="px-6 lg:px-8 pb-6 lg:pb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="Giao diện phần mềm quản lý Dental Lab DentalSO" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
@@ -161,25 +163,27 @@
                         </div>
                         <h3 class="text-2xl font-medium text-[#1e293b] leading-normal group-hover:text-[#0284c7] transition-colors">Kết nối Nha Khoa</h3>
                     </div>
-                    <p class="text-[#64748b] text-base lg:text-lg mb-4 leading-loose flex-grow">
+                    <p class="text-[#64748b] text-base lg:text-lg mb-4 leading-loose">
                         Cổng giao tiếp giữa Phòng khám và Labo. Đặt hàng qua app, theo dõi tiến độ đơn hàng mọi lúc.
                     </p>
-                    <ul class="space-y-2 mb-4">
-                        <li class="flex items-center text-[#475569] text-base lg:text-lg">
-                            <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
-                            <span>Đặt hàng & Gửi file online</span>
-                        </li>
-                        <li class="flex items-center text-[#475569] text-base lg:text-lg">
-                            <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
-                            <span>Tra cứu bảo hành điện tử</span>
-                        </li>
-                    </ul>
-                    <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="inline-flex items-center text-[#0284c7] text-base font-medium group-hover:translate-x-1 transition-transform duration-300">
-                        Tìm hiểu thêm <span class="material-symbols-outlined ml-1 text-base">chevron_right</span>
-                    </a>
+                    <div class="mt-auto">
+                        <ul class="space-y-2 mb-4">
+                            <li class="flex items-center text-[#475569] text-base lg:text-lg">
+                                <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
+                                <span>Đặt hàng & Gửi file online</span>
+                            </li>
+                            <li class="flex items-center text-[#475569] text-base lg:text-lg">
+                                <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
+                                <span>Tra cứu bảo hành điện tử</span>
+                            </li>
+                        </ul>
+                        <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="inline-flex items-center text-[#0284c7] text-base font-medium group-hover:translate-x-1 transition-transform duration-300">
+                            Tìm hiểu thêm <span class="material-symbols-outlined ml-1 text-base">chevron_right</span>
+                        </a>
+                    </div>
                 </div>
                 <!-- Featured Image -->
-                <div class="-mt-8 lg:mt-0 py-2 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
+                <div class="px-6 lg:px-8 pb-6 lg:pb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" alt="Ứng dụng kết nối Nha khoa với Dental Lab trên DentalSO" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
