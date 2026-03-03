@@ -311,6 +311,43 @@
 <!-- Feature: Technician App -->
 <section class="py-16 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
     <style>
+        /* ===== Typography Line-Height System ===== */
+        .banner h1,
+        .banner h2 {
+            line-height: 1.375;
+        }
+
+        section h2 {
+            line-height: 1.5;
+        }
+
+        section h3 {
+            line-height: 1.5;
+        }
+
+        section h4 {
+            line-height: 1.625;
+        }
+
+        section p,
+        section li {
+            line-height: 1.9;
+        }
+
+        section .leading-loose {
+            line-height: 1.9 !important;
+        }
+
+        section .leading-normal {
+            line-height: 1.5 !important;
+        }
+
+        section .leading-snug {
+            line-height: 1.375 !important;
+        }
+
+        /* ========================================= */
+
         /* Phone frame styling */
         .phone-frame {
             background: #0f172a;
