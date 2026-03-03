@@ -347,28 +347,28 @@
 
         #app-slider::part(button-prev),
         #app-slider::part(button-next) {
-            color: #94a3b8;
-            background: none;
-            border: none;
-            box-shadow: none;
-            width: 3rem;
-            height: 3rem;
-            transition: all 0.3s ease;
-            top: 37%;
-        }
-
-        #app-slider::part(button-prev):hover,
-        #app-slider::part(button-next):hover {
-            color: #0f172a;
-            transform: scale(1.15);
+            display: none;
         }
 
         @media (min-width: 1024px) {
 
             #app-slider::part(button-prev),
             #app-slider::part(button-next) {
+                display: flex;
+                color: #94a3b8;
+                background: none;
+                border: none;
+                box-shadow: none;
                 width: 2.5rem;
                 height: 2.5rem;
+                transition: all 0.3s ease;
+                top: 37%;
+            }
+
+            #app-slider::part(button-prev):hover,
+            #app-slider::part(button-next):hover {
+                color: #0f172a;
+                transform: scale(1.15);
             }
         }
 
