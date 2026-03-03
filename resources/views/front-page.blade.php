@@ -95,9 +95,17 @@
                             $link = get_post_custom_values('link');
                             $href = ($link && isset($link[0])) ? $link[0] : '#';
                             ?>
-                            <a href="{{ $href }}" target="_blank" class="block h-12 w-auto select-none" draggable="false">
-                                <?php the_post_thumbnail('medium', ['class' => 'h-full w-auto object-contain select-none', 'draggable' => 'false']); ?>
-                            </a>
+                            <div class="pointer-events-auto" style="touch-action: pan-y;">
+                                <a href="{{ $href }}" target="_blank" class="block h-12 w-auto select-none pointer-events-none" draggable="false">
+                                    <?php
+                                    $img_class = 'h-full w-auto object-contain select-none';
+                                    if ($href !== '#') {
+                                        $img_class .= ' pointer-events-auto cursor-pointer';
+                                    }
+                                    the_post_thumbnail('medium', ['class' => $img_class, 'draggable' => 'false']);
+                                    ?>
+                                </a>
+                            </div>
                         </div>
                 <?php
                     endwhile;
