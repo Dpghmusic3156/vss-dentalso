@@ -572,8 +572,7 @@
 
     #homepage-banner::part(button-prev),
     #homepage-banner::part(button-next) {
-        width: 0rem;
-        height: 0rem;
+        display: none;
         top: 37%;
     }
 
@@ -597,7 +596,10 @@
 
         #homepage-banner::part(button-prev),
         #homepage-banner::part(button-next) {
+            display: flex;
             top: 50%;
+            width: 4rem;
+            height: 4rem;
         }
 
         #homepage-banner::part(pagination) {
