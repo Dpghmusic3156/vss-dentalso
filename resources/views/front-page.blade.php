@@ -113,7 +113,7 @@
 <section id="solutions" class="py-20 lg:py-24 bg-gray-50/50">
     <div class="container max-w-6xl">
         <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
-            <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-2">Giải Pháp Chuyên Biệt <br class="lg:hidden">Cho <br class="hidden lg:block">Ngành Nha</h2>
+            <h2 class="text-2xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-2">Giải Pháp Chuyên Biệt <br class="lg:hidden">Cho <br class="hidden lg:block">Ngành Nha</h2>
             <p class="text-[#64748b] text-sm lg:text-base leading-loose">Hệ sinh thái DentalSO kết nối liền mạch quy trình vận hành, giúp tối ưu hóa hiệu suất.</p>
         </div>
 
@@ -201,8 +201,8 @@
                         <span class="material-symbols-outlined text-[16px] mr-2">hub</span>
                         Giao tiếp thông minh
                     </div>
-                    <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-4">
-                        Xóa bỏ khoảng cách <br> <span class="text-primary-600">Labo & Nha Khoa</span>
+                    <h2 class="text-2xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-4">
+                        Xóa bỏ khoảng cách <br class="hidden lg:block"> <span class="text-primary-600">Labo & Nha Khoa</span>
                     </h2>
                     <p class="text-base lg:text-lg text-[#64748b] leading-loose">
                         Nền tảng cung cấp môi trường giao tiếp tập trung. Mọi trao đổi, hình ảnh lâm sàng, và yêu cầu kỹ thuật được lưu trữ trọn đời, gắn liền với từng đơn hàng cụ thể.
@@ -244,7 +244,7 @@
 
     <div class="container relative">
         <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl lg:text-4xl font-normal leading-normal mb-4">An toàn dữ liệu tuyệt đối</h2>
+            <h2 class="text-2xl lg:text-4xl font-normal leading-normal mb-4">An toàn dữ liệu tuyệt đối</h2>
             <p class="text-gray-400 text-base lg:text-lg leading-loose">Chúng tôi hiểu rằng dữ liệu bệnh nhân và bí mật kinh doanh là tài sản quý giá nhất của bạn.</p>
         </div>
 
@@ -279,8 +279,8 @@
     <div class="container">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 space-y-8" data-aos="fade-right">
-                <h2 class="text-3xl lg:text-4xl font-normal leading-normal text-gray-900">
-                    Tra cứu bảo hành dễ dàng <br> với <span class="text-primary-600">Mã QR Code</span>
+                <h2 class="text-2xl lg:text-4xl font-normal leading-normal text-gray-900">
+                    Tra cứu bảo hành dễ dàng <br class="hidden lg:block"> với <span class="text-primary-600">Mã QR Code</span>
                 </h2>
                 <div class="space-y-6 text-base lg:text-lg text-gray-600 leading-loose">
                     <p>Khách hàng có thể dễ dàng kiểm tra thông tin xuất xứ, thời gian bảo hành và chi tiết phục hình chỉ bằng một thao tác quét mã.</p>
