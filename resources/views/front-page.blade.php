@@ -74,8 +74,8 @@
     <div class="container">
         <div class="flex items-center justify-center gap-6 mb-12" data-aos="fade-up">
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-r from-transparent to-gray-300"></div>
-            <p class="text-center text-[#1e293b] text-[16px] md:text-[19px] font-bold uppercase tracking-[0.15em] m-0">
-                Được tin dùng bởi hơn <span class="inline-flex items-center mx-1.5 px-3 py-0.5 rounded-full bg-gradient-to-r from-primary3-300 to-primary3-500 text-[#1e293b] font-extrabold text-[20px] md:text-[24px] shadow-sm">300+</span> Labo & Nha khoa
+            <p class="text-center text-[#1e293b] text-base md:text-lg font-bold uppercase tracking-[0.15em] m-0">
+                Được tin dùng bởi hơn <span class="inline-flex items-center mx-1.5 px-3 py-0.5 rounded-full bg-gradient-to-r from-primary3-300 to-primary3-500 text-[#1e293b] font-extrabold text-xl md:text-2xl shadow-sm">300+</span> Labo & Nha khoa
             </p>
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-l from-transparent to-gray-300"></div>
         </div>
@@ -113,8 +113,8 @@
 <section id="solutions" class="py-20 lg:py-24 bg-gray-50/50">
     <div class="container max-w-6xl">
         <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
-            <h2 class="text-2xl lg:text-3xl font-medium text-[#1e293b] mb-2">Giải Pháp Chuyên Biệt Cho Ngành Nha</h2>
-            <p class="text-[#64748b] text-[15px] leading-relaxed">Hệ sinh thái DentalSO kết nối liền mạch quy trình vận hành, giúp tối ưu hóa hiệu suất.</p>
+            <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] mb-2">Giải Pháp Chuyên Biệt Cho Ngành Nha</h2>
+            <p class="text-[#64748b] text-sm lg:text-base leading-relaxed">Hệ sinh thái DentalSO kết nối liền mạch quy trình vận hành, giúp tối ưu hóa hiệu suất.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-6 lg:gap-8">
@@ -128,21 +128,21 @@
                         </div>
                         <h3 class="text-xl font-medium text-[#1e293b] group-hover:text-primary-600 transition-colors">Quản lý Dental Lab</h3>
                     </div>
-                    <p class="text-[#64748b] text-[14px] mb-4 leading-relaxed flex-grow">
+                    <p class="text-[#64748b] text-sm lg:text-base mb-4 leading-relaxed flex-grow">
                         Số hoá toàn diện quy trình sản xuất, quản lý nhân sự, lương thưởng. Giảm thiểu sai sót thủ công.
                     </p>
                     <ul class="space-y-2 mb-4">
-                        <li class="flex items-center text-[#475569] text-[14px]">
+                        <li class="flex items-center text-[#475569] text-sm lg:text-base">
                             <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
                             <span>Tối ưu quy trình & năng suất</span>
                         </li>
-                        <li class="flex items-center text-[#475569] text-[14px]">
+                        <li class="flex items-center text-[#475569] text-sm lg:text-base">
                             <span class="material-symbols-outlined text-primary-500 mr-2 text-[18px]">check_circle</span>
                             <span>Kiểm soát chi phí & vật liệu</span>
                         </li>
                     </ul>
-                    <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="inline-flex items-center text-primary-600 text-[14px] font-medium group-hover:translate-x-1 transition-transform duration-300">
-                        Khám phá tính năng <span class="material-symbols-outlined ml-1 text-[14px]">chevron_right</span>
+                    <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="inline-flex items-center text-primary-600 text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+                        Khám phá tính năng <span class="material-symbols-outlined ml-1 text-sm">chevron_right</span>
                     </a>
                 </div>
                 <!-- Featured Image -->
@@ -161,21 +161,21 @@
                         </div>
                         <h3 class="text-xl font-medium text-[#1e293b] group-hover:text-[#0284c7] transition-colors">Kết nối Nha Khoa</h3>
                     </div>
-                    <p class="text-[#64748b] text-[14px] mb-4 leading-relaxed flex-grow">
+                    <p class="text-[#64748b] text-sm lg:text-base mb-4 leading-relaxed flex-grow">
                         Cổng giao tiếp giữa Phòng khám và Labo. Đặt hàng qua app, theo dõi tiến độ đơn hàng mọi lúc.
                     </p>
                     <ul class="space-y-2 mb-4">
-                        <li class="flex items-center text-[#475569] text-[14px]">
+                        <li class="flex items-center text-[#475569] text-sm lg:text-base">
                             <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
                             <span>Đặt hàng & Gửi file online</span>
                         </li>
-                        <li class="flex items-center text-[#475569] text-[14px]">
+                        <li class="flex items-center text-[#475569] text-sm lg:text-base">
                             <span class="material-symbols-outlined text-[#0284c7] mr-2 text-[18px]">check_circle</span>
                             <span>Tra cứu bảo hành điện tử</span>
                         </li>
                     </ul>
-                    <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="inline-flex items-center text-[#0284c7] text-[14px] font-medium group-hover:translate-x-1 transition-transform duration-300">
-                        Tìm hiểu thêm <span class="material-symbols-outlined ml-1 text-[14px]">chevron_right</span>
+                    <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="inline-flex items-center text-[#0284c7] text-sm font-medium group-hover:translate-x-1 transition-transform duration-300">
+                        Tìm hiểu thêm <span class="material-symbols-outlined ml-1 text-sm">chevron_right</span>
                     </a>
                 </div>
                 <!-- Featured Image -->
@@ -197,14 +197,14 @@
             </div>
             <div class="space-y-8 lg:pl-6 order-1 lg:order-2 flex flex-col" data-aos="fade-left">
                 <div>
-                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[13px] tracking-wide border border-[#e0f2fe] uppercase mb-4">
+                    <div class="inline-flex items-center px-4 py-2 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-xs lg:text-sm tracking-wide border border-[#e0f2fe] uppercase mb-4">
                         <span class="material-symbols-outlined text-[16px] mr-2">hub</span>
                         Giao tiếp thông minh
                     </div>
-                    <h2 class="text-3xl lg:text-[40px] font-medium text-[#1e293b] leading-tight mb-4">
+                    <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] leading-tight mb-4">
                         Xóa bỏ khoảng cách <br> <span class="text-primary-600">Labo & Nha Khoa</span>
                     </h2>
-                    <p class="text-[17px] text-[#64748b] leading-[1.8]">
+                    <p class="text-base lg:text-lg text-[#64748b] leading-relaxed">
                         Nền tảng cung cấp môi trường giao tiếp tập trung. Mọi trao đổi, hình ảnh lâm sàng, và yêu cầu kỹ thuật được lưu trữ trọn đời, gắn liền với từng đơn hàng cụ thể.
                     </p>
                 </div>
@@ -214,8 +214,8 @@
                             <span class="material-symbols-outlined text-2xl">forum</span>
                         </div>
                         <div class="ml-4">
-                            <h4 class="font-medium text-[#1e293b] text-[17px] mb-2">Chat Real-time</h4>
-                            <p class="text-[14px] text-[#64748b] leading-relaxed">Trao đổi trực tiếp trên đơn hàng, không lo trôi tin nhắn.</p>
+                            <h4 class="font-medium text-[#1e293b] text-base mb-2">Chat Real-time</h4>
+                            <p class="text-sm lg:text-base text-[#64748b] leading-relaxed">Trao đổi trực tiếp trên đơn hàng, không lo trôi tin nhắn.</p>
                         </div>
                     </div>
                     <div class="flex items-start bg-gray-50/50 p-6 rounded-2xl border border-gray-100 hover:bg-white hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
@@ -223,8 +223,8 @@
                             <span class="material-symbols-outlined text-2xl">photo_library</span>
                         </div>
                         <div class="ml-4">
-                            <h4 class="font-medium text-[#1e293b] text-[17px] mb-2">Lưu trữ Media</h4>
-                            <p class="text-[14px] text-[#64748b] leading-relaxed">Hình ảnh, file 3D thiết kế được lưu trữ độc lập an toàn.</p>
+                            <h4 class="font-medium text-[#1e293b] text-base mb-2">Lưu trữ Media</h4>
+                            <p class="text-sm lg:text-base text-[#64748b] leading-relaxed">Hình ảnh, file 3D thiết kế được lưu trữ độc lập an toàn.</p>
                         </div>
                     </div>
                 </div>
@@ -244,29 +244,29 @@
 
     <div class="container relative">
         <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
-            <h2 class="text-3xl lg:text-4xl  font-normal  mb-4">An toàn dữ liệu tuyệt đối</h2>
-            <p class="text-gray-400 text-lg">Chúng tôi hiểu rằng dữ liệu bệnh nhân và bí mật kinh doanh là tài sản quý giá nhất của bạn.</p>
+            <h2 class="text-3xl lg:text-4xl font-normal mb-4">An toàn dữ liệu tuyệt đối</h2>
+            <p class="text-gray-400 text-base lg:text-lg">Chúng tôi hiểu rằng dữ liệu bệnh nhân và bí mật kinh doanh là tài sản quý giá nhất của bạn.</p>
         </div>
 
         <div class="grid md:grid-cols-3 gap-8 text-center">
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="100">
                 <span class="material-symbols-outlined text-5xl text-primary-400 mb-6">lock</span>
-                <h3 class="text-xl  font-normal  mb-3">Mã hóa RSA & SSL</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <h3 class="text-xl font-normal mb-3">Mã hóa RSA & SSL</h3>
+                <p class="text-sm lg:text-base text-gray-400 leading-relaxed">
                     Toàn bộ dữ liệu truyền tải được mã hóa bằng giao thức SSL/TLS và chuẩn mã hóa RSA tiên tiến nhất.
                 </p>
             </div>
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="200">
                 <span class="material-symbols-outlined text-5xl text-primary2-400 mb-6">cloud_done</span>
-                <h3 class="text-xl  font-normal  mb-3">Sao lưu tự động</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <h3 class="text-xl font-normal mb-3">Sao lưu tự động</h3>
+                <p class="text-sm lg:text-base text-gray-400 leading-relaxed">
                     Hệ thống backup dữ liệu định kỳ hàng ngày, đảm bảo an toàn trước mọi sự cố kỹ thuật.
                 </p>
             </div>
             <div class="p-8 rounded-2xl bg-white/5 border border-white/10 hover:bg-white/10 transition-colors" data-aos="fade-up" data-aos-delay="300">
                 <span class="material-symbols-outlined text-5xl text-orange-400 mb-6">admin_panel_settings</span>
-                <h3 class="text-xl  font-normal  mb-3">Phân quyền chặt chẽ</h3>
-                <p class="text-gray-400 text-sm leading-relaxed">
+                <h3 class="text-xl font-normal mb-3">Phân quyền chặt chẽ</h3>
+                <p class="text-sm lg:text-base text-gray-400 leading-relaxed">
                     Kiểm soát quyền truy cập chi tiết đến từng nhân viên, bảo vệ bí mật kinh doanh của Labo.
                 </p>
             </div>
@@ -282,7 +282,7 @@
                 <h2 class="text-3xl lg:text-4xl font-normal text-gray-900">
                     Tra cứu bảo hành dễ dàng <br> với <span class="text-primary-600">Mã QR Code</span>
                 </h2>
-                <div class="space-y-6 text-lg text-gray-600">
+                <div class="space-y-6 text-base lg:text-lg text-gray-600">
                     <p>Khách hàng có thể dễ dàng kiểm tra thông tin xuất xứ, thời gian bảo hành và chi tiết phục hình chỉ bằng một thao tác quét mã.</p>
                     <ul class="space-y-4">
                         <li class="flex items-center bg-white p-4 rounded-xl shadow-sm border border-gray-100">
@@ -421,14 +421,14 @@
 
             <!-- Right: Text + Features + Download -->
             <div class="order-1 lg:order-2 text-center lg:text-left" data-aos="fade-left">
-                <div class="inline-flex items-center px-4 py-1.5 mb-5 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-[12px] tracking-wide border border-[#e0f2fe] uppercase">
+                <div class="inline-flex items-center px-4 py-1.5 mb-5 rounded-full bg-[#f0f9ff] text-[#0284c7] font-medium text-xs lg:text-sm tracking-wide border border-[#e0f2fe] uppercase">
                     <span class="material-symbols-outlined text-[14px] mr-2">smartphone</span>
                     DentalSO Mobile App
                 </div>
                 <h2 class="text-3xl lg:text-4xl font-normal text-gray-900 mb-4 leading-tight">
                     Trợ lý đắc lực cho <br><span class="text-primary-600">Kỹ thuật viên</span>
                 </h2>
-                <p class="text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
+                <p class="text-base lg:text-lg text-gray-600 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                     Theo dõi tiến độ sản xuất, quét mã nhận việc và nhận thông báo tức thì ngay trên điện thoại di động mọi lúc, mọi nơi.
                 </p>
 
@@ -513,10 +513,10 @@
             <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
 
             <div class="relative z-10 space-y-8" data-aos="zoom-in">
-                <h2 class="text-3xl lg:text-5xl  font-normal  text-white leading-tight">
+                <h2 class="text-3xl lg:text-4xl font-normal text-white leading-tight">
                     Sẵn sàng nâng tầm <br> quản lý doanh nghiệp Nha khoa?
                 </h2>
-                <p class="text-primary-100 text-lg lg:text-xl max-w-2xl mx-auto">
+                <p class="text-primary-100 text-base lg:text-lg max-w-2xl mx-auto">
                     Tham gia cùng 300+ doanh nghiệp đã chuyển đổi số thành công. Trải nghiệm miễn phí đầy đủ tính năng ngay hôm nay.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
