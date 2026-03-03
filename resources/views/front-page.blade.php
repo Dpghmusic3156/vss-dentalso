@@ -110,7 +110,7 @@
 </section>
 
 <!-- Pathways: Choose Solution -->
-<section id="solutions" class="py-20 lg:py-24 bg-gray-50/50">
+<section id="solutions" class="py-20 lg:py-24 bg-gradient-to-b from-[#f0f4f8] to-white">
     <div class="container max-w-6xl">
         <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
             <h2 class="text-2xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-2">Giải Pháp Chuyên Biệt <br class="lg:hidden">Cho <br class="hidden lg:block">Ngành Nha</h2>
@@ -279,7 +279,7 @@
 </section>
 
 <!-- Feature: Warranty Lookup -->
-<section class="py-24 bg-primary3-50 overflow-hidden">
+<section class="py-24 bg-gradient-to-b from-[#fefcf3] to-white overflow-hidden">
     <div class="container">
         <div class="grid lg:grid-cols-2 gap-16 items-center">
             <div class="order-2 lg:order-1 space-y-8" data-aos="fade-right">
@@ -313,7 +313,7 @@
 </section>
 
 <!-- Feature: Technician App -->
-<section class="py-16 lg:py-24 bg-white overflow-hidden border-t border-gray-100">
+<section class="py-16 lg:py-24 bg-gradient-to-b from-[#f0f4f8] to-white overflow-hidden border-t border-gray-100">
     <style>
         /* ===== Typography Line-Height System ===== */
         .banner h1,
