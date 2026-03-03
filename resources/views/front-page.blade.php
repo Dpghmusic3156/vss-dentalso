@@ -114,7 +114,7 @@
                 ?>
             </div>
         </div>
-        <div class="text-center mt-8" data-aos="fade-up">
+        <div class="text-center mt-12" data-aos="fade-up">
             <a href="{{ get_site_url() }}/customer/" class="inline-flex items-center text-primary-600 text-base font-medium hover:text-primary-700 transition-colors">
                 Chi tiết các khách hàng tiêu biểu <span class="material-symbols-outlined ml-1 text-base">chevron_right</span>
             </a>
