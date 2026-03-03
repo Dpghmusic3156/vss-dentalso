@@ -113,7 +113,7 @@
 <section id="solutions" class="py-20 lg:py-24 bg-gray-50/50">
     <div class="container max-w-6xl">
         <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
-            <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-2">Giải Pháp Chuyên Biệt Cho Ngành Nha</h2>
+            <h2 class="text-3xl lg:text-4xl font-medium text-[#1e293b] leading-normal mb-2">Giải Pháp Chuyên Biệt <br class="lg:hidden">Cho <br class="hidden lg:block">Ngành Nha</h2>
             <p class="text-[#64748b] text-sm lg:text-base leading-loose">Hệ sinh thái DentalSO kết nối liền mạch quy trình vận hành, giúp tối ưu hóa hiệu suất.</p>
         </div>
 
