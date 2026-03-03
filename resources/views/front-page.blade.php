@@ -90,7 +90,7 @@
                 if ($query->have_posts()) :
                     while ($query->have_posts()) : $query->the_post();
                 ?>
-                        <div class="swiper-slide !w-auto !flex items-center justify-center px-8 opacity-60 hover:opacity-100 transition-opacity duration-300 grayscale hover:grayscale-0">
+                        <div class="swiper-slide !w-auto !flex items-center justify-center px-8 transition-opacity duration-300">
                             <?php
                             $link = get_post_custom_values('link');
                             $href = ($link && isset($link[0])) ? $link[0] : '#';
