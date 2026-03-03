@@ -350,14 +350,14 @@
 
         /* ===== Horizontal Padding ===== */
         section .container {
-            padding-left: 1.25rem;
-            padding-right: 1.25rem;
+            padding-left: 1.75rem;
+            padding-right: 1.75rem;
         }
 
         @media (min-width: 1024px) {
             section .container {
-                padding-left: 2.5rem;
-                padding-right: 2.5rem;
+                padding-left: 4rem;
+                padding-right: 4rem;
             }
         }
 
