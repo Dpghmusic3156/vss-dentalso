@@ -79,7 +79,7 @@
             </p>
             <div class="hidden md:block w-16 h-[1px] bg-gradient-to-l from-transparent to-gray-300"></div>
         </div>
-        <div id="labs-logo" class="swiper swiper-initialized overflow-hidden relative" data-aos="fade-in">
+        <div id="labs-logo" class="swiper swiper-initialized overflow-hidden relative select-none" data-aos="fade-in">
             <div class="swiper-wrapper flex items-center">
                 <?php
                 $args = array(
@@ -95,8 +95,8 @@
                             $link = get_post_custom_values('link');
                             $href = ($link && isset($link[0])) ? $link[0] : '#';
                             ?>
-                            <a href="{{ $href }}" target="_blank" class="block h-12 w-auto">
-                                <?php the_post_thumbnail('medium', ['class' => 'h-full w-auto object-contain']); ?>
+                            <a href="{{ $href }}" target="_blank" class="block h-12 w-auto select-none" draggable="false">
+                                <?php the_post_thumbnail('medium', ['class' => 'h-full w-auto object-contain select-none', 'draggable' => 'false']); ?>
                             </a>
                         </div>
                 <?php
