@@ -348,11 +348,16 @@
 
         /* ========================================= */
 
-        /* ===== Mobile Horizontal Padding ===== */
-        @media (max-width: 1023px) {
+        /* ===== Horizontal Padding ===== */
+        section .container {
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+        }
+
+        @media (min-width: 1024px) {
             section .container {
-                padding-left: 1.25rem;
-                padding-right: 1.25rem;
+                padding-left: 2.5rem;
+                padding-right: 2.5rem;
             }
         }
 
