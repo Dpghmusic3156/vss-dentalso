@@ -33,7 +33,7 @@
                     </div>
                 </div>
                 <div class="flex justify-center lg:justify-end relative order-1 lg:order-2 w-full px-8 lg:px-0" data-aos="zoom-in">
-                    <img src="{{ get_theme_mod('trang_chu.banner.hinh_1') }}" class="max-h-[35vh] lg:max-h-[500px] object-contain drop-shadow-2xl animate-float">
+                    <img src="{{ get_theme_mod('trang_chu.banner.hinh_1') }}" alt="Phần mềm quản lý Dental Lab DentalSO" class="max-h-[35vh] lg:max-h-[500px] object-contain drop-shadow-2xl animate-float">
                 </div>
             </div>
         </swiper-slide>
@@ -44,16 +44,16 @@
             <div class="absolute inset-0 bg-gradient-to-t lg:bg-gradient-to-l from-black/80 via-black/50 to-transparent"></div>
             <div class="container relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center justify-center h-full pt-10 pb-16 lg:py-0 lg:pt-16">
                 <div class="flex justify-center lg:justify-start relative order-1 w-full px-8 lg:px-0" data-aos="zoom-in">
-                    <img src="{{ get_theme_mod('trang_chu.banner.hinh_2') }}" class="max-h-[35vh] lg:max-h-[500px] object-contain drop-shadow-2xl animate-float">
+                    <img src="{{ get_theme_mod('trang_chu.banner.hinh_2') }}" alt="Kết nối Nha khoa và Dental Lab qua DentalSO" class="max-h-[35vh] lg:max-h-[500px] object-contain drop-shadow-2xl animate-float">
                 </div>
                 <div class="text-center lg:text-right text-white space-y-4 lg:space-y-6 lg:pr-4 order-2 lg:flex lg:flex-col lg:items-end" data-aos="fade-up">
                     <span class="inline-block py-1.5 px-3 lg:py-2 lg:px-4 rounded-full bg-primary-500/20 text-primary-300 border border-primary-500/30 text-xs lg:text-sm font-normal tracking-wider uppercase mb-1 lg:mb-2">
                         Kết nối Nha khoa - Labo
                     </span>
-                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-[1.3] lg:leading-[1.4]">
+                    <h2 class="text-3xl sm:text-4xl lg:text-6xl font-normal leading-[1.3] lg:leading-[1.4]">
                         <span class="text-primary-400">{{ get_theme_mod('trang_chu.banner.title2') }}</span>
                         <br class="hidden sm:block"> Liền mạch
-                    </h1>
+                    </h2>
                     <p class="text-base lg:text-xl text-gray-200 lg:max-w-lg leading-relaxed px-4 lg:px-0">
                         {{ get_theme_mod('trang_chu.banner.content2') }}
                     </p>
@@ -147,7 +147,7 @@
                 </div>
                 <!-- Featured Image -->
                 <div class="-mt-8 lg:mt-0 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="Giao diện phần mềm quản lý Dental Lab DentalSO" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
 
@@ -180,7 +180,7 @@
                 </div>
                 <!-- Featured Image -->
                 <div class="-mt-8 lg:mt-0 py-2 px-6 lg:px-8 mb-8 lg:mb-0 bg-gradient-to-t from-gray-50 to-transparent flex justify-center">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" alt="Ứng dụng kết nối Nha khoa với Dental Lab trên DentalSO" class="h-60 lg:h-[320px] w-full object-contain object-bottom transform group-hover:scale-105 transition-transform duration-500 will-change-transform">
                 </div>
             </div>
         </div>
@@ -193,7 +193,7 @@
         <div class="flex flex-col lg:grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div data-aos="fade-right" class="relative group order-2 lg:order-1">
                 <div class="absolute inset-0 bg-[#0ea5e9]/10 rounded-3xl transform translate-x-4 translate-y-4 -z-10 group-hover:translate-x-6 group-hover:translate-y-6 transition-transform duration-500"></div>
-                <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" class="rounded-3xl shadow-[0_20px_50px_rgb(0,0,0,0.1)] w-full object-cover border border-gray-100 transform group-hover:-translate-y-2 transition-transform duration-500">
+                <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" alt="Giao diện quản lý đơn hàng và giao tiếp trên DentalSO" class="rounded-3xl shadow-[0_20px_50px_rgb(0,0,0,0.1)] w-full object-cover border border-gray-100 transform group-hover:-translate-y-2 transition-transform duration-500">
             </div>
             <div class="space-y-8 lg:pl-6 order-1 lg:order-2 flex flex-col" data-aos="fade-left">
                 <div>
@@ -301,7 +301,7 @@
             <div class="order-1 lg:order-2 flex justify-center" data-aos="fade-left">
                 <div class="relative">
                     <div class="absolute inset-0 bg-primary3-200 rounded-full blur-3xl opacity-30 transform scale-90"></div>
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/06/laptop-and-phone.png" class="relative z-10 w-full max-w-lg object-contain drop-shadow-2xl">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/06/laptop-and-phone.png" alt="Tra cứu bảo hành răng sứ bằng QR Code trên DentalSO" class="relative z-10 w-full max-w-lg object-contain drop-shadow-2xl">
                 </div>
             </div>
         </div>
@@ -401,19 +401,19 @@
                     <!-- Slide 1 -->
                     <swiper-slide class="flex items-center justify-center py-6 px-6">
                         <div class="phone-frame mx-auto" style="max-width: 260px;">
-                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-5.png" alt="Quản lý sản xuất" class="phone-screen">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-5.png" alt="App DentalSO – Màn hình quản lý sản xuất Dental Lab" class="phone-screen">
                         </div>
                     </swiper-slide>
                     <!-- Slide 2 -->
                     <swiper-slide class="flex items-center justify-center py-6 px-6">
                         <div class="phone-frame mx-auto" style="max-width: 260px;">
-                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-4.png" alt="Danh sách đơn hàng" class="phone-screen">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-4.png" alt="App DentalSO – Màn hình danh sách đơn hàng Labo" class="phone-screen">
                         </div>
                     </swiper-slide>
                     <!-- Slide 3 -->
                     <swiper-slide class="flex items-center justify-center py-6 px-6">
                         <div class="phone-frame mx-auto" style="max-width: 260px;">
-                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-1.png" alt="Tài khoản" class="phone-screen">
+                            <img src="wp-content/uploads/2026/02/phan-mem-quan-ly-labo-dentalso-mobile-app-1.png" alt="App DentalSO – Màn hình tài khoản kỹ thuật viên" class="phone-screen">
                         </div>
                     </swiper-slide>
                 </swiper-container>
