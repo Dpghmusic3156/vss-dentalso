@@ -448,7 +448,7 @@
         <div class="flex flex-col lg:grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
 
             <!-- Left: Phone Slider -->
-            <div class="relative w-full max-w-md mx-auto lg:mx-0 lg:ml-8 order-2 lg:order-1" data-aos="fade-right">
+            <div class="relative w-full max-w-md mx-auto lg:mx-0 lg:ml-14 order-2 lg:order-1" data-aos="fade-right">
                 <swiper-container id="app-slider" class="w-full" loop="true" autoplay-delay="4000" navigation="true" pagination="true" pagination-clickable="true">
                     <!-- Slide 1 -->
                     <swiper-slide class="flex items-center justify-center py-6 px-6">
