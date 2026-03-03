@@ -463,8 +463,8 @@
                     </div>
                 </div>
 
-                <!-- Download buttons -->
-                <div class="flex flex-row gap-3 justify-center lg:justify-start">
+                <!-- Download buttons: desktop only -->
+                <div class="hidden lg:flex flex-row gap-3 justify-center lg:justify-start">
                     <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
                         <i class="fa-brands fa-apple text-2xl group-hover:scale-110 transition-transform"></i>
                         <div class="text-left">
@@ -482,8 +482,23 @@
                 </div>
             </div>
 
-            <!-- Download buttons placeholder for mobile ordering (hidden on desktop) -->
-
+            <!-- Download buttons: mobile only, below slider -->
+            <div class="flex lg:hidden flex-row gap-3 justify-center order-3 pt-2">
+                <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
+                    <i class="fa-brands fa-apple text-2xl group-hover:scale-110 transition-transform"></i>
+                    <div class="text-left">
+                        <div class="text-[9px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
+                        <div class="text-base font-medium leading-none">App Store</div>
+                    </div>
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.dentalso" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
+                    <i class="fa-brands fa-google-play text-xl group-hover:scale-110 transition-transform"></i>
+                    <div class="text-left">
+                        <div class="text-[9px] uppercase tracking-wider opacity-80 leading-none mb-1">Tải ngay trên</div>
+                        <div class="text-base font-medium leading-none">Google Play</div>
+                    </div>
+                </a>
+            </div>
 
         </div>
     </div>
