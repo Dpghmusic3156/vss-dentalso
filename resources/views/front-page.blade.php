@@ -609,28 +609,27 @@
     swiper-container::part(button-prev),
     swiper-container::part(button-next) {
         color: white;
-        background: rgba(255, 255, 255, 0.1);
-        border: 1px solid rgba(255, 255, 255, 0.2);
+        background: none;
+        border: none;
         width: 3rem;
         height: 3rem;
-        border-radius: 50%;
-        backdrop-filter: blur(8px);
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        border-radius: 0;
+        backdrop-filter: none;
+        box-shadow: none;
+        transition: all 0.3s ease;
         display: flex;
         align-items: center;
         justify-content: center;
         z-index: 50;
-        /* Ensure it's clickable above slide content */
     }
 
     swiper-container::part(button-prev):hover,
     swiper-container::part(button-next):hover {
-        background: rgba(255, 255, 255, 0.2);
-        border-color: rgba(255, 255, 255, 0.4);
-        transform: scale(1.05);
-        color: #fff;
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+        background: none;
+        border: none;
+        transform: scale(1.15);
+        color: rgba(255, 255, 255, 0.8);
+        box-shadow: none;
     }
 
     /* Specific overrides for homepage banner */
