@@ -462,10 +462,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Download buttons - separate block for mobile ordering -->
-            <div class="order-3 lg:order-2 text-center lg:text-left lg:col-start-2">
+                <!-- Download buttons -->
                 <div class="flex flex-row gap-3 justify-center lg:justify-start">
                     <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" class="flex items-center justify-center gap-2.5 px-6 py-3 bg-black text-white rounded-xl hover:bg-gray-800 transition-colors shadow-md group">
                         <i class="fa-brands fa-apple text-2xl group-hover:scale-110 transition-transform"></i>
@@ -483,6 +481,9 @@
                     </a>
                 </div>
             </div>
+
+            <!-- Download buttons placeholder for mobile ordering (hidden on desktop) -->
+
 
         </div>
     </div>
