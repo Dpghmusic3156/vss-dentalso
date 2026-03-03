@@ -55,6 +55,14 @@ const config = {
         },
     },
     plugins: [],
+    safelist: [
+        'leading-none',
+        'leading-tight',
+        'leading-snug',
+        'leading-normal',
+        'leading-relaxed',
+        'leading-loose',
+    ],
 };
 
 export default config;
