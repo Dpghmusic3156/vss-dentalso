@@ -1,4 +1,3 @@
-
 {{-- ============================================= --}}
 {{-- HERO --}}
 {{-- ============================================= --}}
@@ -17,7 +16,7 @@
             </div>
         </div>
         <div class="apple-hero-img-wrapper fade-in-up" style="animation-delay: 0.2s;">
-            <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="DentalSO Platform" class="apple-hero-img w-full max-w-5xl mx-auto mt-12 rounded-2xl shadow-2xl">
+            <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="DentalSO Platform" class="apple-hero-img w-full max-w-5xl mx-auto mt-12 rounded-2xl">
         </div>
     </div>
 </section>
@@ -218,8 +217,10 @@
                     observer.unobserve(entry.target);
                 }
             });
-        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
+        });
         document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
     });
 </script>
-
