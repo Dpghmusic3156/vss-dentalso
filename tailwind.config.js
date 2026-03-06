@@ -49,7 +49,7 @@ const config = {
                 },
             },
             fontFamily: {
-                vss: ['"Be Vietnam Pro"', 'sans-serif'],
+                vss: ['-apple-system', 'BlinkMacSystemFont', '"SF Pro Display"', '"SF Pro Text"', '"Be Vietnam Pro"', '"Helvetica Neue"', 'Arial', 'sans-serif'],
                 charm: ['"Charm"', 'cursive'],
             },
         },

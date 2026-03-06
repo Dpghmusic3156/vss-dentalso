@@ -1,91 +1,121 @@
 @extends('layouts.app')
 
 @section('content')
-<section class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20" id="contact">
-    <!-- <div class="mb-4">
-        <div class="mb-6 max-w-3xl text-center sm:text-center md:mx-auto md:mb-12">
-            <h2 class="font-heading mb-4 tracking-tight text-gray-900 sm:text-3xl sm:leading-normal">
-                Cho dù bạn có câu hỏi, phản hồi hay đề xuất hợp tác, chúng tôi đều mong muốn được nghe ý kiến ​​của bạn.
-            </h2>
-        </div>
-    </div> -->
-    <div class="grid md:grid-cols-5 gap-10">
-        <div class="bg-primary-50 h-full p-8 md:col-span-2">
-            <h2 class="mb-8 text-2xl">Liên hệ với chúng tôi</h2>
-            <ul class="mb-6 md:mb-0">
-                <li class="flex border-b border-secondary mb-8">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-gray-50">
-                        <span class="material-symbols-outlined">location_on</span>
-                    </div>
-                    <div class="ml-4 mb-4">
-                        <p class="text-gray-900">215/167 Nguyễn Xí, Phường 13,</p>
-                        <p class="text-gray-900">Bình Thạnh, Thành phố Hồ Chí Minh</p>
-                    </div>
-                </li>
-                <li class="flex border-b border-secondary mb-8">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-gray-50">
-                        <span class="material-symbols-outlined">phone_in_talk</span>
-                    </div>
-                    <div class="ml-4 mb-4">
-                        <p class="text-gray-900">Mobile: 0947 476 000</p>
-                        <p class="text-gray-900">Mobile: +1.425.954.5496</p>
-                    </div>
-                </li>
-                <li class="flex border-b border-secondary mb-8">
-                    <div class="flex h-10 w-10 items-center justify-center rounded bg-primary-500 text-gray-50">
-                        <span class="material-symbols-outlined">mail</span>
-                    </div>
-                    <div class="ml-4 mb-4">
-                        <p class="text-gray-900">contact@dentalso.com</p>
-                        <p class="text-gray-900">support@dentalso.com</p>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="card h-fit max-w-6xl px-5 md:p-8 md:col-span-3" id="form">
-            <div id="formContactUs">
-                <h2 class="mb-4 text-2xl">Vui lòng để lại thông tin</h2>
-                <p class="pb-4">Chúng tôi sẽ liên hệ lại ngay khi nhận được yêu cầu</p>
-                <form action="javascript:a();" method="POST"
-                    class="contact-form grid grid-cols-2" autocomplete="off">
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Tên" required>
-                    <input type="text" class="form-control" name="company" id="company" placeholder="Công ty" required>
-                    <input type="text" name="phone" class="form-control" id="phone" placeholder="Điện thoại" required>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                    <div class="form-group">
-                        <select class="h-100 form-control form-select" name="reason" id="reason">
-                            <option selected disabled>Bộ phận liên hệ</option>
-                            <option value="Tư vấn">Tư vấn</option>
-                            <option value="Hỗ trợ kỹ thuật">Hỗ trợ kỹ thuật</option>
-                            <option value="Hợp tác">Hợp tác</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <select class="h-100 form-control form-select" name="product" id="product">
-                            <option selected disabled>Chọn sản phẩm</option>
-                            <option value="Dental Lab">Dental Lab</option>
-                            <option value="Dental Clinic">Dental Clinic</option>
-                        </select>
-                    </div>
-                    <div class="md:col-span-2">
-                        <textarea class="form-control" name="message" placeholder="Tin nhắn" id="message" required></textarea>
-                    </div>
-                    <div class="md:col-span-2">
-                        <div class="loading hidden text-primary-500">Đang tải</div>
-                        <div class="error-message hidden text-red">Không thể gởi tin nhắn. Vui lòng thử lại!</div>
-                    </div>
-                    <button class="flex items-center justify-center group relative h-12 w-48 
-                    rounded-3xl bg-primary-500 text-lg shadow mx-auto lg:ml-0"
-                        type="submit">
-                        <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                        <span class="relative text-white group-hover:text-primary-500">Gửi</span>
-                    </button>
-                </form>
-            </div>
-            <div class="sent-message hidden text-primary-500 text-3xl text-center">Tin nhắn đã được gửi. Chúng tôi sẽ sớm liên hệ lại!</div>
+
+{{-- Hero --}}
+<section class="apple-section apple-section--sm bg-[#f5f5f7]">
+    <div class="apple-container text-center">
+        <div class="fade-in-up">
+            <h1 class="apple-headline mb-4">Contact DentalSO</h1>
+            <p class="apple-hero-copy">
+                Have questions about our dental lab software or want a personalized demo? Fill out the form below and our team will contact you shortly.
+            </p>
         </div>
     </div>
 </section>
+
+{{-- Contact Form + Info --}}
+<section class="apple-section bg-white" id="contact">
+    <div class="apple-container">
+        <div class="grid lg:grid-cols-5 gap-10 lg:gap-16">
+            {{-- Left: Contact Info --}}
+            <div class="lg:col-span-2 fade-in-up">
+                <div class="space-y-6">
+                    <div class="apple-mini-card">
+                        <span class="material-symbols-outlined text-2xl text-[#0071e3] mb-3">mail</span>
+                        <h4 class="apple-mini-title">Sales inquiries</h4>
+                        <p class="apple-mini-desc">Get pricing and product information</p>
+                    </div>
+                    <div class="apple-mini-card">
+                        <span class="material-symbols-outlined text-2xl text-[#30d158] mb-3">calendar_month</span>
+                        <h4 class="apple-mini-title">Demo requests</h4>
+                        <p class="apple-mini-desc">Book a personalized demo session</p>
+                    </div>
+                    <div class="apple-mini-card">
+                        <span class="material-symbols-outlined text-2xl text-[#ff9f0a] mb-3">handshake</span>
+                        <h4 class="apple-mini-title">Partnership opportunities</h4>
+                        <p class="apple-mini-desc">Explore collaboration options</p>
+                    </div>
+                    <div class="apple-mini-card">
+                        <span class="material-symbols-outlined text-2xl text-[#bf5af2] mb-3">support_agent</span>
+                        <h4 class="apple-mini-title">Support questions</h4>
+                        <p class="apple-mini-desc">Get help with existing services</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-4 text-sm text-[#86868b]">
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">location_on</span>
+                        <span>215/167 Nguyễn Xí, Phường 13, Bình Thạnh, TP.HCM</span>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">phone</span>
+                        <a href="tel:0947476000" class="hover:text-[#1d1d1f] transition-colors">0947 476 000</a>
+                        <span>•</span>
+                        <a href="tel:+14259545496" class="hover:text-[#1d1d1f] transition-colors">+1.425.954.5496</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        <a href="mailto:contact@dentalso.com" class="hover:text-[#1d1d1f] transition-colors">contact@dentalso.com</a>
+                    </div>
+                </div>
+            </div>
+
+            {{-- Right: Form --}}
+            <div class="lg:col-span-3 fade-in-up" style="animation-delay: 0.15s;">
+                <div class="bg-[#f5f5f7] rounded-3xl p-8 lg:p-10" id="form">
+                    <div id="formContactUs">
+                        <h2 class="apple-headline-sm mb-2">Submit Inquiry</h2>
+                        <p class="apple-body mb-8">We'll get back to you as soon as possible.</p>
+                        <form action="javascript:a();" method="POST" class="space-y-5" autocomplete="off">
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <input type="text" name="name" class="apple-input" id="name" placeholder="Name" required>
+                                <input type="text" class="apple-input" name="company" id="company" placeholder="Company" required>
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <input type="text" name="phone" class="apple-input" id="phone" placeholder="Phone" required>
+                                <input type="email" class="apple-input" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="grid sm:grid-cols-2 gap-5">
+                                <select class="apple-input" name="reason" id="reason">
+                                    <option selected disabled>Department</option>
+                                    <option value="Tư vấn">Sales</option>
+                                    <option value="Hỗ trợ kỹ thuật">Technical Support</option>
+                                    <option value="Hợp tác">Partnership</option>
+                                </select>
+                                <select class="apple-input" name="product" id="product">
+                                    <option selected disabled>Product</option>
+                                    <option value="Dental Lab">Dental Lab</option>
+                                    <option value="Dental Clinic">Dental Clinic</option>
+                                </select>
+                            </div>
+                            <textarea class="apple-input" name="message" placeholder="Message" id="message" rows="4" required></textarea>
+                            <div>
+                                <div class="loading hidden text-[#0071e3]">Sending...</div>
+                                <div class="error-message hidden text-[#ff453a]">Unable to send. Please try again.</div>
+                            </div>
+                            <button class="apple-cta-primary w-full sm:w-auto" type="submit">
+                                Submit Inquiry
+                            </button>
+                        </form>
+                    </div>
+                    <div class="sent-message hidden text-[#30d158] text-xl text-center py-10 font-medium">
+                        Message sent successfully! We'll contact you shortly.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('is-visible'); observer.unobserve(entry.target); }});
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+});
+</script>
 
 @endsection
 <script type="text/javascript">
@@ -99,75 +129,23 @@
         var email = jQuery.trim(jQuery('#email').val());
         let data = new Object;
 
-
-        // Check if empty of not
-        if (name === '') {
-            alert('Vui lòng nhập tên');
-            return false;
-        } else {
-            data['name'] = name;
-        }
-
-        if (phone === '') {
-            alert('Vui lòng nhập số điện thoại');
-            return false;
-        } else {
-            data['phone'] = phone;
-        }
-        if (email === '') {
-            alert('Vui lòng nhập email');
-            return false;
-        } else {
-            data['email'] = email;
-        }
-        if (message === '') {
-            alert('Vui lòng nhập nhập tin nhắn');
-            return false;
-        } else {
-            data['message'] = message;
-        }
-
-        // var v = grecaptcha.getResponse();
-        // if (v.length == 0) {
-        //     jQuery("#captcha").show();
-        //     return false;
-        // } else {
-        //     jQuery("#captcha").hide();
-        // }
+        if (name === '') { alert('Please enter your name'); return false; } else { data['name'] = name; }
+        if (phone === '') { alert('Please enter your phone number'); return false; } else { data['phone'] = phone; }
+        if (email === '') { alert('Please enter your email'); return false; } else { data['email'] = email; }
+        if (message === '') { alert('Please enter a message'); return false; } else { data['message'] = message; }
 
         jQuery("#formContactUs :input").prop("disabled", true);
 
         let note = "";
         const space = "\n";
-
-        if (data.name) {
-            note += "Tên: " + data.name + space;
-        };
-
-        if (data.company) {
-            note += "Công ty: " + data.company + space;
-        };
-
-        if (data.phone) {
-            note += "Điện thoại: " + data.phone + space;
-        };
-
-        if (data.email) {
-            note += "Email: " + data.email + space;
-            data['el'] = data.email.trim().length;
-        };
-        if (data.product) {
-            note += "Sản phẩm: " + data.product + space;
-        };
+        if (data.name) { note += "Tên: " + data.name + space; };
+        if (data.company) { note += "Công ty: " + data.company + space; };
+        if (data.phone) { note += "Điện thoại: " + data.phone + space; };
+        if (data.email) { note += "Email: " + data.email + space; data['el'] = data.email.trim().length; };
+        if (data.product) { note += "Sản phẩm: " + data.product + space; };
         data['url'] = jQuery(location).attr('href');
-
-        if (reason) {
-            data['reason'] = reason;
-        }
-        if (data.message) {
-            note += "Tin nhắn:" + data.message;
-        };
-
+        if (reason) { data['reason'] = reason; }
+        if (data.message) { note += "Tin nhắn:" + data.message; };
         data['note'] = note;
 
         jQuery.ajax({
