@@ -531,18 +531,16 @@ a:hover .apple-chevron {
 }
 
 .apple-card-img-wrapper {
-  padding: 0 1.5rem;
+  padding: 1.5rem 1.5rem 0;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-shrink: 0;
   overflow: hidden;
-  flex-grow: 0;
-  margin-top: auto;
+  flex-grow: 1;
 }
 
 .apple-card-img {
-  height: 320px;
   width: 100%;
   object-fit: contain;
   object-position: bottom;
@@ -551,12 +549,6 @@ a:hover .apple-chevron {
 
 .apple-card:hover .apple-card-img {
   transform: scale(1.06) translateY(-2px);
-}
-
-@media (min-width: 1024px) {
-  .apple-card-img {
-    height: 400px;
-  }
 }
 
 /* =========================================
