@@ -28,15 +28,15 @@
     <div class="apple-container">
         <div class="apple-split">
             <div class="apple-split-text fade-in-up">
-                <h2 class="apple-headline-sm">Transform Complexity Into Control</h2>
-                <p class="apple-body mb-6">
-                    Dental laboratories and clinics operate in high-precision, high-volume environments. Manual coordination, disconnected systems, and production bottlenecks slow growth and reduce margins.
+                <p class="text-sm font-semibold text-[#0071e3] tracking-wide uppercase mb-4">The Platform</p>
+                <h2 class="text-4xl lg:text-5xl font-bold text-[#1d1d1f] leading-snug tracking-tight mb-6">
+                    Transform complexity<br>into control.
+                </h2>
+                <p class="text-[#86868b] text-xl leading-relaxed mb-8">
+                    Stop losing margins to disconnected systems and manual tracking. DentalSO connects production, quality, and communication into one unified digital environment.
                 </p>
-                <p class="apple-body font-medium text-[#1d1d1f] mb-6">
-                    DentalSO delivers true Dental Streamlined Operations — connecting production, quality control, communication, and analytics into one unified platform.
-                </p>
-                <p class="apple-body">
-                    From case intake to final delivery, every workflow is synchronized, traceable, and optimized.
+                <p class="text-2xl font-bold text-[#1d1d1f] leading-snug">
+                    From case intake to final delivery, every workflow is synchronized and traceable.
                 </p>
             </div>
             <div class="apple-split-media fade-in-up" style="animation-delay: 0.1s;">
