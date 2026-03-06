@@ -1,6 +1,3 @@
-@extends('layouts.app')
-
-@section('content')
 
 {{-- ============================================= --}}
 {{-- HERO --}}
@@ -226,4 +223,3 @@
     });
 </script>
 
-@endsection
