@@ -15,17 +15,17 @@
                 DentalSO
             </h1>
             <h2 class="apple-hero-subheadline">
-                Hệ sinh thái phần mềm quản lý Labo toàn diện.
+                The Complete Dental Lab Software Ecosystem.
             </h2>
             <p class="apple-hero-copy">
-                Tối ưu sản xuất. Kết nối nha khoa. Kiểm soát vận hành toàn diện — tất cả trong một nền tảng duy nhất.
+                Streamline production. Connect with clinics. Deliver total operational control — all in one unified platform.
             </p>
             <div class="apple-cta-group">
                 <a href="{{ get_site_url() }}/yeu-cau-tu-van" class="apple-cta-primary">
-                    Đặt lịch Demo
+                    Book a Demo
                 </a>
                 <a href="#solutions" class="apple-cta-secondary">
-                    Tìm hiểu thêm <span class="apple-chevron">›</span>
+                    Learn more <span class="apple-chevron">›</span>
                 </a>
             </div>
         </div>
@@ -43,20 +43,20 @@
 <section id="solutions" class="apple-section bg-[#f5f5f7]">
     <div class="apple-container">
         <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 fade-in-up">
-            <h2 class="apple-headline">Một nền tảng.<br>Ba giải pháp mạnh mẽ.</h2>
+            <h2 class="apple-headline">One Platform.<br>Three Powerful Solutions.</h2>
         </div>
 
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
             {{-- Card 1: DentalSO Platform --}}
             <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="apple-card apple-card--tint-blue fade-in-up" style="animation-delay: 0.1s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-eyebrow">Quản lý Labo</div>
+                    <div class="apple-card-eyebrow">Lab Management</div>
                     <h3 class="apple-card-title">DentalSO Platform</h3>
                     <p class="apple-card-desc">
-                        Phần mềm quản lý labo nha khoa toàn diện: kiểm soát ca, chuẩn hóa quy trình, đảm bảo chất lượng và phân tích dữ liệu.
+                        Comprehensive dental laboratory management software for case control, workflow standardization, quality assurance, and analytics.
                     </p>
                     <span class="apple-link mt-auto">
-                        Tìm hiểu thêm <span class="apple-chevron">›</span>
+                        Learn more <span class="apple-chevron">›</span>
                     </span>
                 </div>
                 <div class="apple-card-img-wrapper">
@@ -67,13 +67,13 @@
             {{-- Card 2: DentalSO MES --}}
             <a href="{{ get_site_url() }}/products/dental-lab-mes/" class="apple-card apple-card--tint-green fade-in-up" style="animation-delay: 0.2s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-eyebrow">Sản xuất</div>
+                    <div class="apple-card-eyebrow">Production Floor</div>
                     <h3 class="apple-card-title">DentalSO MES</h3>
                     <p class="apple-card-desc">
-                        Hệ thống điều hành sản xuất thời gian thực: giám sát xưởng, phân bổ kỹ thuật viên và ưu tiên theo deadline.
+                        Real-time Manufacturing Execution System for monitoring production floor activity, technician workload, and deadline-based prioritization.
                     </p>
                     <span class="apple-link mt-auto">
-                        Tìm hiểu thêm <span class="apple-chevron">›</span>
+                        Learn more <span class="apple-chevron">›</span>
                     </span>
                 </div>
                 <div class="apple-card-img-wrapper">
@@ -84,13 +84,13 @@
             {{-- Card 3: DentalSO Connect --}}
             <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="apple-card apple-card--tint-purple fade-in-up" style="animation-delay: 0.3s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-eyebrow">Kết nối số</div>
+                    <div class="apple-card-eyebrow">Digital Collaboration</div>
                     <h3 class="apple-card-title">DentalSO Connect</h3>
                     <p class="apple-card-desc">
-                        Ứng dụng gửi ca số và cộng tác dành cho nha khoa, sales và labo gia công.
+                        Digital case submission and partner collaboration app for clinics, sales agents, and outsource labs.
                     </p>
                     <span class="apple-link mt-auto">
-                        Tìm hiểu thêm <span class="apple-chevron">›</span>
+                        Learn more <span class="apple-chevron">›</span>
                     </span>
                 </div>
                 <div class="apple-card-img-wrapper">
@@ -112,30 +112,30 @@
 
     <div class="apple-container relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 fade-in-up">
-            <h2 class="apple-headline text-white">Tại sao chọn DentalSO?</h2>
-            <p class="apple-body text-[#86868b] mt-4 max-w-2xl mx-auto">Được xây dựng từ đầu cho ngành nha khoa. Mỗi tính năng đều thiết kế theo cách labo thực sự vận hành.</p>
+            <h2 class="apple-headline text-white">Why DentalSO?</h2>
+            <p class="apple-body text-[#86868b] mt-4 max-w-2xl mx-auto">Built from the ground up for the dental industry. Every feature is designed around how labs actually work.</p>
         </div>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
             <div class="apple-glass-card fade-in-up" style="animation-delay: 0.1s;">
                 <span class="material-symbols-outlined apple-glass-icon">dentistry</span>
-                <p class="apple-glass-text">Chuyên biệt cho labo nha khoa</p>
+                <p class="apple-glass-text">Built exclusively for dental laboratories</p>
             </div>
             <div class="apple-glass-card fade-in-up" style="animation-delay: 0.15s;">
                 <span class="material-symbols-outlined apple-glass-icon">assignment</span>
-                <p class="apple-glass-text">Theo dõi sản xuất từng ca</p>
+                <p class="apple-glass-text">Case-by-case production tracking</p>
             </div>
             <div class="apple-glass-card fade-in-up" style="animation-delay: 0.2s;">
                 <span class="material-symbols-outlined apple-glass-icon">event_available</span>
-                <p class="apple-glass-text">Lập lịch theo mức ưu tiên</p>
+                <p class="apple-glass-text">Priority-based scheduling</p>
             </div>
             <div class="apple-glass-card fade-in-up" style="animation-delay: 0.25s;">
                 <span class="material-symbols-outlined apple-glass-icon">cloud_done</span>
-                <p class="apple-glass-text">Hạ tầng đám mây an toàn</p>
+                <p class="apple-glass-text">Secure cloud infrastructure</p>
             </div>
             <div class="apple-glass-card fade-in-up" style="animation-delay: 0.3s;">
                 <span class="material-symbols-outlined apple-glass-icon">trending_up</span>
-                <p class="apple-glass-text">Kiến trúc mở rộng cho labo đang phát triển</p>
+                <p class="apple-glass-text">Scalable architecture for growing labs</p>
             </div>
         </div>
     </div>
@@ -152,16 +152,16 @@
 
     <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
-            <h2 class="apple-headline text-white mb-6">Sẵn sàng tối ưu<br>vận hành của bạn?</h2>
+            <h2 class="apple-headline text-white mb-6">Ready to Streamline<br>Your Operations?</h2>
             <p class="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
-                Đặt lịch demo cá nhân hóa và khám phá cách DentalSO thay đổi quy trình sản xuất của bạn.
+                Book a personalized demo and see how DentalSO transforms your production workflow.
             </p>
             <div class="apple-cta-group">
                 <a href="{{ get_site_url() }}/yeu-cau-tu-van" class="apple-cta-primary apple-cta-primary--light">
-                    Đặt lịch Demo
+                    Schedule a Demo
                 </a>
                 <a href="tel:0947476000" class="apple-cta-secondary apple-cta-secondary--light">
-                    Gọi: 0947 476 000 <span class="apple-chevron">›</span>
+                    Call: 0947 476 000 <span class="apple-chevron">›</span>
                 </a>
             </div>
         </div>
