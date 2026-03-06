@@ -4,10 +4,12 @@
 
 {{-- ============================================= --}}
 {{-- SECTION 1: HERO --}}
-{{-- Apple-style: Centered massive text, subheadline, CTA pills --}}
+{{-- Apple-style: Massive centered text, gradient bg, CTA pills --}}
 {{-- ============================================= --}}
-<section class="apple-section apple-hero relative overflow-hidden bg-white">
-    <div class="apple-container text-center">
+<section class="apple-hero relative overflow-hidden">
+    {{-- Subtle gradient background --}}
+    <div class="absolute inset-0 bg-gradient-to-b from-[#fbfbfd] via-white to-[#f5f5f7]"></div>
+    <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
             <h1 class="apple-hero-headline">
                 DentalSO <span class="apple-hero-headline-sub">– Dental Streamlined Operations for Modern Dental Labs</span>
@@ -39,7 +41,7 @@
 
 {{-- ============================================= --}}
 {{-- SECTION 2: ONE PLATFORM. THREE POWERFUL SOLUTIONS --}}
-{{-- Apple-style product grid with rounded cards --}}
+{{-- Apple-style product grid with white rounded cards --}}
 {{-- ============================================= --}}
 <section id="solutions" class="apple-section bg-[#f5f5f7]">
     <div class="apple-container">
@@ -49,95 +51,94 @@
 
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
             {{-- Card 1: DentalSO Platform --}}
-            <div class="apple-card fade-in-up" style="animation-delay: 0.1s;">
+            <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.1s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-white">
-                        <span class="material-symbols-outlined text-3xl text-[#1d1d1f]">precision_manufacturing</span>
-                    </div>
+                    <div class="apple-card-eyebrow">Lab Management</div>
                     <h3 class="apple-card-title">DentalSO Platform</h3>
                     <p class="apple-card-desc">
                         Comprehensive dental laboratory management software for case control, workflow standardization, quality assurance, and analytics.
                     </p>
-                    <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="apple-link mt-auto">
+                    <span class="apple-link mt-auto">
                         Learn more <span class="apple-chevron">›</span>
-                    </a>
+                    </span>
                 </div>
                 <div class="apple-card-img-wrapper">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="DentalSO Platform – Dental Lab Management Software" class="apple-card-img">
                 </div>
-            </div>
+            </a>
 
             {{-- Card 2: DentalSO MES --}}
-            <div class="apple-card fade-in-up" style="animation-delay: 0.2s;">
+            <a href="{{ get_site_url() }}/products/dental-lab-mes/" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.2s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-white">
-                        <span class="material-symbols-outlined text-3xl text-[#1d1d1f]">monitoring</span>
-                    </div>
+                    <div class="apple-card-eyebrow">Production Floor</div>
                     <h3 class="apple-card-title">DentalSO MES</h3>
                     <p class="apple-card-desc">
                         Real-time Manufacturing Execution System for monitoring production floor activity, technician workload, and deadline-based prioritization.
                     </p>
-                    <a href="{{ get_site_url() }}/products/dental-lab-mes/" class="apple-link mt-auto">
+                    <span class="apple-link mt-auto">
                         Learn more <span class="apple-chevron">›</span>
-                    </a>
+                    </span>
                 </div>
                 <div class="apple-card-img-wrapper">
                     <img src="{{ get_theme_mod('trang_chu.banner.hinh_2') }}" alt="DentalSO MES – Real-Time Manufacturing Execution System" class="apple-card-img">
                 </div>
-            </div>
+            </a>
 
             {{-- Card 3: DentalSO Connect --}}
-            <div class="apple-card fade-in-up" style="animation-delay: 0.3s;">
+            <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.3s;">
                 <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-white">
-                        <span class="material-symbols-outlined text-3xl text-[#1d1d1f]">hub</span>
-                    </div>
+                    <div class="apple-card-eyebrow">Digital Collaboration</div>
                     <h3 class="apple-card-title">DentalSO Connect</h3>
                     <p class="apple-card-desc">
                         Digital case submission and partner collaboration app for clinics, sales agents, and outsource labs.
                     </p>
-                    <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="apple-link mt-auto">
+                    <span class="apple-link mt-auto">
                         Learn more <span class="apple-chevron">›</span>
-                    </a>
+                    </span>
                 </div>
                 <div class="apple-card-img-wrapper">
                     <img src="{{ get_site_url() }}/wp-content/uploads/2022/07/clinic.png" alt="DentalSO Connect – Digital Case Submission & Partner Collaboration" class="apple-card-img">
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
 
 {{-- ============================================= --}}
 {{-- SECTION 3: WHY DENTALSO? --}}
-{{-- Apple-style dark section with white text --}}
+{{-- Apple-style dark section with glass cards --}}
 {{-- ============================================= --}}
-<section class="apple-section apple-section--dark">
-    <div class="apple-container">
-        <div class="text-center max-w-3xl mx-auto fade-in-up">
-            <h2 class="apple-headline text-white mb-16 lg:mb-20">Why DentalSO?</h2>
+<section class="apple-section apple-section--dark relative overflow-hidden">
+    {{-- Background glow effects --}}
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0071e3]/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#30d158]/5 rounded-full blur-[100px]"></div>
+
+    <div class="apple-container relative z-10">
+        <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 fade-in-up">
+            <h2 class="apple-headline text-white">Why DentalSO?</h2>
+            <p class="apple-body text-[#86868b] mt-4 max-w-2xl mx-auto">Built from the ground up for the dental industry. Every feature is designed around how labs actually work.</p>
         </div>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-6">
-            <div class="apple-feature-item fade-in-up" style="animation-delay: 0.1s;">
-                <span class="material-symbols-outlined apple-feature-icon">dentistry</span>
-                <p class="apple-feature-text">Built exclusively for dental laboratories</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-5">
+            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.1s;">
+                <span class="material-symbols-outlined apple-glass-icon">dentistry</span>
+                <p class="apple-glass-text">Built exclusively for dental laboratories</p>
             </div>
-            <div class="apple-feature-item fade-in-up" style="animation-delay: 0.15s;">
-                <span class="material-symbols-outlined apple-feature-icon">assignment</span>
-                <p class="apple-feature-text">Case-by-case production tracking</p>
+            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.15s;">
+                <span class="material-symbols-outlined apple-glass-icon">assignment</span>
+                <p class="apple-glass-text">Case-by-case production tracking</p>
             </div>
-            <div class="apple-feature-item fade-in-up" style="animation-delay: 0.2s;">
-                <span class="material-symbols-outlined apple-feature-icon">priority_high</span>
-                <p class="apple-feature-text">Priority-based scheduling</p>
+            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.2s;">
+                <span class="material-symbols-outlined apple-glass-icon">event_available</span>
+                <p class="apple-glass-text">Priority-based scheduling</p>
             </div>
-            <div class="apple-feature-item fade-in-up" style="animation-delay: 0.25s;">
-                <span class="material-symbols-outlined apple-feature-icon">cloud_done</span>
-                <p class="apple-feature-text">Secure cloud infrastructure</p>
+            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.25s;">
+                <span class="material-symbols-outlined apple-glass-icon">cloud_done</span>
+                <p class="apple-glass-text">Secure cloud infrastructure</p>
             </div>
-            <div class="apple-feature-item fade-in-up" style="animation-delay: 0.3s;">
-                <span class="material-symbols-outlined apple-feature-icon">trending_up</span>
-                <p class="apple-feature-text">Scalable architecture for growing labs</p>
+            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.3s;">
+                <span class="material-symbols-outlined apple-glass-icon">trending_up</span>
+                <p class="apple-glass-text">Scalable architecture for growing labs</p>
             </div>
         </div>
     </div>
@@ -147,8 +148,12 @@
 {{-- SECTION 4: FINAL CTA --}}
 {{-- Apple-style centered CTA on blue gradient --}}
 {{-- ============================================= --}}
-<section class="apple-section apple-section--cta">
-    <div class="apple-container text-center">
+<section class="apple-section apple-section--cta relative overflow-hidden">
+    {{-- Decorative gradient orbs --}}
+    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#005bb5]/30 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/4"></div>
+    <div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[#004494]/40 rounded-full blur-[120px] translate-y-1/3 -translate-x-1/4"></div>
+
+    <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
             <h2 class="apple-headline text-white mb-6">Ready to Streamline<br>Your Operations?</h2>
             <p class="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
@@ -168,18 +173,21 @@
 
 {{-- Scroll Reveal Script --}}
 <script>
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -40px 0px'
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 
-    document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-});
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    });
 </script>
 
 @endsection

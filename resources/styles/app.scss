@@ -455,18 +455,34 @@ a:hover .apple-chevron {
   transition:
     transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1),
     box-shadow 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.apple-card--white {
+  background: white;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
 }
 
 .apple-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+  transform: translateY(-6px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.1);
 }
 
 .apple-card-inner {
-  padding: 2rem 2rem 1.5rem;
+  padding: 2.25rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+}
+
+.apple-card-eyebrow {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--apple-blue);
+  margin-bottom: 0.625rem;
 }
 
 .apple-card-icon {
@@ -480,45 +496,47 @@ a:hover .apple-chevron {
 }
 
 .apple-card-title {
-  font-size: 1.375rem;
-  font-weight: 600;
-  letter-spacing: -0.01em;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
   color: var(--apple-dark);
   margin-bottom: 0.75rem;
-  line-height: 1.2;
+  line-height: 1.15;
 }
 
 .apple-card-desc {
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--apple-gray-1);
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .apple-card-img-wrapper {
-  padding: 0 2rem;
+  padding: 0 1.5rem;
   display: flex;
   justify-content: center;
   align-items: flex-end;
   flex-shrink: 0;
   overflow: hidden;
+  flex-grow: 0;
+  margin-top: auto;
 }
 
 .apple-card-img {
-  height: 220px;
+  height: 240px;
   width: 100%;
   object-fit: contain;
   object-position: bottom;
-  transition: transform 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition: transform 0.6s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
 .apple-card:hover .apple-card-img {
-  transform: scale(1.05);
+  transform: scale(1.06) translateY(-2px);
 }
 
 @media (min-width: 1024px) {
   .apple-card-img {
-    height: 280px;
+    height: 300px;
   }
 }
 
@@ -622,17 +640,45 @@ a:hover .apple-chevron {
 }
 
 .apple-glass-card {
-  padding: 2.5rem 2rem;
+  padding: 2rem 1.5rem;
   border-radius: 20px;
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
   text-align: center;
-  transition: all 0.4s;
+  transition: all 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .apple-glass-card:hover {
-  background: rgba(255, 255, 255, 0.08);
-  transform: translateY(-3px);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.15);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.apple-glass-icon {
+  font-size: 2.25rem;
+  color: var(--apple-gray-2);
+  margin-bottom: 1rem;
+  display: block;
+  transition: color 0.3s;
+}
+
+.apple-glass-card:hover .apple-glass-icon {
+  color: white;
+}
+
+.apple-glass-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--apple-gray-1);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.apple-glass-card:hover .apple-glass-text {
+  color: var(--apple-gray-2);
 }
 
 /* =========================================
