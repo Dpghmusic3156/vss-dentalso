@@ -152,7 +152,7 @@
 
     <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
-            <h2 class="apple-headline text-white mb-6">Ready to Streamline<br>Your Operations?</h2>
+            <h2 class="apple-headline text-white mb-6">Sẵn sàng tối ưu<br> quy trình vận hành của bạn?</h2>
             <p class="text-xl lg:text-2xl text-white/80 leading-relaxed max-w-2xl mx-auto mb-10">
                 Book a personalized demo and see how DentalSO transforms your production workflow.
             </p>
