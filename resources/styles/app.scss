@@ -431,14 +431,15 @@ a:hover .apple-chevron {
 }
 
 .apple-hero-img {
-  max-height: 500px;
-  width: auto;
+  max-height: 600px;
+  width: 100%;
+  max-width: 960px;
   object-fit: contain;
 }
 
 @media (max-width: 767px) {
   .apple-hero-img {
-    max-height: 300px;
+    max-height: 400px;
   }
 }
 
@@ -448,7 +449,7 @@ a:hover .apple-chevron {
 
 .apple-card {
   background: var(--apple-gray-3);
-  border-radius: 20px;
+  border-radius: 28px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -462,6 +463,19 @@ a:hover .apple-chevron {
 .apple-card--white {
   background: white;
   box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Apple-style pastel tint backgrounds */
+.apple-card--tint-blue {
+  background: #e3f0fc;
+}
+
+.apple-card--tint-green {
+  background: #e2f5e9;
+}
+
+.apple-card--tint-purple {
+  background: #ece5f6;
 }
 
 .apple-card:hover {
@@ -523,7 +537,7 @@ a:hover .apple-chevron {
 }
 
 .apple-card-img {
-  height: 240px;
+  height: 320px;
   width: 100%;
   object-fit: contain;
   object-position: bottom;
@@ -536,7 +550,7 @@ a:hover .apple-chevron {
 
 @media (min-width: 1024px) {
   .apple-card-img {
-    height: 300px;
+    height: 400px;
   }
 }
 

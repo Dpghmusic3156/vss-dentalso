@@ -12,16 +12,13 @@
     <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
             <h1 class="apple-hero-headline">
-                DentalSO <span class="apple-hero-headline-sub">– Dental Streamlined Operations for Modern Dental Labs</span>
+                DentalSO
             </h1>
             <h2 class="apple-hero-subheadline">
-                The Complete Dental Lab Software Ecosystem
+                The Complete Dental Lab Software Ecosystem.
             </h2>
             <p class="apple-hero-copy">
-                DentalSO is an integrated dental lab software platform designed to streamline production, improve case visibility, and digitally connect laboratories with clinics and partners.
-            </p>
-            <p class="apple-hero-proof">
-                From real-time production floor monitoring to secure case submission and collaboration, DentalSO delivers total operational control in one unified system.
+                Streamline production. Connect with clinics. Deliver total operational control — all in one unified platform.
             </p>
             <div class="apple-cta-group">
                 <a href="{{ get_site_url() }}/yeu-cau-tu-van" class="apple-cta-primary">
@@ -51,7 +48,7 @@
 
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8">
             {{-- Card 1: DentalSO Platform --}}
-            <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.1s;">
+            <a href="{{ get_site_url() }}/quan-ly-dental-lab" class="apple-card apple-card--tint-blue fade-in-up" style="animation-delay: 0.1s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Lab Management</div>
                     <h3 class="apple-card-title">DentalSO Platform</h3>
@@ -68,7 +65,7 @@
             </a>
 
             {{-- Card 2: DentalSO MES --}}
-            <a href="{{ get_site_url() }}/products/dental-lab-mes/" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.2s;">
+            <a href="{{ get_site_url() }}/products/dental-lab-mes/" class="apple-card apple-card--tint-green fade-in-up" style="animation-delay: 0.2s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Production Floor</div>
                     <h3 class="apple-card-title">DentalSO MES</h3>
@@ -85,7 +82,7 @@
             </a>
 
             {{-- Card 3: DentalSO Connect --}}
-            <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.3s;">
+            <a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/" class="apple-card apple-card--tint-purple fade-in-up" style="animation-delay: 0.3s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Digital Collaboration</div>
                     <h3 class="apple-card-title">DentalSO Connect</h3>
