@@ -830,6 +830,17 @@ a:hover .apple-chevron {
   display: block;
 }
 
+/* Invisible bridge to prevent hover loss between nav item and dropdown gap */
+.dropdown-menu::before {
+  content: "";
+  position: absolute;
+  top: -24px;
+  left: 0;
+  width: 100%;
+  height: 24px;
+  background: transparent;
+}
+
 #swiper1 {
   img {
     transform: scale(0.85);
