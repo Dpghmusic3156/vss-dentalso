@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Charm:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0,0");
+@import "swiper/scss";
+@import "layouts/header";
+@import "layouts/post";
+@import "layouts/footer";
+@import "layouts/sidebar";
+@import "layouts/contact-form";
+
+html {
+  @apply font-vss;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+#swiper1 {
+  img {
+    transform: scale(0.85);
+    transition: 0.3s;
+  }
+
+  .swiper-slide-active {
+    img {
+      transform: scale(1);
+    }
+  }
+}
+
+article {
+  h2 {
+    padding: 20px 0 !important;
+  }
+
+  li {
+    padding: 10px 0 !important;
+  }
+
+  p {
+    padding: 5px 0 !important;
+  }
+}
+
+.prose {
+  max-width: inherit !important;
+}
+
+.current-menu-item > a {
+  @apply border-b-2 border-primary-500 pb-0.5;
+}
+
+@layer components {
+  .px0-380 {
+    @apply max-[380px]:!px-0;
+  }
+}
