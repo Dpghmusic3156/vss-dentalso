@@ -21,7 +21,7 @@
                 <span class="material-symbols-outlined text-sm mr-1">call</span>
                 {{ get_theme_mod('phone') }}
             </a>
-            <a href="https://lab.dentalso.com/" target="_blank" class="apple-nav-btn">
+            <a href="https://lab.dentalso.com/" target="_blank" class="apple-nav-btn hidden lg:inline-flex">
                 Đăng nhập
             </a>
             {{-- Mobile hamburger --}}
@@ -31,39 +31,45 @@
         </div>
     </div>
 
-    {{-- Mobile Drawer --}}
-    <div x-show="mobileMenuOpen" @click.away="mobileMenuOpen = false"
-        x-transition:enter="transition ease-out duration-300"
-        x-transition:enter-start="opacity-0 -translate-y-4"
-        x-transition:enter-end="opacity-100 translate-y-0"
-        x-transition:leave="transition ease-in duration-200"
-        x-transition:leave-start="opacity-100 translate-y-0"
-        x-transition:leave-end="opacity-0 -translate-y-4"
-        class="apple-mobile-drawer" x-cloak>
-        <div class="flex items-center justify-between px-5 py-3 border-b border-[#d2d2d7]/50">
+    {{-- Mobile Drawer — Apple-style full-screen overlay --}}
+    <div x-show="mobileMenuOpen"
+        x-transition:enter="transition ease-out duration-400"
+        x-transition:enter-start="opacity-0"
+        x-transition:enter-end="opacity-100"
+        x-transition:leave="transition ease-in duration-300"
+        x-transition:leave-start="opacity-100"
+        x-transition:leave-end="opacity-0"
+        class="apple-mobile-overlay" x-cloak>
+
+        {{-- Overlay header --}}
+        <div class="apple-mobile-overlay__header">
             <a href="{{ home_url('/') }}">
-                <img alt="DentalSO" class="h-8 object-contain" src="{{ get_theme_mod('logo') }}">
+                <img alt="DentalSO" class="h-8 object-contain brightness-0 invert" src="{{ get_theme_mod('logo') }}">
             </a>
-            <button @click="mobileMenuOpen = false" class="flex items-center justify-center w-10 h-10">
-                <span class="material-symbols-outlined text-[#1d1d1f]">close</span>
+            <button @click="mobileMenuOpen = false" class="apple-mobile-overlay__close" aria-label="Close menu">
+                <span class="material-symbols-outlined">close</span>
             </button>
         </div>
-        <div class="px-5 py-4">
+
+        {{-- Menu items --}}
+        <nav class="apple-mobile-overlay__nav">
             {!! wp_nav_menu([
                 'theme_location' => isset($menu) ? $menu : 'primary_navigation',
                 'echo' => false,
                 'container' => false,
-                'items_wrap' => '<ul id="%1$s" class="%2$s apple-mobile-menu">%3$s</ul>',
+                'items_wrap' => '<ul id="%1$s" class="%2$s apple-mobile-overlay__menu">%3$s</ul>',
             ]) !!}
-            <div class="mt-6 pt-6 border-t border-[#d2d2d7]/50 space-y-4">
-                <a href="tel:0947476000" class="flex items-center text-sm text-[#1d1d1f]">
-                    <span class="material-symbols-outlined text-base mr-2">call</span>
-                    {{ get_theme_mod('phone') }}
-                </a>
-                <a href="https://lab.dentalso.com/" target="_blank" class="apple-cta-primary block text-center">
-                    Đăng nhập
-                </a>
-            </div>
+        </nav>
+
+        {{-- Bottom actions --}}
+        <div class="apple-mobile-overlay__actions">
+            <a href="tel:0947476000" class="apple-mobile-overlay__phone">
+                <span class="material-symbols-outlined">call</span>
+                {{ get_theme_mod('phone') }}
+            </a>
+            <a href="https://lab.dentalso.com/" target="_blank" class="apple-mobile-overlay__cta">
+                Đăng nhập
+            </a>
         </div>
     </div>
 </header>
