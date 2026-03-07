@@ -1,226 +1,262 @@
-{{-- ============================================= --}}
-{{-- HERO --}}
-{{-- ============================================= --}}
-<section class="apple-hero relative overflow-hidden bg-[#fbfbfd]">
-    <div class="apple-container text-center relative z-10">
-        <div class="fade-in-up">
-            <h1 class="apple-hero-headline">DentalSO</h1>
-            <h2 class="apple-hero-subheadline">Dental Streamlined Operations</h2>
-            <p class="apple-hero-copy font-medium max-w-3xl mx-auto mt-4">
-                Powering Modern Dental Labs and Clinics with Intelligent, Connected, and Efficient Workflows.
-            </p>
-            <div class="apple-cta-group">
-                <a href="{{ get_site_url() }}/yeu-cau-tu-van" class="apple-cta-primary">
-                    Book a Demo
-                </a>
-            </div>
-        </div>
-        <div class="apple-hero-img-wrapper fade-in-up" style="animation-delay: 0.2s;">
-            <img src="{{ get_site_url() }}/wp-content/uploads/2024/07/dental.png" alt="DentalSO Platform" class="apple-hero-img w-full max-w-5xl mx-auto mt-12 rounded-2xl">
-        </div>
+<section class="bg-primary-50 py-20">
+  <div class="container flex flex-col md:flex-row gap-10">
+    <div class="my-5 text-center md:text-left">
+      <p class="max-w-2xl mb-4 text-4xl leading-normal tracking-tight md:text-5xl xl:text-4xl xl:leading-tight text-primary2-500 text-center lg:text-left md:text-left">
+        Phần mềm Quản lý Labo Nha khoa
+      </p>
+      <p class="text-2xl leading-normal">Tất cả trên một nền tảng, </p>
+      <p class="text-2xl leading-normal mb-6">Số hoá toàn diện cho Dental Lab!</p>
+      <a href="/vi/yeu-cau-tu-van" class="flex items-center justify-center group relative h-12 w-48 
+                    rounded-3xl bg-primary2-500 text-lg shadow md:mx-0">
+        <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full rounded-3xl"></div>
+        <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
+      </a>
     </div>
-</section>
-
-{{-- ============================================= --}}
-{{-- TRANSFORM COMPLEXITY --}}
-{{-- ============================================= --}}
-<section class="apple-section bg-white">
-    <div class="apple-container">
-        <div class="apple-split">
-            <div class="apple-split-text fade-in-up">
-                <p class="text-sm font-semibold text-[#0071e3] tracking-wide uppercase mb-4">The Platform</p>
-                <h2 class="text-4xl lg:text-5xl font-bold text-[#1d1d1f] leading-snug tracking-tight mb-6">
-                    Transform complexity<br>into control.
-                </h2>
-                <p class="text-[#86868b] text-xl leading-relaxed mb-8">
-                    Stop losing margins to disconnected systems and manual tracking. DentalSO connects production, quality, and communication into one unified digital environment.
-                </p>
-                <p class="text-2xl font-bold text-[#1d1d1f] leading-snug">
-                    From case intake to final delivery, every workflow is synchronized and traceable.
-                </p>
-            </div>
-            <div class="apple-split-media fade-in-up" style="animation-delay: 0.1s;">
-                <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" class="apple-split-img rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)]">
-            </div>
-        </div>
+    <div class="">
+      <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2023/04/dentallab-online-banner-1.png" alt="app" class="img-fluid mask-img imgContain">
     </div>
+  </div>
 </section>
-
-{{-- ============================================= --}}
-{{-- BUILT SPECIFICALLY FOR DENTISTRY --}}
-{{-- ============================================= --}}
-<section class="apple-section bg-[#f5f5f7]">
-    <div class="apple-container">
-        <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-            <h2 class="apple-headline-sm">Built Specifically for Dentistry</h2>
-            <p class="apple-body mt-4">Unlike generic ERP or manufacturing tools, DentalSO is engineered exclusively for dental workflows.</p>
-        </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.1s;">
-                <div class="p-8">
-                    <span class="material-symbols-outlined text-[#0071e3] text-4xl mb-4">account_tree</span>
-                    <h3 class="text-lg font-semibold text-[#1d1d1f] mb-2">Case-based production</h3>
-                </div>
-            </div>
-            <div class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.15s;">
-                <div class="p-8">
-                    <span class="material-symbols-outlined text-[#0071e3] text-4xl mb-4">visibility</span>
-                    <h3 class="text-lg font-semibold text-[#1d1d1f] mb-2">Real-time shop floor visibility</h3>
-                </div>
-            </div>
-            <div class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.2s;">
-                <div class="p-8">
-                    <span class="material-symbols-outlined text-[#0071e3] text-4xl mb-4">forum</span>
-                    <h3 class="text-lg font-semibold text-[#1d1d1f] mb-2">Integrated clinic–lab communication</h3>
-                </div>
-            </div>
-            <div class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.25s;">
-                <div class="p-8">
-                    <span class="material-symbols-outlined text-[#0071e3] text-4xl mb-4">fact_check</span>
-                    <h3 class="text-lg font-semibold text-[#1d1d1f] mb-2">Quality assurance checkpoints</h3>
-                </div>
-            </div>
-            <div class="apple-card apple-card--white fade-in-up" style="animation-delay: 0.3s;">
-                <div class="p-8">
-                    <span class="material-symbols-outlined text-[#0071e3] text-4xl mb-4">lock</span>
-                    <h3 class="text-lg font-semibold text-[#1d1d1f] mb-2">Secure patient data handling</h3>
-                </div>
-            </div>
-        </div>
-        <div class="text-center mt-12 fade-in-up" style="animation-delay: 0.35s;">
-            <p class="text-xl font-medium text-[#1d1d1f]">Designed for precision manufacturing. Built for dental professionals.</p>
-        </div>
+<section class="py-20">
+  <div class="container text-center text-lg leading-normal">
+    <p class="text-4xl mb-4"><b style="font-weight:900">Giải quyết 90%</b> các vấn đề quản lý Dental Lab thông qua <b style="font-weight:700">chuyển đổi số!</b></p>
+    <div class="row" style="margin-left:1vw;margin-right:1vw">
+      <div class="col-md-12 col-lg-12 bd-radius-mobile"
+        style="height: 596px;position: relative;border-radius: 2rem;overflow: hidden;max-height: 80vw">
+        <iframe width="560" height="315" class="iframe-responsive"
+          style="position: absolute;left: 0;top: 0;width: 100%;height: 100%;"
+          src="https://www.youtube.com/embed/K-25qPu4F7o?si=IYgsb12jbxqvyrlv"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
     </div>
+  </div>
 </section>
-
-{{-- ============================================= --}}
-{{-- CORE SOLUTIONS --}}
-{{-- ============================================= --}}
-<section class="apple-section bg-white">
-    <div class="apple-container">
-        <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-            <h2 class="apple-headline">Core Solutions</h2>
+<section class="py-20">
+  <div class="container grid lg:grid-cols-2">
+    <div class="basis-1/2">
+      <div class="img-wrap" style="position: relative;">
+        <img src="<?php echo get_template_directory_uri(); ?>/resources/images/iphoneph.svg" class="img-fluid" style="width: 100%">
+        <div class="overflow-hidden" style="position: absolute;left: 31%; right: 26%;top: 4%;padding: 0;height: 84%;transform: scale3d(1.07, 1.029, 1);">
+          <video autoplay="true" autoplay playsinline webkit-playsinline loop="true" muted="true">
+            <source src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-san-xuat.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="grid lg:grid-cols-2 gap-10">
-            {{-- MES --}}
-            <div class="apple-card apple-card--tint-green fade-in-up" style="animation-delay: 0.1s;">
-                <div class="apple-card-inner">
-                    <div class="apple-card-eyebrow">Manufacturing Execution, Reimagined</div>
-                    <h3 class="apple-card-title">1. DentalSO MES for Labs</h3>
-                    <ul class="space-y-4 mb-8 mt-4">
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Real-time production tracking</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Automated scheduling and workload balancing</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Quality control checkpoints and defect tracking</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Inventory forecasting and material control</span></li>
-                    </ul>
-                    <p class="font-medium text-[#1d1d1f] mt-auto">Result: Faster turnaround, fewer remakes, higher margins.</p>
-                </div>
-            </div>
-            {{-- Connect --}}
-            <div class="apple-card apple-card--tint-purple fade-in-up" style="animation-delay: 0.2s;">
-                <div class="apple-card-inner">
-                    <div class="apple-card-eyebrow">Connected Communication. Zero Friction.</div>
-                    <h3 class="apple-card-title">2. Secure Clinic–Lab Collaboration Hub (DentalSO Connect)</h3>
-                    <ul class="space-y-4 mb-8 mt-4">
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Digital case submission</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Image and file sharing</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Order-level patient data storage</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Warranty and case history tracking</span></li>
-                        <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Enterprise-grade security (SSL, digital certificates, RSA encryption)</span></li>
-                    </ul>
-                    <p class="font-medium text-[#1d1d1f] mt-auto">Result: Reduced errors, improved clarity, stronger partnerships.</p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
-</section>
-
-{{-- ============================================= --}}
-{{-- WHY DENTALSO (Dark) --}}
-{{-- ============================================= --}}
-<section class="apple-section apple-section--dark relative overflow-hidden">
-    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0071e3]/5 rounded-full blur-[120px]"></div>
-    <div class="apple-container relative z-10">
-        <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-            <h2 class="apple-headline text-white">Why DentalSO?</h2>
+    <div class="basis-1/2">
+      <p class="text-4xl mt-10 sm:mt-6 mb-10">Quản lý sản xuất</p>
+      <div class="flex flex-col md:flex-row gap-10 mt-10">
+        <div class="px-5">
+          <ul>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Dễ dàng truy cập và cập nhật yêu cầu từ nha khoa.
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Giảm thiểu lỗi kỹ thuật nhờ theo dõi chi tiết từng công đoạn.
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Tối ưu hóa quy trình sản xuất, đảm bảo tiến độ và chất lượng.
+            </li>
+          </ul>
         </div>
-        <div class="grid md:grid-cols-2 gap-6 max-w-5xl mx-auto">
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.1s;">
-                <h3 class="text-xl font-semibold text-white mb-3">Industry-Specific Innovation</h3>
-                <p class="apple-glass-text">Every feature is built around dental production logic — not retrofitted from generic manufacturing systems.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.15s;">
-                <h3 class="text-xl font-semibold text-white mb-3">Enterprise-Level Security</h3>
-                <p class="apple-glass-text">Your patient data and operational intelligence are protected with modern encryption standards.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.2s;">
-                <h3 class="text-xl font-semibold text-white mb-3">Proven Performance</h3>
-                <p class="apple-glass-text">Trusted by 300+ dental organizations to standardize operations and scale confidently.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.25s;">
-                <h3 class="text-xl font-semibold text-white mb-3">Scalable Architecture</h3>
-                <p class="apple-glass-text">Multi-tenant SaaS architecture designed to support single labs, multi-location enterprises, and international expansion.</p>
-            </div>
-        </div>
+      </div>
     </div>
+  </div>
 </section>
-
-{{-- ============================================= --}}
-{{-- FINAL CTA (Gradient & Results) --}}
-{{-- ============================================= --}}
-<section class="apple-section apple-section--cta relative overflow-hidden">
-    <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-[#005bb5]/30 rounded-full blur-[150px] -translate-y-1/2 translate-x-1/4"></div>
-    <div class="apple-container text-center relative z-10">
-        <div class="max-w-4xl mx-auto fade-in-up">
-            <h2 class="apple-headline text-white mb-10">From Workflow Chaos to Operational Excellence</h2>
-            <div class="grid sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
-                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-md border border-white/20">
-                    <p class="text-white font-medium text-sm">Clear production visibility</p>
-                </div>
-                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-md border border-white/20">
-                    <p class="text-white font-medium text-sm">Predictable turnaround</p>
-                </div>
-                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-md border border-white/20">
-                    <p class="text-white font-medium text-sm">Controlled material costs</p>
-                </div>
-                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-md border border-white/20">
-                    <p class="text-white font-medium text-sm">Standardized quality</p>
-                </div>
-                <div class="bg-white/10 rounded-xl p-4 backdrop-blur-md border border-white/20">
-                    <p class="text-white font-medium text-sm">Data-driven decisions</p>
-                </div>
-            </div>
-            <p class="text-xl text-white/80 mb-12 italic">
-                "This is not just software. It is operational infrastructure for modern dental manufacturing."
-            </p>
-            <h3 class="text-3xl font-bold text-white mb-8">Ready to Streamline Your Operations?</h3>
-            <p class="text-lg text-white/90 mb-8">See how DentalSO transforms lab and clinic performance.</p>
-            <div class="apple-cta-group">
-                <a href="{{ get_site_url() }}/yeu-cau-tu-van" class="apple-cta-primary apple-cta-primary--light">
-                    Schedule a Live Demo
-                </a>
-                <a href="{{ get_site_url() }}/lien-he" class="apple-cta-secondary apple-cta-secondary--light">
-                    Request Pricing <span class="apple-chevron">›</span>
-                </a>
-            </div>
+<section class="py-20 bg-primary-50">
+  <div class="container flex flex-col-reverse md:flex-row gap-10">
+    <div class="basis-1/2">
+      <p class="text-4xl mb-10 mt-10">Quản lý Giao nhận</p>
+      <div class="flex flex-col md:flex-row gap-10">
+        <div class="px-5">
+          <ul>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Tự động nhắc nhở và theo dõi lịch trình giao nhận.
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Quản lý chính xác số lượng và tình trạng giao hàng.
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Cải thiện thời gian giao nhận, đảm bảo đúng hẹn với khách hàng.
+            </li>
+          </ul>
         </div>
+      </div>
     </div>
+    <div class="basis-1/2" style="position:relative;top: 18px;">
+      <video autoplay="true" autoplay playsinline webkit-playsinline loop="true" muted="true" class="shadow-xl"
+        style="width: 100%;">
+        <source src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-giao-nhan.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
 </section>
-
-{{-- Scroll Reveal Script --}}
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1,
-            rootMargin: '0px 0px -40px 0px'
-        });
-        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-    });
-</script>
+<section class="py-20">
+  <div class="container flex flex-col md:flex-row gap-10">
+    <div class="basis-1/2">
+      <video autoplay="true" autoplay playsinline webkit-playsinline loop="true" muted="true"
+        style="width: 100%;" class="shadow-xl">
+        <source src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-cham-soc-khach-hang.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="basis-1/2">
+      <p class="text-4xl mb-10 mt-10">Quản lý & chăm sóc khách hàng (CRM)</p>
+      <div class="flex flex-col md:flex-row gap-10">
+        <div class="px-5">
+          <ul>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Lưu trữ toàn bộ thông tin và lịch sử giao dịch của khách hàng
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Tạo và quản lý các chiến dịch chăm sóc khách hàng hiệu quả
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Quản lý linh hoạt và chính xác chính sách giá bán cho từng khách hàng
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-20 bg-primary-50">
+  <div class="container flex flex-col-reverse md:flex-row gap-10">
+    <div class="basis-1/2">
+      <p class="text-4xl mb-10 mt-10">Quản lý Tài chính</p>
+      <div class="flex flex-col-reverse md:flex-row gap-10">
+        <div class="px-5">
+          <ul>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Tự động hoá quy trình xuất hóa đơn, tiết kiệm thời gian và chính xác
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Theo dõi và kiểm soát tình hình tài chính theo thời gian thực
+            </li>
+            <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+              Quản lý công nợ hiệu quả, giảm thiểu rủi ro tài chính
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="basis-1/2" style="position:relative;top: 18px;">
+      <video autoplay="true" autoplay playsinline webkit-playsinline loop="true" muted="true"
+        style="width: 100%; box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;">
+        <source src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-hoa-don.mp4" type="video/mp4">
+      </video>
+    </div>
+  </div>
+</section>
+<section class="py-20">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 col-lg-12" style="place-content: center;">
+        <div class="section-heading mb-5">
+          <p class="text-4xl mb-10 mt-10">Quản lý Nhân sự</p>
+          <div class="flex flex-col-reverse md:flex-row gap-10">
+            <div class="px-5">
+              <ul>
+                <li class="mb-4 sm:mb-10">
+              <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+                  Tạo ra các chính sách thu hút và giữ chân kỹ thuật viên giỏi
+                </li>
+                <li class="mb-4 sm:mb-10">
+                  <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+                  Tối ưu hóa phân công công việc, nâng cao năng suất lao động
+                </li>
+                <li class="mb-4 sm:mb-10">
+                  <span class="material-symbols-outlined align-bottom text-primary-500">check_circle</span>
+                  Theo dõi hiệu quả làm việc và đề xuất cải tiến
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <swiper-container id="swiper1" class="mySwiper">
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-1.png"
+          class="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-2.png"
+          class="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-3.png"
+          class="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-4.png"
+          class="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-5.png"
+          class="">
+      </swiper-slide>
+      <swiper-slide>
+        <img src="<?php echo get_site_url(); ?>/wp-content/uploads/2024/09/phan-mem-quan-ly-labo-dentalso-mobile-app-6.png"
+          class="">
+      </swiper-slide>
+    </swiper-container>
+  </div>
+</section>
+<section class="py-20 bg-primary-50">
+  <div class="container text-center">
+    <p class="text-2xl leading-normal">
+      Tại sao bạn vẫn phải quản lý thủ công?<br>Trong khi DentalSO giúp bạn <b style="font-weight:700">giải quyết 90%</b> các vấn đề trên <b style="font-weight:700">trong vòng 1 tuần</b>
+    </p>
+    <!-- <p class="text-3xl leading-normal">DentalSO - nền tảng quản trị dành riêng cho mọi Dental Lab, sẽ giúp bạn</p> -->
+    <div class="grid grid-cols-4 justify-content-center mt-16">
+      <div class="mt-4 flex flex-col items-center">
+        <span class="material-symbols-outlined w-12 h-12 mb-3 rounded-full text-5xl font-light text-white bg-primary-500 flex items-center justify-center p-11">
+          emoji_objects
+        </span>
+        <h5 class="text-center text-lg mb-2"><b style="font-weight:700">Đơn giản</b> hơn bạn nghĩ</h5>
+      </div>
+      <div class="mt-4 flex flex-col items-center">
+        <span class="material-symbols-outlined w-12 h-12 mb-3 rounded-full text-5xl font-light text-white bg-primary2-500 flex items-center justify-center p-11">
+          savings
+        </span>
+        <h5 class="text-center text-lg mb-2"><b style="font-weight:700">Chi phí thấp</b> hơn bạn lo</h5>
+      </div>
+      <div class="mt-4 flex flex-col items-center">
+        <span class="material-symbols-outlined w-12 h-12 mb-3 rounded-full text-5xl font-light text-white bg-primary3-500 flex items-center justify-center p-11">
+          monitoring
+        </span>
+        <h5 class="text-center text-lg mb-2"><b style="font-weight:700">Hiệu quả</b> hơn bạn mong đợi</h5>
+      </div>
+      <div class="mt-4 flex flex-col items-center">
+        <span class="material-symbols-outlined w-12 h-12 mb-3 rounded-full text-5xl font-light text-white bg-secondary flex items-center justify-center p-11">
+          cloud
+        </span>
+        <h5 class="text-center text-lg mb-2">Quản lý <b style="font-weight:700">dễ dàng</b> & <b style="font-weight:700">từ xa</b></h5>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="py-20">
+  <div class="container text-center">
+    <p class="text-3xl mb-10">Đăng ký Tư vấn và Dùng thử DentalSO miễn phí ngay!</p>
+    <a href="<?php echo get_site_url(); ?>/yeu-cau-tu-van" class="flex items-center justify-center group relative h-12 w-48 
+                    rounded-3xl bg-primary2-500 text-lg shadow mx-auto">
+      <div class="absolute inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full rounded-3xl"></div>
+      <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
+    </a>
+  </div>
+</section>
