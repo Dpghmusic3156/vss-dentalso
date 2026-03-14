@@ -1,0 +1,18 @@
+/* =========================================
+   BASE RESETS
+   ========================================= */
+
+html {
+  font-family: var(--apple-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--apple-dark);
+}
+
+a {
+  text-decoration: none !important;
+}

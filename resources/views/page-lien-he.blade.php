@@ -6,9 +6,9 @@
 <section class="apple-section apple-section--sm bg-[#f5f5f7]">
     <div class="apple-container text-center">
         <div class="fade-in-up">
-            <h1 class="apple-headline mb-4">Contact DentalSO</h1>
+            <h1 class="apple-headline mb-4">Liên Hệ DentalSO</h1>
             <p class="apple-hero-copy">
-                Have questions about our dental lab software or want a personalized demo? Fill out the form below and our team will contact you shortly.
+                Bạn có câu hỏi về phần mềm quản lý Labo hoặc muốn trải nghiệm demo? Hãy điền form bên dưới, đội ngũ chúng tôi sẽ liên hệ bạn sớm nhất.
             </p>
         </div>
     </div>
@@ -18,89 +18,102 @@
 <section class="apple-section bg-white" id="contact">
     <div class="apple-container">
         <div class="grid lg:grid-cols-5 gap-10 lg:gap-16">
-            {{-- Left: Contact Info --}}
-            <div class="lg:col-span-2 fade-in-up">
+            {{-- 1: Text cards (mobile: 1st) --}}
+            <div class="lg:col-span-2 order-1 fade-in-up">
                 <div class="space-y-6">
                     <div class="apple-mini-card">
                         <span class="material-symbols-outlined text-2xl text-[#0071e3] mb-3">mail</span>
-                        <h4 class="apple-mini-title">Sales inquiries</h4>
-                        <p class="apple-mini-desc">Get pricing and product information</p>
+                        <h4 class="apple-mini-title">Tư vấn kinh doanh</h4>
+                        <p class="apple-mini-desc">Nhận thông tin sản phẩm và báo giá</p>
                     </div>
                     <div class="apple-mini-card">
                         <span class="material-symbols-outlined text-2xl text-[#30d158] mb-3">calendar_month</span>
-                        <h4 class="apple-mini-title">Demo requests</h4>
-                        <p class="apple-mini-desc">Book a personalized demo session</p>
+                        <h4 class="apple-mini-title">Đăng ký demo</h4>
+                        <p class="apple-mini-desc">Đặt lịch demo cá nhân hóa</p>
                     </div>
                     <div class="apple-mini-card">
                         <span class="material-symbols-outlined text-2xl text-[#ff9f0a] mb-3">handshake</span>
-                        <h4 class="apple-mini-title">Partnership opportunities</h4>
-                        <p class="apple-mini-desc">Explore collaboration options</p>
+                        <h4 class="apple-mini-title">Cơ hội hợp tác</h4>
+                        <p class="apple-mini-desc">Khám phá các lựa chọn cộng tác</p>
                     </div>
                     <div class="apple-mini-card">
                         <span class="material-symbols-outlined text-2xl text-[#bf5af2] mb-3">support_agent</span>
-                        <h4 class="apple-mini-title">Support questions</h4>
-                        <p class="apple-mini-desc">Get help with existing services</p>
-                    </div>
-                </div>
-
-                <div class="mt-8 space-y-4 text-sm text-[#86868b]">
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-base">location_on</span>
-                        <span>215/167 Nguyễn Xí, Phường 13, Bình Thạnh, TP.HCM</span>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-base">phone</span>
-                        <a href="tel:0947476000" class="hover:text-[#1d1d1f] transition-colors">0947 476 000</a>
-                        <span>•</span>
-                        <a href="tel:+14259545496" class="hover:text-[#1d1d1f] transition-colors">+1.425.954.5496</a>
-                    </div>
-                    <div class="flex items-center gap-3">
-                        <span class="material-symbols-outlined text-base">mail</span>
-                        <a href="mailto:contact@dentalso.com" class="hover:text-[#1d1d1f] transition-colors">contact@dentalso.com</a>
+                        <h4 class="apple-mini-title">Hỗ trợ kỹ thuật</h4>
+                        <p class="apple-mini-desc">Được hỗ trợ về dịch vụ đang sử dụng</p>
                     </div>
                 </div>
             </div>
 
-            {{-- Right: Form --}}
-            <div class="lg:col-span-3 fade-in-up" style="animation-delay: 0.15s;">
+            {{-- 2: Form (mobile: 2nd) --}}
+            <div class="lg:col-span-3 order-2 fade-in-up" style="animation-delay: 0.15s;">
                 <div class="bg-[#f5f5f7] rounded-3xl p-8 lg:p-10" id="form">
                     <div id="formContactUs">
-                        <h2 class="apple-headline-sm mb-2">Submit Inquiry</h2>
-                        <p class="apple-body mb-8">We'll get back to you as soon as possible.</p>
+                        <h2 class="apple-headline-sm mb-2">Gửi yêu cầu</h2>
+                        <p class="apple-body mb-8">Chúng tôi sẽ phản hồi bạn trong thời gian sớm nhất.</p>
                         <form action="javascript:a();" method="POST" class="space-y-5" autocomplete="off">
                             <div class="grid sm:grid-cols-2 gap-5">
-                                <input type="text" name="name" class="apple-input" id="name" placeholder="Name" required>
-                                <input type="text" class="apple-input" name="company" id="company" placeholder="Company" required>
+                                <input type="text" name="name" class="apple-input" id="name" placeholder="Họ tên" required>
+                                <input type="text" class="apple-input" name="company" id="company" placeholder="Công ty" required>
                             </div>
                             <div class="grid sm:grid-cols-2 gap-5">
-                                <input type="text" name="phone" class="apple-input" id="phone" placeholder="Phone" required>
+                                <input type="text" name="phone" class="apple-input" id="phone" placeholder="Số điện thoại" required>
                                 <input type="email" class="apple-input" name="email" id="email" placeholder="Email">
                             </div>
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <select class="apple-input" name="reason" id="reason">
-                                    <option selected disabled>Department</option>
-                                    <option value="Tư vấn">Sales</option>
-                                    <option value="Hỗ trợ kỹ thuật">Technical Support</option>
-                                    <option value="Hợp tác">Partnership</option>
+                                    <option selected disabled>Phòng ban</option>
+                                    <option value="Tư vấn">Kinh doanh</option>
+                                    <option value="Hỗ trợ kỹ thuật">Hỗ trợ kỹ thuật</option>
+                                    <option value="Hợp tác">Hợp tác</option>
                                 </select>
                                 <select class="apple-input" name="product" id="product">
-                                    <option selected disabled>Product</option>
-                                    <option value="Dental Lab">Dental Lab</option>
-                                    <option value="Dental Clinic">Dental Clinic</option>
+                                    <option selected disabled>Sản phẩm</option>
+                                    <option value="DentalSO Platform">DentalSO Platform</option>
+                                    <option value="DentalSO MES">DentalSO MES</option>
+                                    <option value="DentalSO Connect">DentalSO Connect</option>
                                 </select>
                             </div>
-                            <textarea class="apple-input" name="message" placeholder="Message" id="message" rows="4" required></textarea>
+                            <textarea class="apple-input" name="message" placeholder="Nội dung" id="message" rows="4" required></textarea>
                             <div>
-                                <div class="loading hidden text-[#0071e3]">Sending...</div>
-                                <div class="error-message hidden text-[#ff453a]">Unable to send. Please try again.</div>
+                                <div class="loading hidden text-[#0071e3]">Đang gửi...</div>
+                                <div class="error-message hidden text-[#ff453a]">Không thể gửi. Vui lòng thử lại.</div>
                             </div>
                             <button class="apple-cta-primary w-full sm:w-auto" type="submit">
-                                Submit Inquiry
+                                Gửi yêu cầu
                             </button>
                         </form>
                     </div>
                     <div class="sent-message hidden text-[#30d158] text-xl text-center py-10 font-medium">
-                        Message sent successfully! We'll contact you shortly.
+                        Gửi thành công! Chúng tôi sẽ liên hệ bạn sớm nhất.
+                    </div>
+                </div>
+            </div>
+
+            {{-- 3: Contact info (mobile: 3rd) --}}
+            <div class="lg:col-span-2 order-3 lg:order-3 fade-in-up" style="animation-delay: 0.2s;">
+                <div class="space-y-4 text-sm text-[#86868b]">
+                    <div class="flex items-start gap-3">
+                        <span class="material-symbols-outlined text-base mt-0.5">location_on</span>
+                        <div class="flex flex-col gap-1">
+                            <span><strong>VN:</strong> {{ get_theme_mod('address') }}</span>
+                            @if(get_theme_mod('address_us'))
+                            <span><strong>US:</strong> {{ get_theme_mod('address_us') }}</span>
+                            @endif
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">phone</span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/resources/images/vn.png" class="w-4 h-auto" alt="VN">
+                        <a href="tel:{{ get_theme_mod('phone') }}" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phone') }}</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">phone</span>
+                        <img src="<?php echo get_template_directory_uri(); ?>/resources/images/us.png" class="w-4 h-auto" alt="US">
+                        <a href="tel:{{ get_theme_mod('phoneus') }}" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phoneus') }}</a>
+                    </div>
+                    <div class="flex items-center gap-3">
+                        <span class="material-symbols-outlined text-base">mail</span>
+                        <a href="mailto:contact@dentalso.com" class="hover:text-[#1d1d1f] transition-colors">contact@dentalso.com</a>
                     </div>
                 </div>
             </div>
@@ -129,23 +142,23 @@ document.addEventListener('DOMContentLoaded', () => {
         var email = jQuery.trim(jQuery('#email').val());
         let data = new Object;
 
-        if (name === '') { alert('Please enter your name'); return false; } else { data['name'] = name; }
-        if (phone === '') { alert('Please enter your phone number'); return false; } else { data['phone'] = phone; }
-        if (email === '') { alert('Please enter your email'); return false; } else { data['email'] = email; }
-        if (message === '') { alert('Please enter a message'); return false; } else { data['message'] = message; }
+        if (name === '') { alert('Vui lòng nhập họ tên'); return false; } else { data['name'] = name; }
+        if (phone === '') { alert('Vui lòng nhập số điện thoại'); return false; } else { data['phone'] = phone; }
+        if (email === '') { alert('Vui lòng nhập email'); return false; } else { data['email'] = email; }
+        if (message === '') { alert('Vui lòng nhập nội dung'); return false; } else { data['message'] = message; }
 
         jQuery("#formContactUs :input").prop("disabled", true);
 
         let note = "";
         const space = "\n";
-        if (data.name) { note += "Tên: " + data.name + space; };
-        if (data.company) { note += "Công ty: " + data.company + space; };
-        if (data.phone) { note += "Điện thoại: " + data.phone + space; };
+        if (data.name) { note += "Name: " + data.name + space; };
+        if (data.company) { note += "Company: " + data.company + space; };
+        if (data.phone) { note += "Phone: " + data.phone + space; };
         if (data.email) { note += "Email: " + data.email + space; data['el'] = data.email.trim().length; };
-        if (data.product) { note += "Sản phẩm: " + data.product + space; };
+        if (data.product) { note += "Product: " + data.product + space; };
         data['url'] = jQuery(location).attr('href');
         if (reason) { data['reason'] = reason; }
-        if (data.message) { note += "Tin nhắn:" + data.message; };
+        if (data.message) { note += "Message:\n" + data.message; };
         data['note'] = note;
 
         jQuery.ajax({

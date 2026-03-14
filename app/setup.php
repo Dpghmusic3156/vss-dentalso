@@ -25,7 +25,11 @@ add_action('wp_enqueue_scripts', function () {
  * @return void
  */
 add_action('enqueue_block_editor_assets', function () {
-    // bundle('editor')->enqueue();
+    try {
+        bundle('editor')->enqueue();
+    } catch (\Throwable $th) {
+        // Ignored
+    }
 }, 100);
 
 /**
@@ -162,6 +166,16 @@ add_action('customize_register', function ($wp_customize) {
             'label' => 'Địa chỉ',
             'section' => 'title_tagline',
             'settings' => 'address',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting('address_us');
+    $wp_customize->add_control(
+        'address_us',
+        array(
+            'label' => 'Địa chỉ (US)',
+            'section' => 'title_tagline',
+            'settings' => 'address_us',
             'type' => 'text',
         )
     );

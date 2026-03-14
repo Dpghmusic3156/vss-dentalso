@@ -1,23 +1,44 @@
 @extends('layouts.app')
 
-@section('page-header')
-@include('partials.page-header')
-@endsection
-
 @section('content')
-<section class="container py-20">
-        <img class="mx-auto mt-10 rounded-2xl" src="https://dentalso.com/vi/wp-content/uploads/2024/09/Mau-Xanh-Minh-Hoa-Tuyen-Dung-Bai-Dang-LinkedIn.png" alt="" style="width: 80%;" />
-    <p>
-        – Được đào tạo các nghiệp vụ chuyên ngành của phần mềm và CNTT
-    </p>
-    <p>
-        – Phụ cấp cho thực tập sinh
-    </p>
-    <p >
-        – Cơ hội phát triển rộng mở cho các ứng viên có năng lực và yêu thích công việc
-    </p>
-    <p >
-        <b>Thông tin liên hệ: </b><a href="mailto:contact@dentalso.com">contact@dentalso.com</a>
-    </p>
+
+<section class="apple-section apple-section--sm bg-[#f5f5f7]">
+    <div class="apple-container text-center">
+        <div class="fade-in-up">
+            <h1 class="apple-headline mb-4">Tuyển Dụng</h1>
+            <p class="apple-hero-copy">
+                Tham gia đội ngũ DentalSO — Nơi công nghệ kiến tạo tương lai ngành nha khoa.
+            </p>
+        </div>
+    </div>
 </section>
+
+<section class="apple-section bg-white">
+    <div class="apple-container">
+        <div class="max-w-3xl mx-auto text-center fade-in-up">
+            <h2 class="apple-headline-sm mb-6">Hiện chưa có vị trí tuyển dụng</h2>
+            <p class="apple-body mb-8">
+                Chúng tôi luôn tìm kiếm những tài năng xuất sắc. Hãy gửi CV của bạn tới email bên dưới để chúng tôi liên hệ khi có cơ hội phù hợp.
+            </p>
+            <a href="mailto:contact@dentalso.com" class="apple-cta-primary">
+                Gửi CV: contact@dentalso.com
+            </a>
+        </div>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+        document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+    });
+</script>
+
 @endsection

@@ -4,7 +4,7 @@
 @while(have_posts()) @php(the_post())
 <!-- @include('partials.page-header') -->
 <?php
-$post = get_post($post);
+global $post;
 $slug = $post->post_name;
 $post_data = get_post($post->post_parent);
 $parent_slug = $post_data->post_name;

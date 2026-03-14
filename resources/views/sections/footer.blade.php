@@ -3,40 +3,40 @@
         {{-- Top: Links grid --}}
         <div class="apple-footer-grid">
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Products</h5>
+                <h5 class="apple-footer-heading">Sản Phẩm</h5>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ get_site_url() }}/quan-ly-dental-lab">Dental Lab Software</a></li>
-                    <li><a href="{{ get_site_url() }}/products/dental-lab-mes/">DentalSO MES</a></li>
-                    <li><a href="{{ get_site_url() }}/ket-noi-voi-nha-khoa/">DentalSO Connect</a></li>
+                    <li><a href="{{ home_url('san-pham/phan-mem-dental-lab') }}">Dental Lab Software</a></li>
+                    <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">DentalSO MES</a></li>
+                    <li><a href="{{ home_url('san-pham/dentalso-ket-noi/') }}">DentalSO Connect</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Solutions</h5>
+                <h5 class="apple-footer-heading">Giải Pháp</h5>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ get_site_url() }}/solutions/dental-labs/">Dental Labs</a></li>
-                    <li><a href="{{ get_site_url() }}/solutions/dental-clinics/">Dental Clinics</a></li>
-                    <li><a href="{{ get_site_url() }}/solutions/sales-agents/">Sales Agents</a></li>
+                    <li><a href="{{ home_url('giai-phap/labo/') }}">Dành cho Labo</a></li>
+                    <li><a href="{{ home_url('giai-phap/phong-kham/') }}">Dành cho Phòng khám</a></li>
+                    <li><a href="{{ home_url('giai-phap/sales/') }}">Dành cho Sales</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Company</h5>
+                <h5 class="apple-footer-heading">Công Ty</h5>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ get_site_url() }}/ve-chung-toi/">About</a></li>
-                    <li><a href="{{ get_site_url() }}/blog/">Blog</a></li>
-                    <li><a href="{{ get_site_url() }}/lien-he/">Contact</a></li>
-                    <li><a href="{{ get_site_url() }}/tuyen-dung/">Careers</a></li>
+                    <li><a href="{{ home_url('ve-chung-toi/') }}">Về chúng tôi</a></li>
+                    <li><a href="{{ home_url('blog/') }}">Blog</a></li>
+                    <li><a href="{{ home_url('lien-he/') }}">Liên hệ</a></li>
+                    <li><a href="{{ home_url('tuyen-dung/') }}">Tuyển dụng</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Support</h5>
+                <h5 class="apple-footer-heading">Hỗ Trợ</h5>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ get_site_url() }}/huong-dan/">Guides</a></li>
-                    <li><a href="{{ get_site_url() }}/yeu-cau-tu-van">Book a Demo</a></li>
-                    <li><a href="https://lab.dentalso.com/" target="_blank">Login</a></li>
+                    <li><a href="{{ home_url('huong-dan/') }}">Hướng dẫn</a></li>
+                    <li><a href="{{ home_url('yeu-cau-tu-van') }}">Đăng ký Demo</a></li>
+                    <li><a href="https://lab.dentalso.com/" target="_blank">Đăng nhập</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Contact</h5>
+                <h5 class="apple-footer-heading">Liên Hệ</h5>
                 <ul class="apple-footer-links">
                     <li>
                         <a href="mailto:<?php echo get_theme_mod('email1'); ?>">
@@ -45,11 +45,11 @@
                     </li>
                     <li class="flex items-center gap-1.5">
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/vn.png" class="w-4 h-auto" alt="VN">
-                        <a href="tel:0947476000"><?php echo get_theme_mod('phone'); ?></a>
+                        <a href="tel:<?php echo get_theme_mod('phone'); ?>"><?php echo get_theme_mod('phone'); ?></a>
                     </li>
                     <li class="flex items-center gap-1.5">
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/us.png" class="w-4 h-auto" alt="US">
-                        <a href="tel:+14259545496"><?php echo get_theme_mod('phoneus'); ?></a>
+                        <a href="tel:<?php echo get_theme_mod('phoneus'); ?>"><?php echo get_theme_mod('phoneus'); ?></a>
                     </li>
                 </ul>
                 <div class="flex gap-3 mt-4">
@@ -63,25 +63,37 @@
             </div>
         </div>
 
-        {{-- Divider --}}
-        <div class="border-t border-[#d2d2d7]/40 mt-8 pt-6">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-[#86868b]">
-                <div class="flex items-center gap-3">
-                    <img alt="DentalSO" class="h-6 object-contain opacity-50" src="<?php echo get_theme_mod('logo_full'); ?>">
-                    <span>© {{ date('Y') }} DentalSO. All rights reserved.</span>
+        {{-- Bottom --}}
+        <div class="border-t border-[#d2d2d7]/30 mt-8 pt-5 text-[11px] text-[#86868b]">
+            {{-- Row 1: Logo + addresses left, language switcher right --}}
+            <div class="flex flex-col md:flex-row items-center md:items-start justify-between gap-3 mb-3">
+                <div class="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
+                    <img alt="DentalSO" class="h-4 object-contain opacity-70" src="<?php echo get_theme_mod('logo_full'); ?>">
+                    <div class="space-y-0.5">
+                        <?php if(get_theme_mod('address')): ?>
+                        <p><span class="material-symbols-outlined text-[11px] align-middle mr-0.5">location_on</span>VN: <?php echo get_theme_mod('address'); ?></p>
+                        <?php endif; ?>
+                        <?php if(get_theme_mod('address_us')): ?>
+                        <p><span class="material-symbols-outlined text-[11px] align-middle mr-0.5">location_on</span>US: <?php echo get_theme_mod('address_us'); ?></p>
+                        <?php endif; ?>
+                    </div>
                 </div>
-                <div class="flex items-center gap-4">
-                    <a href="https://dentalso.com/en" class="hover:text-[#1d1d1f] transition-colors">English</a>
-                    <span>|</span>
-                    <a href="https://www.facebook.com/<?php echo get_theme_mod('facebook'); ?>" target="_blank" class="hover:text-[#1d1d1f] transition-colors">Facebook</a>
-                    <span>|</span>
-                    <a href="https://dental.vn" target="_blank" class="hover:text-[#1d1d1f] transition-colors">dental.vn</a>
+                <div class="flex items-center gap-3">
+                    <a href="http://ghuy.me/vi/" class="hover:text-[#1d1d1f] transition-colors font-medium text-[#6e6e73]">Tiếng Việt</a>
+                    <span class="text-[#d2d2d7]">|</span>
+                    <a href="http://ghuy.me/en/" class="hover:text-[#1d1d1f] transition-colors">English</a>
                 </div>
             </div>
-            <p class="text-xs text-[#86868b] mt-3">
-                <span class="material-symbols-outlined text-xs mr-1 align-middle">location_on</span>
-                Lầu 8, Toà nhà Thuỷ lợi 4 – <?php echo get_theme_mod('address'); ?>
-            </p>
+            {{-- Row 2: Copyright + legal links, right-aligned --}}
+            <div class="flex flex-wrap items-center justify-center md:justify-end gap-x-1">
+                <span>Copyright © {{ date('Y') }} DentalSO. All rights reserved.</span>
+                <span class="mx-1">|</span>
+                <a href="{{ home_url('chinh-sach-bao-mat/') }}" class="hover:text-[#1d1d1f] transition-colors">Chính sách bảo mật</a>
+                <span class="mx-1">|</span>
+                <a href="{{ home_url('dieu-khoan-su-dung/') }}" class="hover:text-[#1d1d1f] transition-colors">Điều khoản sử dụng</a>
+                <span class="mx-1">|</span>
+                <a href="{{ home_url('chinh-sach-cookies/') }}" class="hover:text-[#1d1d1f] transition-colors">Cookies</a>
+            </div>
         </div>
     </div>
 </footer>
