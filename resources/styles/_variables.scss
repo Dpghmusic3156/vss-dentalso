@@ -15,9 +15,8 @@
   --apple-white: #fbfbfd;
 
   /* Typography */
-  --apple-font:
-    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text",
-    "Be Vietnam Pro", "Helvetica Neue", Arial, sans-serif;
+  --apple-font: "Avenir Next for Intuit", "Avenir Next", "Avenir", "Montserrat", "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --apple-font-mono: ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 
   /* Spacing */
   --apple-section-py: clamp(5rem, 12vw, 10rem);
