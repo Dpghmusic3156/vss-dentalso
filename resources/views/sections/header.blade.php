@@ -1,7 +1,12 @@
-<header class="apple-nav {{ !is_front_page() ? 'has-subnav' : '' }}" x-data="{mobileMenuOpen: false}">
+<header class="apple-nav {{ !is_front_page() ? 'has-subnav' : '' }}" 
+    x-data="{mobileMenuOpen: false}"
+    x-init="$watch('mobileMenuOpen', value => {
+        if (value) document.body.classList.add('overflow-hidden');
+        else document.body.classList.remove('overflow-hidden');
+    })">
     <div class="apple-nav-inner">
         {{-- Logo --}}
-        <a class="apple-nav-logo shrink-0" href="{{ home_url('/') }}">
+        <a class="apple-nav-logo apple-press shrink-0" href="{{ home_url('/') }}">
             <img alt="DentalSO" class="h-full py-2 object-contain" src="{{ get_theme_mod('logo') }}">
         </a>
 
@@ -28,61 +33,42 @@
             --}}
         <div class="flex items-center justify-end gap-3 xl:gap-6 shrink-0 lg:hidden">
             {{-- Mobile hamburger --}}
-            <button class="lg:hidden flex items-center justify-center w-10 h-10 -mr-2" @click="mobileMenuOpen = true" aria-label="Open menu">
-                <span class="material-symbols-outlined text-[#1d1d1f]">menu</span>
+            <button class="flex items-center justify-center w-10 h-10 -mr-2 apple-press" 
+                @click="mobileMenuOpen = !mobileMenuOpen" 
+                aria-label="Toggle menu"
+                :aria-expanded="mobileMenuOpen"
+                aria-controls="mobile-nav">
+                <span class="material-symbols-outlined text-[#1d1d1f]" x-text="mobileMenuOpen ? 'close' : 'menu'">menu</span>
             </button>
         </div>
     </div>
 
-    {{-- Mobile Drawer — Apple-style full-screen overlay --}}
+    {{-- Mobile Nav Panel — Slides down from navbar --}}
     <div x-show="mobileMenuOpen"
-        x-transition:enter="transition ease-out duration-400"
-        x-transition:enter-start="opacity-0"
-        x-transition:enter-end="opacity-100"
-        x-transition:leave="transition ease-in duration-300"
-        x-transition:leave-start="opacity-100"
-        x-transition:leave-end="opacity-0"
-        class="apple-mobile-overlay" x-cloak>
-
-        {{-- Overlay header --}}
-        <div class="apple-mobile-overlay__header">
-            <a href="{{ home_url('/') }}">
-                <img alt="DentalSO" class="h-8 object-contain brightness-0 invert" src="{{ get_theme_mod('logo') }}">
-            </a>
-            <button @click="mobileMenuOpen = false" class="apple-mobile-overlay__close" aria-label="Close menu">
-                <span class="material-symbols-outlined">close</span>
-            </button>
-        </div>
-
-        {{-- Menu items --}}
-        <nav class="apple-mobile-overlay__nav">
+        x-transition:enter="transition-all duration-500 cubic-bezier(0.16, 1, 0.3, 1)"
+        x-transition:enter-start="opacity-0 -translate-y-4 scale-y-95"
+        x-transition:enter-end="opacity-100 translate-y-0 scale-y-100"
+        x-transition:leave="transition-all duration-300 cubic-bezier(0.16, 1, 0.3, 1)"
+        x-transition:leave-start="opacity-100 translate-y-0 scale-y-100"
+        x-transition:leave-end="opacity-0 -translate-y-4 scale-y-95"
+        x-cloak
+        id="mobile-nav"
+        class="lg:hidden bg-white border-b border-gray-100 overflow-hidden relative z-[9998] transform">
+        <nav class="px-6 py-6">
             {!! wp_nav_menu([
                 'theme_location' => isset($menu) ? $menu : 'primary_navigation',
                 'echo' => false,
                 'container' => false,
-                'items_wrap' => '<ul id="%1$s" class="%2$s apple-mobile-overlay__menu">%3$s</ul>',
+                'items_wrap' => '<ul id="%1$s" class="%2$s apple-mobile-menu">%3$s</ul>',
             ]) !!}
         </nav>
-
-        {{-- Bottom actions (Hidden) --}}
-        {{-- 
-        <div class="apple-mobile-overlay__actions">
-            <a href="tel:{{ get_theme_mod('phone') }}" class="apple-mobile-overlay__phone">
-                <span class="material-symbols-outlined">call</span>
-                {{ get_theme_mod('phone') }}
-            </a>
-            <a href="https://lab.dentalso.com/" target="_blank" class="apple-mobile-overlay__cta">
-                Đăng nhập
-            </a>
-        </div>
-        --}}
     </div>
 </header>
 
 @if(!is_front_page())
-<div class="apple-subnav">
+<div class="apple-subnav" x-data="{}">
     <div class="apple-subnav-inner">
-        <h2 class="apple-subnav-title">{{ get_the_title() }}</h2>
+        <h2 class="apple-subnav-title cursor-pointer apple-press" @click="window.scrollTo({top: 0, behavior: 'smooth'})">{{ get_the_title() }}</h2>
         <div class="apple-subnav-actions">
             <a href="{{ home_url('lien-he') }}" class="apple-subnav-btn">
                 Liên hệ
