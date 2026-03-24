@@ -4,7 +4,7 @@
 <div class="container py-16 grid lg:grid-cols-3 gap-10">
     @while(have_posts()) @php(the_post())
 
-    <div class="shadow-xl border border-primary3-100 rounded-3xl p-6">
+    <div class="shadow-xl border border-primary-4/20 rounded-3xl p-6">
         <div class="rounded-full w-32 h-32 flex border rounded-3xl mx-auto items-center p-1">
             <?php the_post_thumbnail(); ?>
         </div>

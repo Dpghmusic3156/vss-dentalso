@@ -5,9 +5,9 @@
             <div class="apple-footer-col">
                 <h5 class="apple-footer-heading">Sản Phẩm</h5>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ home_url('san-pham/phan-mem-dental-lab') }}">Dental Lab Software</a></li>
-                    <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">DentalSO MES</a></li>
-                    <li><a href="{{ home_url('san-pham/dentalso-ket-noi/') }}">DentalSO Connect</a></li>
+                    <li><a href="{{ home_url('san-pham/phan-mem-dental-lab') }}">Quản lý Labo nha khoa</a></li>
+                    <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">Quản lý sản xuất</a></li>
+                    <li><a href="{{ home_url('san-pham/dentalso-ket-noi/') }}">Kết nối Labo và Nha khoa</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
@@ -30,6 +30,7 @@
             <div class="apple-footer-col">
                 <h5 class="apple-footer-heading">Hỗ Trợ</h5>
                 <ul class="apple-footer-links">
+                    <li><a href="http://ghuy.me/vi/customer/">Khách hàng tiêu biểu</a></li>
                     <li><a href="{{ home_url('huong-dan/') }}">Hướng dẫn</a></li>
                     <li><a href="{{ home_url('yeu-cau-tu-van') }}">Đăng ký Demo</a></li>
                     <li><a href="https://lab.dentalso.com/" target="_blank">Đăng nhập</a></li>
@@ -45,11 +46,11 @@
                     </li>
                     <li class="flex items-center gap-1.5">
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/vn.png" class="w-4 h-auto" alt="VN">
-                        <a href="tel:<?php echo get_theme_mod('phone'); ?>"><?php echo get_theme_mod('phone'); ?></a>
+                        <a href="http://zalo.me/0947476000" target="_blank"><?php echo get_theme_mod('phone'); ?></a>
                     </li>
                     <li class="flex items-center gap-1.5">
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/us.png" class="w-4 h-auto" alt="US">
-                        <a href="tel:<?php echo get_theme_mod('phoneus'); ?>"><?php echo get_theme_mod('phoneus'); ?></a>
+                        <a href="https://api.whatsapp.com/send/?phone=12062019069&text&type=phone_number&app_absent=0" target="_blank"><?php echo get_theme_mod('phoneus'); ?></a>
                     </li>
                 </ul>
                 <div class="flex gap-3 mt-4">
@@ -97,3 +98,44 @@
         </div>
     </div>
 </footer>
+
+{{-- Floating Zalo Button with hover tooltip --}}
+<div id="floating-zalo-wrap" style="position:fixed;bottom:24px;right:24px;z-index:9999;display:flex;align-items:center;gap:0;">
+    {{-- Tooltip label --}}
+    <span id="zalo-tooltip" style="pointer-events:none;white-space:nowrap;background:#0068FF;color:#fff;font-size:14px;font-weight:600;padding:10px 20px;border-radius:28px;box-shadow:0 4px 12px rgba(0,0,0,.15);opacity:0;transform:translateX(20px);transition:opacity .35s ease,transform .35s cubic-bezier(.16,1,.3,1);margin-right:-8px;">
+        Liên hệ ngay
+    </span>
+    {{-- Button --}}
+    <a href="http://zalo.me/0947476000"
+       target="_blank"
+       id="floating-zalo"
+       aria-label="Chat trên Zalo"
+       style="position:relative;width:56px;height:56px;min-width:56px;border-radius:50%;background:#0068FF;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 12px rgba(0,0,0,.2);transition:transform .3s cubic-bezier(.16,1,.3,1),box-shadow .3s ease;cursor:pointer;text-decoration:none;">
+        <img src="https://page.widget.zalo.me/static/images/2.0/Logo.svg" alt="Zalo" width="32" height="32" style="pointer-events:none;">
+    </a>
+</div>
+<style>
+    #floating-zalo-wrap:hover #zalo-tooltip {
+        opacity: 1;
+        transform: translateX(0);
+        pointer-events: auto;
+    }
+    #floating-zalo-wrap:hover #floating-zalo {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0,104,255,.45);
+    }
+    #floating-zalo::after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        background: #0068FF;
+        z-index: -1;
+        animation: zalo-pulse 2s ease-out infinite;
+    }
+    @keyframes zalo-pulse {
+        0% { transform: scale(1); opacity: .4; }
+        100% { transform: scale(1.6); opacity: 0; }
+    }
+</style>

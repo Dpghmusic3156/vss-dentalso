@@ -12,16 +12,16 @@
   <div class="e-content prose">
     @php(the_content())
   </div>
-  <section class="container md:p-20 text-center rounded-3xl bg-primary3-50 min-h-96 flex flex-col justify-center mt-6 mb-6" data-aos="fade-up" style="
+  <section class="container md:p-20 text-center rounded-3xl bg-primary-4/10 min-h-96 flex flex-col justify-center mt-6 mb-6" data-aos="fade-up" style="
     background-image: url(https://demo.awaikenthemes.com/seore/wp-content/uploads/2024/07/need-help-bg.svg);
     background-position: 371px -75px;
     background-repeat: no-repeat;
     background-size: auto;">
     <p class="mb-4 text-4xl" data-aos="fade-up">Sẵn sàng để bắt đầu?</p>
     <a href="<?php echo get_site_url(); ?>/yeu-cau-tu-van" class="flex items-center justify-center group relative h-12 w-48 
-        rounded-3xl bg-primary-500 text-lg shadow mx-auto mt-10">
+        rounded-3xl bg-primary-1 text-lg shadow mx-auto mt-10">
             <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-            <span class="relative text-white group-hover:text-primary-500">Đăng ký Demo</span>
+            <span class="relative text-white group-hover:text-primary-1">Đăng ký Demo</span>
         </a>
 </section>
   @if ($pagination)

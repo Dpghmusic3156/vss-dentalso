@@ -1,4 +1,4 @@
-{{-- Template Name: Product: DentalSO MES --}}
+{{-- Template Name: Product: Quản lý sản xuất --}}
 @extends('layouts.app')
 
 @section('content')
@@ -8,7 +8,7 @@
     <div class="apple-container text-center">
         <div class="fade-in-up">
             <span class="apple-eyebrow">Hệ thống quản lý sản xuất</span>
-            <h1 class="apple-headline mb-6">DentalSO MES</h1>
+            <h1 class="apple-headline mb-6">Quản lý sản xuất</h1>
             <p class="apple-hero-copy">
                 Theo dõi xưởng sản xuất thời gian thực. Kiểm soát từng ca. Giao hàng đúng hẹn — mọi lúc.
             </p>
@@ -18,8 +18,8 @@
             </div>
         </div>
         <div class="fade-in-up mt-10" style="animation-delay: 0.2s;">
-            <div class="bg-white rounded-2xl overflow-hidden p-1 max-w-5xl mx-auto">
-                <img src="{{ get_theme_mod('trang_chu.banner.hinh_2') }}" alt="DentalSO MES — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full">
+            <div class="bg-white rounded-2xl overflow-hidden p-1 max-w-5xl mx-auto shadow-sm">
+                <img src="@asset('images/mes-dashboard-hero.png')" alt="Quản lý sản xuất — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full">
             </div>
         </div>
     </div>
@@ -32,7 +32,7 @@
             <span class="apple-eyebrow apple-eyebrow--light">MES là gì?</span>
             <h2 class="apple-headline text-white">Trái tim sản xuất<br>của DentalSO.</h2>
             <p class="apple-body text-[#86868b] mt-4 max-w-xl mx-auto">
-                DentalSO MES biến quy trình phức tạp của Labo thành hệ thống có cấu trúc, theo dõi được và ưu tiên theo deadline — được thiết kế riêng cho sản xuất nha khoa.
+                Quản lý sản xuất biến quy trình phức tạp của Labo thành hệ thống có cấu trúc, theo dõi được và ưu tiên theo deadline — được thiết kế riêng cho sản xuất nha khoa.
             </p>
         </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
@@ -67,7 +67,7 @@
             <div class="apple-split-text fade-in-up">
                 <span class="apple-eyebrow">Dashboard trực tiếp</span>
                 <h2 class="apple-headline-sm mb-4">Giám sát xưởng<br>thời gian thực.</h2>
-                <p class="apple-body mb-6">Nắm bắt toàn bộ hoạt động chỉ với một cái nhìn. DentalSO MES cung cấp bảng điều khiển vận hành trực tiếp, hiển thị mọi thông tin bạn cần để ra quyết định nhanh chóng.</p>
+                <p class="apple-body mb-6">Nắm bắt toàn bộ hoạt động chỉ với một cái nhìn. Quản lý sản xuất cung cấp bảng điều khiển vận hành trực tiếp, hiển thị mọi thông tin bạn cần để ra quyết định nhanh chóng.</p>
                 <ul class="space-y-3">
                     <li class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-[#0071e3] text-xl flex-shrink-0">visibility</span>
@@ -89,7 +89,7 @@
             </div>
             <div class="apple-split-media fade-in-up" style="animation-delay: 0.15s;">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-1">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="DentalSO MES — Dashboard giám sát sản xuất thời gian thực" class="apple-split-img rounded-xl">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="Quản lý sản xuất — Dashboard giám sát sản xuất thời gian thực" class="apple-split-img rounded-xl">
                 </div>
             </div>
         </div>
@@ -168,7 +168,7 @@
             <div class="apple-split-text fade-in-up">
                 <span class="apple-eyebrow">Sắp lịch thông minh</span>
                 <h2 class="apple-headline-sm mb-4">Lập lịch sản xuất<br>theo mức ưu tiên.</h2>
-                <p class="apple-body mb-6">DentalSO MES tự động ưu tiên ca dựa trên deadline giao hàng, thời gian sản xuất còn lại và năng lực xưởng. Kỹ thuật viên luôn biết cần làm ca nào tiếp theo.</p>
+                <p class="apple-body mb-6">Quản lý sản xuất tự động ưu tiên ca dựa trên deadline giao hàng, thời gian sản xuất còn lại và năng lực xưởng. Kỹ thuật viên luôn biết cần làm ca nào tiếp theo.</p>
                 <ul class="space-y-3">
                     <li class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-[#30d158] text-xl flex-shrink-0">check_circle</span>
@@ -190,7 +190,7 @@
             </div>
             <div class="apple-split-media fade-in-up" style="animation-delay: 0.15s;">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-1">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" alt="DentalSO MES — Bảng sắp lịch ưu tiên sản xuất" class="apple-split-img rounded-xl">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" alt="Quản lý sản xuất — Bảng sắp lịch ưu tiên sản xuất" class="apple-split-img rounded-xl">
                 </div>
             </div>
         </div>
@@ -262,7 +262,7 @@
             <span class="apple-eyebrow">Chuyên biệt</span>
             <h2 class="apple-headline-sm">Được thiết kế riêng<br>cho Dental Lab.</h2>
             <p class="apple-body mt-3 max-w-xl mx-auto">
-                Khác với các hệ thống MES chung chung, DentalSO MES hiểu rõ tính biến động của sản xuất nha khoa — không chỉ dây chuyền lắp ráp công nghiệp.
+                Khác với các hệ thống MES chung chung, Quản lý sản xuất hiểu rõ tính biến động của sản xuất nha khoa — không chỉ dây chuyền lắp ráp công nghiệp.
             </p>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
@@ -327,10 +327,10 @@
     <div class="apple-container text-center">
         <div class="fade-in-up">
             <h2 class="apple-headline text-white mb-4">Kiểm soát toàn bộ<br>xưởng sản xuất.</h2>
-            <p class="text-white/70 text-lg mb-8 max-w-lg mx-auto">Khám phá cách DentalSO MES chuyển đổi từ sắp lịch thụ động sang quản lý sản xuất chủ động, dựa trên dữ liệu.</p>
+            <p class="text-white/70 text-lg mb-8 max-w-lg mx-auto">Khám phá cách Quản lý sản xuất chuyển đổi từ sắp lịch thụ động sang quản lý sản xuất chủ động, dựa trên dữ liệu.</p>
             <div class="apple-cta-group">
                 <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--light">Đăng Ký Demo MES</a>
-                <a href="{{ home_url('san-pham/dentalso-ket-noi/') }}" class="apple-cta-secondary apple-cta-secondary--light">Khám phá DentalSO Connect<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
+                <a href="{{ home_url('san-pham/dentalso-ket-noi/') }}" class="apple-cta-secondary apple-cta-secondary--light">Khám phá Kết nối Labo và Nha khoa<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
         </div>
     </div>

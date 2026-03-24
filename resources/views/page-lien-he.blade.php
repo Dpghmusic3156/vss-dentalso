@@ -68,9 +68,10 @@
                                 </select>
                                 <select class="apple-input" name="product" id="product">
                                     <option selected disabled>Sản phẩm</option>
-                                    <option value="DentalSO Platform">DentalSO Platform</option>
-                                    <option value="DentalSO MES">DentalSO MES</option>
-                                    <option value="DentalSO Connect">DentalSO Connect</option>
+                                    <option value="Quản lý Labo nha khoa">Quản lý Labo nha khoa</option>
+                                    <option value="Quản lý sản xuất (MES)">Quản lý sản xuất (MES)</option>
+                                    <option value="Kết nối Labo - Nha khoa">Kết nối Labo - Nha khoa</option>
+                                    <option value="Quản lý bảo hành">Quản lý bảo hành</option>
                                 </select>
                             </div>
                             <textarea class="apple-input" name="message" placeholder="Nội dung" id="message" rows="4" required></textarea>
@@ -104,12 +105,12 @@
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-base">phone</span>
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/vn.png" class="w-4 h-auto" alt="VN">
-                        <a href="tel:{{ get_theme_mod('phone') }}" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phone') }}</a>
+                        <a href="http://zalo.me/0947476000" target="_blank" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phone') }}</a>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-base">phone</span>
                         <img src="<?php echo get_template_directory_uri(); ?>/resources/images/us.png" class="w-4 h-auto" alt="US">
-                        <a href="tel:{{ get_theme_mod('phoneus') }}" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phoneus') }}</a>
+                        <a href="https://api.whatsapp.com/send/?phone=12062019069&text&type=phone_number&app_absent=0" target="_blank" class="hover:text-[#1d1d1f] transition-colors">{{ get_theme_mod('phoneus') }}</a>
                     </div>
                     <div class="flex items-center gap-3">
                         <span class="material-symbols-outlined text-base">mail</span>

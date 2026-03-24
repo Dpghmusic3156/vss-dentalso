@@ -9,6 +9,10 @@ const config = {
         extend: {
             colors: {
                 primary: {
+                    1: 'var(--primary-1)',
+                    2: 'var(--primary-2)',
+                    3: 'var(--primary-3)',
+                    4: 'var(--primary-4)',
                     100: '#E6F4EA',
                     200: '#C3E6CB',
                     300: '#65C37B',
@@ -20,6 +24,10 @@ const config = {
                     900: '#1B5E20',
                     DEFAULT: '#2E8543',
                 },
+                'primary-1': 'var(--primary-1)',
+                'primary-2': 'var(--primary-2)',
+                'primary-3': 'var(--primary-3)',
+                'primary-4': 'var(--primary-4)',
                 primary2: {
                     100: '#DEF2FF',
                     200: '#81D4FA',

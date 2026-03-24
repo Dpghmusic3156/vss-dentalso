@@ -2,10 +2,10 @@
     @apply grid sm:gap-8 gap-4 grid-cols-1 md:grid-cols-2;
 
     input:not([type='checkbox']), textarea, select {
-      @apply block w-full px-4 py-3 mb-0 leading-tight border border-primary-200 appearance-none text-primary-500 rounded;
+      @apply block w-full px-4 py-3 mb-0 leading-tight border border-primary-200 appearance-none text-primary-1 rounded;
 
       &:focus {
-        @apply outline-none border-primary-500;
+        @apply outline-none border-primary-1;
       }
     }
 
@@ -14,10 +14,10 @@
     }
   
     .submit {
-      @apply py-2 mr-auto w-40 mt-0 text-lg font-bold text-white border-2 border-transparent bg-primary-500 rounded shadow-md;
+      @apply py-2 mr-auto w-40 mt-0 text-lg font-bold text-white border-2 border-transparent bg-primary-1 rounded shadow-md;
       
       &:hover {
-        @apply bg-white text-primary-500 border-primary-500  shadow-lg;
+        @apply bg-white text-primary-1 border-primary-1  shadow-lg;
       }
       
       &:focus {
@@ -55,7 +55,7 @@
       }
   
       &.wpcf7-mail-sent-ok {
-        @apply text-primary-500 border-primary-500 ;
+        @apply text-primary-1 border-primary-1 ;
       }
     }
   }

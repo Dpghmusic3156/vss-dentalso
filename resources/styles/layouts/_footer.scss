@@ -2,7 +2,7 @@ footer {
   .menu-clinic {
     li {
       a {
-        @apply hover:text-primary-500;
+        @apply hover:text-primary-1;
       }
     }
   }
@@ -10,7 +10,7 @@ footer {
   .menu-lab {
     li {
       a {
-        @apply hover:text-primary2-500;
+        @apply hover:text-primary-2;
       }
     }
   }

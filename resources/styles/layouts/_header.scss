@@ -3,7 +3,7 @@
     @apply flex items-center h-full relative;
 
     a {
-      @apply flex items-center h-full hover:text-primary-500;
+      @apply flex items-center h-full hover:text-primary-1;
     }
 
     &::after{
@@ -30,7 +30,7 @@
       &::after{
         content: '';
   
-        @apply bg-primary-500 opacity-0;
+        @apply bg-primary-1 opacity-0;
       }
   
       >ul {
@@ -54,7 +54,7 @@
           padding: 0;
   
           a {
-            @apply hover:text-primary-500;
+            @apply hover:text-primary-1;
   
             padding: 16px;
             width: 100%;
@@ -94,7 +94,7 @@
       padding: 0;
 
       a {
-        @apply hover:text-primary-500;
+        @apply hover:text-primary-1;
 
         padding: 16px;
         width: 100%;

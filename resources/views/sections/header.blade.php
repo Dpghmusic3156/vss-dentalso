@@ -23,7 +23,7 @@
         {{-- Right Actions (Hidden) --}}
         {{-- 
         <div class="flex items-center justify-end gap-3 xl:gap-6 shrink-0">
-            <a href="tel:{{ get_theme_mod('phone') }}" class="hidden lg:flex items-center text-xs text-[#1d1d1f]/60 hover:text-[#1d1d1f] transition-colors whitespace-nowrap">
+            <a href="http://zalo.me/0947476000" target="_blank" class="hidden lg:flex items-center text-xs text-[#1d1d1f]/60 hover:text-[#1d1d1f] transition-colors whitespace-nowrap">
                 <span class="material-symbols-outlined text-sm mr-1">call</span>
                 {{ get_theme_mod('phone') }}
             </a>
@@ -66,12 +66,18 @@
 </header>
 
 @if(!is_front_page())
+@php
+    $subnav_title = get_the_title();
+    if (is_post_type_archive('customer') || is_singular('customer') || is_page('khach-hang') || is_page('customer')) {
+        $subnav_title = 'Khách hàng tiêu biểu';
+    }
+@endphp
 <div class="apple-subnav" x-data="{}">
     <div class="apple-subnav-inner">
-        <h2 class="apple-subnav-title cursor-pointer apple-press" @click="window.scrollTo({top: 0, behavior: 'smooth'})">{{ get_the_title() }}</h2>
+        <h2 class="apple-subnav-title cursor-pointer apple-press" @click="window.scrollTo({top: 0, behavior: 'smooth'})">{{ $subnav_title }}</h2>
         <div class="apple-subnav-actions">
-            <a href="{{ home_url('lien-he') }}" class="apple-subnav-btn">
-                Liên hệ
+            <a href="{{ home_url('yeu-cau-tu-van') }}" class="apple-subnav-btn">
+                Đăng ký Demo
             </a>
         </div>
     </div>

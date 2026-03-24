@@ -18,7 +18,7 @@
             <p class="text-5xl mb-6">Request Demo</p>
             <p class="pb-3 mb-3 mb-lg-4">
                 Already Have an Account&nbsp;&nbsp;
-                <a class="text-primary-500" href='https://lab.dentalso.com'>
+                <a class="text-primary-1" href='https://lab.dentalso.com'>
                     Login!
                 </a>
             </p>
@@ -41,14 +41,14 @@
                 <input class="hidden d-none" type="hidden" id="payment" value="<?php echo $payment; ?>">
                 <input class="hidden d-none" type="hidden" id="productParam" value="<?php echo $product; ?>">
                 <div class="md:col-span-2">
-                    <div class="loading hidden text-primary-500">Loading</div>
+                    <div class="loading hidden text-primary-1">Loading</div>
                     <div class="error-message hidden text-red">Can't send message. Please try again!</div>
                 </div>
 
-                <button class="col-span-2 mx-auto flex items-center justify-center group relative h-12 w-48 rounded-3xl bg-primary-500 text-lg shadow"
+                <button class="col-span-2 mx-auto flex items-center justify-center group relative h-12 w-48 rounded-3xl bg-primary-1 text-lg shadow"
                     type="submit" data-sitekey="6LffhjIqAAAAAHnrks5E6qdfB7t8HLgiBZYT65UO" data-callback='onSubmit' data-action='submit'>
                     <div class="absolute rounded-3xl inset-0 w-0 bg-white transition-all duration-[250ms] ease-out group-hover:w-full"></div>
-                    <span class="relative text-white group-hover:text-primary-500">Submit</span>
+                    <span class="relative text-white group-hover:text-primary-1">Submit</span>
                 </button>
             </form>
         </div>
@@ -57,7 +57,7 @@
         </div>
     </div>
     <div class="flex h-screen items-center justify-center">
-        <p class="sent-message hidden text-primary-500 text-3xl text-center">We have received your request and will contact you soon!</p>
+        <p class="sent-message hidden text-primary-1 text-3xl text-center">We have received your request and will contact you soon!</p>
     </div>
 
 

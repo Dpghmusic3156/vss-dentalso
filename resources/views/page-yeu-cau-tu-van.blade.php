@@ -56,12 +56,13 @@
                                 <input type="text" name="phone" class="apple-input" id="phone" placeholder="Số điện thoại" required>
                                 <input type="email" class="apple-input" name="email" id="email" placeholder="Email">
                             </div>
-                            <select class="apple-input" name="product" id="product">
-                                <option selected disabled>Chọn sản phẩm</option>
-                                <option value="DentalSO Platform">DentalSO Platform</option>
-                                <option value="DentalSO MES">DentalSO MES</option>
-                                <option value="DentalSO Connect">DentalSO Connect</option>
-                            </select>
+                             <select class="apple-input" name="product" id="product">
+                                 <option selected disabled>Chọn sản phẩm</option>
+                                 <option value="Quản lý Labo nha khoa">Quản lý Labo nha khoa</option>
+                                 <option value="Quản lý sản xuất (MES)">Quản lý sản xuất (MES)</option>
+                                 <option value="Kết nối Labo - Nha khoa">Kết nối Labo - Nha khoa</option>
+                                 <option value="Quản lý bảo hành">Quản lý bảo hành</option>
+                             </select>
                             <?php
                             $plan = isset($_GET['plan']) ? $_GET['plan'] : '';
                             $payment = isset($_GET['payment']) ? $_GET['payment'] : '';

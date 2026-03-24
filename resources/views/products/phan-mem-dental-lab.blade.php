@@ -12,8 +12,8 @@
 <section class="apple-hero relative overflow-hidden bg-[#fbfbfd]">
     <div class="apple-container text-center relative z-10">
         <div class="fade-in-up">
-            <h1 class="apple-hero-headline">DentalSO</h1>
-            <h2 class="apple-hero-subheadline">Vận hành Nha khoa Tinh gọn</h2>
+            <h1 class="apple-hero-headline">Quản lý Labo nha khoa</h1>
+            <h2 class="apple-hero-subheadline">Vận hành Labo Tinh gọn</h2>
             <p class="apple-hero-copy font-medium max-w-3xl mx-auto mt-4">
                 Cung cấp sức mạnh cho Labo và Phòng khám Nha khoa hiện đại với quy trình thông minh, kết nối và hiệu quả.
             </p>
@@ -114,7 +114,7 @@
             <div class="apple-card apple-card--tint-green fade-in-up" style="animation-delay: 0.1s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Quản lý sản xuất, được tái định nghĩa</div>
-                    <h3 class="apple-card-title">1. DentalSO MES cho Labo</h3>
+                    <h3 class="apple-card-title">1. Quản lý sản xuất cho Labo</h3>
                     <ul class="space-y-4 mb-8 mt-4">
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Theo dõi sản xuất thời gian thực</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Tự động sắp lịch và cân bằng tải</span></li>
@@ -128,7 +128,7 @@
             <div class="apple-card apple-card--tint-purple fade-in-up" style="animation-delay: 0.2s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Kết nối liền mạch. Không ma sát.</div>
-                    <h3 class="apple-card-title">2. DentalSO Connect — Kết nối Phòng khám & Labo</h3>
+                    <h3 class="apple-card-title">2. Kết nối Labo và Nha khoa</h3>
                     <ul class="space-y-4 mb-8 mt-4">
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Gửi ca trực tuyến</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Chia sẻ hình ảnh và file</span></li>
