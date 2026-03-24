@@ -12,6 +12,11 @@
   @php(wp_head())
   {{-- Open Graph / Social --}}
   @if(!defined('WPSEO_VERSION') && !class_exists('RankMath'))
+  @if(is_front_page() || is_home())
+    <meta name="description" content="Giải pháp số hóa toàn diện cho Dental Lab và Phòng khám Nha khoa. Quản lý sản xuất, bảo hành QR, kết nối liền mạch. 300+ khách hàng tin dùng.">
+  @elseif(is_singular())
+    <meta name="description" content="{{ wp_trim_words(strip_shortcodes(strip_tags(get_post()->post_content)), 30, '...') }}">
+  @endif
   <meta property="og:type" content="website" />
   <meta property="og:site_name" content="DentalSO" />
   <meta property="og:title" content="DentalSO – Phần mềm quản lý Dental Lab & kết nối Nha khoa" />

@@ -521,3 +521,5 @@ function get_recent_docs_by_category(WP_REST_Request $request)
 add_action('save_post_lab_logo', function () {
     delete_transient('lab_logo_html');
 });
+
+
