@@ -42,7 +42,7 @@
             {{-- Card 1: Linh Hoạt --}}
             <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 100ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
-                    <h3 class="text-gray-900 font-bold text-base tracking-widest uppercase mb-4">LINH HOẠT</h3>
+                    <h3 class="text-primary-1 font-bold text-base tracking-widest uppercase mb-4">LINH HOẠT</h3>
                     <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
                         <span class="text-3xl lg:text-4xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="800.000" data-price-year="8.000.000">800.000</span>
                         <span class="text-xl text-gray-900 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
@@ -86,7 +86,7 @@
             {{-- Card 2: Tiêu Chuẩn --}}
             <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 200ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
-                    <h3 class="text-gray-900 font-bold text-base tracking-widest uppercase mb-4">TIÊU CHUẨN</h3>
+                    <h3 class="text-primary-2 font-bold text-base tracking-widest uppercase mb-4">TIÊU CHUẨN</h3>
                     <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
                         <span class="text-3xl lg:text-4xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="2.000.000" data-price-year="20.000.000">2.000.000</span>
                         <span class="text-xl text-gray-900 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
@@ -134,7 +134,7 @@
             {{-- Card 3: Nâng Cao --}}
             <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 300ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
-                    <h3 class="text-gray-900 font-bold text-base tracking-widest uppercase mb-5">NÂNG CAO</h3>
+                    <h3 class="text-primary-3 font-bold text-base tracking-widest uppercase mb-5">NÂNG CAO</h3>
                     <p class="text-base leading-relaxed text-gray-900 font-medium">
                         Phiên bản Nâng cao là giải pháp <strong class="font-bold">MES (Manufacturing Execution System - Hệ thống điều hành sản xuất)</strong> dành cho các labo nha khoa
                     </p>
