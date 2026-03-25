@@ -19,7 +19,7 @@
         </div>
         <div class="fade-in-up mt-10" style="animation-delay: 0.2s;">
             <div class="bg-white rounded-2xl overflow-hidden p-1 max-w-5xl mx-auto shadow-sm">
-                <img src="@asset('images/mes-dashboard-hero.png')" alt="Quản lý sản xuất — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full">
+                <img src="@asset('images/mes-dashboard-hero.png')" alt="Quản lý sản xuất — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full" loading="lazy">
             </div>
         </div>
     </div>
@@ -89,7 +89,7 @@
             </div>
             <div class="apple-split-media fade-in-up" style="animation-delay: 0.15s;">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-1">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="Quản lý sản xuất — Dashboard giám sát sản xuất thời gian thực" class="apple-split-img rounded-xl">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="Quản lý sản xuất — Dashboard giám sát sản xuất thời gian thực" class="apple-split-img rounded-xl" loading="lazy">
                 </div>
             </div>
         </div>
@@ -190,7 +190,7 @@
             </div>
             <div class="apple-split-media fade-in-up" style="animation-delay: 0.15s;">
                 <div class="bg-white rounded-2xl shadow-lg overflow-hidden p-1">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" alt="Quản lý sản xuất — Bảng sắp lịch ưu tiên sản xuất" class="apple-split-img rounded-xl">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/08/clinic-dashboard.png" alt="Quản lý sản xuất — Bảng sắp lịch ưu tiên sản xuất" class="apple-split-img rounded-xl" loading="lazy">
                 </div>
             </div>
         </div>

@@ -53,7 +53,7 @@
             </form>
         </div>
         <div class="flex-1 w-50 hidden md:flex items-center collapse md:visible" style="background: #aed8ac;">
-            <img class="w-100" src="<?php echo get_site_url(); ?>/wp-content/uploads/2023/04/dentallab-online-banner-1.png" alt="">
+            <img class="w-100" loading="lazy" src="<?php echo get_site_url(); ?>/wp-content/uploads/2023/04/dentallab-online-banner-1.png" alt="">
         </div>
     </div>
     <div class="flex h-screen items-center justify-center">

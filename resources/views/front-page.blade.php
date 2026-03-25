@@ -31,7 +31,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper fade-in-up" style="transition-delay: 200ms;">
-            <img src="{{ get_theme_mod('trang_chu.banner.hinh_1') }}" alt="DentalSO – Phần mềm quản lý Dental Lab" class="apple-hero-img animate-float">
+            <img src="{{ get_theme_mod('trang_chu.banner.hinh_1') }}" alt="DentalSO – Phần mềm quản lý Dental Lab" class="apple-hero-img animate-float" loading="lazy">
         </div>
     </div>
 </section>
@@ -47,9 +47,9 @@
         </div>
         <div class="space-y-12 lg:space-y-24">
             {{-- Giải pháp 1: DentalSO Platform --}}
-            <div class="apple-split solution-card solution-card--blue bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 0ms;">
+            <div class="apple-split solution-card solution-card--blue bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 0ms;">
                 <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/dental-platform-mockup.png')" alt="DentalSO Platform" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy">
+                    <img src="@asset('images/dental-platform-mockup.png')" alt="DentalSO Platform" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                 </div>
                 <div class="apple-split-text">
                     <span class="solution-pill solution-pill--blue">Quản lý Labo</span>
@@ -64,9 +64,9 @@
             </div>
 
             {{-- Giải pháp 2: DentalSO MES --}}
-            <div class="apple-split apple-split--reverse solution-card solution-card--green bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 100ms;">
+            <div class="apple-split apple-split--reverse solution-card solution-card--green bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 100ms;">
                 <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/mes-dashboard-hero.png')" alt="DentalSO MES" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy">
+                    <img src="@asset('images/mes-dashboard-hero.png')" alt="DentalSO MES" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                 </div>
                 <div class="apple-split-text">
                     <span class="solution-pill solution-pill--green">Điều hành sản xuất</span>
@@ -81,9 +81,9 @@
             </div>
 
             {{-- Giải pháp 3: DentalSO Connect --}}
-            <div class="apple-split solution-card solution-card--orange bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 200ms;">
+            <div class="apple-split solution-card solution-card--orange bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 200ms;">
                 <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/dentalso-connect-illustration.png')" alt="DentalSO Connect" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy">
+                    <img src="@asset('images/dentalso-connect-illustration.png')" alt="DentalSO Connect" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                 </div>
                 <div class="apple-split-text">
                     <span class="solution-pill solution-pill--orange">Kết nối số</span>
@@ -98,9 +98,9 @@
             </div>
 
             {{-- Giải pháp 4: Quản lý bảo hành --}}
-            <div class="apple-split apple-split--reverse solution-card solution-card--yellow bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 300ms;">
+            <div class="apple-split apple-split--reverse solution-card solution-card--yellow bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 300ms;">
                 <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/warranty-hero-mockup.png')" alt="Quản lý bảo hành" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy">
+                    <img src="@asset('images/warranty-hero-mockup.png')" alt="Quản lý bảo hành" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                 </div>
                 <div class="apple-split-text">
                     <span class="solution-pill solution-pill--yellow">Bảo hành</span>
@@ -135,7 +135,7 @@
         <div class="apple-bento-grid">
             {{-- Feature 1: Labs (Large) --}}
             <div class="apple-bento-card apple-bento-card--span-4 apple-lift fade-in-up" style="transition-delay: 100ms;">
-                <img src="@asset('images/image.png')" alt="Công nghệ Labo" class="apple-bento-visual">
+                <img src="@asset('images/image.png')" alt="Công nghệ Labo" class="apple-bento-visual" loading="lazy">
                 <div class="apple-bento-content">
                     <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">dentistry</span>
                     <h3 class="apple-bento-title">Thiết kế chuyên biệt cho Labo nha khoa</h3>
@@ -163,7 +163,7 @@
 
             {{-- Feature 4: Cloud (Large) --}}
             <div class="apple-bento-card apple-bento-card--span-4 apple-bento-card--dark apple-lift fade-in-up" style="transition-delay: 250ms;">
-                <img src="@asset('images/bento-abstract-2.png')" alt="Hệ thống đám mây" class="apple-bento-visual">
+                <img src="@asset('images/bento-abstract-2.png')" alt="Hệ thống đám mây" class="apple-bento-visual" loading="lazy">
                 <div class="apple-bento-content">
                     <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">cloud_done</span>
                     <h3 class="apple-bento-title">Nền tảng đám mây bảo mật</h3>

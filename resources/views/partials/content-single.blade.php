@@ -2,7 +2,7 @@
 <article class="single-post container shadow-xl bg-white p-16 relative contents lg:block rounded-xl" style="margin-top: -100px">
 <?php if (has_post_thumbnail( $post->ID ) ): ?>
   <?php $image = wp_get_attachment_url( get_post_thumbnail_id( $post->ID ), 'thumbnail' ); ?>
-    {{-- <img class="my-3 post-featured-image" style="max-width: 100%;
+    {{-- <img class="my-3 post-featured-image" loading="lazy" style="max-width: 100%;
     width:80%;
     border-radius: .75rem;
     box-shadow: 0 .3125rem .625rem 0 rgba(0, 0, 0, .12) !important;margin-top: 1rem !important;

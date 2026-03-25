@@ -40,12 +40,12 @@
         {{-- Pricing Grid --}}
         <div class="grid md:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl mx-auto">
             {{-- Card 1: Linh Hoạt --}}
-            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 ease-apple flex flex-col h-full" style="transition-delay: 100ms;">
+            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 100ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
                     <h3 class="text-primary-1 font-bold text-base tracking-widest uppercase mb-4">LINH HOẠT</h3>
                     <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
-                        <span class="text-4xl lg:text-5xl font-normal tracking-tight transition-all duration-500 ease-apple inline-block" data-price-month="800.000" data-price-year="8.000.000">800.000</span>
-                        <span class="text-xl text-gray-500 ml-2 transition-all duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
+                        <span class="text-4xl lg:text-5xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="800.000" data-price-year="8.000.000">800.000</span>
+                        <span class="text-xl text-gray-500 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
                     </div>
                     <div class="space-y-2 mt-6 text-base text-gray-600">
                         <p>Phí khởi tạo: <strong class="font-bold text-gray-900">2.000.000 đ</strong></p>
@@ -53,7 +53,7 @@
                     </div>
                 </div>
                 
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="block w-full py-4 px-6 text-lg bg-primary-1 hover:opacity-90 text-white text-center rounded-full font-semibold transition-all duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Đăng ký Demo</a>
+                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="block w-full py-4 px-6 text-lg bg-primary-1 hover:opacity-90 text-white text-center rounded-full font-semibold transition-[transform,box-shadow,opacity] duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Đăng ký Demo</a>
                 
                 <ul class="space-y-5 text-base lg:text-[1.0625rem] text-gray-700 flex-1">
                     <li class="flex items-start">
@@ -84,12 +84,12 @@
             </div>
 
             {{-- Card 2: Tiêu Chuẩn --}}
-            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 ease-apple flex flex-col h-full" style="transition-delay: 200ms;">
+            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 200ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
                     <h3 class="text-primary-2 font-bold text-base tracking-widest uppercase mb-4">TIÊU CHUẨN</h3>
                     <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
-                        <span class="text-4xl lg:text-5xl font-normal tracking-tight transition-all duration-500 ease-apple inline-block" data-price-month="2.000.000" data-price-year="20.000.000">2.000.000</span>
-                        <span class="text-xl text-gray-500 ml-2 transition-all duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
+                        <span class="text-4xl lg:text-5xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="2.000.000" data-price-year="20.000.000">2.000.000</span>
+                        <span class="text-xl text-gray-500 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
                     </div>
                     <div class="space-y-2 mt-6 text-base text-gray-600">
                         <p>Phí khởi tạo: <strong class="font-bold text-gray-900">4.000.000 đ</strong></p>
@@ -97,7 +97,7 @@
                     </div>
                 </div>
                 
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="block w-full py-4 px-6 text-lg bg-primary-2 hover:opacity-90 text-white text-center rounded-full font-semibold transition-all duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Đăng ký Demo</a>
+                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="block w-full py-4 px-6 text-lg bg-primary-2 hover:opacity-90 text-white text-center rounded-full font-semibold transition-[transform,box-shadow,opacity] duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Đăng ký Demo</a>
                 
                 <ul class="space-y-5 text-base lg:text-[1.0625rem] text-gray-700 flex-1">
                     <li class="flex items-start">
@@ -132,7 +132,7 @@
             </div>
 
             {{-- Card 3: Nâng Cao --}}
-            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-all duration-500 ease-apple flex flex-col h-full" style="transition-delay: 300ms;">
+            <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 300ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
                     <h3 class="text-primary-3 font-bold text-base tracking-widest uppercase mb-5">NÂNG CAO</h3>
                     <p class="text-base leading-relaxed text-gray-900 font-medium">
@@ -140,7 +140,7 @@
                     </p>
                 </div>
                 
-                <a href="{{ home_url('lien-he/') }}" class="block w-full py-4 px-6 text-lg bg-primary-3 hover:opacity-90 text-white text-center rounded-full font-semibold transition-all duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Liên hệ tư vấn</a>
+                <a href="{{ home_url('lien-he/') }}" class="block w-full py-4 px-6 text-lg bg-primary-3 hover:opacity-90 text-white text-center rounded-full font-semibold transition-[transform,box-shadow,opacity] duration-300 ease-apple hover:scale-[1.03] hover:shadow-lg active:scale-95 mb-10">Liên hệ tư vấn</a>
                 
                 <div class="text-base lg:text-[1.0625rem] text-gray-700 leading-relaxed space-y-5 flex-1">
                     <p>Khác với các phiên bản Linh hoạt và Cơ bản, phiên bản Nâng cao được tích hợp các chức năng cao cấp để quản lý sản xuất, vật tư và trang thiết bị chuyên sâu.</p>
@@ -171,13 +171,13 @@
             <h2 class="text-3xl font-bold text-center mb-10 tracking-tight text-gray-900">Tính năng chi tiết</h2>
             
             <div class="inline-flex rounded-full bg-[#f5f5f7] p-2 mb-10 relative w-full flex justify-center max-w-md mx-auto shadow-inner reveal" style="transition-delay: 100ms;">
-                <button @click="tab = 'flexible'" :class="tab === 'flexible' ? 'bg-primary-1 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-all duration-300 text-sm md:text-base">
+                <button @click="tab = 'flexible'" :class="tab === 'flexible' ? 'bg-primary-1 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-colors duration-300 text-sm md:text-base">
                     LINH HOẠT
                 </button>
-                <button @click="tab = 'standard'" :class="tab === 'standard' ? 'bg-primary-2 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-all duration-300 text-sm md:text-base">
+                <button @click="tab = 'standard'" :class="tab === 'standard' ? 'bg-primary-2 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-colors duration-300 text-sm md:text-base">
                     TIÊU CHUẨN
                 </button>
-                <button @click="tab = 'premium'" :class="tab === 'premium' ? 'bg-primary-3 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-all duration-300 text-sm md:text-base">
+                <button @click="tab = 'premium'" :class="tab === 'premium' ? 'bg-primary-3 text-white shadow-md' : 'text-gray-600 hover:text-gray-900'" class="flex-1 px-5 py-2.5 font-bold rounded-full transition-colors duration-300 text-sm md:text-base">
                     NÂNG CAO
                 </button>
             </div>
@@ -281,7 +281,7 @@
                             <td class="py-3.5 px-8 align-middle font-medium cursor-pointer text-gray-700 group-hover:text-primary-3 transition-colors duration-300" x-on:click="activeModal = '<?php echo get_the_ID(); ?>'">
                                 <div class="flex items-center gap-3">
                                     <span><?php the_title(); ?></span>
-                                    <span class="material-symbols-outlined text-gray-300 group-hover:text-primary-3 transition-all duration-300 text-[22px] group-hover:translate-x-1 group-hover:scale-110 shrink-0">arrow_forward</span>
+                                    <span class="material-symbols-outlined text-gray-300 group-hover:text-primary-3 transition-[transform,box-shadow,opacity,colors] duration-300 text-[22px] group-hover:translate-x-1 group-hover:scale-110 shrink-0">arrow_forward</span>
                                 </div>
                             </td>
                             <td class="py-3.5 px-8 align-middle text-center">
