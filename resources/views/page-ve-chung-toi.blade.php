@@ -95,14 +95,14 @@
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div class="text-center p-4">
                 <div class="w-16 h-16 inline-block p-4 bg-white rounded-full shadow-sm mb-4 text-blue-600">
-                    <i class="fas fa-lightbulb text-2xl"></i> </div>
+                    <span class="material-symbols-outlined text-2xl align-middle">lightbulb</span> </div>
                 <h4 class="text-xl font-bold mb-2">Đổi mới chuyên biệt ngành</h4>
                 <p class="text-primary-2 text-sm">Mọi tính năng đều được thiết kế cho quy trình nha khoa, không phải nhu cầu chung chung.</p>
             </div>
             
             <div class="text-center p-4">
                 <div class="w-16 h-16 inline-block p-4 bg-white rounded-full shadow-sm mb-4 text-blue-600">
-                    <i class="fas fa-shield-alt text-2xl"></i>
+                    <span class="material-symbols-outlined text-2xl align-middle">shield</span>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Bảo mật cấp doanh nghiệp</h4>
                 <p class="text-primary-2 text-sm">Mã hóa SSL, chứng chỉ số và công nghệ RSA để bảo vệ quyền riêng tư bệnh nhân.</p>
@@ -110,7 +110,7 @@
 
             <div class="text-center p-4">
                 <div class="w-16 h-16 inline-block p-4 bg-white rounded-full shadow-sm mb-4 text-blue-600">
-                    <i class="fas fa-chart-line text-2xl"></i>
+                    <span class="material-symbols-outlined text-2xl align-middle">trending_up</span>
                 </div>
                 <h4 class="text-xl font-bold mb-2">Tác động thực tế</h4>
                 <p class="text-primary-2 text-sm">Hàng trăm khách hàng đã tăng hiệu suất và mở rộng hoạt động thành công.</p>
