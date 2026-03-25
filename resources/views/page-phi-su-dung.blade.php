@@ -43,13 +43,13 @@
             <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 100ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
                     <h3 class="text-primary-1 font-bold text-base tracking-widest uppercase mb-4">LINH HOẠT</h3>
-                    <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
+                    <div class="flex items-baseline mb-3 text-black overflow-hidden py-1">
                         <span class="text-3xl lg:text-4xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="800.000" data-price-year="8.000.000">800.000</span>
-                        <span class="text-xl text-gray-900 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
+                        <span class="text-xl text-black ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/ tháng</span>
                     </div>
-                    <div class="space-y-2 mt-6 text-base text-gray-900">
-                        <p>Phí khởi tạo: <strong class="font-bold text-gray-900">2.000.000 đ</strong></p>
-                        <p>Quản lý đến <span class="font-bold text-gray-900">500 đơn hàng</span> mỗi tháng</p>
+                    <div class="space-y-2 mt-6 text-lg text-black">
+                        <p>Phí khởi tạo: <strong class="font-bold">2.000.000 đ</strong></p>
+                        <p>Quản lý đến <span class="font-bold">500 đơn hàng</span> mỗi tháng</p>
                     </div>
                 </div>
                 
@@ -87,13 +87,13 @@
             <div class="reveal bg-white rounded-[2.5rem] border border-gray-100 p-8 lg:p-10 shadow-[0_8px_30px_rgb(0,0,0,0.06)] hover:shadow-[0_20px_40px_rgb(0,0,0,0.12)] hover:-translate-y-2 transition-[transform,box-shadow] duration-500 ease-apple flex flex-col h-full" style="transition-delay: 200ms;">
                 <div class="mb-8 min-h-[220px] xl:min-h-[210px]">
                     <h3 class="text-primary-2 font-bold text-base tracking-widest uppercase mb-4">TIÊU CHUẨN</h3>
-                    <div class="flex items-baseline mb-3 text-gray-900 overflow-hidden py-1">
+                    <div class="flex items-baseline mb-3 text-black overflow-hidden py-1">
                         <span class="text-3xl lg:text-4xl font-normal tracking-tight transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-price-month="2.000.000" data-price-year="20.000.000">2.000.000</span>
-                        <span class="text-xl text-gray-900 ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/tháng</span>
+                        <span class="text-xl text-black ml-2 transition-[transform,box-shadow] duration-500 ease-apple inline-block" data-period-month="/tháng" data-period-year="/năm">/ tháng</span>
                     </div>
-                    <div class="space-y-2 mt-6 text-base text-gray-900">
-                        <p>Phí khởi tạo: <strong class="font-bold text-gray-900">4.000.000 đ</strong></p>
-                        <p>Quản lý đến <span class="font-bold text-gray-900">1.000 đơn hàng</span> mỗi tháng</p>
+                    <div class="space-y-2 mt-6 text-lg text-black">
+                        <p>Phí khởi tạo: <strong class="font-bold">4.000.000 đ</strong></p>
+                        <p>Quản lý đến <span class="font-bold">1.000 đơn hàng</span> mỗi tháng</p>
                     </div>
                 </div>
                 
