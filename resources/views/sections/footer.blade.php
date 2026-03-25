@@ -80,9 +80,9 @@
                     </div>
                 </div>
                 <div class="flex items-center gap-3">
-                    <a href="http://ghuy.me/vi/" class="hover:text-[#1d1d1f] transition-colors font-medium text-[#6e6e73]">Tiếng Việt</a>
+                    <a href="https://dentalso.com/vi/" class="hover:text-[#1d1d1f] transition-colors font-medium text-[#6e6e73]">Tiếng Việt</a>
                     <span class="text-[#d2d2d7]">|</span>
-                    <a href="http://ghuy.me/en/" class="hover:text-[#1d1d1f] transition-colors">English</a>
+                    <a href="https://dentalso.com/en/" class="hover:text-[#1d1d1f] transition-colors">English</a>
                 </div>
             </div>
             {{-- Row 2: Copyright + legal links, right-aligned --}}
