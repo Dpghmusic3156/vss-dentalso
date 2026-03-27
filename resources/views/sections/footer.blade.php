@@ -3,7 +3,7 @@
         {{-- Top: Links grid --}}
         <div class="apple-footer-grid">
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Sản Phẩm</h5>
+                <h4 class="apple-footer-heading">Sản Phẩm</h4>
                 <ul class="apple-footer-links">
                     <li><a href="{{ home_url('san-pham/phan-mem-dental-lab') }}">Quản lý Labo nha khoa</a></li>
                     <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">Quản lý sản xuất</a></li>
@@ -11,7 +11,7 @@
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Giải Pháp</h5>
+                <h4 class="apple-footer-heading">Giải Pháp</h4>
                 <ul class="apple-footer-links">
                     <li><a href="{{ home_url('giai-phap/labo/') }}">Dành cho Labo</a></li>
                     <li><a href="{{ home_url('giai-phap/phong-kham/') }}">Dành cho Phòng khám</a></li>
@@ -19,7 +19,7 @@
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Công Ty</h5>
+                <h4 class="apple-footer-heading">Công Ty</h4>
                 <ul class="apple-footer-links">
                     <li><a href="{{ home_url('ve-chung-toi/') }}">Về chúng tôi</a></li>
                     <li><a href="{{ home_url('blog/') }}">Blog</a></li>
@@ -28,7 +28,7 @@
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Hỗ Trợ</h5>
+                <h4 class="apple-footer-heading">Hỗ Trợ</h4>
                 <ul class="apple-footer-links">
                     <li><a href="http://ghuy.me/vi/customer/">Khách hàng tiêu biểu</a></li>
                     <li><a href="{{ home_url('huong-dan/') }}">Hướng dẫn</a></li>
@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div class="apple-footer-col">
-                <h5 class="apple-footer-heading">Liên Hệ</h5>
+                <h4 class="apple-footer-heading">Liên Hệ</h4>
                 <ul class="apple-footer-links">
                     <li>
                         <a href="mailto:<?php echo get_theme_mod('email1'); ?>">
