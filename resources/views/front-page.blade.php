@@ -31,7 +31,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper fade-in-up" style="transition-delay: 200ms;">
-            <img src="{{ get_theme_mod('trang_chu.banner.hinh_1') }}" alt="DentalSO – Phần mềm quản lý Dental Lab" class="apple-hero-img animate-float" loading="lazy">
+            <img src="@asset('images/dental-platform-mockup.png')" alt="DentalSO – Phần mềm quản lý Dental Lab" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
