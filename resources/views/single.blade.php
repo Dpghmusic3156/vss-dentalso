@@ -102,6 +102,11 @@
             </div>
         </div>
 
+        {{-- Mobile Share --}}
+        <div class="post-mobile-share lg:hidden">
+            @include('partials.share-buttons')
+        </div>
+
         {{-- Phân trang --}}
         @if ($pagination)
         <nav class="post-pagination" aria-label="Điều hướng trang">
@@ -151,6 +156,9 @@
                 <p class="post-sidebar-cta__body">Đặt lịch demo miễn phí và trải nghiệm DentalSO ngay.</p>
                 <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary !text-sm !py-2.5 !px-5">Đặt lịch Demo</a>
             </div>
+
+            {{-- Share buttons --}}
+            @include('partials.share-buttons')
         </div>
     </aside>
 </div>
