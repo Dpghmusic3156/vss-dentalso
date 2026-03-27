@@ -37,7 +37,7 @@
 </section>
 
 {{-- ============================================= --}}
-{{-- SECTION 2: MỘT NỀN TẢNG. BỐN GIẢI PHÁP MẠNH MẼ --}}
+{{-- SECTION 2: MỘT NỀN TẢNG. BỐN SẢN PHẨM MẠNH MẼ --}}
 {{-- Bold product split cards with per-solution color identity --}}
 {{-- ============================================= --}}
 <section id="solutions" class="apple-section bg-[var(--apple-gray-light)]">
