@@ -119,47 +119,53 @@
 
 {{-- ============================================= --}}
 {{-- SECTION 3: TẠI SAO CHỌN DENTALSO? --}}
-{{-- Apple-style bright section with clean white cards --}}
+{{-- Apple-style dark section with glass cards --}}
 {{-- ============================================= --}}
-<section class="apple-section relative overflow-hidden" style="background: #f5f5f7;">
+<section class="apple-section apple-section--dark relative overflow-hidden">
+    {{-- Background glow effects --}}
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-[#0071e3]/5 rounded-full blur-[120px]"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 bg-[#30d158]/5 rounded-full blur-[100px]"></div>
+
     <div class="apple-container relative z-10">
         <div class="text-center max-w-3xl mx-auto mb-16 lg:mb-20 fade-in-up">
-            <h2 class="apple-headline">Tại sao chọn DentalSO?</h2>
-            <p class="apple-body text-[#6e6e73] mt-4 max-w-2xl mx-auto">Được xây dựng từ đầu cho ngành nha khoa. Mọi tính năng đều được thiết kế dựa trên cách Labo thực sự vận hành.</p>
+            <h2 class="apple-headline text-white">Tại sao chọn DentalSO?</h2>
+            <p class="apple-body text-[#86868b] mt-4 max-w-2xl mx-auto">Được xây dựng từ đầu cho ngành nha khoa. Mọi tính năng đều được thiết kế dựa trên cách Labo thực sự vận hành.</p>
         </div>
 
         <div class="apple-bento-grid">
-            {{-- Feature 1: Chuyên biệt cho Labo (Large) --}}
+            {{-- Feature 1: Labs (Large) --}}
             <div class="apple-bento-card apple-bento-card--span-4 apple-lift fade-in-up" style="transition-delay: 100ms;">
+                <img src="@asset('images/image.png')" alt="Công nghệ Labo" class="apple-bento-visual" loading="lazy">
                 <div class="apple-bento-content">
-                    <span class="apple-bento-dot apple-bento-dot--green" aria-hidden="true"></span>
+                    <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">dentistry</span>
                     <h3 class="apple-bento-title">Thiết kế chuyên biệt cho Labo nha khoa</h3>
                     <p class="apple-bento-text">Mọi tính năng được tối ưu theo quy trình thực tế của Labo, từ quản lý đơn hàng đến kiểm soát chất lượng cuối cùng.</p>
                 </div>
             </div>
 
-            {{-- Feature 2: Điều phối thông minh (Small) --}}
+            {{-- Feature 2: Scheduling (Small) --}}
             <div class="apple-bento-card apple-bento-card--span-2 apple-bento-card--top-content apple-lift fade-in-up" style="transition-delay: 150ms;">
                 <div class="apple-bento-content">
-                    <span class="apple-bento-dot apple-bento-dot--blue" aria-hidden="true"></span>
+                    <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">event_available</span>
                     <h3 class="apple-bento-title">Điều phối thông minh</h3>
                     <p class="apple-bento-text">Sắp xếp lịch sản xuất tự động dựa trên mức độ ưu tiên và năng suất thực tế.</p>
                 </div>
             </div>
 
-            {{-- Feature 3: Theo dõi tức thời (Small) --}}
+            {{-- Feature 3: Tracking (Small) --}}
             <div class="apple-bento-card apple-bento-card--span-2 apple-lift fade-in-up" style="transition-delay: 200ms;">
                 <div class="apple-bento-content">
-                    <span class="apple-bento-dot apple-bento-dot--orange" aria-hidden="true"></span>
+                    <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">assignment</span>
                     <h3 class="apple-bento-title">Theo dõi tức thời</h3>
                     <p class="apple-bento-text">Cập nhật trạng thái từng ca sản xuất theo thời gian thực trên mọi thiết bị.</p>
                 </div>
             </div>
 
-            {{-- Feature 4: Nền tảng đám mây (Large) --}}
+            {{-- Feature 4: Cloud (Large) --}}
             <div class="apple-bento-card apple-bento-card--span-4 apple-bento-card--dark apple-lift fade-in-up" style="transition-delay: 250ms;">
+                <img src="@asset('images/bento-abstract-2.png')" alt="Hệ thống đám mây" class="apple-bento-visual" loading="lazy">
                 <div class="apple-bento-content">
-                    <span class="apple-bento-dot apple-bento-dot--dark" aria-hidden="true" style="background: #fff;"></span>
+                    <span class="material-symbols-outlined apple-bento-icon" aria-hidden="true">cloud_done</span>
                     <h3 class="apple-bento-title">Nền tảng đám mây bảo mật</h3>
                     <p class="apple-bento-text">Xây dựng trên hạ tầng hiện đại, dễ dàng mở rộng quy mô và đảm bảo dữ liệu của bạn luôn an toàn.</p>
                 </div>
