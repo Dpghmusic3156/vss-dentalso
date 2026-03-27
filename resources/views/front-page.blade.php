@@ -15,10 +15,10 @@
                 <span style="background: linear-gradient(90deg, #f9ab00, #34a853, #4285f4); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">DentalSO</span>
             </h1>
             <h2 class="apple-hero-subheadline fade-in-up fade-delay-2">
-                Hệ sinh thái phần mềm labo nha khoa toàn diện giúp tối ưu vận hành
+                Nền tảng Quản trị Labo Nha khoa toàn diện
             </h2>
             <h3 class="fade-in-up fade-delay-3 text-2xl md:text-3xl font-semibold text-[#1d1d1f] tracking-tight mt-6 mb-8">
-                Tất cả trên 1 nền tảng duy nhất
+                Tất cả trên Một nền tảng
             </h3>
             <div class="apple-cta-group fade-in-up fade-delay-4">
                 <a href="{{ home_url('yeu-cau-tu-van') }}" class="apple-cta-primary apple-press">
