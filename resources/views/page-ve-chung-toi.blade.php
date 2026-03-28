@@ -64,7 +64,7 @@
                     <li class="flex items-start"><span class="mr-2">✔</span> Theo dõi và truy vết từng công đoạn sản xuất</li>
                     <li class="flex items-start"><span class="mr-2">✔</span> Tối ưu quy trình bằng phân tích dữ liệu</li>
                     <li class="flex items-start"><span class="mr-2">✔</span> Kiểm soát chất lượng tại từng checkpoint</li>
-                    <li class="flex items-start"><span class="mr-2">✔</span> Theo dõi xưởng sản xuất thời gian thực</li>
+                    <li class="flex items-start"><span class="mr-2">✔</span> Quản lý sản xuất thời gian thực</li>
                 </ul>
             </div>
 
