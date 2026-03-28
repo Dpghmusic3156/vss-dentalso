@@ -18,7 +18,7 @@
                 Cung cấp sức mạnh cho Labo và Phòng khám Nha khoa hiện đại với quy trình thông minh, kết nối và hiệu quả.
             </p>
             <div class="apple-cta-group">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary">
+                <a href="{{ home_url('yeu-cau-tu-van/?product=' . urlencode('Quản lý Labo nha khoa')) }}" class="apple-cta-primary">
                     Đặt Lịch Demo
                 </a>
             </div>
@@ -210,7 +210,7 @@
             <h3 class="text-3xl font-bold text-white mb-8">Sẵn sàng tối ưu vận hành?</h3>
             <p class="text-lg text-white/90 mb-8">Khám phá cách DentalSO nâng tầm hiệu suất Labo và phòng khám.</p>
             <div class="apple-cta-group">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--light">
+                <a href="{{ home_url('yeu-cau-tu-van/?product=' . urlencode('Quản lý Labo nha khoa')) }}" class="apple-cta-primary apple-cta-primary--light">
                     Đặt Lịch Demo Trực Tiếp
                 </a>
                 <a href="{{ home_url('lien-he/') }}" class="apple-cta-secondary apple-cta-secondary--light">

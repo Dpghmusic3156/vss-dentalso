@@ -13,7 +13,7 @@
                 Theo dõi xưởng sản xuất thời gian thực. Kiểm soát từng ca. Giao hàng đúng hẹn — mọi lúc.
             </p>
             <div class="apple-cta-group my-10">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary">Đăng Ký Demo MES</a>
+                <a href="{{ home_url('yeu-cau-tu-van/?product=' . urlencode('Quản lý sản xuất (MES)')) }}" class="apple-cta-primary">Đăng Ký Demo MES</a>
                 <a href="{{ home_url('san-pham/phan-mem-dental-lab/') }}" class="apple-cta-secondary">Khám phá nền tảng<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
         </div>
@@ -329,7 +329,7 @@
             <h2 class="apple-headline text-white mb-4">Kiểm soát toàn bộ<br>xưởng sản xuất.</h2>
             <p class="text-white/70 text-lg mb-8 max-w-lg mx-auto">Khám phá cách Quản lý sản xuất chuyển đổi từ sắp lịch thụ động sang quản lý sản xuất chủ động, dựa trên dữ liệu.</p>
             <div class="apple-cta-group">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--light">Đăng Ký Demo MES</a>
+                <a href="{{ home_url('yeu-cau-tu-van/?product=' . urlencode('Quản lý sản xuất (MES)')) }}" class="apple-cta-primary apple-cta-primary--light">Đăng Ký Demo MES</a>
                 <a href="{{ home_url('san-pham/dentalso-ket-noi/') }}" class="apple-cta-secondary apple-cta-secondary--light">Khám phá Kết nối Labo và Nha khoa<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
         </div>

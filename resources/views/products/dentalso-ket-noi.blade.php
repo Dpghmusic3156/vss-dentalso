@@ -314,7 +314,7 @@
                 Loại bỏ email. Thay thế phiếu chỉ định giấy. Tối ưu cộng tác
             </p>
             <div class="apple-cta-group">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--light">
+                <a href="{{ home_url('yeu-cau-tu-van/?product=' . urlencode('Kết nối Labo - Nha khoa')) }}" class="apple-cta-primary apple-cta-primary--light">
                     Đăng Ký Demo Connect
                 </a>
                 <a href="{{ home_url('san-pham/phan-mem-mes/') }}" class="apple-cta-secondary apple-cta-secondary--light">
