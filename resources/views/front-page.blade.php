@@ -47,70 +47,78 @@
         </div>
         <div class="space-y-12 lg:space-y-24">
             {{-- Giải pháp 1: DentalSO Platform --}}
-            <div class="apple-split solution-card solution-card--blue bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 0ms;">
-                <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/dental-platform-mockup.png')" alt="DentalSO Platform" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
-                </div>
-                <div class="apple-split-text">
-                    <span class="solution-pill solution-pill--blue">Quản lý Labo</span>
-                    <h3 class="apple-headline-sm font-bold mt-4">Quản lý Labo nha khoa</h3>
-                    <p class="apple-body mb-10 text-[#86868b]">
-                        Phần mềm quản lý Labo toàn diện — kiểm soát ca, chuẩn hóa quy trình, đảm bảo chất lượng và phân tích dữ liệu.
-                    </p>
-                    <a href="{{ home_url('san-pham/phan-mem-dental-lab') }}" class="solution-cta">
-                        Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
-                    </a>
+            <div class="fade-in-up" style="transition-delay: 0ms;">
+                <div class="apple-split solution-card solution-card--blue bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                    <div class="apple-split-media solution-card__media">
+                        <img src="@asset('images/dental-platform-mockup.png')" alt="DentalSO Platform" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                    </div>
+                    <div class="apple-split-text">
+                        <span class="solution-pill solution-pill--blue">Quản lý Labo</span>
+                        <h3 class="apple-headline-sm font-bold mt-4">Quản lý Labo nha khoa</h3>
+                        <p class="apple-body mb-10 text-[#86868b]">
+                            Phần mềm quản lý Labo toàn diện — kiểm soát ca, chuẩn hóa quy trình, đảm bảo chất lượng và phân tích dữ liệu.
+                        </p>
+                        <a href="{{ home_url('san-pham/phan-mem-dental-lab') }}" class="solution-cta">
+                            Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             {{-- Giải pháp 2: DentalSO MES --}}
-            <div class="apple-split apple-split--reverse solution-card solution-card--green bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 100ms;">
-                <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/mes-dashboard-hero.png')" alt="DentalSO MES" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
-                </div>
-                <div class="apple-split-text">
-                    <span class="solution-pill solution-pill--green">Điều hành sản xuất</span>
-                    <h3 class="apple-headline-sm font-bold mt-4">Quản lý sản xuất</h3>
-                    <p class="apple-body mb-10 text-[#86868b]">
-                        Hệ thống điều hành sản xuất thời gian thực — theo dõi xưởng sản xuất, khối lượng công việc kỹ thuật viên và ưu tiên tiến độ.
-                    </p>
-                    <a href="{{ home_url('san-pham/phan-mem-mes') }}" class="solution-cta solution-cta--green">
-                        Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
-                    </a>
+            <div class="fade-in-up" style="transition-delay: 100ms;">
+                <div class="apple-split apple-split--reverse solution-card solution-card--green bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                    <div class="apple-split-media solution-card__media">
+                        <img src="@asset('images/mes-dashboard-hero.png')" alt="DentalSO MES" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                    </div>
+                    <div class="apple-split-text">
+                        <span class="solution-pill solution-pill--green">Điều hành sản xuất</span>
+                        <h3 class="apple-headline-sm font-bold mt-4">Quản lý sản xuất</h3>
+                        <p class="apple-body mb-10 text-[#86868b]">
+                            Hệ thống điều hành sản xuất thời gian thực — theo dõi xưởng sản xuất, khối lượng công việc kỹ thuật viên và ưu tiên tiến độ.
+                        </p>
+                        <a href="{{ home_url('san-pham/phan-mem-mes') }}" class="solution-cta solution-cta--green">
+                            Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             {{-- Giải pháp 3: DentalSO Connect --}}
-            <div class="apple-split solution-card solution-card--orange bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 200ms;">
-                <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/dentalso-connect-illustration.png')" alt="DentalSO Connect" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
-                </div>
-                <div class="apple-split-text">
-                    <span class="solution-pill solution-pill--orange">Kết nối số</span>
-                    <h3 class="apple-headline-sm font-bold mt-4">Kết nối Labo và Nha khoa</h3>
-                    <p class="apple-body mb-10 text-[#86868b]">
-                        Ứng dụng gửi ca số hóa và cộng tác đối tác cho phòng khám, đại lý kinh doanh và Labo gia công.
-                    </p>
-                    <a href="{{ home_url('san-pham/dentalso-ket-noi') }}" class="solution-cta solution-cta--orange">
-                        Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
-                    </a>
+            <div class="fade-in-up" style="transition-delay: 200ms;">
+                <div class="apple-split solution-card solution-card--orange bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                    <div class="apple-split-media solution-card__media">
+                        <img src="@asset('images/dentalso-connect-illustration.png')" alt="DentalSO Connect" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                    </div>
+                    <div class="apple-split-text">
+                        <span class="solution-pill solution-pill--orange">Kết nối số</span>
+                        <h3 class="apple-headline-sm font-bold mt-4">Kết nối Labo và Nha khoa</h3>
+                        <p class="apple-body mb-10 text-[#86868b]">
+                            Ứng dụng gửi ca số hóa và cộng tác đối tác cho phòng khám, đại lý kinh doanh và Labo gia công.
+                        </p>
+                        <a href="{{ home_url('san-pham/dentalso-ket-noi') }}" class="solution-cta solution-cta--orange">
+                            Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
 
             {{-- Giải pháp 4: Quản lý bảo hành --}}
-            <div class="apple-split apple-split--reverse solution-card solution-card--yellow bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-[transform,box-shadow] duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] fade-in-up group" style="transition-delay: 300ms;">
-                <div class="apple-split-media solution-card__media">
-                    <img src="@asset('images/warranty-hero-mockup.png')" alt="Quản lý bảo hành" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
-                </div>
-                <div class="apple-split-text">
-                    <span class="solution-pill solution-pill--yellow">Bảo hành</span>
-                    <h3 class="apple-headline-sm font-bold mt-4">Quản lý bảo hành</h3>
-                    <p class="apple-body mb-10 text-[#86868b]">
-                        Ứng dụng quản lý bảo hành trong DentalSO Starter giúp theo dõi toàn bộ thông tin bảo hành theo từng case một cách rõ ràng và chính xác. Hệ thống hỗ trợ tra cứu bằng mã vạch, in thẻ bảo hành sau khi sản xuất, và liên kết chặt chẽ thông tin giữa bệnh nhân, nha khoa và labo.
-                    </p>
-                    <a href="{{ home_url('quan-ly-bao-hanh') }}" class="solution-cta solution-cta--yellow">
-                        Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
-                    </a>
+            <div class="fade-in-up" style="transition-delay: 300ms;">
+                <div class="apple-split apple-split--reverse solution-card solution-card--yellow bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
+                    <div class="apple-split-media solution-card__media">
+                        <img src="@asset('images/warranty-hero-mockup.png')" alt="Quản lý bảo hành" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                    </div>
+                    <div class="apple-split-text">
+                        <span class="solution-pill solution-pill--yellow">Bảo hành</span>
+                        <h3 class="apple-headline-sm font-bold mt-4">Quản lý bảo hành</h3>
+                        <p class="apple-body mb-10 text-[#86868b]">
+                            Ứng dụng quản lý bảo hành trong DentalSO Starter giúp theo dõi toàn bộ thông tin bảo hành theo từng case một cách rõ ràng và chính xác. Hệ thống hỗ trợ tra cứu bằng mã vạch, in thẻ bảo hành sau khi sản xuất, và liên kết chặt chẽ thông tin giữa bệnh nhân, nha khoa và labo.
+                        </p>
+                        <a href="{{ home_url('quan-ly-bao-hanh') }}" class="solution-cta solution-cta--yellow">
+                            Tìm hiểu thêm <span class="solution-cta__arrow transition-transform duration-300 group-hover:translate-x-2 inline-block">→</span>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
