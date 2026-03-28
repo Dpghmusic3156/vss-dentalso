@@ -176,9 +176,11 @@
     <div class="apple-subnav-inner">
         <h2 class="apple-subnav-title cursor-pointer apple-press" @click="window.scrollTo({top: 0, behavior: 'smooth'})">{{ $subnav_title }}</h2>
         <div class="apple-subnav-actions">
-            <a href="{{ home_url('yeu-cau-tu-van') }}" class="apple-subnav-btn">
-                Đăng ký Demo
-            </a>
+            @if(!is_page('yeu-cau-tu-van'))
+                <a href="{{ home_url('yeu-cau-tu-van') }}" class="apple-subnav-btn">
+                    Đăng ký Demo
+                </a>
+            @endif
         </div>
     </div>
 </div>
