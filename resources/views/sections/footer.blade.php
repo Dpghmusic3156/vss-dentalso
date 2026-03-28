@@ -24,7 +24,6 @@
                     <li><a href="{{ home_url('ve-chung-toi/') }}">Về chúng tôi</a></li>
                     <li><a href="{{ home_url('blog/') }}">Blog</a></li>
                     <li><a href="{{ home_url('lien-he/') }}">Liên hệ</a></li>
-                    <li><a href="{{ home_url('tuyen-dung/') }}">Tuyển dụng</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
