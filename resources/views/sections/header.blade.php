@@ -128,7 +128,7 @@
             {{-- Mobile Login Button --}}
             <div class="mt-10 pt-8 border-t border-[#d2d2d7]/60">
                 <a href="https://lab.dentalso.com/" target="_blank" 
-                   class="flex items-center justify-center w-full py-3.5 px-6 rounded-full bg-[#0071e3] text-white text-lg font-semibold tracking-tight active:opacity-70 transition-opacity">
+                   class="apple-nav-btn-mobile flex items-center justify-center w-full py-3.5 px-6 rounded-full text-white text-lg font-semibold tracking-tight active:opacity-70 transition-opacity">
                     <span class="material-symbols-outlined mr-2 text-xl">login</span>
                     Đăng nhập
                 </a>

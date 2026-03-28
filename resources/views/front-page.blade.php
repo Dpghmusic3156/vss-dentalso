@@ -137,9 +137,7 @@
     <section class="max-w-7xl mx-auto px-8 mb-32 fade-in-up">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6" style="background-color: rgba(66, 133, 244, 0.1); color: #4285F4;">
-                    <span class="material-symbols-outlined" aria-hidden="true">precision_manufacturing</span>
-                </div>
+
                 <h3 class="apple-headline-sm">Thiết kế chuyên biệt cho Labo</h3>
                 <p class="text-lg text-[#86868b] leading-relaxed">
                     Mọi tính năng được tối ưu theo quy trình thực tế của Labo, từ quản lý đơn hàng đến kiểm soát chất lượng cuối cùng. Chúng tôi loại bỏ các bước thừa thãi để kỹ thuật viên tập trung vào chuyên môn.
@@ -175,9 +173,7 @@
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6" style="background-color: rgba(251, 188, 5, 0.2); color: #FBBC05;">
-                        <span class="material-symbols-outlined" aria-hidden="true">auto_graph</span>
-                    </div>
+
                     <h3 class="apple-headline-sm">Điều phối thông minh</h3>
                     <p class="text-lg text-[#86868b] leading-relaxed">
                         Sắp xếp lịch sản xuất tự động dựa trên mức độ ưu tiên và năng suất thực tế.
@@ -201,9 +197,7 @@
     <section class="max-w-7xl mx-auto px-8 my-32 fade-in-up">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div>
-                <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl mb-6" style="background-color: rgba(52, 168, 83, 0.1); color: #34A853;">
-                    <span class="material-symbols-outlined" aria-hidden="true">visibility</span>
-                </div>
+
                 <h3 class="apple-headline-sm">Theo dõi tức thời</h3>
                 <p class="text-lg text-[#86868b] leading-relaxed">
                     Cập nhật trạng thái từng ca sản xuất theo thời gian thực trên mọi thiết bị. Chủ Labo và bác sĩ có thể biết chính xác đơn hàng đang ở công đoạn nào, giúp tăng cường sự tin tưởng và minh bạch.
@@ -277,9 +271,7 @@
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
-                    <div class="inline-flex items-center justify-center w-12 h-12 rounded-xl shadow-lg mb-6" style="background-color: #4285F4; box-shadow: 0 4px 14px rgba(66,133,244,0.3);">
-                        <span class="material-symbols-outlined text-white" aria-hidden="true">cloud_done</span>
-                    </div>
+
                     <h3 class="apple-headline-sm">Nền tảng đám mây bảo mật</h3>
                     <p class="text-lg text-[#86868b] leading-relaxed">
                         Xây dựng trên hạ tầng hiện đại, dễ dàng mở rộng quy mô và đảm bảo dữ liệu của bạn luôn an toàn. Bạn có thể truy cập hệ thống từ bất cứ đâu, trên điện thoại hay máy tính, với các tiêu chuẩn mã hóa dữ liệu hàng đầu.
