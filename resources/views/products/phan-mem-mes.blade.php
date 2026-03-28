@@ -8,7 +8,7 @@
     <div class="apple-container text-center">
         <div class="fade-in-up">
             <span class="apple-eyebrow">Hệ thống quản lý sản xuất</span>
-            <h1 class="apple-headline mb-6">Quản lý sản xuất</h1>
+            <h1 class="apple-headline mb-6">Quản lý sản xuất (MES)</h1>
             <p class="apple-hero-copy">
                 Theo dõi xưởng sản xuất thời gian thực. Kiểm soát từng ca. Giao hàng đúng hẹn — mọi lúc.
             </p>

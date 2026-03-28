@@ -6,7 +6,7 @@
                 <h4 class="apple-footer-heading">Sản Phẩm</h4>
                 <ul class="apple-footer-links">
                     <li><a href="{{ home_url('san-pham/phan-mem-dental-lab') }}">Quản lý Labo nha khoa</a></li>
-                    <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">Quản lý sản xuất</a></li>
+                    <li><a href="{{ home_url('san-pham/phan-mem-mes/') }}">Quản lý sản xuất (MES)</a></li>
                     <li><a href="{{ home_url('san-pham/dentalso-ket-noi/') }}">Kết nối Labo và Nha khoa</a></li>
                 </ul>
             </div>
