@@ -73,7 +73,7 @@
                     </div>
                     <div class="apple-split-text">
                         <span class="solution-pill solution-pill--green">Điều hành sản xuất</span>
-                        <h3 class="apple-headline-sm font-bold mt-4">Quản lý sản xuất</h3>
+                        <h3 class="apple-headline-sm font-bold mt-4">Quản lý sản xuất (MES)</h3>
                         <p class="apple-body mb-10 text-[#86868b]">
                             Hệ thống điều hành sản xuất thời gian thực — theo dõi xưởng sản xuất, khối lượng công việc kỹ thuật viên và ưu tiên tiến độ.
                         </p>
