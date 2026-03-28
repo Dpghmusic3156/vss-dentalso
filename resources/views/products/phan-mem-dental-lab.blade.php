@@ -111,24 +111,27 @@
         </div>
         <div class="grid lg:grid-cols-2 gap-10">
             {{-- MES --}}
-            <div class="apple-card apple-card--tint-green fade-in-up" style="animation-delay: 0.1s;">
+            <a href="{{ home_url('san-pham/phan-mem-mes/') }}" class="apple-card apple-card--tint-green fade-in-up block group transition-transform hover:-translate-y-1" style="animation-delay: 0.1s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Quản lý sản xuất, được tái định nghĩa</div>
-                    <h3 class="apple-card-title">1. Quản lý sản xuất cho Labo</h3>
+                    <h3 class="apple-card-title group-hover:text-[#30d158] transition-colors">1. Quản lý sản xuất cho Labo</h3>
                     <ul class="space-y-4 mb-8 mt-4">
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Theo dõi sản xuất thời gian thực</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Tự động sắp lịch và cân bằng tải</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Kiểm soát chất lượng và theo dõi lỗi</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#30d158] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Dự báo tồn kho và quản lý vật tư</span></li>
                     </ul>
-                    <p class="font-medium text-[#1d1d1f] mt-auto">Kết quả: Giao hàng nhanh hơn, ít làm lại, lợi nhuận cao hơn.</p>
+                    <p class="font-medium text-[#1d1d1f] mt-auto flex items-center justify-between">
+                        <span>Kết quả: Giao hàng nhanh hơn, ít làm lại, lợi nhuận cao hơn.</span>
+                        <span class="material-symbols-outlined text-[#30d158] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+                    </p>
                 </div>
-            </div>
+            </a>
             {{-- Connect --}}
-            <div class="apple-card apple-card--tint-purple fade-in-up" style="animation-delay: 0.2s;">
+            <a href="{{ home_url('san-pham/dentalso-ket-noi/') }}" class="apple-card apple-card--tint-purple fade-in-up block group transition-transform hover:-translate-y-1" style="animation-delay: 0.2s;">
                 <div class="apple-card-inner">
                     <div class="apple-card-eyebrow">Kết nối liền mạch. Không ma sát.</div>
-                    <h3 class="apple-card-title">2. Kết nối Labo và Nha khoa</h3>
+                    <h3 class="apple-card-title group-hover:text-[#bf5af2] transition-colors">2. Kết nối Labo và Nha khoa</h3>
                     <ul class="space-y-4 mb-8 mt-4">
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Gửi ca trực tuyến</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Chia sẻ hình ảnh và file</span></li>
@@ -136,9 +139,12 @@
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Theo dõi bảo hành và lịch sử ca</span></li>
                         <li class="flex items-start"><span class="material-symbols-outlined text-[#bf5af2] mr-3 mt-1 text-xl">check_circle</span><span class="text-[#1d1d1f]">Bảo mật cấp doanh nghiệp (SSL, chứng chỉ số, mã hóa RSA)</span></li>
                     </ul>
-                    <p class="font-medium text-[#1d1d1f] mt-auto">Kết quả: Giảm lỗi, thông tin rõ ràng hơn, quan hệ đối tác bền chặt.</p>
+                    <p class="font-medium text-[#1d1d1f] mt-auto flex items-center justify-between">
+                        <span>Kết quả: Giảm lỗi, thông tin rõ ràng hơn, quan hệ đối tác bền chặt.</span>
+                        <span class="material-symbols-outlined text-[#bf5af2] opacity-0 group-hover:opacity-100 transition-opacity translate-x-[-10px] group-hover:translate-x-0 duration-300">arrow_forward</span>
+                    </p>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 </section>
