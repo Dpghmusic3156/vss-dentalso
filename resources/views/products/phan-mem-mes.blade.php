@@ -19,7 +19,7 @@
         </div>
         <div class="fade-in-up mt-10" style="animation-delay: 0.2s;">
             <div class="bg-white rounded-2xl overflow-hidden p-1 max-w-5xl mx-auto shadow-sm">
-                <img src="@asset('images/mes-dashboard-hero.png')" alt="Quản lý sản xuất — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full" loading="lazy">
+                <img src="@asset('images/mes-dashboard-hero.webp')" alt="Quản lý sản xuất — Bảng điều khiển giám sát sản xuất thời gian thực" class="rounded-xl w-full" loading="lazy">
             </div>
         </div>
     </div>

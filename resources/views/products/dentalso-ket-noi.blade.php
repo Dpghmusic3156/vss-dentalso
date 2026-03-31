@@ -64,7 +64,7 @@
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
             <div class="w-full lg:w-[62%] fade-in-up">
                 <div class="bg-white rounded-3xl p-1 shadow-sm overflow-hidden border border-[#f5f5f7]">
-                    <img src="@asset('images/connect-clinic-partner.png')" alt="Giao diện Phòng khám" class="rounded-2xl w-full h-full object-cover" loading="lazy">
+                    <img src="@asset('images/connect-clinic-partner.webp')" alt="Giao diện Phòng khám" class="rounded-2xl w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
             <div class="w-full lg:w-[38%] fade-in-up" style="animation-delay: 0.15s;">
@@ -119,7 +119,7 @@
         <div class="flex flex-col-reverse lg:flex-row items-center gap-12 lg:gap-20">
             <div class="w-full lg:w-[62%] fade-in-up">
                 <div class="bg-white rounded-3xl p-1 shadow-sm overflow-hidden border border-[#f5f5f7]">
-                    <img src="@asset('images/connect-lab-partner.png')" alt="Cộng tác giữa các Labo" class="rounded-2xl w-full h-full object-cover" loading="lazy">
+                    <img src="@asset('images/connect-lab-partner.webp')" alt="Cộng tác giữa các Labo" class="rounded-2xl w-full h-full object-cover" loading="lazy">
                 </div>
             </div>
             <div class="w-full lg:w-[38%] fade-in-up" style="animation-delay: 0.15s;">
