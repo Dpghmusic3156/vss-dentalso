@@ -14,13 +14,6 @@
   <link rel="alternate" href="https://dentalso.com/vi/" hreflang="x-default" />
   @php(do_action('get_header'))
   @php(wp_head())
-  {{-- Fallback Meta Description --}}
-  @php
-    $yoast_desc = is_singular() ? get_post_meta(get_the_ID(), '_yoast_wpseo_metadesc', true) : '';
-  @endphp
-  @if(empty($yoast_desc) && defined('WPSEO_VERSION') && is_singular())
-    <meta name="description" content="{{ wp_trim_words(strip_shortcodes(strip_tags(get_post()->post_content)), 30, '...') }}">
-  @endif
   {{-- Open Graph / Social --}}
   @if(!defined('WPSEO_VERSION') && !class_exists('RankMath'))
   @if(is_front_page() || is_home())
