@@ -28,7 +28,7 @@
 
         {{-- Right Actions --}}
         <div class="flex items-center justify-end gap-3 xl:gap-6 shrink-0">
-            <a href="https://lab.dentalso.com/" target="_blank" class="apple-nav-btn hidden lg:inline-flex whitespace-nowrap">
+            <a href="https://lab.dentalso.com/" target="_blank" rel="noopener noreferrer" class="apple-nav-btn hidden lg:inline-flex whitespace-nowrap">
                 Đăng nhập
             </a>
         </div>
@@ -127,7 +127,7 @@
 
             {{-- Mobile Login Button --}}
             <div class="mt-10 pt-8 border-t border-[#d2d2d7]/60">
-                <a href="https://lab.dentalso.com/" target="_blank" 
+                <a href="https://lab.dentalso.com/" target="_blank" rel="noopener noreferrer"
                    class="apple-nav-btn-mobile flex items-center justify-center w-full py-3.5 px-6 rounded-full text-white text-lg font-semibold tracking-tight active:opacity-70 transition-opacity">
                     <span class="material-symbols-outlined mr-2 text-xl">login</span>
                     Đăng nhập

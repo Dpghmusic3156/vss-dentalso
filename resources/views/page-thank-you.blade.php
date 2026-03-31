@@ -30,11 +30,11 @@
                     style="display: flex; flex-direction: row; align-items: center;margin-right: 1rem;">
                     <img src="https://dentalso.com/wp-content/plugins/polylang/flags/vn.png" alt="Tiếng Việt" loading="lazy"
                         style="width: 16px; height: 11px">
-                    <a class="hover:text-primary-1 text-xl" href="http://zalo.me/0947476000" target="_blank">&nbsp;{{ get_theme_mod('phone') }}</a>
+                    <a class="hover:text-primary-1 text-xl" href="http://zalo.me/0947476000" target="_blank" rel="noopener noreferrer">&nbsp;{{ get_theme_mod('phone') }}</a>
                 </span>
                 <img src="https://dentalso.com/wp-content/plugins/polylang/flags/us.png" alt="English" loading="lazy"
                     style="width: 16px; height: 11px;">
-                <a class="hover:text-primary-1 text-xl" href="https://api.whatsapp.com/send/?phone=12062019069&text&type=phone_number&app_absent=0" target="_blank">&nbsp;{{ get_theme_mod('phoneus') }}</a>
+                <a class="hover:text-primary-1 text-xl" href="https://api.whatsapp.com/send/?phone=12062019069&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer">&nbsp;{{ get_theme_mod('phoneus') }}</a>
                  <span class="material-symbols-outlined align-bottom" style="margin-left: 1rem;" id="maildesktop">mail</span>
                     <a href="mailto:contact@dentalso.com" class="hover:text-primary-1 text-xl" id="maildesktop">contact@dentalso.com</a>
             </div>
