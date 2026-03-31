@@ -8,8 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,100..700,0,0&display=swap">
-  <link rel=“alternate” href=“https://dentalso.com/vi” hreflang=“vi-vn” />
-  <link rel=“alternate” href=“https://dentalso.com/en” hreflang=“en” />
+  <link rel="alternate" href="https://dentalso.com/vi/" hreflang="vi-vn" />
+  <link rel="alternate" href="https://dentalso.com/vi/" hreflang="vi" />
+  <link rel="alternate" href="https://dentalso.com/en/" hreflang="en" />
+  <link rel="alternate" href="https://dentalso.com/vi/" hreflang="x-default" />
   @php(do_action('get_header'))
   @php(wp_head())
   {{-- Open Graph / Social --}}
