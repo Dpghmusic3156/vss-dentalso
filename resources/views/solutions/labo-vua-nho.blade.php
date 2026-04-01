@@ -13,7 +13,7 @@
                 Đơn giản hóa Vận hành. Tổ chức Khoa học. Giao hàng Đúng hạn.
             </p>
             <p class="apple-hero-copy">
-                Các Labo nha khoa vừa và nhỏ thường phụ thuộc vào Excel, theo dõi thủ công và trao đổi thông tin phân tán. Khi số lượng ca tăng, hệ thống này nhanh chóng trở nên kém hiệu quả và dễ xảy ra sai sót. DentalSO cung cấp nền tảng đơn giản, có cấu trúc giúp Labo làm chủ hoạt động mà không hề phức tạp.
+                Thay thế các bảng tính Excel dễ mắc lỗi và việc theo dõi thủ công bằng một nền tảng đơn giản, có cấu trúc. Trọn quyền kiểm soát vận hành khi labo ngày một phát triển mà không hề phức tạp.
             </p>
             <div class="apple-cta-group mt-10">
                 <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary">Đặt Lịch Demo</a>
