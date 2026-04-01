@@ -12,13 +12,17 @@
             <p class="text-[1.125rem] md:text-[1.375rem] font-medium text-[#1d1d1f] leading-snug max-w-3xl mx-auto mb-4">
                 Đơn giản hóa Vận hành. Tổ chức Khoa học. Giao hàng Đúng hạn.
             </p>
-            <p class="apple-hero-copy">
+            <p class="apple-hero-copy hidden">
                 Thay thế các bảng tính Excel dễ mắc lỗi và việc theo dõi thủ công bằng một nền tảng đơn giản, có cấu trúc. Trọn quyền kiểm soát vận hành khi labo ngày một phát triển mà không hề phức tạp.
             </p>
             <div class="apple-cta-group mt-10">
                 <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary">Đặt Lịch Demo</a>
-                <a href="{{ home_url('lien-he/') }}" class="apple-cta-secondary">Liên hệ Kinh doanh<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
+                <a href="{{ home_url('lien-he/') }}" class="apple-cta-secondary">Liên hệ Kinh doanh <span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
+        </div>
+        {{-- Hero image --}}
+        <div class="apple-hero-img-wrapper fade-in-up" style="transition-delay: 200ms;">
+            <img src="@asset('images/mes-dashboard-hero.webp')" alt="DentalSO MES Dashboard" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
@@ -116,37 +120,142 @@
     </div>
 </section>
 
-{{-- When Is This Right — Dark Section --}}
-<section class="apple-section apple-section--dark">
-    <div class="apple-container">
-        <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-            <span class="apple-eyebrow apple-eyebrow--light">Phù hợp với ai?</span>
-            <h2 class="apple-headline text-white">Giải pháp Này Phù hợp<br>Với Bạn Khi Nào?</h2>
+{{-- Giải pháp phù hợp khi nào — Zigzag Section --}}
+<div class="pt-16 pb-32 overflow-hidden">
+
+    {{-- Section Header --}}
+    <header class="max-w-4xl mx-auto px-8 text-center mb-24 fade-in-up">
+        <span class="apple-eyebrow">Phù hợp với ai?</span>
+        <h2 class="apple-headline mb-6">Giải pháp Này Phù hợp<br>Với Bạn Khi Nào?</h2>
+    </header>
+
+    {{-- Item 1: Theo dõi Thủ công --}}
+    <section class="max-w-7xl mx-auto px-8 mb-32 fade-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h3 class="apple-headline-sm">Bạn Đang Theo dõi Thủ công ?</h3>
+                <p class="text-lg text-[#1d1d1f] leading-relaxed mt-4">
+                    Bạn quản lý ca làm bằng Excel hay giấy tờ. Khi labo phát triển, bảng tính trở nên dễ mắc lỗi và tốn thời gian.
+                </p>
+                <div class="mt-8 flex gap-4">
+                    <div class="p-4 rounded-xl bg-[#f5f5f7]">
+                        <span class="block text-2xl font-semibold text-[#34a853]">80%</span>
+                        <span class="text-sm text-[#86868b]">Thời gian nhập liệu thủ công</span>
+                    </div>
+                    <div class="p-4 rounded-xl bg-[#f5f5f7]">
+                        <span class="block text-2xl font-semibold text-[#34a853]">3x</span>
+                        <span class="text-sm text-[#86868b]">Sai sót so với kỹ thuật số</span>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(52,168,83,0.05);"></div>
+                <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Quản lý ca bằng Excel và giấy tờ thủ công" class="w-full h-auto object-cover" loading="lazy">
+                </div>
+            </div>
         </div>
-        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5 max-w-4xl mx-auto">
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.05s;">
-                <span class="material-symbols-outlined text-4xl text-[#ff453a] mb-4">table_view</span>
-                <p class="text-white font-semibold text-sm mb-1">Theo dõi Thủ công</p>
-                <p class="text-[#86868b] text-xs leading-relaxed">Bạn quản lý ca làm bằng Excel hay giấy tờ.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.1s;">
-                <span class="material-symbols-outlined text-4xl text-[#ff9f0a] mb-4">search_off</span>
-                <p class="text-white font-semibold text-sm mb-1">Thiếu Tầm nhìn</p>
-                <p class="text-[#86868b] text-xs leading-relaxed">Bạn gặp khó khăn loay hoay khi theo dõi vị trí ca.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.15s;">
-                <span class="material-symbols-outlined text-4xl text-[#0a84ff] mb-4">account_tree</span>
-                <p class="text-white font-semibold text-sm mb-1">Cần Khắc phục Rối ren</p>
-                <p class="text-[#86868b] text-xs leading-relaxed">Bạn muốn sắp xếp khoa học nhưng sợ phần mềm quá phức tạp.</p>
-            </div>
-            <div class="apple-glass-card fade-in-up" style="animation-delay: 0.2s;">
-                <span class="material-symbols-outlined text-4xl text-[#30d158] mb-4">rocket_launch</span>
-                <p class="text-white font-semibold text-sm mb-1">Đang Mở rộng</p>
-                <p class="text-[#86868b] text-xs leading-relaxed">Labo đang tăng trưởng nhưng chưa cần hệ thống MES quá lớn.</p>
+    </section>
+
+    {{-- Item 2: Thiếu Tầm nhìn --}}
+    <section class="bg-[#f5f5f7] py-24 fade-in-up">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 relative group">
+                    <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(255,159,10,0.1);"></div>
+                    <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Khó khăn khi theo dõi trạng thái ca" class="w-full h-auto object-cover" loading="lazy">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="apple-headline-sm">Thiếu Tầm nhìn ?</h3>
+                    <p class="text-lg text-[#1d1d1f] leading-relaxed mt-4">
+                        Bạn gặp khó khăn loay hoay khi theo dõi vị trí ca. Không có tầm nhìn thời gian thực, deadline bị trễ và khách hàng mất niềm tin.
+                    </p>
+                    <ul class="mt-8 space-y-4">
+                        <li class="flex items-center gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined" style="color: #ff9f0a;" aria-hidden="true">done_all</span>
+                            <span>Không biết ca đang ở công đoạn nào</span>
+                        </li>
+                        <li class="flex items-center gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined" style="color: #ff9f0a;" aria-hidden="true">done_all</span>
+                            <span>Không trả lời nhanh khi khách hỏi tiến độ</span>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+
+    {{-- Item 3: Cần Khắc phục Rối ren --}}
+    <section class="max-w-7xl mx-auto px-8 my-32 fade-in-up">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div>
+                <h3 class="apple-headline-sm">Cần Khắc phục Rối ren</h3>
+                <p class="text-lg text-[#1d1d1f] leading-relaxed mt-4">
+                    Bạn muốn sắp xếp khoa học nhưng sợ phần mềm quá phức tạp. Một hệ thống đơn giản, có cấu trúc mà đội ngũ có thể áp dụng ngay.
+                </p>
+                <div class="mt-8 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background-color: rgba(10,132,255,0.1);">
+                            <span class="material-symbols-outlined text-xl" style="color: #0a84ff;" aria-hidden="true">touch_app</span>
+                        </div>
+                        <div>
+                            <div class="text-sm font-semibold text-[#1d1d1f]">Dễ dàng triển khai</div>
+                            <div class="text-xs text-[#86868b]">Bắt đầu sử dụng chỉ trong 30 phút</div>
+                        </div>
+                    </div>
+                    <div class="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
+                        <div class="h-full w-[90%]" style="background-color: #0a84ff;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(10,132,255,0.05);"></div>
+                <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                    <img src="@asset('images/zigzag_need_simplicity.webp')" alt="Giao diện đơn giản dễ sử dụng" class="w-full h-auto object-cover" loading="lazy">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Item 4: Đang Mở rộng --}}
+    <section class="py-24 fade-in-up" style="background-color: rgba(48,209,88,0.04);">
+        <div class="max-w-7xl mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                <div class="order-2 md:order-1 relative group">
+                    <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(48,209,88,0.08);"></div>
+                    <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
+                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Labo nha khoa đang mở rộng quy mô" class="w-full h-auto object-cover" loading="lazy">
+                    </div>
+                </div>
+                <div class="order-1 md:order-2">
+                    <h3 class="apple-headline-sm">Labo Đang Mở Rộng ?</h3>
+                    <p class="text-lg text-[#1d1d1f] leading-relaxed mt-4">
+                        Labo đang tăng trưởng nhưng chưa cần hệ thống MES quá lớn. DentalSO cho bạn không gian để mở rộng mà không cần đầu tư quá mức.
+                    </p>
+                    <div class="mt-8 flex flex-col gap-4">
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-100">
+                            <span class="material-symbols-outlined" style="color: #30d158;" aria-hidden="true">trending_up</span>
+                            <div>
+                                <div class="font-semibold text-[#1d1d1f]">Bắt đầu nhỏ</div>
+                                <p class="text-sm text-[#86868b]">Sử dụng các tính năng cốt lõi, thêm module khi phát triển.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-100">
+                            <span class="material-symbols-outlined" style="color: #30d158;" aria-hidden="true">upgrade</span>
+                            <div>
+                                <div class="font-semibold text-[#1d1d1f]">Nâng cấp khi sẵn sàng</div>
+                                <p class="text-sm text-[#86868b]">Chuyển sang MES mượt mà khi bạn cần.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</div>
 
 {{-- CTA --}}
 <section class="apple-section apple-section--cta">
