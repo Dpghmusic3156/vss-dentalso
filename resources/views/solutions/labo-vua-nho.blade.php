@@ -10,19 +10,17 @@
             <span class="apple-eyebrow hero-stagger-1">Giải pháp Tiết kiệm & Hiệu quả</span>
             <h1 class="apple-headline mb-4 hero-stagger-2">Phần mềm quản lý<br>Labo Nha khoa nhỏ & Startup</h1>
             <p class="text-[1.25rem] md:text-[1.5rem] font-bold text-[#0071e3] tracking-tight mb-6 hero-stagger-3">
-                Chi phí thấp – Đầy đủ tính năng – Dùng thử MIỄN PHÍ
+                Chi phí thấp – Tối ưu cho labo nhỏ – Dùng thử MIỄN PHÍ
             </p>
-            <p class="text-lg md:text-xl text-[#1d1d1f] max-w-4xl mx-auto mb-10 leading-relaxed opacity-90 hero-stagger-4" style="text-wrap: balance;">
-                Quản lý quy trình sản xuất, biểu mẫu, khách hàng, công nợ – tất cả trong 1 nền tảng duy&nbsp;nhất. Thay thế Excel lộn xộn, giảm 80% thời gian nhập liệu, giao hàng đúng hạn mà không tốn&nbsp;kém.
-            </p>
+
             
             <div class="apple-cta-group hero-stagger-5">
-                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--blue cta-pulse">DÙNG THỬ MIỄN PHÍ NGAY</a>
-                <a href="{{ home_url('bang-gia/') }}" class="apple-cta-secondary">Xem bảng giá <span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
+                <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-primary apple-cta-primary--blue cta-pulse">ĐĂNG KÝ DEMO NGAY</a>
+                <a href="{{ home_url('phi-su-dung/') }}" class="apple-cta-secondary">Xem bảng giá <span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
 
             {{-- Trust Signals --}}
-            <div class="apple-trust-bar">
+            <!--<div class="apple-trust-bar">
                 <div class="trust-item trust-pop-1">
                     <span class="material-symbols-outlined">check_circle</span>
                     <span>Chi phí rõ ràng, minh bạch</span>
@@ -37,7 +35,7 @@
                     <span class="material-symbols-outlined">check_circle</span>
                     <span>Hỗ trợ 24/7</span>
                 </div>
-            </div>
+            </div>-->
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
@@ -162,19 +160,19 @@
                 <p class="apple-body mb-6">DentalSO giúp bạn xây dựng nền tảng vững chắc để mở rộng quy mô mà không gặp phải sự hỗn loạn trong vận hành.</p>
                 <ul class="space-y-3">
                     <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-[#bf5af2] text-xl mt-0.5">check_circle</span>
+                        <span class="material-symbols-outlined text-[#bf5af2] text-xl flex-shrink-0 mt-[2px]">check_circle</span>
                         <span class="text-[#1d1d1f] text-[0.9375rem]">Giảm thiểu sự hỗn loạn vận hành</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-[#bf5af2] text-xl mt-0.5">check_circle</span>
+                        <span class="material-symbols-outlined text-[#bf5af2] text-xl flex-shrink-0 mt-[2px]">check_circle</span>
                         <span class="text-[#1d1d1f] text-[0.9375rem]">Nâng cao khả năng theo dõi ca</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-[#bf5af2] text-xl mt-0.5">check_circle</span>
+                        <span class="material-symbols-outlined text-[#bf5af2] text-xl flex-shrink-0 mt-[2px]">check_circle</span>
                         <span class="text-[#1d1d1f] text-[0.9375rem]">Giao hàng đúng hạn liên tục</span>
                     </li>
                     <li class="flex items-start gap-3">
-                        <span class="material-symbols-outlined text-[#bf5af2] text-xl mt-0.5">check_circle</span>
+                        <span class="material-symbols-outlined text-[#bf5af2] text-xl flex-shrink-0 mt-[2px]">check_circle</span>
                         <span class="text-[#1d1d1f] text-[0.9375rem]">Xây dựng nền tảng dễ dàng mở rộng quy mô</span>
                     </li>
                 </ul>
@@ -236,18 +234,29 @@
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
-                    <h3 class="apple-headline-sm">Thiếu Tầm nhìn ?</h3>
-                    <p class="text-lg text-[#1d1d1f] leading-relaxed mt-4">
-                        Bạn gặp khó khăn loay hoay khi theo dõi vị trí ca. Không có tầm nhìn thời gian thực, deadline bị trễ và khách hàng mất niềm tin.
+                    <h3 class="apple-headline-sm">Thiếu Tầm nhìn?</h3>
+                    <p class="text-[1.25rem] font-semibold text-[#1d1d1f] mt-4 mb-2">Bạn đang loay hoay không biết ca đang ở đâu?</p>
+                    <p class="text-lg text-[#424245] leading-relaxed">
+                        Một ca gửi từ sáng, đến chiều vẫn phải hỏi nhân viên “làm đến đâu rồi?”. Khách gọi hỏi tiến độ, bạn chỉ trả lời chung chung “đang làm ạ”… deadline trễ, khách mất niềm tin và chuyển labo khác.
                     </p>
-                    <ul class="mt-8 space-y-4">
-                        <li class="flex items-center gap-3 text-[#1d1d1f]">
-                            <span class="material-symbols-outlined" style="color: #ff9f0a;" aria-hidden="true">done_all</span>
+                    
+                    <p class="font-bold text-[#1d1d1f] mt-8 mb-4">Khó khăn phổ biến của labo nhỏ:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined flex-shrink-0 mt-[2px]" style="color: #ff9f0a;" aria-hidden="true">error</span>
                             <span>Không biết ca đang ở công đoạn nào</span>
                         </li>
-                        <li class="flex items-center gap-3 text-[#1d1d1f]">
-                            <span class="material-symbols-outlined" style="color: #ff9f0a;" aria-hidden="true">done_all</span>
+                        <li class="flex items-start gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined flex-shrink-0 mt-[2px]" style="color: #ff9f0a;" aria-hidden="true">error</span>
                             <span>Không trả lời nhanh khi khách hỏi tiến độ</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined flex-shrink-0 mt-[2px]" style="color: #ff9f0a;" aria-hidden="true">error</span>
+                            <span>Phải liên tục hỏi nhân viên → dễ bỏ sót ca gấp hoặc bảo hành</span>
+                        </li>
+                        <li class="flex items-start gap-3 text-[#1d1d1f]">
+                            <span class="material-symbols-outlined flex-shrink-0 mt-[2px]" style="color: #ff9f0a;" aria-hidden="true">error</span>
+                            <span>Dễ quên ca làm lại → khiếu nại bất ngờ</span>
                         </li>
                     </ul>
                 </div>
@@ -310,13 +319,13 @@
                                 <p class="text-sm text-[#86868b]">Sử dụng các tính năng cốt lõi, thêm module khi phát triển.</p>
                             </div>
                         </div>
-                        <div class="flex items-start gap-4 p-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-100 apple-lift">
+                        <a href="{{ home_url('san-pham/phan-mem-mes/') }}" class="flex items-start gap-4 p-4 rounded-xl bg-white/50 backdrop-blur-sm border border-gray-100 apple-lift group decoration-none">
                             <span class="material-symbols-outlined" style="color: #30d158;" aria-hidden="true">upgrade</span>
                             <div>
-                                <div class="font-semibold text-[#1d1d1f]">Nâng cấp khi sẵn sàng</div>
+                                <div class="font-semibold text-[#1d1d1f] group-hover:text-[#0071e3] transition-colors">Nâng cấp khi sẵn sàng</div>
                                 <p class="text-sm text-[#86868b]">Chuyển sang MES mượt mà khi bạn cần.</p>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
