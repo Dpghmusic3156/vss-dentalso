@@ -39,7 +39,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
-            <img src="@asset('images/mes-dashboard-hero.webp')" alt="DentalSO MES Dashboard" class="apple-hero-img animate-float">
+            <img src="@asset('images/small-labo-hero.png')" alt="DentalSO Small Lab Management" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
@@ -47,61 +47,94 @@
 {{-- What You Get --}}
 <section class="apple-section bg-[#f5f5f7]">
     <div class="apple-container">
-        <div class="text-center max-w-3xl mx-auto mb-16 fade-in-up">
-            <span class="apple-eyebrow">Tính năng</span>
-            <h2 class="apple-headline-sm">Bạn Nhận Được Gì</h2>
+        <div class="text-center max-w-4xl mx-auto mb-16 fade-in-up">
+            <span class="apple-eyebrow">Bạn Nhận Được Gì</span>
+            <h1 class="text-[1.75rem] md:text-[2.25rem] font-bold text-[#1d1d1f] tracking-tight mb-2">Lợi ích chính</h1>
+            <h2 class="apple-headline-sm">Xây dựng quy trình chuyên nghiệp –<br>Nền tảng phát triển nhanh cho labo nhỏ</h2>
         </div>
-        <div class="grid sm:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#e3f0fc]">
-                        <span class="material-symbols-outlined text-[#0071e3]">folder_open</span>
-                    </div>
-                    <h3 class="apple-card-title">Quản lý Ca Tập trung</h3>
-                    <ul class="apple-card-desc space-y-2 mt-4 text-[#86868b] text-[0.9375rem] mb-4">
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#0071e3] mt-0.5">check</span> Tiếp nhận ca kỹ thuật số</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#0071e3] mt-0.5">check</span> Theo dõi ca theo trạng thái</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#0071e3] mt-0.5">check</span> Phân công kỹ thuật viên</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#0071e3] mt-0.5">check</span> Lịch sử ca & bảo hành</li>
-                    </ul>
-                    <p class="apple-card-desc italic mt-auto">Mọi thứ được sắp xếp gọn gàng trong một hệ thống.</p>
+
+        {{-- Row 1: 2 large cards with images --}}
+        <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-6">
+            {{-- Card 1: Quy trình chuẩn hoá --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1 overflow-hidden">
+                <div class="w-full bg-[#e3f0fc] flex items-center justify-center overflow-hidden">
+                    <img src="@asset('images/quytrinh.png')" alt="DentalSO Workflow" class="w-full h-auto object-contain">
                 </div>
-            </div>
-            
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-2">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#fef3e2]">
-                        <span class="material-symbols-outlined text-[#ff9f0a]">account_tree</span>
+                <div class="apple-card-inner p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#e3f0fc] flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#0071e3]">account_tree</span>
+                        </div>
+                        <h3 class="apple-card-title !mb-0">Quy trình chuẩn hoá từ đầu đến cuối</h3>
                     </div>
-                    <h3 class="apple-card-title">Chuẩn hóa Quy trình</h3>
-                    <ul class="apple-card-desc space-y-2 mt-4 text-[#86868b] text-[0.9375rem] mb-4">
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#ff9f0a] mt-0.5">check</span> Công đoạn sản xuất rõ ràng</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#ff9f0a] mt-0.5">check</span> Giảm thiểu sai lệch thông tin</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#ff9f0a] mt-0.5">check</span> Thời gian xử lý nhất quán</li>
-                    </ul>
-                    <p class="apple-card-desc italic mt-auto">Thay thế điều phối thủ công bằng quy trình có cấu trúc.</p>
+                    <p class="text-[#424245] text-[0.9375rem] leading-relaxed">
+                        Từ nhập thông tin đơn hàng → theo dõi tiến độ realtime → phân công kỹ thuật viên → xuất hoá đơn. Mọi bước liền mạch, minh bạch, loại bỏ sai sót và chậm trễ.
+                    </p>
                 </div>
             </div>
 
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-3">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#e2f5e9]">
-                        <span class="material-symbols-outlined text-[#30d158]">verified</span>
+            {{-- Card 2: Tài liệu & biểu mẫu --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-2 overflow-hidden">
+                <div class="w-full bg-[#fef3e2] flex items-center justify-center overflow-hidden">
+                    <img src="@asset('images/MauTheBaoHanh.png')" alt="DentalSO Documents and Templates" class="w-full h-auto object-contain">
+                </div>
+                <div class="apple-card-inner p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-10 h-10 rounded-xl bg-[#fef3e2] flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#ff9f0a]">description</span>
+                        </div>
+                        <h3 class="apple-card-title !mb-0">Tài liệu & biểu mẫu chuyên nghiệp</h3>
                     </div>
-                    <h3 class="apple-card-title">Bảo hành & Hậu mãi</h3>
-                    <ul class="apple-card-desc space-y-2 mt-4 text-[#86868b] text-[0.9375rem] mb-4">
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#30d158] mt-0.5">check</span> Theo dõi bảo hành từng ca</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#30d158] mt-0.5">check</span> Quản lý làm lại hiệu quả</li>
-                        <li class="flex items-start leading-[1.4]"><span class="material-symbols-outlined text-base mr-2 text-[#30d158] mt-0.5">check</span> Duy trì niềm tin khách hàng</li>
-                    </ul>
-                    <p class="apple-card-desc italic mt-auto">Không còn mất mát hay mập mờ hồ sơ bảo hành.</p>
+                    <p class="text-[#424245] text-[0.9375rem] leading-relaxed">
+                        Hàng chục mẫu tài liệu đẹp, đồng bộ (đơn hàng, nghiệm thu, bảo hành, hoá đơn…). Tạo phong cách chuyên nghiệp ngay từ những ca đầu tiên, tăng uy tín với nha sĩ và clinic.
+                    </p>
                 </div>
             </div>
         </div>
-        <div class="mt-12 text-center fade-in-up fade-delay-4">
-            <p class="text-[1.125rem] md:text-[1.25rem] text-[#1d1d1f] font-medium max-w-3xl mx-auto">
-                Thiết kế đơn giản, dễ dùng ngay cho labo nhỏ – Không cần đào tạo dài dòng.
-            </p>
+
+        {{-- Row 2: 3 smaller cards --}}
+        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            {{-- Card 3: Tự động hoá --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-3">
+                <div class="apple-card-inner">
+                    <div class="apple-card-icon bg-[#e2f5e9]">
+                        <span class="material-symbols-outlined text-[#30d158]">bolt</span>
+                    </div>
+                    <h3 class="apple-card-title">Tự động hóa cao</h3>
+                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Giảm tối đa công việc thủ công</p>
+                    <p class="apple-card-desc">
+                        Nhắc nhở tự động, báo cáo realtime, theo dõi công nợ và bảo hành. Bạn tập trung vào chất lượng sản phẩm thay vì giấy tờ lộn xộn.
+                    </p>
+                </div>
+            </div>
+
+            {{-- Card 4: Chi phí thấp --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-4">
+                <div class="apple-card-inner">
+                    <div class="apple-card-icon bg-[#f5e6fe]">
+                        <span class="material-symbols-outlined text-[#bf5af2]">savings</span>
+                    </div>
+                    <h3 class="apple-card-title">Chi phí thấp</h3>
+                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Phù hợp labo nhỏ & startup</p>
+                    <p class="apple-card-desc">
+                        Giá cả minh bạch, bắt đầu nhỏ, chỉ trả cho những gì bạn cần. Không lãng phí, dễ dàng mở rộng khi labo phát triển.
+                    </p>
+                </div>
+            </div>
+
+            {{-- Card 5: Nền tảng phát triển --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-5">
+                <div class="apple-card-inner">
+                    <div class="apple-card-icon bg-[#fff3e0]">
+                        <span class="material-symbols-outlined text-[#ff6d00]">rocket_launch</span>
+                    </div>
+                    <h3 class="apple-card-title">Nền tảng vững chắc</h3>
+                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Phát triển nhanh không rối loạn</p>
+                    <p class="apple-card-desc">
+                        Chuẩn hoá ngay từ hôm nay giúp labo vận hành chuyên nghiệp, dễ tuyển dụng, dễ mở rộng quy mô mà không rối loạn.
+                    </p>
+                </div>
+            </div>
         </div>
 
         {{-- Mini Comparison Table --}}
