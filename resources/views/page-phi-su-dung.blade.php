@@ -325,19 +325,19 @@
                  x-transition:leave="transition ease-in duration-200"
                  x-transition:leave-start="opacity-100"
                  x-transition:leave-end="opacity-0"
-                 class="fixed inset-0 bg-gray-900/60 backdrop-blur-md transition-opacity"></div>
+                 class="fixed inset-0 bg-gray-900/60 transition-opacity"></div>
         
             <div class="fixed inset-0 z-[60] w-screen overflow-y-auto" @keydown.window.escape="activeModal = null">
-                <div class="flex min-h-full items-end justify-center p-4 text-center sm:items-center sm:p-0">
+                <div class="flex min-h-full items-end justify-center p-0 sm:p-6 text-center">
                     <div x-show="activeModal === '<?php echo get_the_ID(); ?>'"
                          @click.away="activeModal = null"
                          x-transition:enter="transition ease-[cubic-bezier(0.25,1,0.5,1)] duration-500"
-                         x-transition:enter-start="opacity-0 translate-y-12 sm:scale-90"
-                         x-transition:enter-end="opacity-100 translate-y-0 sm:scale-100"
-                         x-transition:leave="transition ease-in duration-200"
-                         x-transition:leave-start="opacity-100 translate-y-0 sm:scale-100"
-                         x-transition:leave-end="opacity-0 translate-y-8 sm:scale-95"
-                         class="relative transform overflow-hidden rounded-3xl bg-white/95 backdrop-blur-xl border border-white/60 text-left shadow-[0_20px_60px_rgb(0,0,0,0.15)] transition-all sm:my-8 sm:w-full sm:max-w-2xl p-6 sm:p-8">
+                         x-transition:enter-start="opacity-0 translate-y-full"
+                         x-transition:enter-end="opacity-100 translate-y-0"
+                         x-transition:leave="transition ease-[cubic-bezier(0.25,1,0.5,1)] duration-400"
+                         x-transition:leave-start="opacity-100 translate-y-0"
+                         x-transition:leave-end="opacity-0 translate-y-full"
+                         class="relative transform overflow-hidden rounded-t-[2.5rem] sm:rounded-3xl bg-white/95 backdrop-blur-xl border-t sm:border border-white/60 text-left shadow-[0_-10px_60px_rgb(0,0,0,0.15)] transition-all w-full sm:w-full sm:max-w-2xl p-6 sm:p-8 pb-12 sm:pb-8">
             
                         <div class="flex flex-col relative w-full items-start gap-4">
                             <button @click="activeModal = null" class="absolute -top-2 -right-2 p-2 text-gray-400 hover:text-gray-900 transition-colors bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center z-10 shrink-0">
