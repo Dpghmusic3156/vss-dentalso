@@ -31,7 +31,19 @@
                     <option selected disabled>Select an Application</option>
                     <option value="Dental Lab">Dental Lab</option>
                 </select>
-                <textarea class="form-control col-span-2" name="message" placeholder="Message" id="message"></textarea>
+                <select class="h-100 form-control form-select col-span-2" name="preferred_time" id="preferred_time">
+                    <option selected disabled>Giờ muốn nhận cuộc gọi</option>
+                    <option value="08:00 - 09:00">08:00 – 09:00</option>
+                    <option value="09:00 - 10:00">09:00 – 10:00</option>
+                    <option value="10:00 - 11:00">10:00 – 11:00</option>
+                    <option value="11:00 - 12:00">11:00 – 12:00</option>
+                    <option value="13:00 - 14:00">13:00 – 14:00</option>
+                    <option value="14:00 - 15:00">14:00 – 15:00</option>
+                    <option value="15:00 - 16:00">15:00 – 16:00</option>
+                    <option value="16:00 - 17:00">16:00 – 17:00</option>
+                    <option value="17:00 - 18:00">17:00 – 18:00</option>
+                </select>
+                <textarea class="form-control col-span-2" name="message" placeholder="Tin nhắn" id="message"></textarea>
                 <?php
                 $plan = $_GET['plan'];
                 $payment = $_GET['payment'];
@@ -70,6 +82,7 @@
             var company = jQuery.trim(jQuery('#company').val());
             var message = jQuery.trim(jQuery('#message').val());
             var email = jQuery.trim(jQuery('#email').val());
+            var preferred_time = jQuery.trim(jQuery('#preferred_time').val());
             let data = new Object;
 
             // Check if empty of not
@@ -124,6 +137,7 @@
             if (data.product) {
                 note += "Sản phẩm: " + data.product + space;
             };
+            if (preferred_time) { note += "Giờ muốn nhận cuộc gọi: " + preferred_time + space; };
             data['url'] = jQuery(location).attr('href');
 
             if (reason) {

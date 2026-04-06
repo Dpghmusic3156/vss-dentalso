@@ -61,19 +61,31 @@
                             </div>
                             <div class="grid sm:grid-cols-2 gap-5">
                                 <select class="apple-input" name="reason" id="reason">
-                                    <option selected disabled>Phòng ban</option>
+                                    <option selected disabled>Chọn phòng ban của bạn</option>
                                     <option value="Tư vấn">Kinh doanh</option>
                                     <option value="Hỗ trợ kỹ thuật">Hỗ trợ kỹ thuật</option>
                                     <option value="Hợp tác">Hợp tác</option>
                                 </select>
                                 <select class="apple-input" name="product" id="product">
-                                    <option selected disabled>Sản phẩm</option>
+                                    <option selected disabled>Chọn sản phẩm</option>
                                     <option value="Quản lý Labo nha khoa">Quản lý Labo nha khoa</option>
                                     <option value="Quản lý sản xuất (MES)">Quản lý sản xuất (MES)</option>
                                     <option value="Kết nối Labo - Nha khoa">Kết nối Labo - Nha khoa</option>
                                     <option value="Quản lý bảo hành">Quản lý bảo hành</option>
                                 </select>
                             </div>
+                            <select class="apple-input" name="preferred_time" id="preferred_time">
+                                <option selected disabled>Giờ muốn nhận cuộc gọi</option>
+                                <option value="08:00 - 09:00">08:00 – 09:00</option>
+                                <option value="09:00 - 10:00">09:00 – 10:00</option>
+                                <option value="10:00 - 11:00">10:00 – 11:00</option>
+                                <option value="11:00 - 12:00">11:00 – 12:00</option>
+                                <option value="13:00 - 14:00">13:00 – 14:00</option>
+                                <option value="14:00 - 15:00">14:00 – 15:00</option>
+                                <option value="15:00 - 16:00">15:00 – 16:00</option>
+                                <option value="16:00 - 17:00">16:00 – 17:00</option>
+                                <option value="17:00 - 18:00">17:00 – 18:00</option>
+                            </select>
                             <textarea class="apple-input" name="message" placeholder="Nội dung" id="message" rows="4" required></textarea>
                             <div>
                                 <div class="loading hidden text-[#0071e3]">Đang gửi...</div>
@@ -141,6 +153,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var company = jQuery.trim(jQuery('#company').val());
         var message = jQuery.trim(jQuery('#message').val());
         var email = jQuery.trim(jQuery('#email').val());
+        var preferred_time = jQuery.trim(jQuery('#preferred_time').val());
         let data = new Object;
 
         if (name === '') { alert('Vui lòng nhập họ tên'); return false; } else { data['name'] = name; }
@@ -157,6 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.phone) { note += "Phone: " + data.phone + space; };
         if (data.email) { note += "Email: " + data.email + space; data['el'] = data.email.trim().length; };
         if (data.product) { note += "Product: " + data.product + space; };
+        if (preferred_time) { note += "Giờ muốn nhận cuộc gọi: " + preferred_time + space; };
         data['url'] = jQuery(location).attr('href');
         if (reason) { data['reason'] = reason; }
         if (data.message) { note += "Message:\n" + data.message; };

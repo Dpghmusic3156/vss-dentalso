@@ -71,6 +71,18 @@
                             <input class="hidden" type="hidden" id="plan" value="<?php echo esc_attr($plan); ?>">
                             <input class="hidden" type="hidden" id="payment" value="<?php echo esc_attr($payment); ?>">
                             <input class="hidden" type="hidden" id="productParam" value="<?php echo esc_attr($product); ?>">
+                            <select class="apple-input" name="preferred_time" id="preferred_time">
+                                <option selected disabled>Giờ muốn nhận cuộc gọi</option>
+                                <option value="08:00 - 09:00">08:00 – 09:00</option>
+                                <option value="09:00 - 10:00">09:00 – 10:00</option>
+                                <option value="10:00 - 11:00">10:00 – 11:00</option>
+                                <option value="11:00 - 12:00">11:00 – 12:00</option>
+                                <option value="13:00 - 14:00">13:00 – 14:00</option>
+                                <option value="14:00 - 15:00">14:00 – 15:00</option>
+                                <option value="15:00 - 16:00">15:00 – 16:00</option>
+                                <option value="16:00 - 17:00">16:00 – 17:00</option>
+                                <option value="17:00 - 18:00">17:00 – 18:00</option>
+                            </select>
                             <textarea class="apple-input" name="message" placeholder="Mô tả nhu cầu của bạn" id="message" rows="4" required></textarea>
                             <div>
                                 <div class="loading hidden text-[#0071e3]">Đang gửi...</div>
@@ -126,6 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
         var company = jQuery.trim(jQuery('#company').val());
         var message = jQuery.trim(jQuery('#message').val());
         var email = jQuery.trim(jQuery('#email').val());
+        var preferred_time = jQuery.trim(jQuery('#preferred_time').val());
         let data = new Object;
 
         if (name === '') { alert('Vui lòng nhập họ tên'); return false; } else { data['name'] = name; }
@@ -144,6 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (jQuery('#plan').val()) { note += "Plan: " + jQuery('#plan').val() + space; };
         if (jQuery('#payment').val()) { note += "Payment: " + jQuery('#payment').val() + space; };
         if (data.product) { note += "Sản phẩm: " + data.product + space; };
+        if (preferred_time) { note += "Giờ muốn nhận cuộc gọi: " + preferred_time + space; };
         data['url'] = jQuery(location).attr('href');
         if (reason) { data['reason'] = reason; }
         if (data.message) { note += "Tin nhắn:\n" + data.message; };
