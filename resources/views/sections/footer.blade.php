@@ -59,14 +59,14 @@
         <div class="apple-footer-offices">
             <?php if(get_theme_mod('address')): ?>
             <div class="apple-footer-office">
-                <span class="apple-footer-office-label"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Trụ sở Việt Nam:</span>
+                <span class="apple-footer-office-label"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> VP. Việt Nam:</span>
                 <div class="apple-footer-office-phone"><a href="http://zalo.me/0947476000"><?php echo get_theme_mod('phone'); ?></a></div>
                 <p class="apple-footer-office-address"><?php echo get_theme_mod('address'); ?></p>
             </div>
             <?php endif; ?>
             <?php if(get_theme_mod('address_us')): ?>
             <div class="apple-footer-office">
-                <span class="apple-footer-office-label"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> VP. Hoa Kỳ:</span>
+                <span class="apple-footer-office-label"><span class="material-symbols-outlined" style="font-size: 14px;">location_on</span> Trụ sở Hoa Kỳ:</span>
                 <div class="apple-footer-office-phone"><a href="https://api.whatsapp.com/send/?phone=12062019069&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer"><?php echo get_theme_mod('phoneus'); ?></a></div>
                 <p class="apple-footer-office-address"><?php echo get_theme_mod('address_us'); ?></p>
             </div>
