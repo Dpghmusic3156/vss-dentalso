@@ -250,7 +250,7 @@
             <div class="relative group slide-in-right">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(52,168,83,0.05);"></div>
                 <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Quản lý ca bằng Excel và giấy tờ thủ công - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Không cần quản lý ca bằng Excel và giấy tờ thủ công nữa - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -263,7 +263,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(255,159,10,0.1);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Khó khăn khi theo dõi trạng thái ca - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Giảm khó khăn khi theo dõi trạng thái ca - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
@@ -336,7 +336,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(48,209,88,0.08);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Labo nha khoa đang mở rộng quy mô - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Hỗ trợ Labo nha khoa đang mở rộng quy mô - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
