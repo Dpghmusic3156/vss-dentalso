@@ -57,8 +57,10 @@
         <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-6">
             {{-- Card 1: Quy trình chuẩn hoá --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1 overflow-hidden">
-                <div class="w-full bg-[#e3f0fc] flex items-center justify-center overflow-hidden border-b border-black/5 p-6 lg:p-8">
-                    <img src="@asset('images/quytrinh.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
+                <div class="w-full bg-[#e3f0fc] flex items-center justify-center border-b border-black/5 p-2">
+                    <div class="bg-[#f5f5f7] rounded-2xl shadow-lg overflow-hidden p-1 w-full group-hover:scale-[1.02] transition-transform duration-500">
+                        <img src="@asset('images/quytrinhsanxuat.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain rounded-xl parallax-img" loading="lazy">
+                    </div>
                 </div>
                 <div class="apple-card-inner p-6">
                     <div class="flex items-center gap-3 mb-3">
@@ -75,8 +77,29 @@
 
             {{-- Card 2: Tài liệu & biểu mẫu --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-2 overflow-hidden">
-                <div class="w-full bg-[#fef3e2] flex items-center justify-center overflow-hidden border-b border-black/5 p-6 lg:p-8">
-                    <img src="@asset('images/MauTheBaoHanh.png')" alt="DentalSO Documents and Templates - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
+                <div class="w-full bg-[#fef3e2] flex items-center justify-center border-b border-black/5 p-2">
+                    <div class="bg-[#f5f5f7] rounded-2xl shadow-lg overflow-hidden p-1 w-full group-hover:scale-[1.02] transition-transform duration-500 relative group/slider">
+                        <div class="slider-container flex w-full overflow-hidden rounded-xl relative" data-current="0">
+                            @php
+                                $sliderImages = ['phieubaoquyettoan.png', 'phieubaohanh.png', 'phieuchi.png', 'phieugiaohang.png', 'phieuthu.png', 'phieuyeucau.png'];
+                            @endphp
+                            @foreach($sliderImages as $img)
+                            <img src="@asset('images/mauthe/' . $img)" class="w-full h-auto object-contain flex-shrink-0 transition-transform duration-500 ease-in-out" alt="DentalSO Documents and Templates - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" loading="lazy">
+                            @endforeach
+                            <div class="w-full flex-shrink-0 flex flex-col items-center justify-center transition-transform duration-500 ease-in-out bg-white p-6">
+                                <span class="material-symbols-outlined text-[3rem] text-[#ff9f0a] mb-3">folder_open</span>
+                                <div class="text-[#1d1d1f] font-[600] text-[1.125rem] text-center leading-snug">Còn hàng chục tài liệu và<br>biểu mẫu chuyên nghiệp khác</div>
+                            </div>
+                        </div>
+                        
+                        <button onclick="event.preventDefault(); event.stopPropagation(); let c = this.parentElement.querySelector('.slider-container'); let curr = parseInt(c.getAttribute('data-current') || 0); let tot = c.children.length; curr = (curr === 0) ? tot - 1 : curr - 1; c.setAttribute('data-current', curr); Array.from(c.children).forEach(el => el.style.transform = `translateX(-${curr * 100}%)`);" class="absolute left-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white/90 hover:bg-white text-black shadow-md rounded-full transition-all duration-300 z-10 opacity-0 group-hover/slider:opacity-100">
+                            <span class="material-symbols-outlined text-[1.25rem]">chevron_left</span>
+                        </button>
+                        
+                        <button onclick="event.preventDefault(); event.stopPropagation(); let c = this.parentElement.querySelector('.slider-container'); let curr = parseInt(c.getAttribute('data-current') || 0); let tot = c.children.length; curr = (curr === tot - 1) ? 0 : curr + 1; c.setAttribute('data-current', curr); Array.from(c.children).forEach(el => el.style.transform = `translateX(-${curr * 100}%)`);" class="absolute right-3 top-1/2 -translate-y-1/2 w-8 h-8 flex items-center justify-center bg-white/90 hover:bg-white text-black shadow-md rounded-full transition-all duration-300 z-10 opacity-0 group-hover/slider:opacity-100">
+                            <span class="material-symbols-outlined text-[1.25rem]">chevron_right</span>
+                        </button>
+                    </div>
                 </div>
                 <div class="apple-card-inner p-6">
                     <div class="flex items-center gap-3 mb-3">
@@ -92,47 +115,56 @@
             </div>
         </div>
 
-        {{-- Row 2: 3 smaller cards --}}
-        <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+        {{-- Section 3 distinct cards --}}
+        <div class="space-y-6 max-w-4xl mx-auto mt-6">
             {{-- Card 3: Tự động hoá --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-3">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#e2f5e9]">
-                        <span class="material-symbols-outlined text-[#30d158]">bolt</span>
-                    </div>
-                    <h3 class="apple-card-title">Tự động hóa cao</h3>
-                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Giảm tối đa công việc thủ công</p>
-                    <p class="apple-card-desc">
-                        Nhắc nhở tự động, báo cáo realtime, theo dõi công nợ và bảo hành. Bạn tập trung vào chất lượng sản phẩm thay vì giấy tờ lộn xộn.
-                    </p>
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-3 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
+                <div class="w-16 h-16 rounded-2xl bg-[#e2f5e9] flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-[#30d158] text-3xl">bolt</span>
+                </div>
+                <div>
+                    <h3 class="apple-card-title !mb-1">Tự động hóa cao</h3>
+                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Giảm tối đa công việc thủ công</p>
+                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Ứng dụng tự phân bổ công việc cho từng KTV</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Tự động nhắc đơn hàng phải giao theo thời gian đã nhập</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Kết nối dữ liệu bảo hành giữa bệnh nhân và thông tin sản phẩm</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Quản lý dữ liệu tập trung theo đơn hàng, giảm thời gian truy tìm thông tin</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Giảm thời gian nhập liệu, tiết kiệm chi phí vận hành nhờ tự động hoá</li>
+                    </ul>
                 </div>
             </div>
 
             {{-- Card 4: Chi phí thấp --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-4">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#f5e6fe]">
-                        <span class="material-symbols-outlined text-[#bf5af2]">savings</span>
-                    </div>
-                    <h3 class="apple-card-title">Chi phí thấp</h3>
-                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Phù hợp labo nhỏ & startup</p>
-                    <p class="apple-card-desc">
-                        Giá cả minh bạch, bắt đầu nhỏ, chỉ trả cho những gì bạn cần. Không lãng phí, dễ dàng mở rộng khi labo phát triển.
-                    </p>
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-4 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
+                <div class="w-16 h-16 rounded-2xl bg-[#f5e6fe] flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-[#bf5af2] text-3xl">savings</span>
+                </div>
+                <div>
+                    <h3 class="apple-card-title !mb-1">Chi phí thấp</h3>
+                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Phù hợp labo nhỏ & startup</p>
+                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Không tốn chi phí phát triển ứng dụng, chỉ trả phí sử dụng hàng tháng</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Chi phí sử dụng phần mềm cực kỳ thấp</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Mô hình thanh toán linh hoạt: Dùng bao nhiêu trả bấy nhiêu</li>
+                    </ul>
                 </div>
             </div>
 
-            {{-- Card 5: Nền tảng phát triển --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-5">
-                <div class="apple-card-inner">
-                    <div class="apple-card-icon bg-[#fff3e0]">
-                        <span class="material-symbols-outlined text-[#ff6d00]">rocket_launch</span>
-                    </div>
-                    <h3 class="apple-card-title">Nền tảng vững chắc</h3>
-                    <p class="text-[0.875rem] font-medium text-[#1d1d1f] mb-2">Phát triển nhanh không rối loạn</p>
-                    <p class="apple-card-desc">
-                        Chuẩn hoá ngay từ hôm nay giúp labo vận hành chuyên nghiệp, dễ tuyển dụng, dễ mở rộng quy mô mà không rối loạn.
-                    </p>
+            {{-- Card 5: Nền tảng vững chắc --}}
+            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-5 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
+                <div class="w-16 h-16 rounded-2xl bg-[#fff3e0] flex items-center justify-center flex-shrink-0">
+                    <span class="material-symbols-outlined text-[#ff6d00] text-3xl">rocket_launch</span>
+                </div>
+                <div>
+                    <h3 class="apple-card-title !mb-1">Nền tảng vững chắc</h3>
+                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Phát triển nhanh không rối loạn</p>
+                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Quy trình quản lý khoa học giúp doanh nghiệp phát triển nhanh</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Hệ thống hoạt động ổn định 99.9% trên nền tảng Cloud trực tuyến</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Sao lưu (backup) tự động liên tục, tính bảo mật dữ liệu cao</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Hỗ trợ không giới hạn số lượng tài khoản người dùng</li>
+                    </ul>
                 </div>
             </div>
         </div>
