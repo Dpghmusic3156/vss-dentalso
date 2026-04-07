@@ -177,7 +177,7 @@
                 <div class="order-2 md:order-1 relative group">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(251,188,5,0.15);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/workflow.webp')" alt="Quy trình điều phối sản xuất thông minh - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="@asset('images/quy-trinh-lam-viec-labo-nha-khoa.webp')" alt="Quy trình điều phối sản xuất thông minh - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -275,7 +275,7 @@
                 <div class="order-2 md:order-1 relative group">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(66,133,244,0.1);"></div>
                     <div class="relative rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/cloud.webp')" alt="Nền tảng đám mây bảo mật DentalSO - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="@asset('images/nen-tang-cloud-dentalso.webp')" alt="Nền tảng đám mây bảo mật DentalSO - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2">

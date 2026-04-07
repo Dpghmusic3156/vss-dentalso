@@ -39,7 +39,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
-            <img src="@asset('images/small-labo-hero.png')" alt="DentalSO Small Lab Management - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-hero-img animate-float">
+            <img src="@asset('images/giai-phap-quan-ly-labo-nha-khoa-nho.png')" alt="DentalSO Small Lab Management - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
@@ -59,7 +59,7 @@
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1 overflow-hidden">
                 <div class="w-full bg-[#e3f0fc] flex items-center justify-center border-b border-black/5 p-2">
                     <div class="bg-[#f5f5f7] rounded-2xl shadow-lg overflow-hidden p-1 w-full group-hover:scale-[1.02] transition-transform duration-500">
-                        <img src="@asset('images/quytrinhsanxuat.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain rounded-xl parallax-img" loading="lazy">
+                        <img src="@asset('images/quy-trinh-san-xuat-rang-su-dentalso.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain rounded-xl parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="apple-card-inner p-6">
@@ -96,7 +96,7 @@
                     <div class="bg-[#f5f5f7] rounded-2xl shadow-lg overflow-hidden p-1 w-full group-hover:scale-[1.02] transition-transform duration-500 relative group/slider">
                         <div class="slider-container flex w-full overflow-hidden rounded-xl relative" data-current="0">
                             @php
-                                $sliderImages = ['phieubaoquyettoan.png', 'phieubaohanh.png', 'phieuchi.png', 'phieugiaohang.png', 'phieuthu.png', 'phieuyeucau.png'];
+                                $sliderImages = ['phieu-bao-quyet-toan-labo.png', 'phieu-bao-hanh-labo-nha-khoa.png', 'phieu-chi-labo-nha-khoa.png', 'phieu-giao-hang-labo-nha-khoa.png', 'phieu-thu-tien-labo-nha-khoa.png', 'phieu-yeu-cau-labo-nha-khoa.png'];
                             @endphp
                             @foreach($sliderImages as $img)
                             <img src="@asset('images/mauthe/' . $img)" class="w-full h-auto object-contain flex-shrink-0 transition-transform duration-500 ease-in-out" alt="DentalSO Documents and Templates - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" loading="lazy">
@@ -130,54 +130,72 @@
             </div>
         </div>
 
-        {{-- Section 3 distinct cards --}}
-        <div class="space-y-6 max-w-4xl mx-auto mt-6">
-            {{-- Card 3: Tự động hoá --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-3 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#e2f5e9] flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-[#30d158] text-3xl">bolt</span>
+        {{-- Section: Tự động hoá — image LEFT, text RIGHT --}}
+        <div class="max-w-5xl mx-auto mt-16 fade-in-up">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-14 items-center">
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="<?php echo get_template_directory_uri(); ?>/resources/images/phan-mem-tu-dong-hoa-labo-nha-khoa.png" alt="Tự động hoá quy trình Labo" class="w-full h-auto object-cover rounded-2xl" loading="lazy">
                 </div>
                 <div>
-                    <h3 class="apple-card-title !mb-1">Tự động hóa cao</h3>
-                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Giảm tối đa công việc thủ công</p>
-                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#e2f5e9] flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#30d158]">bolt</span>
+                        </div>
+                        <h3 class="text-[1.5rem] font-semibold text-[#1d1d1f] leading-tight">Tự động hóa cao</h3>
+                    </div>
+                    <p class="text-[#86868b] text-[0.9375rem] mb-6">Giảm tối đa công việc thủ công, để đội ngũ tập trung vào chất lượng sản phẩm.</p>
+                    <ul class="space-y-3 text-[#424245] text-[0.9375rem]">
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Ứng dụng tự phân bổ công việc cho từng KTV</li>
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Tự động nhắc đơn hàng phải giao theo thời gian đã nhập</li>
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Kết nối dữ liệu bảo hành giữa bệnh nhân và thông tin sản phẩm</li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Quản lý dữ liệu tập trung theo đơn hàng, giảm thời gian truy tìm thông tin</li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Giảm thời gian nhập liệu, tiết kiệm chi phí vận hành nhờ tự động hoá</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Quản lý dữ liệu tập trung theo đơn hàng, giảm thời gian truy tìm</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#30d158] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Giảm thời gian nhập liệu, tiết kiệm chi phí vận hành</li>
                     </ul>
                 </div>
             </div>
+        </div>
 
-            {{-- Card 4: Chi phí thấp --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-4 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#f5e6fe] flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-[#bf5af2] text-3xl">savings</span>
-                </div>
-                <div>
-                    <h3 class="apple-card-title !mb-1">Chi phí thấp</h3>
-                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Phù hợp labo nhỏ & startup</p>
-                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+        {{-- Section: Chi phí thấp — text LEFT, image RIGHT (zigzag) --}}
+        <div class="max-w-5xl mx-auto mt-20 fade-in-up">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-14 items-center">
+                <div class="order-2 md:order-1">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#f5e6fe] flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#bf5af2]">savings</span>
+                        </div>
+                        <h3 class="text-[1.5rem] font-semibold text-[#1d1d1f] leading-tight">Chi phí thấp</h3>
+                    </div>
+                    <p class="text-[#86868b] text-[0.9375rem] mb-6">Phù hợp labo nhỏ & startup — không cần đầu tư lớn, bắt đầu ngay hôm nay.</p>
+                    <ul class="space-y-3 text-[#424245] text-[0.9375rem]">
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Không tốn chi phí phát triển ứng dụng, chỉ trả phí sử dụng hàng tháng</li>
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Chi phí sử dụng phần mềm cực kỳ thấp</li>
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#bf5af2] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Mô hình thanh toán linh hoạt: Dùng bao nhiêu trả bấy nhiêu</li>
                     </ul>
                 </div>
+                <div class="order-1 md:order-2 rounded-2xl overflow-hidden">
+                    <img src="<?php echo get_template_directory_uri(); ?>/resources/images/chi-phi-thap-phan-mem-quan-ly-labo.png" alt="Chi phí thấp cho Labo nhỏ" class="w-full h-auto object-cover rounded-2xl" loading="lazy">
+                </div>
             </div>
+        </div>
 
-            {{-- Card 5: Nền tảng vững chắc --}}
-            <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-5 p-6 sm:p-8 flex flex-col sm:flex-row items-start gap-6">
-                <div class="w-16 h-16 rounded-2xl bg-[#fff3e0] flex items-center justify-center flex-shrink-0">
-                    <span class="material-symbols-outlined text-[#ff6d00] text-3xl">rocket_launch</span>
+        {{-- Section: Nền tảng vững chắc — image LEFT, text RIGHT --}}
+        <div class="max-w-5xl mx-auto mt-20 fade-in-up">
+            <div class="grid md:grid-cols-2 gap-8 md:gap-14 items-center">
+                <div class="rounded-2xl overflow-hidden">
+                    <img src="<?php echo get_template_directory_uri(); ?>/resources/images/nen-tang-cloud-quan-ly-labo-dentalso.png" alt="Nền tảng Cloud vững chắc" class="w-full h-auto object-cover rounded-2xl" loading="lazy">
                 </div>
                 <div>
-                    <h3 class="apple-card-title !mb-1">Nền tảng vững chắc</h3>
-                    <p class="text-[0.9375rem] font-medium text-[#1d1d1f] mb-4">Phát triển nhanh không rối loạn</p>
-                    <ul class="space-y-2 text-[#424245] text-[0.9375rem]">
+                    <div class="flex items-center gap-3 mb-4">
+                        <div class="w-10 h-10 rounded-xl bg-[#fff3e0] flex items-center justify-center flex-shrink-0">
+                            <span class="material-symbols-outlined text-[#ff6d00]">rocket_launch</span>
+                        </div>
+                        <h3 class="text-[1.5rem] font-semibold text-[#1d1d1f] leading-tight">Nền tảng vững chắc</h3>
+                    </div>
+                    <p class="text-[#86868b] text-[0.9375rem] mb-6">Phát triển nhanh không rối loạn — hạ tầng đáng tin cậy cho mọi quy mô.</p>
+                    <ul class="space-y-3 text-[#424245] text-[0.9375rem]">
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Quy trình quản lý khoa học giúp doanh nghiệp phát triển nhanh</li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Hệ thống hoạt động ổn định 99.9% trên nền tảng Cloud trực tuyến</li>
-                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Sao lưu (backup) tự động liên tục, tính bảo mật dữ liệu cao</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Hệ thống hoạt động ổn định 99.9% trên nền tảng Cloud</li>
+                        <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Sao lưu (backup) tự động liên tục, bảo mật dữ liệu cao</li>
                         <li class="flex items-start gap-3"><span class="material-symbols-outlined text-[#ff6d00] flex-shrink-0 mt-0.5 text-[1.125rem]">check_circle</span> Hỗ trợ không giới hạn số lượng tài khoản người dùng</li>
                     </ul>
                 </div>
@@ -297,7 +315,7 @@
             <div class="relative group slide-in-right">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(52,168,83,0.05);"></div>
                 <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Không cần quản lý ca bằng Excel và giấy tờ thủ công nữa - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                    <img src="@asset('images/zigzag-manual-tracking.webp')" alt="Không cần quản lý ca bằng Excel và giấy tờ thủ công nữa - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -310,7 +328,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(255,159,10,0.1);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Giảm khó khăn khi theo dõi trạng thái ca - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag-poor-visibility.webp')" alt="Giảm khó khăn khi theo dõi trạng thái ca - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
@@ -370,7 +388,7 @@
             <div class="relative group slide-in-right">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(10,132,255,0.05);"></div>
                 <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/zigzag_need_simplicity.webp')" alt="Giao diện đơn giản dễ sử dụng - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                    <img src="@asset('images/zigzag-need-simplicity.webp')" alt="Giao diện đơn giản dễ sử dụng - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -383,7 +401,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(48,209,88,0.08);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Hỗ trợ Labo nha khoa đang mở rộng quy mô - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag-scaling-up.webp')" alt="Hỗ trợ Labo nha khoa đang mở rộng quy mô - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
