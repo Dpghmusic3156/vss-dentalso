@@ -39,7 +39,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
-            <img src="@asset('images/small-labo-hero.png')" alt="DentalSO Small Lab Management" class="apple-hero-img animate-float">
+            <img src="@asset('images/small-labo-hero.png')" alt="DentalSO Small Lab Management - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
@@ -58,7 +58,7 @@
             {{-- Card 1: Quy trình chuẩn hoá --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1 overflow-hidden">
                 <div class="w-full bg-[#e3f0fc] flex items-center justify-center overflow-hidden">
-                    <img src="@asset('images/quytrinh.png')" alt="DentalSO Workflow" class="w-full h-auto object-contain">
+                    <img src="@asset('images/quytrinh.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
                 </div>
                 <div class="apple-card-inner p-6">
                     <div class="flex items-center gap-3 mb-3">
@@ -76,7 +76,7 @@
             {{-- Card 2: Tài liệu & biểu mẫu --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-2 overflow-hidden">
                 <div class="w-full bg-[#fef3e2] flex items-center justify-center overflow-hidden">
-                    <img src="@asset('images/MauTheBaoHanh.png')" alt="DentalSO Documents and Templates" class="w-full h-auto object-contain">
+                    <img src="@asset('images/MauTheBaoHanh.png')" alt="DentalSO Documents and Templates - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
                 </div>
                 <div class="apple-card-inner p-6">
                     <div class="flex items-center gap-3 mb-3">
@@ -212,7 +212,7 @@
             </div>
             <div class="apple-split-media slide-in-right">
                 <div class="bg-[#f5f5f7] rounded-2xl shadow-lg overflow-hidden p-1">
-                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="DentalSO Platform Dashboard" class="apple-split-img rounded-xl parallax-img" loading="lazy">
+                    <img src="{{ get_site_url() }}/wp-content/uploads/2022/12/dental-online-lab-dashboard.png" alt="DentalSO Platform Dashboard - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-split-img rounded-xl parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -250,7 +250,7 @@
             <div class="relative group slide-in-right">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(52,168,83,0.05);"></div>
                 <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Quản lý ca bằng Excel và giấy tờ thủ công" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                    <img src="@asset('images/zigzag_manual_tracking.webp')" alt="Quản lý ca bằng Excel và giấy tờ thủ công - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -263,7 +263,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(255,159,10,0.1);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Khó khăn khi theo dõi trạng thái ca" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag_poor_visibility.webp')" alt="Khó khăn khi theo dõi trạng thái ca - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">
@@ -323,7 +323,7 @@
             <div class="relative group slide-in-right">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(10,132,255,0.05);"></div>
                 <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/zigzag_need_simplicity.webp')" alt="Giao diện đơn giản dễ sử dụng" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                    <img src="@asset('images/zigzag_need_simplicity.webp')" alt="Giao diện đơn giản dễ sử dụng - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                 </div>
             </div>
         </div>
@@ -336,7 +336,7 @@
                 <div class="order-2 md:order-1 relative group slide-in-left">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(48,209,88,0.08);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Labo nha khoa đang mở rộng quy mô" class="w-full h-auto object-cover parallax-img" loading="lazy">
+                        <img src="@asset('images/zigzag_scaling_up.webp')" alt="Labo nha khoa đang mở rộng quy mô - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover parallax-img" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2 slide-in-right">

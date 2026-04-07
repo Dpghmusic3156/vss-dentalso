@@ -31,7 +31,7 @@
         </div>
         {{-- Hero image --}}
         <div class="apple-hero-img-wrapper fade-in-up" style="transition-delay: 200ms;">
-            <img src="@asset('images/dental-platform-mockup.webp')" alt="DentalSO – Phần mềm quản lý Dental Lab" class="apple-hero-img animate-float">
+            <img src="@asset('images/dental-platform-mockup.webp')" alt="DentalSO – Phần mềm quản lý Dental Lab - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-hero-img animate-float">
         </div>
     </div>
 </section>
@@ -50,7 +50,7 @@
             <div class="fade-in-up" style="transition-delay: 0ms;">
                 <div class="apple-split solution-card solution-card--blue bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
                     <div class="apple-split-media solution-card__media">
-                        <img src="@asset('images/dental-platform-mockup.webp')" alt="DentalSO Platform" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                        <img src="@asset('images/dental-platform-mockup.webp')" alt="DentalSO Platform - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                     </div>
                     <div class="apple-split-text">
                         <span class="solution-pill solution-pill--blue">Quản lý Labo</span>
@@ -69,7 +69,7 @@
             <div class="fade-in-up" style="transition-delay: 100ms;">
                 <div class="apple-split apple-split--reverse solution-card solution-card--green bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
                     <div class="apple-split-media solution-card__media">
-                        <img src="@asset('images/mes-dashboard-hero.webp')" alt="DentalSO MES" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                        <img src="@asset('images/mes-dashboard-hero.webp')" alt="DentalSO MES - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                     </div>
                     <div class="apple-split-text">
                         <span class="solution-pill solution-pill--green">Điều hành sản xuất</span>
@@ -88,7 +88,7 @@
             <div class="fade-in-up" style="transition-delay: 200ms;">
                 <div class="apple-split solution-card solution-card--orange bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
                     <div class="apple-split-media solution-card__media">
-                        <img src="@asset('images/dentalso-connect-illustration.webp')" alt="DentalSO Connect" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                        <img src="@asset('images/dentalso-connect-illustration.webp')" alt="DentalSO Connect - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                     </div>
                     <div class="apple-split-text">
                         <span class="solution-pill solution-pill--orange">Kết nối số</span>
@@ -107,7 +107,7 @@
             <div class="fade-in-up" style="transition-delay: 300ms;">
                 <div class="apple-split apple-split--reverse solution-card solution-card--yellow bg-white rounded-[2.5rem] p-8 md:p-12 lg:p-16 shadow-sm hover:shadow-[0_20px_40px_rgb(0,0,0,0.1)] hover:-translate-y-3 transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] group">
                     <div class="apple-split-media solution-card__media">
-                        <img src="@asset('images/warranty-hero-mockup.webp')" alt="Quản lý bảo hành" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
+                        <img src="@asset('images/warranty-hero-mockup.webp')" alt="Quản lý bảo hành - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-split-img rounded-2xl relative z-10 group-hover:scale-[1.03] transition-transform duration-500 ease-[cubic-bezier(0.25,1,0.5,1)]" loading="lazy" loading="lazy">
                     </div>
                     <div class="apple-split-text">
                         <span class="solution-pill solution-pill--yellow">Bảo hành</span>
@@ -164,7 +164,7 @@
             <div class="relative group">
                 <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(66,133,244,0.05);"></div>
                 <div class="relative rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                    <img src="@asset('images/dental-lab-workspace.webp')" alt="Kỹ thuật viên Labo nha khoa thiết kế CAD trên máy tính" class="w-full h-auto object-cover" loading="lazy">
+                    <img src="@asset('images/dental-lab-workspace.webp')" alt="Kỹ thuật viên Labo nha khoa thiết kế CAD trên máy tính - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
                 </div>
             </div>
         </div>
@@ -177,7 +177,7 @@
                 <div class="order-2 md:order-1 relative group">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(251,188,5,0.15);"></div>
                     <div class="relative rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/workflow.webp')" alt="Quy trình điều phối sản xuất thông minh" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="@asset('images/workflow.webp')" alt="Quy trình điều phối sản xuất thông minh - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
@@ -275,7 +275,7 @@
                 <div class="order-2 md:order-1 relative group">
                     <div class="absolute -inset-4 rounded-3xl blur-2xl transition-colors" style="background-color: rgba(66,133,244,0.1);"></div>
                     <div class="relative rounded-2xl shadow-2xl border border-gray-100 overflow-hidden">
-                        <img src="@asset('images/cloud.webp')" alt="Nền tảng đám mây bảo mật DentalSO" class="w-full h-auto object-cover" loading="lazy">
+                        <img src="@asset('images/cloud.webp')" alt="Nền tảng đám mây bảo mật DentalSO - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-cover" loading="lazy">
                     </div>
                 </div>
                 <div class="order-1 md:order-2">
