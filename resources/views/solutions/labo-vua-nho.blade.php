@@ -69,8 +69,23 @@
                         </div>
                         <h3 class="apple-card-title !mb-0">Quy trình chuẩn hoá từ đầu đến cuối</h3>
                     </div>
-                    <p class="text-[#424245] text-[0.9375rem] leading-relaxed">
-                        Từ nhập thông tin đơn hàng → theo dõi tiến độ realtime → phân công kỹ thuật viên → xuất hoá đơn. Mọi bước liền mạch, minh bạch, loại bỏ sai sót và chậm trễ.
+                    <div class="flex flex-col items-center justify-center gap-1.5 sm:gap-2 w-full text-[0.875rem] font-medium text-[#1d1d1f] my-6">
+                        <div class="px-4 py-1.5 bg-white border border-black/10 rounded-full shadow-sm text-center w-fit">Nhập đơn hàng</div>
+                        
+                        <div class="text-gray-400 material-symbols-outlined text-base my-[-0.25rem]">arrow_downward</div>
+                        
+                        <div class="px-4 py-1.5 bg-white border border-black/10 rounded-full shadow-sm text-center w-fit">Theo dõi tiến độ realtime</div>
+                        
+                        <div class="text-gray-400 material-symbols-outlined text-base my-[-0.25rem]">arrow_downward</div>
+                        
+                        <div class="px-4 py-1.5 bg-white border border-black/10 rounded-full shadow-sm text-center w-fit">Phân công KTV</div>
+                        
+                        <div class="text-gray-400 material-symbols-outlined text-base my-[-0.25rem]">arrow_downward</div>
+                        
+                        <div class="px-4 py-1.5 bg-[#a1a1aa] text-white rounded-full shadow-sm text-center border border-[#a1a1aa] w-fit">Xuất hoá đơn</div>
+                    </div>
+                    <p class="text-[#424245] text-[0.9375rem] leading-relaxed mt-3">
+                        Mọi bước liền mạch, minh bạch, loại bỏ sai sót và chậm trễ.
                     </p>
                 </div>
             </div>
