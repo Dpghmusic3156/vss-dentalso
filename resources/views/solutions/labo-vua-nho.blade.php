@@ -57,7 +57,7 @@
         <div class="grid md:grid-cols-2 gap-6 max-w-6xl mx-auto mb-6">
             {{-- Card 1: Quy trình chuẩn hoá --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-1 overflow-hidden">
-                <div class="w-full bg-[#e3f0fc] flex items-center justify-center overflow-hidden border-b border-black/5">
+                <div class="w-full bg-[#e3f0fc] flex items-center justify-center overflow-hidden border-b border-black/5 p-6 lg:p-8">
                     <img src="@asset('images/quytrinh.png')" alt="DentalSO Workflow - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
                 </div>
                 <div class="apple-card-inner p-6">
@@ -75,7 +75,7 @@
 
             {{-- Card 2: Tài liệu & biểu mẫu --}}
             <div class="apple-card apple-card--white apple-lift fade-in-up fade-delay-2 overflow-hidden">
-                <div class="w-full bg-[#fef3e2] flex items-center justify-center overflow-hidden border-b border-black/5">
+                <div class="w-full bg-[#fef3e2] flex items-center justify-center overflow-hidden border-b border-black/5 p-6 lg:p-8">
                     <img src="@asset('images/MauTheBaoHanh.png')" alt="DentalSO Documents and Templates - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="w-full h-auto object-contain">
                 </div>
                 <div class="apple-card-inner p-6">
