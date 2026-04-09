@@ -25,7 +25,7 @@
             <form class="contact-form" autocomplete="off" action="javascript:Submit();">
                 <input type="text" name="name" class="col-span-2 md:col-span-1" id="name" placeholder="Name">
                 <input type="text" class="col-span-2 md:col-span-1" name="company" id="company" placeholder="Business">
-                <input type="text" name="phone" class="col-span-2 md:col-span-1" id="phone" placeholder="Phone">
+                <input type="text" name="phone" class="col-span-2 md:col-span-1" id="phone" placeholder="Phone" oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
                 <input type="email" class="col-span-2 md:col-span-1" name="email" id="email" placeholder="Email">
                 <select class="h-100 form-control form-select col-span-2" name="product" id="product">
                     <option selected disabled>Select an Application</option>
@@ -98,6 +98,11 @@
                 return false;
             } else {
                 data['phone'] = phone;
+            }
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email !== '' && !emailRegex.test(email)) {
+                alert('Please enter a valid email');
+                return false;
             }
             data['email'] = email;
             if (message === '') {

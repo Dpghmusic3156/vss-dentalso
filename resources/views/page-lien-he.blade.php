@@ -56,7 +56,7 @@
                                 <input type="text" class="apple-input" name="company" id="company" placeholder="Công ty" required>
                             </div>
                             <div class="grid sm:grid-cols-2 gap-5">
-                                <input type="text" name="phone" class="apple-input" id="phone" placeholder="Số điện thoại" required>
+                                <input type="text" name="phone" class="apple-input" id="phone" placeholder="Số điện thoại" required oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
                                 <input type="email" class="apple-input" name="email" id="email" placeholder="Email">
                             </div>
                             <div class="grid sm:grid-cols-2 gap-5">
@@ -158,7 +158,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (name === '') { alert('Vui lòng nhập họ tên'); return false; } else { data['name'] = name; }
         if (phone === '') { alert('Vui lòng nhập số điện thoại'); return false; } else { data['phone'] = phone; }
-        if (email === '') { alert('Vui lòng nhập email'); return false; } else { data['email'] = email; }
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (email === '' || !emailRegex.test(email)) { alert('Vui lòng nhập email hợp lệ'); return false; } else { data['email'] = email; }
         if (message === '') { alert('Vui lòng nhập nội dung'); return false; } else { data['message'] = message; }
 
         jQuery("#formContactUs :input").prop("disabled", true);
