@@ -40,7 +40,7 @@
         {{-- Hero video --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
             <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:1.5rem;width:100%;max-width:960px;">
-                <iframe src="https://www.youtube.com/embed/gyeXaXoxltA" title="DentalSO - Phần mềm quản lý labo nha khoa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;"></iframe>
+                <iframe src="https://www.youtube.com/embed/gyeXaXoxltA?vq=hd1080&rel=0" title="DentalSO - Phần mềm quản lý labo nha khoa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy" style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;"></iframe>
             </div>
         </div>
     </div>
