@@ -534,4 +534,111 @@ add_action('save_post_lab_logo', function () {
     delete_transient('lab_logo_html');
 });
 
+/**
+ * Shortcode [dentalso_form] - Embed consultation form in any post/page.
+ * Usage: [dentalso_form title="Đặt lịch Demo" button="Đăng Ký Demo"]
+ */
+add_shortcode('dentalso_form', function ($atts) {
+    $atts = shortcode_atts([
+        'title'  => 'Đăng Ký Tư Vấn',
+        'button' => 'Gửi yêu cầu',
+        'desc'   => 'Chúng tôi sẽ phản hồi trong vòng 1 ngày làm việc.',
+    ], $atts);
 
+    $unique_id = 'dsForm_' . wp_rand(1000, 9999);
+    $redirect_url = home_url('/cam-on/');
+
+    ob_start();
+    ?>
+    <div class="bg-[#f5f5f7] rounded-3xl p-8 lg:p-10 my-8" id="<?php echo $unique_id; ?>_wrapper">
+        <div id="<?php echo $unique_id; ?>">
+            <h3 class="text-2xl font-semibold mb-2"><?php echo esc_html($atts['title']); ?></h3>
+            <p class="text-[#86868b] mb-6"><?php echo esc_html($atts['desc']); ?></p>
+            <form action="javascript:void(0);" method="POST" class="space-y-5" autocomplete="off" id="<?php echo $unique_id; ?>_form">
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <input type="text" class="apple-input" name="name" placeholder="Họ tên" required>
+                    <input type="text" class="apple-input" name="company" placeholder="Công ty / Labo" required>
+                </div>
+                <div class="grid sm:grid-cols-2 gap-5">
+                    <input type="text" class="apple-input" name="phone" placeholder="Số điện thoại" required oninput="this.value = this.value.replace(/[^0-9+]/g, '')">
+                    <input type="email" class="apple-input" name="email" placeholder="Email">
+                </div>
+                <select class="apple-input" name="product">
+                    <option selected disabled>Chọn sản phẩm</option>
+                    <option value="Quản lý Labo nha khoa">Quản lý Labo nha khoa</option>
+                    <option value="Quản lý sản xuất (MES)">Quản lý sản xuất (MES)</option>
+                    <option value="Kết nối Labo - Nha khoa">Kết nối Labo - Nha khoa</option>
+                    <option value="Quản lý bảo hành">Quản lý bảo hành</option>
+                </select>
+                <textarea class="apple-input" name="message" placeholder="Mô tả nhu cầu của bạn" rows="4" required></textarea>
+                <div>
+                    <div class="<?php echo $unique_id; ?>_loading hidden text-[#0071e3]">Đang gửi...</div>
+                    <div class="<?php echo $unique_id; ?>_error hidden text-[#ff453a]">Không thể gửi. Vui lòng thử lại.</div>
+                </div>
+                <button class="apple-cta-primary w-full sm:w-auto" type="submit">
+                    <?php echo esc_html($atts['button']); ?>
+                </button>
+            </form>
+        </div>
+        <div class="<?php echo $unique_id; ?>_success hidden text-center py-12">
+            <span class="material-symbols-outlined text-[#30d158] text-5xl mb-4">check_circle</span>
+            <p class="text-xl font-semibold text-[#1d1d1f] mb-2">Đã nhận yêu cầu!</p>
+            <p class="text-[#86868b]">Chúng tôi sẽ liên hệ bạn sớm nhất.</p>
+        </div>
+    </div>
+    <script>
+    (function(){
+        var form = document.getElementById('<?php echo $unique_id; ?>_form');
+        if (!form) return;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var name = form.querySelector('[name="name"]').value.trim();
+            var phone = form.querySelector('[name="phone"]').value.trim();
+            var email = form.querySelector('[name="email"]').value.trim();
+            var message = form.querySelector('[name="message"]').value.trim();
+            var product = form.querySelector('[name="product"]').value;
+            var company = form.querySelector('[name="company"]').value.trim();
+
+            if (!name) { alert('Vui lòng nhập họ tên'); return; }
+            if (!phone) { alert('Vui lòng nhập số điện thoại'); return; }
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email && !emailRegex.test(email)) { alert('Vui lòng nhập email hợp lệ'); return; }
+            if (!message) { alert('Vui lòng nhập nội dung'); return; }
+
+            var data = { name: name, phone: phone, email: email, message: message, url: window.location.href };
+            if (company) data.company = company;
+            var note = "Tên: " + name + "\nCông ty: " + company + "\nĐiện thoại: " + phone + "\nEmail: " + email;
+            if (product) { data.product = product; note += "\nSản phẩm: " + product; }
+            note += "\nTin nhắn:\n" + message;
+            data.note = note;
+            if (email) data.el = email.length;
+
+            var loading = document.querySelector('.<?php echo $unique_id; ?>_loading');
+            var error = document.querySelector('.<?php echo $unique_id; ?>_error');
+            var success = document.querySelector('.<?php echo $unique_id; ?>_success');
+            loading.classList.remove('hidden');
+            error.classList.add('hidden');
+
+            fetch('https://sapi.dentalso.com/api/v1/public/callme', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(data)
+            })
+            .then(function(res) { return res.json(); })
+            .then(function() {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ 'event': 'form_submission_success', 'form_type': 'shortcode_form', 'page_language': 'vi' });
+                loading.classList.add('hidden');
+                document.getElementById('<?php echo $unique_id; ?>').classList.add('hidden');
+                success.classList.remove('hidden');
+            })
+            .catch(function() {
+                loading.classList.add('hidden');
+                error.classList.remove('hidden');
+            });
+        });
+    })();
+    </script>
+    <?php
+    return ob_get_clean();
+});
