@@ -37,9 +37,11 @@
                 </div>
             </div>-->
         </div>
-        {{-- Hero image --}}
+        {{-- Hero video --}}
         <div class="apple-hero-img-wrapper hero-stagger-6">
-            <img src="@asset('images/giai-phap-quan-ly-labo-nha-khoa-nho.png')" alt="DentalSO Small Lab Management - Phần mềm quản lý labo nha khoa giá rẻ, cho dùng thử miễn phí" class="apple-hero-img animate-float">
+            <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;border-radius:1.5rem;">
+                <iframe src="https://www.youtube.com/embed/gyeXaXoxltA" title="DentalSO - Phần mềm quản lý labo nha khoa" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;border-radius:1.5rem;"></iframe>
+            </div>
         </div>
     </div>
 </section>
