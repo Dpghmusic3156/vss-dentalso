@@ -8,7 +8,7 @@
     <div class="apple-container text-center">
         <div>
             <span class="apple-eyebrow hero-stagger-1">Giải pháp Tiết kiệm & Hiệu quả</span>
-            <h1 class="apple-headline mb-4 hero-stagger-2">Phần mềm quản lý<br>Labo Nha khoa nhỏ & Startup</h1>
+            <h1 class="apple-headline mb-4 hero-stagger-2">Phần mềm Quản lý<br>Labo Nha khoa Nhỏ & Startup</h1>
             <p class="text-[1.25rem] md:text-[1.5rem] font-bold text-[#0071e3] tracking-tight mb-6 hero-stagger-3">
                 Chi phí thấp – Tối ưu cho labo nhỏ – Dùng thử MIỄN PHÍ
             </p>
