@@ -13,9 +13,9 @@
             <div class="apple-footer-col">
                 <h4 class="apple-footer-heading">Giải Pháp</h4>
                 <ul class="apple-footer-links">
-                    <li><a href="{{ home_url('giai-phap/labo/') }}">Dành cho Labo</a></li>
-                    <li><a href="{{ home_url('giai-phap/phong-kham/') }}">Dành cho Phòng khám</a></li>
-                    <li><a href="{{ home_url('giai-phap/sales/') }}">Dành cho Sales</a></li>
+                    <li><a href="{{ home_url('giai-phap/labo-vua-nho/') }}">Labo vừa và nhỏ</a></li>
+                    <li><a href="{{ home_url('giai-phap/labo-gia-cong/') }}">Labo gia công và xuất khẩu</a></li>
+                    <li><a href="{{ home_url('giai-phap/labo-lon-mes/') }}">Labo lớn</a></li>
                 </ul>
             </div>
             <div class="apple-footer-col">
