@@ -30,7 +30,6 @@
                 <h4 class="apple-footer-heading">Hỗ Trợ</h4>
                 <ul class="apple-footer-links">
                     <li><a href="http://ghuy.me/vi/customer/">Khách hàng tiêu biểu</a></li>
-                    <li><a href="{{ home_url('huong-dan/') }}">Hướng dẫn</a></li>
                     <li><a href="{{ home_url('yeu-cau-tu-van') }}">Đăng ký Demo</a></li>
                     <li><a href="https://lab.dentalso.com/" target="_blank" rel="noopener noreferrer">Đăng nhập</a></li>
                 </ul>
