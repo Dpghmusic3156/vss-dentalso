@@ -107,9 +107,15 @@
                 <span class="mx-1">·</span>
                 <a href="{{ home_url('chinh-sach-cookies/') }}">Cookies</a>
             </div>
-            <div class="apple-footer-contact">
-                <a href="mailto:<?php echo get_theme_mod('email1'); ?>">
-                    <span class="material-symbols-outlined" style="font-size: 14px;">mail</span>
+            <div class="apple-footer-contact flex items-center gap-4">
+                <a href="https://www.facebook.com/DentalSo.Vietnam" target="_blank" rel="noopener noreferrer" style="color: inherit;" aria-label="Facebook">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24h11.495v-9.294h-3.128v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.597 1.323-1.325v-21.35C24 .597 23.403 0 22.675 0z"/></svg>
+                </a>
+                <a href="https://www.youtube.com/@dentalSO" target="_blank" rel="noopener noreferrer" style="color: inherit;" aria-label="YouTube">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582,6.186c-0.23-0.86-0.908-1.538-1.768-1.768C18.254,4,12,4,12,4s-6.254,0-7.814,0.418 c-0.86,0.23-1.538,0.908-1.768,1.768C2,7.746,2,12,2,12s0,4.254,0.418,5.814c0.23,0.86,0.908,1.538,1.768,1.768 C5.746,20,12,20,12,20s6.254,0,7.814-0.418c0.86-0.23,1.538-0.908,1.768-1.768C22,16.254,22,12,22,12S22,7.746,21.582,6.186z M9.667,14.997V9.003L15.333,12L9.667,14.997z"/></svg>
+                </a>
+                <a href="mailto:<?php echo get_theme_mod('email1'); ?>" class="flex items-center gap-1.5" style="color: inherit;">
+                    <span class="material-symbols-outlined" style="font-size: 16px;">mail</span>
                     <?php echo get_theme_mod('email1'); ?>
                 </a>
             </div>
