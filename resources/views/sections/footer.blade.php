@@ -86,7 +86,6 @@
                 </div>
             </div>
             <div class="apple-footer-apps">
-                <span class="apple-footer-apps-label">Tải ứng dụng:</span>
                 <a href="https://apps.apple.com/vn/app/dentalso/id6447111443" target="_blank" rel="noopener noreferrer">
                     <img alt="Tải ứng dụng quản lý nha khoa trên App Store" loading="lazy" src="<?php echo get_site_url(); ?>/wp-content/uploads/2025/02/app-store.png">
                 </a>
