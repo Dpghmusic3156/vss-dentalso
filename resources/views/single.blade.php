@@ -27,15 +27,19 @@
 {{-- ============================================================
      HERO — Ảnh bìa toàn chiều rộng với tiêu đề phủ lên
      ============================================================ --}}
-<section class="post-hero relative overflow-hidden {{ $thumbnail ? '' : 'post-hero--no-image' }}">
+<section class="post-hero {{ $thumbnail ? '' : 'post-hero--no-image' }}">
     @if($thumbnail)
-        <div class="post-hero__bg" style="background-image: url('{{ $thumbnail }}')"></div>
-        <div class="post-hero__overlay"></div>
+    <div class="apple-container">
+        <div class="post-hero__card">
+            <img src="{{ $thumbnail }}" alt="{{ get_the_title() }}" class="post-hero__img" loading="eager">
+            <div class="post-hero__overlay"></div>
+            <div class="post-hero__content">
     @else
-        <div class="post-hero__bg-plain"></div>
+    <div class="post-hero__bg-plain"></div>
+    <div class="apple-container">
+        <div class="post-hero__content" style="position:relative; z-index:10; padding-top:4rem;">
     @endif
 
-    <div class="apple-container relative z-10 post-hero__content">
         {{-- Breadcrumb --}}
         <nav class="post-breadcrumb" aria-label="Đường dẫn">
             <a href="{{ home_url('/') }}" class="post-breadcrumb__link">Trang chủ</a>
@@ -66,7 +70,11 @@
                 <span class="post-meta-read">{{ $read_time }} phút đọc</span>
             </div>
         </div>
-    </div>
+        </div>{{-- close .post-hero__content --}}
+    @if($thumbnail)
+        </div>{{-- close .post-hero__card --}}
+    @endif
+    </div>{{-- close .apple-container --}}
 </section>
 
 {{-- ============================================================
