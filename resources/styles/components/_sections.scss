@@ -254,6 +254,29 @@
   height: 2rem;
 }
 
+.apple-footer-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.apple-footer-social:hover {
+  opacity: 1 !important;
+  transform: scale(1.1);
+}
+
+.apple-footer-social--fb {
+  color: #1877f2 !important;
+}
+
+.apple-footer-social--yt {
+  color: #ff0000 !important;
+}
+
 /* Copyright bar */
 .apple-footer-copyright {
   display: flex;
