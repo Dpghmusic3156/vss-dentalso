@@ -338,7 +338,166 @@ add_action('customize_register', function ($wp_customize) {
             'type' => 'text',
         )
     );
+
+    // YouTube API Key
+    $wp_customize->add_setting('youtube_api_key');
+    $wp_customize->add_control(
+        'youtube_api_key',
+        array(
+            'label' => 'YouTube API Key',
+            'description' => 'API key để tự động lấy video từ YouTube',
+            'section' => 'title_tagline',
+            'settings' => 'youtube_api_key',
+            'type' => 'text',
+        )
+    );
 });
+
+/**
+ * Lấy danh sách video từ các playlist YouTube của DentalSO
+ * Cache 12 giờ bằng WordPress transient
+ */
+function dentalso_get_youtube_videos()
+{
+    // Kiểm tra cache
+    $cached = get_transient('dentalso_yt_videos');
+    if ($cached !== false) {
+        return $cached;
+    }
+
+    $api_key = get_theme_mod('youtube_api_key', '');
+    if (empty($api_key)) {
+        return dentalso_get_fallback_videos();
+    }
+
+    // 4 playlist với category tương ứng
+    $playlists = [
+        'PLtGly8_RzMfs5LkZ8hlukNhqwkKMy3cuC' => 'don-hang',
+        'PLtGly8_RzMfu7L8ybbN5h3DLFMKn5JNSo' => 'phien-ban-linh-hoat',
+        'PLtGly8_RzMfvekuRCIRpr5YKCN3HFWtOB' => 'don-hang',
+        'PLtGly8_RzMfvXUOf3yohM2biNaQYN9qjF' => 'don-hang',
+    ];
+
+    $all_videos = [];
+    $seen_ids = [];
+
+    foreach ($playlists as $playlist_id => $default_category) {
+        $page_token = '';
+        do {
+            $url = add_query_arg([
+                'part' => 'snippet',
+                'playlistId' => $playlist_id,
+                'maxResults' => 50,
+                'pageToken' => $page_token,
+                'key' => $api_key,
+            ], 'https://www.googleapis.com/youtube/v3/playlistItems');
+
+            $response = wp_remote_get($url, ['timeout' => 10]);
+            if (is_wp_error($response)) break;
+
+            $body = json_decode(wp_remote_retrieve_body($response), true);
+            if (empty($body['items'])) break;
+
+            foreach ($body['items'] as $item) {
+                $snippet = $item['snippet'] ?? [];
+                $video_id = $snippet['resourceId']['videoId'] ?? '';
+                $title = $snippet['title'] ?? '';
+
+                // Bỏ video trùng hoặc bị xóa
+                if (empty($video_id) || isset($seen_ids[$video_id]) || $title === 'Private video' || $title === 'Deleted video') {
+                    continue;
+                }
+                $seen_ids[$video_id] = true;
+
+                // Tự động phân loại dựa trên tiêu đề
+                $category = dentalso_detect_video_category($title, $default_category);
+
+                $all_videos[] = [
+                    'id' => $video_id,
+                    'title' => $title,
+                    'desc' => $snippet['description'] ?? '',
+                    'category' => $category,
+                ];
+            }
+
+            $page_token = $body['nextPageToken'] ?? '';
+        } while (!empty($page_token));
+    }
+
+    if (empty($all_videos)) {
+        return dentalso_get_fallback_videos();
+    }
+
+    // Cache 12 giờ
+    set_transient('dentalso_yt_videos', $all_videos, 12 * HOUR_IN_SECONDS);
+    return $all_videos;
+}
+
+/**
+ * Tự động phân loại video dựa trên tiêu đề
+ */
+function dentalso_detect_video_category($title, $default)
+{
+    $title_lower = mb_strtolower($title);
+
+    if (preg_match('/giới thiệu|tổng quan|phiên bản.*labo nhỏ/u', $title_lower)) {
+        return 'gioi-thieu';
+    }
+    if (preg_match('/bảo hành|thẻ bảo hành|in thẻ/u', $title_lower)) {
+        return 'bao-hanh';
+    }
+    if (preg_match('/hóa đơn|công nợ|chiết khấu|xuất hóa đơn/u', $title_lower)) {
+        return 'hoa-don';
+    }
+    if (preg_match('/người dùng|phân quyền|nha khoa.*bảng giá|bảng giá|cài đặt|màn hình chính/u', $title_lower)) {
+        return 'quan-ly-chung';
+    }
+    if (preg_match('/đơn hàng|sản xuất|công đoạn|hàng thử|hàng gửi|tháo lắp|hình ảnh.*đơn|phiếu chỉ định/u', $title_lower)) {
+        return 'don-hang';
+    }
+
+    return $default;
+}
+
+/**
+ * Xóa cache video (gọi khi cần refresh)
+ */
+function dentalso_clear_youtube_cache()
+{
+    delete_transient('dentalso_yt_videos');
+}
+
+/**
+ * Fallback: danh sách video tĩnh khi không có API key hoặc API lỗi
+ */
+function dentalso_get_fallback_videos()
+{
+    return [
+        ['id' => 'tlw25BpD77M', 'title' => 'Giới thiệu DentalSO', 'desc' => 'Tổng quan về phần mềm quản lý Labo nha khoa DentalSO', 'category' => 'gioi-thieu'],
+        ['id' => 'gyeXaXoxltA', 'title' => 'Phiên bản dành cho Labo nhỏ', 'desc' => 'Giới thiệu phiên bản DentalSO tối ưu cho Labo quy mô nhỏ', 'category' => 'gioi-thieu'],
+        ['id' => 'HsqAd8dvQWY', 'title' => 'Hướng dẫn tạo đơn hàng', 'desc' => 'Tạo đơn hàng trên phiên bản linh hoạt', 'category' => 'phien-ban-linh-hoat'],
+        ['id' => 'Tb-peLSI0PA', 'title' => 'Hướng dẫn in phiếu chỉ định', 'desc' => 'In phiếu chỉ định sản xuất', 'category' => 'phien-ban-linh-hoat'],
+        ['id' => 'EeE_MUlhsos', 'title' => 'Hướng dẫn sửa đơn hàng', 'desc' => 'Chỉnh sửa đơn hàng đã tạo', 'category' => 'phien-ban-linh-hoat'],
+        ['id' => 'NYrd3atyVJo', 'title' => 'Chọn đơn hàng trước khi xuất hóa đơn', 'desc' => 'Chọn đơn hàng hoàn thành để xuất hóa đơn', 'category' => 'phien-ban-linh-hoat'],
+        ['id' => 'UKyG7uziVmg', 'title' => 'Thêm DentalSO vào màn hình chính iOS', 'desc' => 'Thêm shortcut lên iPhone / iPad', 'category' => 'phien-ban-linh-hoat'],
+        ['id' => 'Xjw7YmIy-O8', 'title' => 'Quản lý đơn hàng sản xuất', 'desc' => 'Tạo, theo dõi và quản lý đơn hàng', 'category' => 'don-hang'],
+        ['id' => '8-v535pFNYU', 'title' => 'Quản lý đơn hàng sản xuất (Cập nhật)', 'desc' => 'Phiên bản cập nhật', 'category' => 'don-hang'],
+        ['id' => 'h1TVk4mkXa4', 'title' => 'Hướng dẫn cho sản xuất', 'desc' => 'Quy trình sản xuất trên DentalSO', 'category' => 'don-hang'],
+        ['id' => 'MwmSX2xpiLY', 'title' => 'Cập nhật công đoạn trong đơn hàng', 'desc' => 'Cập nhật tiến độ công đoạn sản xuất', 'category' => 'don-hang'],
+        ['id' => 'pR5skyAPQZE', 'title' => 'Nhập đơn hàng tháo lắp', 'desc' => 'Nhập đơn hàng tháo lắp trên hệ thống', 'category' => 'don-hang'],
+        ['id' => '5pebBX1ZBnA', 'title' => 'Quản lý hàng gửi thử', 'desc' => 'Quản lý quy trình hàng gửi thử', 'category' => 'don-hang'],
+        ['id' => 'hddVfQrfIBE', 'title' => 'Quản lý hàng thử', 'desc' => 'Quản lý hàng thử từ tiếp nhận đến hoàn thành', 'category' => 'don-hang'],
+        ['id' => 'aCbTgpMw_xk', 'title' => 'Quản lý hình ảnh theo đơn hàng', 'desc' => 'Tải lên và quản lý hình ảnh đơn hàng', 'category' => 'don-hang'],
+        ['id' => 'W4eW-YuOoi8', 'title' => 'Quản lý hóa đơn và công nợ', 'desc' => 'Tạo hóa đơn, theo dõi công nợ', 'category' => 'hoa-don'],
+        ['id' => 'eJUYaaZG864', 'title' => 'Chiết khấu hoá đơn theo nhóm sản phẩm', 'desc' => 'Thiết lập chiết khấu theo nhóm', 'category' => 'hoa-don'],
+        ['id' => 'YbdgRwob3d0', 'title' => 'Nhập chiết khấu hóa đơn', 'desc' => 'Nhập và áp dụng chiết khấu', 'category' => 'hoa-don'],
+        ['id' => 'sug84WWNG6k', 'title' => 'Chọn đơn hàng để xuất hóa đơn', 'desc' => 'Chọn đơn hàng hoàn thành để xuất hóa đơn', 'category' => 'hoa-don'],
+        ['id' => 'aUUPumcSv0o', 'title' => 'Quản lý mẫu thẻ bảo hành', 'desc' => 'Tạo và tùy chỉnh mẫu thẻ bảo hành', 'category' => 'bao-hanh'],
+        ['id' => 'BcXhVJo2WsI', 'title' => 'In thẻ bảo hành', 'desc' => 'In thẻ bảo hành QR Code', 'category' => 'bao-hanh'],
+        ['id' => 'Qc9nLVEdolc', 'title' => 'Quản lý Nha khoa và Bảng giá', 'desc' => 'Quản lý danh sách nha khoa và bảng giá', 'category' => 'quan-ly-chung'],
+        ['id' => 'PkhZH1zxtY4', 'title' => 'Quản lý người dùng và phân quyền', 'desc' => 'Tạo tài khoản và phân quyền', 'category' => 'quan-ly-chung'],
+    ];
+}
 
 add_action('init', function () {
     register_extended_post_type('lab_logo', [
