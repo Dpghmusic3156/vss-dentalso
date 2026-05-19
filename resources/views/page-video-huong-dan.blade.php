@@ -257,11 +257,11 @@
 </section>
 
 {{-- YouTube Channel CTA --}}
+{{--
 <section class="apple-section bg-white">
     <div class="apple-container">
         <div class="max-w-4xl mx-auto fade-in-up">
             <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#1d1d1f] to-[#2d2d30] p-10 md:p-16 text-center">
-                {{-- Decorative elements --}}
                 <div class="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
                 <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
 
@@ -281,6 +281,7 @@
         </div>
     </div>
 </section>
+--}}
 
 {{-- CTA --}}
 <section class="apple-section apple-section--cta">
