@@ -9,12 +9,12 @@
             <span class="apple-eyebrow">Tài liệu</span>
             <h1 class="apple-headline mb-6">Video Hướng Dẫn</h1>
             <p class="apple-hero-copy">
-                Tổng hợp các video hướng dẫn sử dụng DentalSO — từ cài đặt ban đầu đến vận hành nâng cao. Xem ngay trên kênh YouTube chính thức.
+                Tổng hợp các video hướng dẫn sử dụng DentalSO — từ cài đặt ban đầu đến vận hành nâng cao.
             </p>
             <div class="apple-cta-group mt-10">
                 <a href="https://www.youtube.com/@DentalSO?sub_confirmation=1" target="_blank" rel="noopener" class="apple-cta-primary inline-flex items-center gap-2">
                     <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg>
-                    Đăng ký kênh YouTube
+                    Đăng ký kênh
                 </a>
                 <a href="{{ home_url('yeu-cau-tu-van/') }}" class="apple-cta-secondary">Đăng ký Demo<span class="apple-chevron material-symbols-outlined">chevron_right</span></a>
             </div>
@@ -270,8 +270,8 @@
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg>
                         DentalSO Vietnam
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Xem thêm video<br>trên kênh YouTube</h2>
-                    <p class="text-white/60 text-lg mb-8 max-w-lg mx-auto">Đăng ký kênh để nhận thông báo khi có video hướng dẫn mới. Cập nhật liên tục các tính năng và mẹo sử dụng DentalSO.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Xem thêm video<br>trên kênh DentalSO</h2>
+                    <p class="text-white/60 text-lg mb-8 max-w-lg mx-auto">Đăng ký kênh để nhận thông báo khi có video hướng dẫn mới. Cập nhật liên tục các tính năng và mẹo sử dụng.</p>
                     <a href="https://www.youtube.com/@DentalSO?sub_confirmation=1" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3.5 rounded-full transition-colors duration-300 shadow-lg shadow-red-600/25">
                         <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg>
                         Đăng ký kênh ngay
