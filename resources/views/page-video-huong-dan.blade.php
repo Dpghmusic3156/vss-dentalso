@@ -598,7 +598,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 e.preventDefault();
                 e.stopPropagation();
                 const url = card.getAttribute('href');
-                navigator.clipboard.writeText(window.location.origin + url).then(() => {
+                navigator.clipboard.writeText(url).then(() => {
                     toast.classList.add('is-visible');
                     setTimeout(() => toast.classList.remove('is-visible'), 2000);
                 });
