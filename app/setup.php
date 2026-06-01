@@ -499,6 +499,51 @@ function dentalso_get_fallback_videos()
     ];
 }
 
+/**
+ * Tạo slug URL-friendly từ tiêu đề tiếng Việt
+ */
+function dentalso_vn_slug($str)
+{
+    $str = mb_strtolower(trim($str));
+    $map = [
+        'à'=>'a','á'=>'a','ả'=>'a','ã'=>'a','ạ'=>'a','ă'=>'a','ắ'=>'a','ằ'=>'a','ẳ'=>'a','ẵ'=>'a','ặ'=>'a',
+        'â'=>'a','ấ'=>'a','ầ'=>'a','ẩ'=>'a','ẫ'=>'a','ậ'=>'a','đ'=>'d',
+        'è'=>'e','é'=>'e','ẻ'=>'e','ẽ'=>'e','ẹ'=>'e','ê'=>'e','ế'=>'e','ề'=>'e','ể'=>'e','ễ'=>'e','ệ'=>'e',
+        'ì'=>'i','í'=>'i','ỉ'=>'i','ĩ'=>'i','ị'=>'i',
+        'ò'=>'o','ó'=>'o','ỏ'=>'o','õ'=>'o','ọ'=>'o','ô'=>'o','ố'=>'o','ồ'=>'o','ổ'=>'o','ỗ'=>'o','ộ'=>'o',
+        'ơ'=>'o','ớ'=>'o','ờ'=>'o','ở'=>'o','ỡ'=>'o','ợ'=>'o',
+        'ù'=>'u','ú'=>'u','ủ'=>'u','ũ'=>'u','ụ'=>'u','ư'=>'u','ứ'=>'u','ừ'=>'u','ử'=>'u','ữ'=>'u','ự'=>'u',
+        'ỳ'=>'y','ý'=>'y','ỷ'=>'y','ỹ'=>'y','ỵ'=>'y',
+    ];
+    $str = strtr($str, $map);
+    $str = preg_replace('/[^a-z0-9\s-]/', '', $str);
+    $str = preg_replace('/[\s-]+/', '-', $str);
+    return trim($str, '-');
+}
+
+/**
+ * Rewrite rules cho trang Video Hướng Dẫn
+ * URL: /video-huong-dan/{category}/{video-slug}/
+ */
+add_action('init', function () {
+    add_rewrite_rule(
+        'video-huong-dan/([^/]+)/([^/]+)/?$',
+        'index.php?pagename=video-huong-dan&vhd_category=$matches[1]&vhd_video=$matches[2]',
+        'top'
+    );
+    add_rewrite_rule(
+        'video-huong-dan/([^/]+)/?$',
+        'index.php?pagename=video-huong-dan&vhd_category=$matches[1]',
+        'top'
+    );
+});
+
+add_filter('query_vars', function ($vars) {
+    $vars[] = 'vhd_category';
+    $vars[] = 'vhd_video';
+    return $vars;
+});
+
 add_action('init', function () {
     register_extended_post_type('lab_logo', [
         'show_in_feed' => true,

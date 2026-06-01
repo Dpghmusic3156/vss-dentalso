@@ -2,128 +2,175 @@
 
 @section('content')
 
-{{-- Hero --}}
-<section class="apple-section apple-hero bg-white">
-    <div class="apple-container text-center">
+@php
+$videos = \App\dentalso_get_youtube_videos();
+
+// Đọc URL params
+$active_category = get_query_var('vhd_category', '');
+$active_video_slug = get_query_var('vhd_video', '');
+
+// Trang gốc video-huong-dan
+$base_url = home_url('video-huong-dan');
+
+// Định nghĩa danh mục
+$categories = [
+    'gioi-thieu' => [
+        'title' => 'Giới thiệu',
+        'desc' => 'Tổng quan về DentalSO và các phiên bản phần mềm quản lý Labo nha khoa.',
+        'icon' => 'play_circle',
+        'color' => '#3b82f6',
+        'bg' => '#eff6ff',
+    ],
+    'phien-ban-linh-hoat' => [
+        'title' => 'Phiên bản linh hoạt',
+        'desc' => 'Hướng dẫn sử dụng phiên bản DentalSO linh hoạt cho Labo mọi quy mô.',
+        'icon' => 'devices',
+        'color' => '#06b6d4',
+        'bg' => '#ecfeff',
+    ],
+    'don-hang' => [
+        'title' => 'Đơn hàng & Sản xuất',
+        'desc' => 'Quản lý đơn hàng, theo dõi sản xuất và cập nhật công đoạn.',
+        'icon' => 'inventory_2',
+        'color' => '#10b981',
+        'bg' => '#ecfdf5',
+    ],
+    'hoa-don' => [
+        'title' => 'Hóa đơn & Công nợ',
+        'desc' => 'Xuất hóa đơn, quản lý công nợ và thiết lập chiết khấu.',
+        'icon' => 'receipt_long',
+        'color' => '#f59e0b',
+        'bg' => '#fffbeb',
+    ],
+    'bao-hanh' => [
+        'title' => 'Bảo hành',
+        'desc' => 'Tạo mẫu thẻ bảo hành điện tử và in thẻ bảo hành QR Code.',
+        'icon' => 'verified_user',
+        'color' => '#8b5cf6',
+        'bg' => '#f5f3ff',
+    ],
+    'quan-ly-chung' => [
+        'title' => 'Quản lý chung',
+        'desc' => 'Quản lý nha khoa, bảng giá, người dùng và phân quyền hệ thống.',
+        'icon' => 'settings',
+        'color' => '#6b7280',
+        'bg' => '#f9fafb',
+    ],
+];
+
+// Đếm video theo danh mục + tạo slug map
+$category_counts = [];
+$video_slugs = []; // slug => video data
+foreach ($videos as &$v) {
+    $cat = $v['category'] ?? 'quan-ly-chung';
+    $category_counts[$cat] = ($category_counts[$cat] ?? 0) + 1;
+    $slug = \App\dentalso_vn_slug($v['title']);
+    $v['slug'] = $slug;
+    $v['url'] = $base_url . '/' . $cat . '/' . $slug . '/';
+    $video_slugs[$slug] = $v;
+}
+unset($v);
+
+// Tìm video đang active (nếu có)
+$active_video = null;
+$is_category_view = !empty($active_category) && isset($categories[$active_category]);
+$is_video_view = $is_category_view && !empty($active_video_slug) && isset($video_slugs[$active_video_slug]);
+if ($is_video_view) {
+    $active_video = $video_slugs[$active_video_slug];
+}
+@endphp
+
+@if(!$is_category_view)
+{{-- ============ TRANG CHÍNH: CATEGORY CARDS ============ --}}
+
+<section class="vhd-hero">
+    <div class="apple-container">
         <div class="fade-in-up">
-            <span class="apple-eyebrow">Tài liệu</span>
-            <h1 class="apple-headline mb-6">Video Hướng Dẫn</h1>
-            <p class="apple-hero-copy">
-                Tổng hợp các video hướng dẫn sử dụng DentalSO — từ cài đặt ban đầu đến vận hành nâng cao.
-            </p>
-            
+            <h1 class="vhd-hero__title">Video Hướng Dẫn</h1>
+            <p class="vhd-hero__subtitle">Tổng hợp các video hướng dẫn sử dụng DentalSO — từ cài đặt ban đầu đến vận hành nâng cao.</p>
         </div>
     </div>
 </section>
 
-{{-- Category Filter --}}
-<section class="apple-section--sm bg-[#f5f5f7]" id="video-list">
+<section class="vhd-categories">
     <div class="apple-container">
-        <div class="text-center mb-10 fade-in-up">
-            <span class="apple-eyebrow">Danh mục</span>
-            <h2 class="apple-headline-sm">Chọn chủ đề bạn quan tâm</h2>
+        <div class="vhd-categories__grid">
+            @foreach($categories as $slug => $cat)
+            @if(($category_counts[$slug] ?? 0) > 0)
+            <a href="{{ $base_url }}/{{ $slug }}/" class="vhd-cat-card fade-in-up">
+                <div class="vhd-cat-card__visual" style="background: {{ $cat['bg'] }};">
+                    <div class="vhd-cat-card__decor" style="background: {{ $cat['color'] }}20;"></div>
+                    <div class="vhd-cat-card__icon-wrap" style="background: {{ $cat['color'] }};">
+                        <span class="material-symbols-outlined">{{ $cat['icon'] }}</span>
+                    </div>
+                    <span class="vhd-cat-card__count" style="color: {{ $cat['color'] }};">{{ $category_counts[$slug] ?? 0 }} video</span>
+                </div>
+                <div class="vhd-cat-card__body">
+                    <h3 class="vhd-cat-card__title">{{ $cat['title'] }}</h3>
+                    <p class="vhd-cat-card__desc">{{ $cat['desc'] }}</p>
+                </div>
+            </a>
+            @endif
+            @endforeach
         </div>
-        <div class="flex flex-wrap justify-center gap-3 mb-12 fade-in-up" id="video-filters">
-            <button class="video-filter-btn active" data-filter="all">Tất cả</button>
-            <button class="video-filter-btn" data-filter="gioi-thieu">Giới thiệu</button>
-            <button class="video-filter-btn" data-filter="phien-ban-linh-hoat">Phiên bản linh hoạt</button>
-            <button class="video-filter-btn" data-filter="don-hang">Đơn hàng & Sản xuất</button>
-            <button class="video-filter-btn" data-filter="hoa-don">Hóa đơn & Công nợ</button>
-            <button class="video-filter-btn" data-filter="bao-hanh">Bảo hành</button>
-            <button class="video-filter-btn" data-filter="quan-ly-chung">Quản lý chung</button>
+    </div>
+</section>
+
+@else
+{{-- ============ TRANG DANH MỤC: VIDEO LIST ============ --}}
+
+@php $cat_info = $categories[$active_category]; @endphp
+
+<section class="vhd-videos">
+    <div class="apple-container">
+        <div class="vhd-videos__header fade-in-up">
+            <a href="{{ $base_url }}/" class="vhd-back-btn">
+                <span class="material-symbols-outlined">arrow_back</span>
+                Tất cả danh mục
+            </a>
+            <div class="vhd-videos__title-row">
+                <div class="vhd-videos__icon" style="background: {{ $cat_info['color'] }};">
+                    <span class="material-symbols-outlined">{{ $cat_info['icon'] }}</span>
+                </div>
+                <div>
+                    <h1 class="vhd-videos__title">{{ $cat_info['title'] }}</h1>
+                    <p class="vhd-videos__count">{{ $category_counts[$active_category] ?? 0 }} video</p>
+                </div>
+            </div>
         </div>
 
-        @php
-        $videos = \App\dentalso_get_youtube_videos();
-        @endphp
-
-        {{-- Video Grid --}}
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="video-grid">
+        <div class="vhd-videos__grid">
             @foreach($videos as $index => $video)
-            <div class="video-card fade-in-up group" data-category="{{ $video['category'] }}" style="animation-delay: {{ ($index % 6) * 0.08 }}s;">
-                <div class="relative rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
-                    {{-- Thumbnail with play overlay --}}
-                    <div class="video-thumb relative cursor-pointer aspect-video overflow-hidden" data-video-id="{{ $video['id'] }}">
+            @if($video['category'] === $active_category)
+            <div class="vhd-video-card fade-in-up">
+                <a href="{{ $video['url'] }}" class="vhd-video-card__inner" data-video-id="{{ $video['id'] }}">
+                    <div class="vhd-video-card__thumb">
                         <img
                             src="https://img.youtube.com/vi/{{ $video['id'] }}/hqdefault.jpg"
                             alt="{{ $video['title'] }}"
-                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
                             loading="lazy"
                         >
-                        <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors duration-300 flex items-center justify-center">
-                            <div class="w-16 h-16 rounded-full bg-red-600 shadow-lg flex items-center justify-center transform group-hover:scale-110 transition-transform duration-300">
-                                <svg class="w-7 h-7 text-white ml-1" viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>
-                            </div>
-                        </div>
-                        @if(!empty($video['duration']))
-                        <span class="absolute bottom-2 right-2 bg-black/80 text-white text-xs font-medium px-2 py-0.5 rounded">{{ $video['duration'] }}</span>
-                        @endif
-                    </div>
-                    {{-- Info --}}
-                    <div class="p-5">
-                        <h3 class="font-semibold text-[#1d1d1f] text-base leading-snug mb-2 line-clamp-2 group-hover:text-[#0071e3] transition-colors">{{ $video['title'] }}</h3>
-                        <p class="text-[#86868b] text-sm leading-relaxed line-clamp-2">{{ $video['desc'] }}</p>
-                        <div class="mt-3 flex items-center gap-2">
-                            <span class="inline-block text-xs font-medium px-2.5 py-1 rounded-full
-                                @switch($video['category'])
-                                    @case('gioi-thieu') bg-blue-50 text-blue-600 @break
-                                    @case('phien-ban-linh-hoat') bg-cyan-50 text-cyan-600 @break
-                                    @case('don-hang') bg-emerald-50 text-emerald-600 @break
-                                    @case('hoa-don') bg-amber-50 text-amber-600 @break
-                                    @case('bao-hanh') bg-purple-50 text-purple-600 @break
-                                    @default bg-gray-100 text-gray-600
-                                @endswitch
-                            ">
-                                @switch($video['category'])
-                                    @case('gioi-thieu') Giới thiệu @break
-                                    @case('phien-ban-linh-hoat') Phiên bản linh hoạt @break
-                                    @case('don-hang') Đơn hàng & Sản xuất @break
-                                    @case('hoa-don') Hóa đơn & Công nợ @break
-                                    @case('bao-hanh') Bảo hành @break
-                                    @default Quản lý chung @break
-                                @endswitch
-                            </span>
+                        <div class="vhd-video-card__play">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>
                         </div>
                     </div>
-                </div>
+                    <div class="vhd-video-card__info">
+                        <h3 class="vhd-video-card__title">{{ $video['title'] }}</h3>
+                        <p class="vhd-video-card__desc">{{ $video['desc'] }}</p>
+                        <span class="vhd-video-card__link">
+                            <span class="material-symbols-outlined">link</span>
+                            Sao chép link
+                        </span>
+                    </div>
+                </a>
             </div>
+            @endif
             @endforeach
         </div>
-
-        {{-- Empty state --}}
-        <div class="hidden text-center py-16" id="no-videos">
-            <span class="material-symbols-outlined text-6xl text-[#d2d2d7] mb-4">videocam_off</span>
-            <p class="text-[#86868b] text-lg">Không có video nào trong danh mục này.</p>
-        </div>
     </div>
 </section>
 
-{{-- YouTube Channel CTA --}}
-{{--
-<section class="apple-section bg-white">
-    <div class="apple-container">
-        <div class="max-w-4xl mx-auto fade-in-up">
-            <div class="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#1d1d1f] to-[#2d2d30] p-10 md:p-16 text-center">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-red-600/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2"></div>
-                <div class="absolute bottom-0 left-0 w-48 h-48 bg-blue-600/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2"></div>
-
-                <div class="relative z-10">
-                    <div class="inline-flex items-center gap-2 bg-red-600 text-white text-sm font-semibold px-4 py-2 rounded-full mb-6">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg>
-                        DentalSO Vietnam
-                    </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Xem thêm video<br>trên kênh DentalSO</h2>
-                    <p class="text-white/60 text-lg mb-8 max-w-lg mx-auto">Đăng ký kênh để nhận thông báo khi có video hướng dẫn mới. Cập nhật liên tục các tính năng và mẹo sử dụng.</p>
-                    <a href="https://www.youtube.com/@DentalSO?sub_confirmation=1" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-semibold px-8 py-3.5 rounded-full transition-colors duration-300 shadow-lg shadow-red-600/25">
-                        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814z"/><polygon fill="#fff" points="9.545,15.568 15.818,12 9.545,8.432"/></svg>
-                        Đăng ký kênh ngay
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
---}}
+@endif
 
 {{-- CTA --}}
 <section class="apple-section apple-section--cta">
@@ -140,121 +187,391 @@
 </section>
 
 {{-- Video Modal --}}
-<div id="video-modal" class="fixed inset-0 z-[9999] hidden items-center justify-center p-4 bg-black/80 backdrop-blur-sm" style="display:none;">
-    <div class="relative w-full max-w-4xl mx-auto">
-        <button id="modal-close" class="absolute -top-12 right-0 text-white/80 hover:text-white transition-colors">
-            <span class="material-symbols-outlined text-3xl">close</span>
+<div id="video-modal" class="vhd-modal" style="display:none;">
+    <div class="vhd-modal__backdrop"></div>
+    <div class="vhd-modal__content">
+        <button class="vhd-modal__close" id="modal-close">
+            <span class="material-symbols-outlined">close</span>
         </button>
-        <div class="relative rounded-2xl overflow-hidden bg-black shadow-2xl aspect-video">
-            <iframe id="modal-iframe" class="absolute inset-0 w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <div class="vhd-modal__player">
+            <iframe id="modal-iframe" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </div>
 
+{{-- Copy toast --}}
+<div id="copy-toast" class="vhd-toast">Link đã được sao chép!</div>
+
 <style>
-    /* Filter buttons */
-    .video-filter-btn {
-        padding: 0.5rem 1.25rem;
-        border-radius: 9999px;
-        font-size: 0.875rem;
-        font-weight: 500;
-        color: #86868b;
-        background: white;
-        border: 1px solid #e5e5ea;
-        cursor: pointer;
-        transition: all 0.25s ease;
-    }
-    .video-filter-btn:hover {
-        color: #1d1d1f;
-        border-color: #d1d1d6;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .video-filter-btn.active {
-        background: #1d1d1f;
-        color: white;
-        border-color: #1d1d1f;
-    }
+/* ===========================
+   VIDEO HUONG DAN - REDESIGN
+   =========================== */
 
-    /* Video card show/hide */
-    .video-card {
-        transition: opacity 0.35s ease, transform 0.35s ease;
-    }
-    .video-card.is-hidden {
-        display: none;
-    }
+/* Hero */
+.vhd-hero {
+    padding: 80px 0 40px;
+    background: #fff;
+}
+.vhd-hero__title {
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    color: #1d1d1f;
+    letter-spacing: -0.02em;
+    margin-bottom: 12px;
+}
+.vhd-hero__subtitle {
+    font-size: 1.125rem;
+    color: #86868b;
+    max-width: 560px;
+    line-height: 1.6;
+}
 
-    /* line-clamp */
-    .line-clamp-2 {
-        display: -webkit-box;
-        -webkit-line-clamp: 2;
-        -webkit-box-orient: vertical;
-        overflow: hidden;
-    }
+/* Category Cards Grid */
+.vhd-categories {
+    padding: 20px 0 80px;
+    background: #fff;
+}
+.vhd-categories__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media (max-width: 960px) {
+    .vhd-categories__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .vhd-categories__grid { grid-template-columns: 1fr; }
+}
 
-    /* Fade in animation */
-    .fade-in-up {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.7s ease, transform 0.7s ease;
-    }
-    .fade-in-up.is-visible {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* Category Card */
+.vhd-cat-card {
+    display: block;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+.vhd-cat-card:hover {
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transform: translateY(-3px);
+}
+.vhd-cat-card__visual {
+    position: relative;
+    padding: 32px 28px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 140px;
+    overflow: hidden;
+}
+.vhd-cat-card__decor {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    top: -30px;
+    right: -20px;
+}
+.vhd-cat-card__icon-wrap {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.vhd-cat-card__icon-wrap .material-symbols-outlined { font-size: 28px; }
+.vhd-cat-card__count {
+    font-size: 0.8rem;
+    font-weight: 600;
+    position: relative;
+    z-index: 1;
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #fff;
+}
+.vhd-cat-card__body { padding: 20px 24px 24px; }
+.vhd-cat-card__title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+}
+.vhd-cat-card__desc {
+    font-size: 0.875rem;
+    color: #86868b;
+    line-height: 1.55;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Videos Section */
+.vhd-videos {
+    padding: 40px 0 80px;
+    background: #fff;
+    min-height: 50vh;
+}
+.vhd-videos__header { margin-bottom: 40px; }
+.vhd-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #0071e3;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: opacity 0.2s;
+    text-decoration: none;
+}
+.vhd-back-btn:hover { opacity: 0.7; }
+.vhd-back-btn .material-symbols-outlined { font-size: 20px; }
+.vhd-videos__title-row {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.vhd-videos__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-shrink: 0;
+}
+.vhd-videos__icon .material-symbols-outlined { font-size: 26px; }
+.vhd-videos__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1d1d1f;
+}
+.vhd-videos__count {
+    font-size: 0.875rem;
+    color: #86868b;
+    margin-top: 2px;
+}
+
+/* Video Grid */
+.vhd-videos__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media (max-width: 960px) {
+    .vhd-videos__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .vhd-videos__grid { grid-template-columns: 1fr; }
+}
+
+/* Video Card */
+.vhd-video-card__inner {
+    display: block;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #f0f0f0;
+    text-decoration: none;
+    transition: box-shadow 0.3s ease, transform 0.25s ease;
+}
+.vhd-video-card__inner:hover {
+    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
+    transform: translateY(-2px);
+}
+.vhd-video-card__thumb {
+    position: relative;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+}
+.vhd-video-card__thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+.vhd-video-card__inner:hover .vhd-video-card__thumb img {
+    transform: scale(1.05);
+}
+.vhd-video-card__play {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.15);
+    transition: background 0.3s;
+}
+.vhd-video-card__inner:hover .vhd-video-card__play {
+    background: rgba(0,0,0,0.35);
+}
+.vhd-video-card__play svg {
+    width: 28px;
+    height: 28px;
+    color: #fff;
+    padding: 14px;
+    background: rgba(0,0,0,0.6);
+    border-radius: 50%;
+    box-sizing: content-box;
+    transition: transform 0.3s, background 0.3s;
+}
+.vhd-video-card__inner:hover .vhd-video-card__play svg {
+    transform: scale(1.1);
+    background: #e00;
+}
+.vhd-video-card__info { padding: 16px 18px 20px; }
+.vhd-video-card__title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.4;
+}
+.vhd-video-card__desc {
+    font-size: 0.8rem;
+    color: #86868b;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.vhd-video-card__link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 10px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: #0071e3;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+.vhd-video-card__link:hover { opacity: 0.7; }
+.vhd-video-card__link .material-symbols-outlined { font-size: 16px; }
+
+/* Modal */
+.vhd-modal {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px;
+}
+.vhd-modal__backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+.vhd-modal__content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+.vhd-modal__close {
+    position: absolute;
+    top: -48px;
+    right: 0;
+    color: rgba(255,255,255,0.7);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+    transition: color 0.2s;
+}
+.vhd-modal__close:hover { color: #fff; }
+.vhd-modal__close .material-symbols-outlined { font-size: 32px; }
+.vhd-modal__player {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #000;
+    aspect-ratio: 16/9;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.vhd-modal__player iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Toast */
+.vhd-toast {
+    position: fixed;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%) translateY(80px);
+    background: #1d1d1f;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 12px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    z-index: 10000;
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    pointer-events: none;
+}
+.vhd-toast.is-visible {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+/* Animations */
+.fade-in-up {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-    // Intersection Observer for fade-in
+    // Intersection Observer
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('is-visible');
-                observer.unobserve(entry.target);
-            }
+        entries.forEach(e => {
+            if (e.isIntersecting) { e.target.classList.add('is-visible'); observer.unobserve(e.target); }
         });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
     document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
-
-    // Category filter
-    const filterBtns = document.querySelectorAll('.video-filter-btn');
-    const videoCards = document.querySelectorAll('.video-card');
-    const noVideos = document.getElementById('no-videos');
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            const filter = btn.dataset.filter;
-
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
-
-            let visibleCount = 0;
-            videoCards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.classList.remove('is-hidden');
-                    visibleCount++;
-                } else {
-                    card.classList.add('is-hidden');
-                }
-            });
-
-            noVideos.style.display = visibleCount === 0 ? 'block' : 'none';
-        });
-    });
 
     // Video modal
     const modal = document.getElementById('video-modal');
     const modalIframe = document.getElementById('modal-iframe');
     const modalClose = document.getElementById('modal-close');
+    const toast = document.getElementById('copy-toast');
 
-    document.querySelectorAll('.video-thumb').forEach(thumb => {
-        thumb.addEventListener('click', () => {
-            const videoId = thumb.dataset.videoId;
-            modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-            modal.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        });
-    });
+    function openModal(videoId) {
+        modalIframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+        modal.style.display = 'flex';
+        document.body.style.overflow = 'hidden';
+    }
 
     function closeModal() {
         modal.style.display = 'none';
@@ -262,13 +579,43 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    modalClose.addEventListener('click', closeModal);
-    modal.addEventListener('click', (e) => {
-        if (e.target === modal) closeModal();
+    // Video card click: play video, copy link
+    document.querySelectorAll('.vhd-video-card__inner').forEach(card => {
+        // Click thumbnail → open modal
+        const thumb = card.querySelector('.vhd-video-card__thumb');
+        if (thumb) {
+            thumb.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                openModal(card.dataset.videoId);
+            });
+        }
+
+        // Click "Sao chép link"
+        const linkBtn = card.querySelector('.vhd-video-card__link');
+        if (linkBtn) {
+            linkBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                const url = card.getAttribute('href');
+                navigator.clipboard.writeText(window.location.origin + url).then(() => {
+                    toast.classList.add('is-visible');
+                    setTimeout(() => toast.classList.remove('is-visible'), 2000);
+                });
+            });
+        }
     });
-    document.addEventListener('keydown', (e) => {
-        if (e.key === 'Escape') closeModal();
-    });
+
+    // Auto-open video if URL has video slug
+    @if($is_video_view && $active_video)
+    openModal('{{ $active_video['id'] }}');
+    @endif
+
+    // Modal close
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    const backdrop = document.querySelector('.vhd-modal__backdrop');
+    if (backdrop) backdrop.addEventListener('click', closeModal);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeModal(); });
 });
 </script>
 
