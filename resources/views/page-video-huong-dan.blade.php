@@ -3,7 +3,12 @@
 @section('content')
 
 @php
-$videos = \App\dentalso_get_youtube_videos();
+$all_videos = \App\vhd_get_videos_with_overrides();
+$hidden_ids = \App\vhd_get_hidden_videos();
+
+// Lọc bỏ video bị ẩn
+$videos = array_filter($all_videos, fn($v) => !($v['hidden'] ?? false));
+$videos = array_values($videos);
 
 // Đọc URL params
 $active_category = get_query_var('vhd_category', '');
@@ -12,57 +17,17 @@ $active_video_slug = get_query_var('vhd_video', '');
 // Trang gốc video-huong-dan
 $base_url = home_url('video-huong-dan');
 
-// Định nghĩa danh mục
-$categories = [
-    'gioi-thieu' => [
-        'title' => 'Giới thiệu',
-        'desc' => 'Tổng quan về DentalSO và các phiên bản phần mềm quản lý Labo nha khoa.',
-        'icon' => 'play_circle',
-        'color' => '#3b82f6',
-        'bg' => '#eff6ff',
-    ],
-    'phien-ban-linh-hoat' => [
-        'title' => 'Phiên bản linh hoạt',
-        'desc' => 'Hướng dẫn sử dụng phiên bản DentalSO linh hoạt cho Labo mọi quy mô.',
-        'icon' => 'devices',
-        'color' => '#06b6d4',
-        'bg' => '#ecfeff',
-    ],
-    'don-hang' => [
-        'title' => 'Đơn hàng & Sản xuất',
-        'desc' => 'Quản lý đơn hàng, theo dõi sản xuất và cập nhật công đoạn.',
-        'icon' => 'inventory_2',
-        'color' => '#10b981',
-        'bg' => '#ecfdf5',
-    ],
-    'hoa-don' => [
-        'title' => 'Hóa đơn & Công nợ',
-        'desc' => 'Xuất hóa đơn, quản lý công nợ và thiết lập chiết khấu.',
-        'icon' => 'receipt_long',
-        'color' => '#f59e0b',
-        'bg' => '#fffbeb',
-    ],
-    'bao-hanh' => [
-        'title' => 'Bảo hành',
-        'desc' => 'Tạo mẫu thẻ bảo hành điện tử và in thẻ bảo hành QR Code.',
-        'icon' => 'verified_user',
-        'color' => '#8b5cf6',
-        'bg' => '#f5f3ff',
-    ],
-    'quan-ly-chung' => [
-        'title' => 'Quản lý chung',
-        'desc' => 'Quản lý nha khoa, bảng giá, người dùng và phân quyền hệ thống.',
-        'icon' => 'settings',
-        'color' => '#6b7280',
-        'bg' => '#f9fafb',
-    ],
-];
+// Lấy danh mục từ admin (chỉ hiện các danh mục visible)
+$all_categories = \App\vhd_get_categories();
+$categories = array_filter($all_categories, fn($c) => ($c['visible'] ?? true));
+uasort($categories, fn($a,$b) => ($a['order']??0) - ($b['order']??0));
 
 // Đếm video theo danh mục + tạo slug map
 $category_counts = [];
-$video_slugs = []; // slug => video data
+$video_slugs = [];
 foreach ($videos as &$v) {
     $cat = $v['category'] ?? 'quan-ly-chung';
+    if (!isset($categories[$cat])) continue; // Bỏ video thuộc danh mục bị ẩn
     $category_counts[$cat] = ($category_counts[$cat] ?? 0) + 1;
     $slug = \App\dentalso_vn_slug($v['title']);
     $v['slug'] = $slug;

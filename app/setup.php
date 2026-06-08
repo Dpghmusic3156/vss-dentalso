@@ -6,6 +6,8 @@
 
 namespace App;
 
+require_once __DIR__ . '/admin-video-huong-dan.php';
+
 use function Roots\bundle;
 use WP_REST_Request;
 use \WP_Query;
