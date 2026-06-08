@@ -162,8 +162,8 @@ function vhd_admin_page()
                 <?php
                 uasort($categories, fn($a,$b) => ($a['order']??0) - ($b['order']??0));
                 foreach ($categories as $slug => $cat): ?>
-                <tr data-slug="<?= esc_attr($slug) ?>">
-                    <td style="color:#999;cursor:grab">☰</td>
+                <tr data-slug="<?= esc_attr($slug) ?>" draggable="true">
+                    <td class="vhd-drag-handle" style="color:#999;cursor:grab;user-select:none">☰</td>
                     <td><strong><?= esc_html($cat['title']) ?></strong></td>
                     <td><code><?= esc_html($slug) ?></code></td>
                     <td><?= esc_html($cat['desc'] ?? '') ?></td>
@@ -263,6 +263,10 @@ function vhd_admin_page()
     .vhd-toggle input:checked + .vhd-toggle-slider { background:#0071e3 }
     .vhd-toggle input:checked + .vhd-toggle-slider:before { transform:translateX(18px) }
     .vhd-hidden-row { opacity:.45 }
+    #cat-table tbody tr[draggable] { transition:opacity .2s }
+    #cat-table tbody tr.vhd-dragging { opacity:.4;background:#f0f6fc }
+    #cat-table tbody tr.vhd-drag-over td { border-top:2px solid #0071e3 }
+    .vhd-drag-handle { user-select:none;-webkit-user-select:none }
     #cat-modal .vhd-modal-bg { position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99999 }
     #cat-modal .vhd-modal-box { position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;padding:24px 32px;border-radius:12px;z-index:100000;width:560px;max-width:90vw;max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3) }
     </style>
@@ -405,6 +409,57 @@ function vhd_admin_page()
             location.reload();
         });
     }
+
+    // Drag & drop reorder
+    (function(){
+        const tbody = document.querySelector('#cat-table tbody');
+        if (!tbody) return;
+        let dragRow = null;
+
+        tbody.addEventListener('dragstart', e => {
+            const row = e.target.closest('tr');
+            if (!row) return;
+            dragRow = row;
+            row.classList.add('vhd-dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', row.dataset.slug);
+        });
+
+        tbody.addEventListener('dragend', e => {
+            if (dragRow) dragRow.classList.remove('vhd-dragging');
+            tbody.querySelectorAll('tr').forEach(r => r.classList.remove('vhd-drag-over'));
+            dragRow = null;
+        });
+
+        tbody.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            const row = e.target.closest('tr');
+            tbody.querySelectorAll('tr').forEach(r => r.classList.remove('vhd-drag-over'));
+            if (row && row !== dragRow) row.classList.add('vhd-drag-over');
+        });
+
+        tbody.addEventListener('drop', e => {
+            e.preventDefault();
+            const target = e.target.closest('tr');
+            if (!target || !dragRow || target === dragRow) return;
+            // Insert before or after
+            const rows = [...tbody.querySelectorAll('tr')];
+            const dragIdx = rows.indexOf(dragRow);
+            const targetIdx = rows.indexOf(target);
+            if (dragIdx < targetIdx) {
+                target.after(dragRow);
+            } else {
+                target.before(dragRow);
+            }
+            // Save new order
+            tbody.querySelectorAll('tr').forEach((r, i) => {
+                const slug = r.dataset.slug;
+                if (VHD.cats[slug]) VHD.cats[slug].order = i;
+            });
+            vhdAjax('vhd_save_categories', {categories: JSON.stringify(VHD.cats)});
+        });
+    })();
     </script>
     <?php
 }
