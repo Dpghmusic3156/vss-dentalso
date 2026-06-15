@@ -45,12 +45,19 @@ function vhd_get_video_overrides()
     return get_option('dentalso_vhd_video_overrides', []);
 }
 
+// Get video order
+function vhd_get_video_order()
+{
+    return get_option('dentalso_vhd_video_order', []);
+}
+
 // Get videos with overrides applied
 function vhd_get_videos_with_overrides()
 {
     $videos = dentalso_get_youtube_videos();
     $overrides = vhd_get_video_overrides();
     $hidden = vhd_get_hidden_videos();
+    $order = vhd_get_video_order();
 
     foreach ($videos as &$v) {
         $vid = $v['id'];
@@ -58,7 +65,11 @@ function vhd_get_videos_with_overrides()
         if (isset($overrides[$vid]['category'])) {
             $v['category'] = $overrides[$vid]['category'];
         }
+        $v['order'] = $order[$vid] ?? 999;
     }
+
+    // Sort by order
+    usort($videos, fn($a, $b) => ($a['order'] ?? 999) - ($b['order'] ?? 999));
     return $videos;
 }
 
@@ -104,6 +115,15 @@ add_action('wp_ajax_vhd_delete_category', function () {
     $cats = vhd_get_categories();
     unset($cats[$slug]);
     update_option('dentalso_vhd_categories', $cats);
+    wp_send_json_success();
+});
+
+// AJAX: Save video order
+add_action('wp_ajax_vhd_save_video_order', function () {
+    check_ajax_referer('vhd_admin_nonce');
+    if (!current_user_can('manage_options')) wp_die('Forbidden');
+    $order = json_decode(stripslashes($_POST['order'] ?? '{}'), true);
+    if ($order !== null) update_option('dentalso_vhd_video_order', $order);
     wp_send_json_success();
 });
 
@@ -199,6 +219,7 @@ function vhd_admin_page()
             </div>
             <table class="wp-list-table widefat fixed striped" id="video-table">
                 <thead><tr>
+                    <th style="width:30px"></th>
                     <th style="width:120px">Thumbnail</th>
                     <th>Tiêu đề</th>
                     <th style="width:180px">Danh mục</th>
@@ -206,7 +227,8 @@ function vhd_admin_page()
                 </tr></thead>
                 <tbody>
                 <?php foreach ($videos as $v): ?>
-                <tr data-id="<?= esc_attr($v['id']) ?>" data-cat="<?= esc_attr($v['category']) ?>" class="<?= $v['hidden'] ? 'vhd-hidden-row' : '' ?>">
+                <tr data-id="<?= esc_attr($v['id']) ?>" data-cat="<?= esc_attr($v['category']) ?>" class="<?= $v['hidden'] ? 'vhd-hidden-row' : '' ?>" draggable="true">
+                    <td class="vhd-drag-handle" style="color:#999;cursor:grab;user-select:none">☰</td>
                     <td><img src="https://img.youtube.com/vi/<?= esc_attr($v['id']) ?>/default.jpg" style="width:100%;border-radius:4px"></td>
                     <td>
                         <strong><?= esc_html($v['title']) ?></strong>
@@ -266,6 +288,9 @@ function vhd_admin_page()
     #cat-table tbody tr[draggable] { transition:opacity .2s }
     #cat-table tbody tr.vhd-dragging { opacity:.4;background:#f0f6fc }
     #cat-table tbody tr.vhd-drag-over td { border-top:2px solid #0071e3 }
+    #video-table tbody tr[draggable] { transition:opacity .2s }
+    #video-table tbody tr.vhd-dragging { opacity:.4;background:#f0f6fc }
+    #video-table tbody tr.vhd-drag-over td { border-top:2px solid #0071e3 }
     .vhd-drag-handle { user-select:none;-webkit-user-select:none }
     #cat-modal .vhd-modal-bg { position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:99999 }
     #cat-modal .vhd-modal-box { position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#fff;padding:24px 32px;border-radius:12px;z-index:100000;width:560px;max-width:90vw;max-height:80vh;overflow-y:auto;box-shadow:0 20px 60px rgba(0,0,0,.3) }
@@ -458,6 +483,56 @@ function vhd_admin_page()
                 if (VHD.cats[slug]) VHD.cats[slug].order = i;
             });
             vhdAjax('vhd_save_categories', {categories: JSON.stringify(VHD.cats)});
+        });
+    })();
+
+    // Drag & drop reorder videos
+    (function(){
+        const tbody = document.querySelector('#video-table tbody');
+        if (!tbody) return;
+        let dragRow = null;
+
+        tbody.addEventListener('dragstart', e => {
+            const row = e.target.closest('tr');
+            if (!row) return;
+            dragRow = row;
+            row.classList.add('vhd-dragging');
+            e.dataTransfer.effectAllowed = 'move';
+            e.dataTransfer.setData('text/plain', row.dataset.id);
+        });
+
+        tbody.addEventListener('dragend', e => {
+            if (dragRow) dragRow.classList.remove('vhd-dragging');
+            tbody.querySelectorAll('tr').forEach(r => r.classList.remove('vhd-drag-over'));
+            dragRow = null;
+        });
+
+        tbody.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            const row = e.target.closest('tr');
+            tbody.querySelectorAll('tr').forEach(r => r.classList.remove('vhd-drag-over'));
+            if (row && row !== dragRow) row.classList.add('vhd-drag-over');
+        });
+
+        tbody.addEventListener('drop', e => {
+            e.preventDefault();
+            const target = e.target.closest('tr');
+            if (!target || !dragRow || target === dragRow) return;
+            const rows = [...tbody.querySelectorAll('tr')];
+            const dragIdx = rows.indexOf(dragRow);
+            const targetIdx = rows.indexOf(target);
+            if (dragIdx < targetIdx) {
+                target.after(dragRow);
+            } else {
+                target.before(dragRow);
+            }
+            // Save order for visible rows
+            const order = {};
+            tbody.querySelectorAll('tr').forEach((r, i) => {
+                if (r.dataset.id) order[r.dataset.id] = i;
+            });
+            vhdAjax('vhd_save_video_order', {order: JSON.stringify(order)});
         });
     })();
     </script>
