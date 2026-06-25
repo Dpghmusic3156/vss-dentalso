@@ -104,31 +104,25 @@ if ($is_video_view) {
             </div>
         </div>
 
-        <div class="vhd-videos__grid">
+        <div class="vhd-videos__list">
             @foreach($videos as $index => $video)
             @if($video['category'] === $active_category)
-            <div class="vhd-video-card fade-in-up">
-                <a href="{{ $video['url'] }}" class="vhd-video-card__inner" data-video-id="{{ $video['id'] }}">
-                    <div class="vhd-video-card__thumb">
-                        <img
-                            src="https://img.youtube.com/vi/{{ $video['id'] }}/hqdefault.jpg"
-                            alt="{{ $video['title'] }}"
-                            loading="lazy"
-                        >
-                        <div class="vhd-video-card__play">
-                            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>
-                        </div>
+            <a href="{{ $video['url'] }}" class="vhd-video-item fade-in-up" data-video-id="{{ $video['id'] }}">
+                <div class="vhd-video-item__thumb">
+                    <img src="https://img.youtube.com/vi/{{ $video['id'] }}/hqdefault.jpg" alt="{{ $video['title'] }}" loading="lazy">
+                    <div class="vhd-video-item__play">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="8,5 19,12 8,19"/></svg>
                     </div>
-                    <div class="vhd-video-card__info">
-                        <h3 class="vhd-video-card__title">{{ $video['title'] }}</h3>
-                        <p class="vhd-video-card__desc">{{ $video['desc'] }}</p>
-                        <span class="vhd-video-card__link">
-                            <span class="material-symbols-outlined">link</span>
-                            Sao chép link
-                        </span>
-                    </div>
-                </a>
-            </div>
+                </div>
+                <div class="vhd-video-item__info">
+                    <h3 class="vhd-video-item__title">{{ $video['title'] }}</h3>
+                    <p class="vhd-video-item__desc">{{ $video['desc'] }}</p>
+                    <span class="vhd-video-item__link">
+                        <span class="material-symbols-outlined">link</span>
+                        Sao chép link
+                    </span>
+                </div>
+            </a>
             @endif
             @endforeach
         </div>
@@ -330,107 +324,112 @@ if ($is_video_view) {
     margin-top: 2px;
 }
 
-/* Video Grid */
-.vhd-videos__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-@media (max-width: 960px) {
-    .vhd-videos__grid { grid-template-columns: repeat(2, 1fr); }
-}
-@media (max-width: 600px) {
-    .vhd-videos__grid { grid-template-columns: 1fr; }
-}
-
-/* Video Card */
-.vhd-video-card__inner {
-    display: block;
+/* Video List */
+.vhd-videos__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1px;
+    background: #f0f0f0;
     border-radius: 14px;
     overflow: hidden;
-    background: #fff;
     border: 1px solid #f0f0f0;
+}
+
+/* Video List Item */
+.vhd-video-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 16px 20px;
+    background: #fff;
     text-decoration: none;
-    transition: box-shadow 0.3s ease, transform 0.25s ease;
+    transition: background 0.2s;
 }
-.vhd-video-card__inner:hover {
-    box-shadow: 0 6px 24px rgba(0,0,0,0.08);
-    transform: translateY(-2px);
+.vhd-video-item:hover {
+    background: #f9f9fb;
 }
-.vhd-video-card__thumb {
+.vhd-video-item__thumb {
     position: relative;
+    width: 180px;
+    min-width: 180px;
     aspect-ratio: 16/9;
+    border-radius: 10px;
     overflow: hidden;
 }
-.vhd-video-card__thumb img {
+.vhd-video-item__thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.4s ease;
+    transition: transform 0.3s;
 }
-.vhd-video-card__inner:hover .vhd-video-card__thumb img {
+.vhd-video-item:hover .vhd-video-item__thumb img {
     transform: scale(1.05);
 }
-.vhd-video-card__play {
+.vhd-video-item__play {
     position: absolute;
     inset: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(0,0,0,0.15);
-    transition: background 0.3s;
+    background: rgba(0,0,0,0.1);
+    opacity: 0;
+    transition: opacity 0.25s;
 }
-.vhd-video-card__inner:hover .vhd-video-card__play {
-    background: rgba(0,0,0,0.35);
+.vhd-video-item:hover .vhd-video-item__play {
+    opacity: 1;
 }
-.vhd-video-card__play svg {
-    width: 28px;
-    height: 28px;
+.vhd-video-item__play svg {
+    width: 22px;
+    height: 22px;
     color: #fff;
-    padding: 14px;
-    background: rgba(0,0,0,0.6);
+    padding: 10px;
+    background: rgba(0,0,0,0.65);
     border-radius: 50%;
     box-sizing: content-box;
-    transition: transform 0.3s, background 0.3s;
 }
-.vhd-video-card__inner:hover .vhd-video-card__play svg {
-    transform: scale(1.1);
-    background: #e00;
+.vhd-video-item__info {
+    flex: 1;
+    min-width: 0;
 }
-.vhd-video-card__info { padding: 16px 18px 20px; }
-.vhd-video-card__title {
+.vhd-video-item__title {
     font-size: 0.95rem;
     font-weight: 600;
     color: #1d1d1f;
-    margin-bottom: 6px;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    margin-bottom: 4px;
     line-height: 1.4;
-}
-.vhd-video-card__desc {
-    font-size: 0.8rem;
-    color: #86868b;
-    line-height: 1.5;
     display: -webkit-box;
-    -webkit-line-clamp: 2;
+    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-.vhd-video-card__link {
+.vhd-video-item__desc {
+    font-size: 0.82rem;
+    color: #86868b;
+    line-height: 1.45;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.vhd-video-item__link {
     display: inline-flex;
     align-items: center;
     gap: 4px;
-    margin-top: 10px;
+    margin-top: 6px;
     font-size: 0.78rem;
     font-weight: 500;
     color: #0071e3;
     cursor: pointer;
     transition: opacity 0.2s;
 }
-.vhd-video-card__link:hover { opacity: 0.7; }
-.vhd-video-card__link .material-symbols-outlined { font-size: 16px; }
+.vhd-video-item__link:hover { opacity: 0.7; }
+.vhd-video-item__link .material-symbols-outlined { font-size: 16px; }
+@media (max-width: 600px) {
+    .vhd-video-item { gap: 14px; padding: 12px 14px; }
+    .vhd-video-item__thumb { width: 120px; min-width: 120px; }
+    .vhd-video-item__title { font-size: 0.88rem; }
+    .vhd-video-item__desc { display: none; }
+}
 
 /* Modal */
 .vhd-modal {
@@ -544,25 +543,25 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
     }
 
-    // Video card click: play video, copy link
-    document.querySelectorAll('.vhd-video-card__inner').forEach(card => {
+    // Video item click: play video, copy link
+    document.querySelectorAll('.vhd-video-item').forEach(item => {
         // Click thumbnail → open modal
-        const thumb = card.querySelector('.vhd-video-card__thumb');
+        const thumb = item.querySelector('.vhd-video-item__thumb');
         if (thumb) {
             thumb.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                openModal(card.dataset.videoId);
+                openModal(item.dataset.videoId);
             });
         }
 
         // Click "Sao chép link"
-        const linkBtn = card.querySelector('.vhd-video-card__link');
+        const linkBtn = item.querySelector('.vhd-video-item__link');
         if (linkBtn) {
             linkBtn.addEventListener('click', (e) => {
                 e.preventDefault();
                 e.stopPropagation();
-                const url = card.getAttribute('href');
+                const url = item.getAttribute('href');
                 navigator.clipboard.writeText(url).then(() => {
                     toast.classList.add('is-visible');
                     setTimeout(() => toast.classList.remove('is-visible'), 2000);
