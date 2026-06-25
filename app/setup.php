@@ -372,23 +372,35 @@ function dentalso_get_youtube_videos()
         return dentalso_get_fallback_videos();
     }
 
-    // 4 playlist với category tương ứng
-    $playlists = [
-        'PLtGly8_RzMfs5LkZ8hlukNhqwkKMy3cuC' => 'don-hang',
-        'PLtGly8_RzMfu7L8ybbN5h3DLFMKn5JNSo' => 'phien-ban-linh-hoat',
-        'PLtGly8_RzMfvekuRCIRpr5YKCN3HFWtOB' => 'don-hang',
-        'PLtGly8_RzMfvXUOf3yohM2biNaQYN9qjF' => 'don-hang',
-    ];
-
     $all_videos = [];
     $seen_ids = [];
 
-    foreach ($playlists as $playlist_id => $default_category) {
+    // Bước 1: Lấy uploads playlist ID từ kênh @DentalSO
+    $uploads_playlist = get_transient('dentalso_yt_uploads_id');
+    if (!$uploads_playlist) {
+        $ch_url = add_query_arg([
+            'part' => 'contentDetails',
+            'forHandle' => '@DentalSO',
+            'key' => $api_key,
+        ], 'https://www.googleapis.com/youtube/v3/channels');
+
+        $ch_response = wp_remote_get($ch_url, ['timeout' => 10]);
+        if (!is_wp_error($ch_response)) {
+            $ch_body = json_decode(wp_remote_retrieve_body($ch_response), true);
+            $uploads_playlist = $ch_body['items'][0]['contentDetails']['relatedPlaylists']['uploads'] ?? '';
+            if ($uploads_playlist) {
+                set_transient('dentalso_yt_uploads_id', $uploads_playlist, 30 * DAY_IN_SECONDS);
+            }
+        }
+    }
+
+    // Bước 2: Lấy tất cả video từ uploads playlist (= tất cả video trên kênh)
+    if ($uploads_playlist) {
         $page_token = '';
         do {
             $url = add_query_arg([
                 'part' => 'snippet',
-                'playlistId' => $playlist_id,
+                'playlistId' => $uploads_playlist,
                 'maxResults' => 50,
                 'pageToken' => $page_token,
                 'key' => $api_key,
@@ -405,14 +417,12 @@ function dentalso_get_youtube_videos()
                 $video_id = $snippet['resourceId']['videoId'] ?? '';
                 $title = $snippet['title'] ?? '';
 
-                // Bỏ video trùng hoặc bị xóa
                 if (empty($video_id) || isset($seen_ids[$video_id]) || $title === 'Private video' || $title === 'Deleted video') {
                     continue;
                 }
                 $seen_ids[$video_id] = true;
 
-                // Tự động phân loại dựa trên tiêu đề
-                $category = dentalso_detect_video_category($title, $default_category);
+                $category = dentalso_detect_video_category($title, 'quan-ly-chung');
 
                 $all_videos[] = [
                     'id' => $video_id,
