@@ -576,8 +576,10 @@ add_action('init', function () {
         'has_archive'   => true,
         'archive' => [
             'nopaging' => true,
+            'orderby'  => 'menu_order',
+            'order'    => 'ASC',
         ],
-        'supports' => ['title', 'thumbnail', 'custom-fields'],
+        'supports' => ['title', 'thumbnail', 'custom-fields', 'page-attributes'],
     ], [
         'singular' => 'Customer',
         'plural'   => 'Customers',
@@ -857,4 +859,113 @@ add_shortcode('dentalso_form', function ($atts) {
     </script>
     <?php
     return ob_get_clean();
+});
+
+/**
+ * Customer: Sắp xếp admin list theo menu_order + kéo thả
+ */
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() || !$query->is_main_query()) return;
+    if ($query->get('post_type') !== 'customer') return;
+    if (!$query->get('orderby')) {
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+    }
+});
+
+// AJAX: Lưu thứ tự customer
+add_action('wp_ajax_save_customer_order', function () {
+    check_ajax_referer('customer_sort_nonce');
+    if (!current_user_can('edit_posts')) wp_die('Forbidden');
+    $order = $_POST['order'] ?? [];
+    if (is_array($order)) {
+        foreach ($order as $position => $post_id) {
+            wp_update_post([
+                'ID' => intval($post_id),
+                'menu_order' => intval($position),
+            ]);
+        }
+    }
+    wp_send_json_success();
+});
+
+// Thêm JS kéo thả vào trang admin Customer
+add_action('admin_footer-edit.php', function () {
+    $screen = get_current_screen();
+    if (!$screen || $screen->post_type !== 'customer') return;
+    $nonce = wp_create_nonce('customer_sort_nonce');
+    ?>
+    <style>
+    #the-list tr { transition: opacity .15s; cursor: grab; }
+    #the-list tr.cst-dragging { opacity: .35; background: #f0f6fc; }
+    #the-list tr.cst-drag-over td { border-top: 2px solid #0071e3; }
+    .cst-sort-notice { background:#fff; border-left:4px solid #0071e3; padding:8px 14px; margin:10px 0; font-size:13px; }
+    </style>
+    <script>
+    (function(){
+        const list = document.getElementById('the-list');
+        if (!list) return;
+
+        // Notice
+        const tbl = document.querySelector('.wp-list-table');
+        if (tbl) {
+            const n = document.createElement('div');
+            n.className = 'cst-sort-notice';
+            n.textContent = '☰ Kéo thả các hàng để thay đổi thứ tự hiển thị khách hàng.';
+            tbl.parentNode.insertBefore(n, tbl);
+        }
+
+        let dragRow = null;
+
+        list.querySelectorAll('tr').forEach(row => {
+            row.setAttribute('draggable', 'true');
+        });
+
+        list.addEventListener('dragstart', e => {
+            dragRow = e.target.closest('tr');
+            if (dragRow) {
+                dragRow.classList.add('cst-dragging');
+                e.dataTransfer.effectAllowed = 'move';
+            }
+        });
+
+        list.addEventListener('dragend', () => {
+            if (dragRow) dragRow.classList.remove('cst-dragging');
+            list.querySelectorAll('tr').forEach(r => r.classList.remove('cst-drag-over'));
+            dragRow = null;
+        });
+
+        list.addEventListener('dragover', e => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'move';
+            const row = e.target.closest('tr');
+            list.querySelectorAll('tr').forEach(r => r.classList.remove('cst-drag-over'));
+            if (row && row !== dragRow) row.classList.add('cst-drag-over');
+        });
+
+        list.addEventListener('drop', e => {
+            e.preventDefault();
+            const target = e.target.closest('tr');
+            if (!target || !dragRow || target === dragRow) return;
+
+            const rows = [...list.querySelectorAll('tr')];
+            const dragIdx = rows.indexOf(dragRow);
+            const targetIdx = rows.indexOf(target);
+            if (dragIdx < targetIdx) {
+                target.after(dragRow);
+            } else {
+                target.before(dragRow);
+            }
+
+            // Lưu thứ tự mới
+            const order = [...list.querySelectorAll('tr')].map(r => r.id.replace('post-', ''));
+            const fd = new FormData();
+            fd.append('action', 'save_customer_order');
+            fd.append('_ajax_nonce', '<?= $nonce ?>');
+            order.forEach((id, i) => fd.append('order[' + i + ']', id));
+            fetch(ajaxurl, { method: 'POST', body: fd });
+        });
+    })();
+    </script>
+    <?php
 });
