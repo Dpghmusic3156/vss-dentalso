@@ -666,6 +666,16 @@ add_action('init', function () {
         'rewrite'      => ['slug' => 'chuyen-muc-tai-lieu'],
     ]);
 });
+
+/**
+ * Order customer archive by menu_order ASC.
+ */
+add_action('pre_get_posts', function ($query) {
+    if (!is_admin() && $query->is_main_query() && $query->is_post_type_archive('customer')) {
+        $query->set('orderby', 'menu_order');
+        $query->set('order', 'ASC');
+    }
+});
 add_action('rest_api_init', function () {
     register_rest_route('custom/v1', '/filter-docs', [
         'methods' => 'GET',
