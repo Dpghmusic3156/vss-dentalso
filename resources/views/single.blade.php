@@ -1,6 +1,38 @@
 @extends('layouts.app')
 
 @section('content')
+
+<style>
+/* Tuỳ chỉnh giao diện Bài viết */
+.post-hero__content .post-title {
+    font-size: max(1.875rem, min(5vw, 3rem)) !important;
+    font-weight: 500 !important;
+}
+
+/* Canh đều chữ và thu hẹp khoảng cách các đoạn văn, danh sách */
+.post-prose p,
+.post-prose ul,
+.post-prose ol,
+.post-prose li {
+    text-align: justify;
+}
+.post-prose p,
+.post-prose ul,
+.post-prose ol {
+    margin-top: 0.75em !important;
+    margin-bottom: 0.75em !important;
+}
+.post-prose li {
+    margin-top: 0.25em !important;
+    margin-bottom: 0.25em !important;
+}
+
+/* Ẩn tiêu đề h2 trong thanh subnav trên trang đọc bài nhưng giữ bố cục */
+.apple-subnav h2 {
+    visibility: hidden !important;
+}
+</style>
+
 @while(have_posts())
 @php the_post(); @endphp
 
